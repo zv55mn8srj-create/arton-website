@@ -26,7 +26,7 @@ export default function ProcessSection() {
             label="The Ecosystem"
             light
             title={<>建立一次策展，<br />讓價值<br />一直走下去。</>}
-            titleSize="clamp(2.15rem,3.6vw,3.4rem)"
+            titleSize="clamp(2.6rem,4.6vw,4.6rem)"
             description={<>藝術不再只依賴作品被買走而產生價值。透過持續展示，創作的收入跟著空間裡的每一天一起累積。從創作到空間，每一步都讓創作者走得更遠。</>}
             className={`lg:col-span-5 lg:sticky lg:top-32 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           />

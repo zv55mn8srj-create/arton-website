@@ -38,7 +38,7 @@ export default function GalleryHeading({
   description,
   light = false,
   className = "",
-  titleSize = "clamp(2.85rem,5.6vw,5.75rem)",
+  titleSize = "clamp(3.4rem,6.2vw,6.2rem)",
 }: GalleryHeadingProps) {
   return (
     <div className={`relative ${className}`}>
@@ -47,10 +47,11 @@ export default function GalleryHeading({
         <span className="museum-label">Room {room} · {label}</span>
       </div>
       <h2
-        className={`text-[${titleSize}] leading-[0.98] font-light tracking-[-0.045em] ${
-          light ? "text-white" : "text-[#1C1C1E]"
-        }`}
-        style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}
+        className={`leading-[0.98] font-light tracking-[-0.045em] ${light ? "text-white" : "text-[#1C1C1E]"}`}
+        style={{
+          fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif",
+          fontSize: titleSize,
+        }}
       >
         {title}
       </h2>
