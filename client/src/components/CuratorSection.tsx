@@ -4,6 +4,7 @@
  * not a conventional software feature showcase.
  */
 import GalleryHeading, { PowerGlyph } from "./GalleryHeading";
+import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { BarChart3, FolderOpen, LayoutGrid, Share2, Sparkles } from "lucide-react";
 
@@ -65,7 +66,7 @@ export default function CuratorSection() {
                 </div>
               ))}
             </div>
-            <a href="#start" className="inline-flex mt-10 items-center gap-4 text-[13px] font-medium text-[#1C1C1E] border-b border-[#C4A265] pb-2 hover:text-[#9B7C47] transition-colors">
+            <a href={LINKS.curatorLine} target="_blank" rel="noopener noreferrer" className="inline-flex mt-10 items-center gap-4 text-[13px] font-medium text-[#1C1C1E] border-b border-[#C4A265] pb-2 hover:text-[#9B7C47] transition-colors">
               成為 ArtON 策展人 <span className="text-[#C4A265]">↗</span>
             </a>
           </div>

@@ -72,13 +72,17 @@ export default function HeroSection() {
               }`}
             >
               <a
-                href="#start"
+                href="https://lin.ee/yEZxsB3"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 bg-[#C4A265] text-white text-[14px] font-medium rounded-full hover:bg-[#b8954f] transition-all duration-300 hover:shadow-xl hover:shadow-[#C4A265]/20 text-center active:scale-[0.97]"
               >
                 我要開始展示
               </a>
               <a
-                href="#curator"
+                href="https://lin.ee/7dr8uq4"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 border border-white/38 text-white text-[14px] font-medium rounded-full hover:bg-white/10 transition-all duration-300 text-center backdrop-blur-sm active:scale-[0.97]"
               >
                 我要成為策展人

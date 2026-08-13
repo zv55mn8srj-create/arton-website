@@ -4,6 +4,7 @@
  */
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { LINKS } from "@/lib/links";
 
 const navLinks = [
   { label: "關於 ArtON", href: "#about" },
@@ -65,7 +66,9 @@ export default function Header() {
 
         <div className="hidden lg:flex items-center gap-4">
           <a
-            href="#curator"
+            href={LINKS.curatorLine}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`text-[15px] font-medium transition-colors duration-300 ${
               scrolled ? "text-[#1C1C1E] hover:text-[#C4A265]" : "text-white hover:text-[#C4A265]"
             }`}
@@ -73,7 +76,9 @@ export default function Header() {
             成為策展人
           </a>
           <a
-            href="#start"
+            href={LINKS.customerLine}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2.5 bg-[#C4A265] text-white text-[15px] font-medium rounded-full hover:bg-[#b8954f] transition-all duration-300 hover:shadow-lg"
           >
             開始展示
@@ -104,10 +109,10 @@ export default function Header() {
               </a>
             ))}
             <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-[#E5E5E3]">
-              <a href="#curator" className="text-center text-[15px] text-[#1C1C1E] font-medium py-2">
+              <a href={LINKS.curatorLine} target="_blank" rel="noopener noreferrer" className="text-center text-[15px] text-[#1C1C1E] font-medium py-2">
                 成為策展人
               </a>
-              <a href="#start" className="text-center px-5 py-2.5 bg-[#C4A265] text-white text-[15px] font-medium rounded-full">
+              <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="text-center px-5 py-2.5 bg-[#C4A265] text-white text-[15px] font-medium rounded-full">
                 開始展示
               </a>
             </div>

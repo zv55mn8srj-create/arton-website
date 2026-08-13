@@ -4,15 +4,16 @@
  * rather than appearing as interchangeable product cards.
  */
 import GalleryHeading from "./GalleryHeading";
+import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const exhibitions = [
-  { title: "春季療癒展", tag: "Healing", image: "/manus-storage/exhibition-spring_779eb4e1.jpg", artist: "柔光、花影與重新生長的季節" },
+  { title: "身障藝術展", tag: "Together", image: "/manus-storage/koi-nine_6a87b9e0.jpg", artist: "身心障礙創作者的油畫，讓每一面牆都成為展廳", featured: true },
   { title: "旅行台灣", tag: "Taiwan", image: "/manus-storage/exhibition-taiwan_802358d3.jpg", artist: "山海之間，留下島嶼的日常風景" },
   { title: "療癒攝影", tag: "Photography", image: "/manus-storage/exhibition-healing_3a941b9a.jpg", artist: "讓光線慢下來，也讓心慢下來" },
   { title: "抽象藝術", tag: "Abstract", image: "/manus-storage/exhibition-abstract_a4923795.jpg", artist: "色彩、形狀與空間之間的自由對話" },
   { title: "自然風景", tag: "Nature", image: "/manus-storage/exhibition-nature_c9268f72.jpg", artist: "將遠方的山林帶進每天經過的地方" },
-  { title: "身障藝術展", tag: "Together", image: "/manus-storage/public-space-art_1fe105c8.jpg", artist: "不同的身體經驗，同樣有力的創作聲音" },
+  { title: "春季療癒展", tag: "Healing", image: "/manus-storage/flowers-sea-island_a1502703.jpg", artist: "柔光、花影與重新生長的季節" },
 ];
 
 const spans = ["md:col-span-5", "md:col-span-3", "md:col-span-4", "md:col-span-4", "md:col-span-5", "md:col-span-3"];
@@ -32,7 +33,7 @@ export default function ExploreSection() {
           />
           <div className={`lg:col-span-4 lg:col-start-9 pb-2 transition-all duration-700 delay-150 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <p className="text-[15px] leading-[1.9] text-[#1C1C1E]/50">每一檔策展，都有自己的情緒、節奏與故事。企業可以直接觀看，找到最適合空間的一場展覽。</p>
-            <a href="#start" className="inline-flex mt-6 gap-3 text-[12px] tracking-[0.08em] border-b border-[#C4A265] pb-2">查看所有策展 <span className="text-[#C4A265]">↗</span></a>
+            <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="inline-flex mt-6 gap-3 text-[12px] tracking-[0.08em] border-b border-[#C4A265] pb-2">查看所有策展 <span className="text-[#C4A265]">↗</span></a>
           </div>
         </div>
 
@@ -43,7 +44,7 @@ export default function ExploreSection() {
               className={`${spans[index]} group transition-all duration-700 ${index === 1 || index === 4 ? "md:mt-16" : ""} ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
               style={{ transitionDelay: `${100 + index * 80}ms` }}
             >
-              <a href="#start" className="block">
+              <a href={exhibition.featured ? LINKS.customerLine : "#start"} className="block">
                 <div className="gallery-frame">
                   <div className={`overflow-hidden ${index === 0 || index === 4 ? "aspect-[4/3]" : "aspect-[3/4] md:aspect-[4/5]"}`}>
                     <img src={exhibition.image} alt={exhibition.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" />

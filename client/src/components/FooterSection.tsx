@@ -2,6 +2,8 @@
  * Footer CTA + Footer
  * Design: Gallery Quietism - warm, elegant closing
  */
+import { LINKS } from "@/lib/links";
+
 export default function FooterSection() {
   return (
     <>
@@ -32,13 +34,17 @@ export default function FooterSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#"
+                href={LINKS.curatorLine}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 bg-[#C4A265] text-white text-[15px] font-medium rounded-full hover:bg-[#b8954f] transition-all duration-300 hover:shadow-xl hover:shadow-[#C4A265]/20"
               >
                 我要成為策展人
               </a>
               <a
-                href="#"
+                href={LINKS.customerLine}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 border border-white/30 text-white text-[15px] font-medium rounded-full hover:bg-white/10 transition-all duration-300"
               >
                 我要開始展示
@@ -110,10 +116,10 @@ export default function FooterSection() {
                 聯絡我們
               </h5>
               <ul className="space-y-3">
-                <li><a href="#" className="text-white/35 text-[14px] hover:text-[#C4A265] transition-colors duration-300">contact@arton.studio</a></li>
-                <li><a href="#" className="text-white/35 text-[14px] hover:text-[#C4A265] transition-colors duration-300">Instagram</a></li>
-                <li><a href="#" className="text-white/35 text-[14px] hover:text-[#C4A265] transition-colors duration-300">Facebook</a></li>
-                <li><a href="#" className="text-white/35 text-[14px] hover:text-[#C4A265] transition-colors duration-300">LINE</a></li>
+                <li><a href={LINKS.email} className="text-white/35 text-[14px] hover:text-[#C4A265] transition-colors duration-300">{LINKS.emailDisplay}</a></li>
+                <li><a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-white/35 text-[14px] hover:text-[#C4A265] transition-colors duration-300">Instagram</a></li>
+                <li><a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="text-white/35 text-[14px] hover:text-[#C4A265] transition-colors duration-300">Facebook</a></li>
+                <li><a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="text-white/35 text-[14px] hover:text-[#C4A265] transition-colors duration-300">LINE（客戶）</a></li>
               </ul>
             </div>
           </div>
