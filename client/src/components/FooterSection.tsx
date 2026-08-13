@@ -26,7 +26,7 @@ export default function FooterSection() {
             </p>
             <h2 className="text-[36px] md:text-[52px] lg:text-[58px] font-light text-white leading-[1.15] mb-6"
               style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-              一起讓藝術走進生活，<br className="hidden md:block" />讓創作者靠作品生活。
+              一起讓藝術走進生活。
             </h2>
             <p className="text-white/65 text-[16px] md:text-[18px] leading-[1.9] mb-12 max-w-lg mx-auto">
               我們不是在租畫，<br />
