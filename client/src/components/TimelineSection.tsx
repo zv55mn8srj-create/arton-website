@@ -24,6 +24,7 @@ export default function TimelineSection() {
             room="06"
             label="A Living Exhibition"
             title={<>一次策展，<br />五個持續<br />發生的瞬間。</>}
+            titleSize="clamp(2.6rem,4.6vw,4.6rem)"
             className={`lg:col-span-7 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           />
           <p className={`lg:col-span-4 lg:col-start-9 text-[15px] leading-[1.9] text-[#1C1C1E]/48 transition-all duration-700 delay-150 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>

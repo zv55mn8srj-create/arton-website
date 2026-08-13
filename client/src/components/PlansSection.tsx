@@ -27,6 +27,17 @@ interface Plan {
 
 const plans: Plan[] = [
   {
+    tag: "START HERE",
+    icon: Smartphone,
+    title: "ArtON 支持夥伴",
+    subtitle: "與 ArtON 一起支持身障藝術創作，每一次訂閱都是實質的力量。",
+    price: "NT$799",
+    priceNote: "／月起",
+    highlight: "加入 LINE 開始訂閱",
+    features: ["ArtON 平台展示服務", "藝術內容支持與合法展示授權", "ArtON 藝術內容持續更新", "雲端管理與展示紀錄"],
+    cta: "加入 LINE 開始訂閱",
+  },
+  {
     tag: "OPTION 01",
     icon: Smartphone,
     title: "ArtON Box 藝術盒",
@@ -49,7 +60,7 @@ const plans: Plan[] = [
     recommended: true,
   },
   {
-    tag: "OPTION 03",
+    tag: "OPTION 02",
     icon: Sun,
     title: "ArtON 真全彩電子紙展示",
     subtitle: "1677 萬真全彩｜零藍光護眼｜超低耗電。",
@@ -72,7 +83,7 @@ export default function PlansSection() {
             room="09"
             label="Exhibiting Options"
             title="選擇適合你的展示方式。"
-            description={<>三種裝置，同一份心意。無論從一個螢幕開始，還是整棟空間規劃，ArtON 都陪著你讓藝術持續被看見。</>}
+            description={<>從支持夥伴訂閱開始，或選擇專屬展示裝置。無論從一個螢幕開始，還是整棟空間規劃，ArtON 都陪著你讓藝術持續被看見。</>}
             className="max-w-3xl mx-auto"
             titleSize="clamp(2.15rem,3.8vw,3.6rem)"
           />
@@ -141,7 +152,7 @@ export default function PlansSection() {
               </ul>
 
               <a
-                href={LINKS.email}
+                href={plan.tag === "START HERE" ? LINKS.customerLine : LINKS.email}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`group inline-flex items-center justify-center gap-2.5 text-[13.5px] font-medium tracking-[0.04em] px-6 py-4 transition-all duration-200 active:scale-[0.97] ${

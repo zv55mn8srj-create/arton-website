@@ -27,7 +27,7 @@ export default function WhyEnterprise() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/62 via-transparent to-transparent" />
               <figcaption className="absolute bottom-0 inset-x-0 p-7 md:p-9">
                 <p className="museum-label text-[#E2C88E]">Everyday Patronage</p>
-                <p className="mt-3 text-[16px] text-white/68 max-w-md leading-[1.8]">當藝術成為每天會經過的風景，對創作者的支持也就不再只是一次性的選擇。</p>
+                <p className="mt-3 text-[16px] text-white/80 max-w-md leading-[1.8]">當藝術成為每天會經過的風景，對創作者的支持也就不再只是一次性的選擇。</p>
               </figcaption>
             </div>
           </figure>
@@ -49,7 +49,7 @@ export default function WhyEnterprise() {
                   style={{ transitionDelay: `${180 + index * 80}ms` }}
                 >
                   <Icon className="w-4.5 h-4.5 text-[#C4A265] mt-1" strokeWidth={1.35} />
-                  <div><h3 className="text-[17px] font-normal mb-2">{title}</h3><p className="text-[12px] leading-[1.8] text-white/38">{description}</p></div>
+                  <div><h3 className="text-[17px] font-normal mb-2">{title}</h3><p className="text-[12px] leading-[1.8] text-white/62">{description}</p></div>
                 </article>
               ))}
             </div>

@@ -35,8 +35,8 @@ export default function Home() {
         <WhyEnterprise />
         <VenuesSection />
         <SpacesPartnersSection />
-        <PlansSection />
         <FAQSection />
+        <PlansSection />
       </main>
       <FooterSection />
     </div>
