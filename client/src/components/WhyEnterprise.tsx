@@ -11,7 +11,7 @@ const reasons = [
   { icon: Sparkles, title: "美化空間", description: "以經過策展的作品，為日常環境帶來情緒、節奏與記憶點。" },
   { icon: Leaf, title: "ESG 永續", description: "將文化支持轉化為能長期累積、被看見也能被記錄的企業行動。" },
   { icon: Cloud, title: "雲端更新", description: "不改變空間工程，也能讓不同據點持續迎來新的展覽內容。" },
-  { icon: Heart, title: "支持藝術", description: "每一個展示日，都是對藝術家與策展人最直接、最日常的支持。" },
+  { icon: Heart, title: "支持創作者自立", description: "每一個展示日，都在讓創作者靠自己的作品，持續獲得收入、持續生活。" },
 ];
 
 export default function WhyEnterprise() {
@@ -27,7 +27,7 @@ export default function WhyEnterprise() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/62 via-transparent to-transparent" />
               <figcaption className="absolute bottom-0 inset-x-0 p-7 md:p-9">
                 <p className="museum-label text-[#E2C88E]">Everyday Patronage</p>
-                <p className="mt-3 text-[16px] text-white/68 max-w-md leading-[1.8]">當藝術成為每天會經過的風景，支持創作也就不再只是一次性的選擇。</p>
+                <p className="mt-3 text-[16px] text-white/68 max-w-md leading-[1.8]">當藝術成為每天會經過的風景，對創作者的支持也就不再只是一次性的選擇。</p>
               </figcaption>
             </div>
           </figure>

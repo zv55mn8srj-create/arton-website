@@ -1,7 +1,8 @@
 /**
- * ArtON Hero Section
- * Design: Gallery Quietism - full-screen cinematic with warm overlay
- * Typography: Cormorant Garamond for display, large and elegant
+ * ArtON Hero Section — Room 00
+ * Gallery Quietism: cinematic full-screen art space, exhibition-scale type.
+ * Brand promise: every wall can change a creator's future.
+ * Empowerment narrative — creators earn income through sustained display.
  */
 import { useEffect, useState } from "react";
 
@@ -13,79 +14,72 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen min-h-[700px] overflow-hidden">
-      {/* Background Image */}
+    <section className="relative w-full h-screen min-h-[760px] overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0">
         <img
           src="/manus-storage/hero-gallery_f188e269.jpg"
           alt="ArtON 藝術展示空間"
           className="w-full h-full object-cover"
         />
-        {/* Stronger gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/76 via-black/49 to-black/12" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/46 via-transparent to-black/12" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center">
-        <div className="container">
-          <div className="max-w-2xl lg:max-w-3xl">
-            {/* Subtitle above */}
+        <div className="container pt-16">
+          <div className="max-w-[790px]">
             <p
-              className={`text-[#C4A265] text-[13px] md:text-[14px] uppercase tracking-[0.35em] mb-8 font-medium transition-all duration-1000 ${
+              className={`text-[#D6B876] text-[11px] md:text-[13px] uppercase tracking-[0.32em] mb-7 font-medium transition-all duration-1000 ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              Turn Art ON — 藝術 · 即刻啟動
+              Art · Independence · Continuity · Together
             </p>
 
-            {/* Main Title */}
             <h1
-              className={`font-display text-[44px] md:text-[60px] lg:text-[76px] leading-[1.1] text-white mb-8 font-light transition-all duration-1000 delay-200 ${
+              className={`text-[clamp(2.8rem,6.1vw,5.6rem)] leading-[1.08] text-white mb-8 font-light tracking-[-0.045em] transition-all duration-1000 delay-150 ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
               style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}
             >
               每一面牆，<br />
-              都能成為展覽。
+              都能改變一位<br className="hidden sm:block" />
+              創作者的未來。
             </h1>
 
-            {/* Description */}
             <p
-              className={`text-white/80 text-[16px] md:text-[18px] leading-[1.9] mb-5 max-w-xl font-light transition-all duration-1000 delay-400 ${
+              className={`text-white/76 text-[15px] md:text-[17px] leading-[1.95] mb-5 max-w-[680px] font-light transition-all duration-1000 delay-300 ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              ArtON 串連藝術家、策展人、畫廊與企業，
-              讓藝術走進診所、企業、飯店、咖啡館與更多生活空間，
-              打造可持續展示的藝術生態。
+              ArtON 串連藝術家、策展人、畫廊與企業，讓藝術走進生活空間，建立持續展示的機會，也讓更多創作者能靠自己的作品，持續創作、持續生活。
             </p>
 
-            {/* Brand Statement */}
             <p
-              className={`text-[#C4A265] text-[15px] md:text-[17px] leading-[1.8] mb-10 max-w-lg font-light italic transition-all duration-1000 delay-500 ${
+              className={`text-[#D6B876] text-[14px] md:text-[16px] leading-[1.8] mb-9 max-w-xl font-light italic transition-all duration-1000 delay-[450ms] ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              每一次展示，不只是美化空間，
-              更是在支持藝術創作。
+              每一次展示，不只是美化空間，<br className="hidden sm:block" />
+              更是在創造一份持續的收入。
             </p>
 
-            {/* CTA Buttons */}
             <div
-              className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-700 ${
+              className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-[600ms] ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
               <a
                 href="#start"
-                className="px-8 py-4 bg-[#C4A265] text-white text-[15px] font-medium rounded-full hover:bg-[#b8954f] transition-all duration-300 hover:shadow-xl hover:shadow-[#C4A265]/20 text-center"
+                className="px-8 py-4 bg-[#C4A265] text-white text-[14px] font-medium rounded-full hover:bg-[#b8954f] transition-all duration-300 hover:shadow-xl hover:shadow-[#C4A265]/20 text-center active:scale-[0.97]"
               >
                 我要開始展示
               </a>
               <a
                 href="#curator"
-                className="px-8 py-4 border border-white/40 text-white text-[15px] font-medium rounded-full hover:bg-white/10 transition-all duration-300 text-center backdrop-blur-sm"
+                className="px-8 py-4 border border-white/38 text-white text-[14px] font-medium rounded-full hover:bg-white/10 transition-all duration-300 text-center backdrop-blur-sm active:scale-[0.97]"
               >
                 我要成為策展人
               </a>
@@ -95,9 +89,9 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-        <div className="w-[1px] h-12 bg-gradient-to-b from-transparent to-white/40 mx-auto" />
-        <div className="w-5 h-8 border border-white/30 rounded-full flex justify-center pt-1.5 mt-2">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10" aria-hidden="true">
+        <div className="w-px h-10 bg-gradient-to-b from-transparent to-white/38 mx-auto" />
+        <div className="w-5 h-8 border border-white/28 rounded-full flex justify-center pt-1.5 mt-2">
           <div className="w-[2px] h-2 bg-[#C4A265] rounded-full animate-bounce" />
         </div>
       </div>

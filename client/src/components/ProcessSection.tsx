@@ -7,10 +7,10 @@ import GalleryHeading, { PowerGlyph } from "./GalleryHeading";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const participants = [
-  { role: "藝術家", action: "創作作品", note: "Ideas become works" },
-  { role: "策展人／畫廊", action: "建立策展", note: "Works become stories" },
-  { role: "ArtON", action: "串連展示", note: "Stories find spaces" },
-  { role: "企業／診所／飯店", action: "讓藝術走進日常", note: "Spaces sustain creation" },
+  { role: "藝術家", action: "創作出動人的作品", note: "Works take shape" },
+  { role: "策展人／畫廊", action: "讓作品成為一個展覽", note: "Works become exhibitions" },
+  { role: "ArtON", action: "把展覽帶進生活空間", note: "Exhibitions find spaces" },
+  { role: "企業／診所／飯店", action: "讓展示轉化為持續的收入", note: "Spaces sustain income" },
 ];
 
 export default function ProcessSection() {
@@ -25,8 +25,8 @@ export default function ProcessSection() {
             room="02"
             label="The Ecosystem"
             light
-            title={<>一件作品，<br />走進一座城市。</>}
-            description={<>建立一次策展，讓藝術持續展示，也持續支持藝術創作。從創作到空間，每一步都讓價值留下來。</>}
+            title={<>建立一次策展，<br />讓價值<br />一直走下去。</>}
+            description={<>藝術不再只依賴作品被買走而產生價值。透過持續展示，創作的收入跟著空間裡的每一天一起累積。從創作到空間，每一步都讓創作者走得更遠。</>}
             className={`lg:col-span-5 lg:sticky lg:top-32 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           />
 

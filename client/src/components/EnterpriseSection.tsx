@@ -11,7 +11,7 @@ const problems = ["不知道如何開始 ESG", "每年都要重新找活動", "�
 
 const provisions = [
   { icon: MapPin, text: "長期藝術展示" },
-  { icon: Users, text: "支持藝術家與策展人" },
+  { icon: Users, text: "讓創作者獲得持續收入" },
   { icon: Building2, text: "多據點管理" },
   { icon: RefreshCw, text: "雲端更新與永續展示" },
   { icon: FileText, text: "ESG 成果紀錄" },
@@ -20,7 +20,7 @@ const provisions = [
 const statistics = [
   { label: "展示據點", value: "12", icon: MapPin },
   { label: "展示策展", value: "08", icon: CalendarDays },
-  { label: "支持藝術家", value: "24", icon: Users },
+  { label: "支持創作者", value: "24", icon: Users },
   { label: "展示天數", value: "365", icon: FileText },
 ];
 
@@ -34,8 +34,8 @@ export default function EnterpriseSection() {
           <GalleryHeading
             room="03"
             label="Cultural ESG"
-            title={<>讓 ESG，<br />每天都在<br />空間裡發生。</>}
-            description={<>不是一年一次的活動，而是一場長期、可被看見、也能被記錄的文化行動。</>}
+            title={<>為企業打造，<br />持續發生的 ESG。</>}
+            description={<>不是一年一次的活動，而是一場長期、可被看見、也能被記錄的文化行動。你的每一面牆，都在支持創作者靠作品持續生活。</>}
             className={`lg:col-span-5 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           />
 
@@ -71,7 +71,7 @@ export default function EnterpriseSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/58 via-transparent to-transparent" />
             <figcaption className="absolute bottom-0 left-0 right-0 p-7 md:p-9 text-white">
               <span className="museum-label text-[#E2C88E]">Exhibition Site · Taipei</span>
-              <p className="mt-3 text-[17px] font-light">藝術成為空間的一部分，支持也成為企業文化的一部分。</p>
+                  <p className="mt-3 text-[17px] font-light">藝術成為空間的一部分，你的支持也成為創作者生活的一部分。</p>
             </figcaption>
           </div>
 
@@ -80,7 +80,7 @@ export default function EnterpriseSection() {
               <div className="flex items-center gap-3">
                 <PowerGlyph className="w-6 h-6 text-[#C4A265]" />
                 <div>
-                  <p className="text-[14px] font-medium text-[#1C1C1E]">年度文化影響紀錄</p>
+                  <p className="text-[14px] font-medium text-[#1C1C1E]">年度文化與創作者影響紀錄</p>
                   <p className="text-[10px] uppercase tracking-[0.17em] text-[#1C1C1E]/35 mt-1">ArtON · ESG Cultural Ledger</p>
                 </div>
               </div>

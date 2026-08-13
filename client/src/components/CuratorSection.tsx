@@ -54,8 +54,8 @@ export default function CuratorSection() {
             <GalleryHeading
               room="04"
               label="For Curators"
-              title={<>策展一次，<br />價值不只<br />發生一次。</>}
-              description={<>讓一場策展離開單一展期，走進更多企業與生活空間；被分享、被管理，也持續創造收益。</>}
+              title={<>策展一次，<br />讓更多創作者<br />有收入。</>}
+              description={<>你的策展讓作品走進更多企業與生活空間，持續被看見，也讓藝術家靠作品獲得穩定、長期的收入。</>}
               className={`transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             />
             <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-1 gap-x-8 gap-y-4">

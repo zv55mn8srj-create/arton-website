@@ -1,83 +1,92 @@
 /**
- * Room 01 — Brand values.
- * Gallery Quietism: offset exhibition heading and plaque-like principles,
- * avoiding the repeated centered card rhythm of a SaaS landing page.
+ * Room 01 — Our Why.
+ * Gallery Quietism: a direct, dignified origin story about disabled artists,
+ * creative independence and recurring income — not charity or pity.
+ * Placed right after the Hero so businesses understand why ArtON exists.
  */
-import GalleryHeading from "./GalleryHeading";
+import GalleryHeading, { PowerGlyph } from "./GalleryHeading";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Eye, Heart, Palette, Leaf } from "lucide-react";
 
-const principles = [
+const beliefs = [
   {
-    icon: Eye,
-    title: "讓藝術持續被看見",
-    description: "藝術不再只停留在展覽期間，而是走進每一天的生活。",
+    en: "Ability",
+    title: "看見能力，而不是標籤",
+    description: "身心障礙不是作品的註解。創作的專業、觀點與價值，值得被公平看見。",
   },
   {
-    icon: Heart,
-    title: "讓空間更有溫度",
-    description: "用藝術提升診所、企業、飯店與公共空間的體驗。",
+    en: "Independence",
+    title: "讓創作成為可以依靠的工作",
+    description: "作品持續展示，就能持續產生價值，讓創作者靠自己的雙手累積收入與選擇。",
   },
   {
-    icon: Palette,
-    title: "支持藝術創作",
-    description: "每一次展示，都將支持藝術家與策展人持續創作。",
-  },
-  {
-    icon: Leaf,
-    title: "ESG 永續共好",
-    description: "讓企業的文化支持不只發生在活動當天，而成為每天都在累積的行動。",
+    en: "Continuity",
+    title: "把一次機會，變成長期的可能",
+    description: "從短暫展期走進日常空間，讓被看見、被欣賞與獲得收入都不再只發生一次。",
   },
 ];
 
 export default function WhyArtON() {
-  const { ref, isVisible } = useScrollAnimation(0.08);
+  const { ref, isVisible } = useScrollAnimation(0.05);
 
   return (
-    <section id="about" className="relative py-28 md:py-40 bg-[#F7F4EF] overflow-hidden">
-      <div className="absolute -top-24 right-[7%] text-[20rem] leading-none text-[#C4A265]/[0.045] font-light select-none" aria-hidden="true">
-        01
-      </div>
+    <section id="about" className="relative py-28 md:py-44 bg-[#F7F4EF] overflow-hidden">
+      <div className="absolute -top-24 right-[4%] text-[21rem] leading-none text-[#C4A265]/[0.045] font-light select-none" aria-hidden="true">01</div>
       <div className="container relative" ref={ref}>
-        <div className="grid lg:grid-cols-12 gap-14 lg:gap-10 items-start">
+        <div className="grid lg:grid-cols-12 gap-14 lg:gap-16 items-start">
           <GalleryHeading
             room="01"
-            label="The Belief"
-            title={<>藝術不是裝飾。<br />它是一種<br className="hidden lg:block" />日常支持。</>}
-            description={<>ArtON 讓創作離開短暫的展期，在真實生活裡持續發生；一面牆、一個空間，也能成為文化永續的起點。</>}
-            className={`lg:col-span-5 lg:sticky lg:top-32 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+            label="Our Why · 品牌初心"
+            title={<>讓創作者，<br />靠自己的作品<br />站穩腳步。</>}
+            description={<>我們相信，藝術可以改變生活，也能改變一個人的未來。</>}
+            className={`lg:col-span-5 lg:sticky lg:top-32 transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
           />
 
-          <div className="lg:col-span-7 lg:pt-24">
-            <p
-              className={`max-w-2xl text-[clamp(1.55rem,2.6vw,2.55rem)] leading-[1.45] font-light text-[#1C1C1E] tracking-[-0.03em] mb-16 transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-              style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}
+          <div className="lg:col-span-7 lg:pt-14">
+            <div
+              className={`space-y-7 max-w-2xl text-[15px] md:text-[17px] leading-[2] text-[#1C1C1E]/58 transition-all duration-700 delay-100 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
             >
-              每一次作品被看見，都是創作者繼續走下去的一盞燈；每一個願意展示的空間，都在替藝術保留未來。
-            </p>
+              <p className="text-[clamp(1.55rem,2.8vw,2.65rem)] leading-[1.48] font-light tracking-[-0.03em] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                許多優秀的藝術家，並不缺少創作能力，而是缺少持續被看見的機會。
+              </p>
+              <p>其中，也包含許多身心障礙藝術家。他們創作出動人的作品，卻往往只能在短暫的展覽中被看見；展覽結束後，作品離開視線，創作也失去了穩定的收入來源。</p>
+              <p className="text-[#1C1C1E]/78 font-medium">ArtON 希望改變這件事。</p>
+              <p>我們不是提供一次性的幫助，而是建立一個能夠持續展示、持續被欣賞、持續創造收入的藝術生態。透過企業、診所、飯店、咖啡館與更多生活空間，每一次展示，都讓創作者獲得靠作品持續創作、持續生活的機會。</p>
+            </div>
 
-            <div className="grid sm:grid-cols-2 gap-x-10 gap-y-12">
-              {principles.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <article
-                    key={item.title}
-                    className={`plaque group transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-                    style={{ transitionDelay: `${180 + index * 90}ms` }}
-                  >
-                    <div className="flex items-center justify-between mb-7">
-                      <span className="text-[3.5rem] leading-none font-light text-[#C4A265]/38" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                        0{index + 1}
-                      </span>
-                      <Icon className="w-5 h-5 text-[#C4A265]" strokeWidth={1.35} />
-                    </div>
-                    <h3 className="text-[20px] md:text-[22px] text-[#1C1C1E] font-normal mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                      {item.title}
-                    </h3>
-                    <p className="text-[14px] leading-[1.9] text-[#1C1C1E]/48">{item.description}</p>
-                  </article>
-                );
-              })}
+            <blockquote
+              className={`relative my-14 md:my-20 py-10 md:py-12 border-y border-[#C4A265]/38 transition-all duration-700 delay-200 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
+            >
+              <PowerGlyph className="w-7 h-7 text-[#C4A265] mb-7" />
+              <p className="text-[clamp(1.75rem,3.3vw,3.4rem)] leading-[1.45] font-light tracking-[-0.035em] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                真正的支持，不是一次性的捐助，<br className="hidden md:block" />
+                而是讓創作者能靠自己的作品，持續走下去。
+              </p>
+            </blockquote>
+
+            <div className="grid md:grid-cols-3 gap-10 md:gap-6">
+              {beliefs.map((belief, index) => (
+                <article
+                  key={belief.title}
+                  className={`transition-all duration-700 ${
+                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-7"
+                  }`}
+                  style={{ transitionDelay: `${260 + index * 90}ms` }}
+                >
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-[#1C1C1E]/32 mb-5 font-medium">
+                    0{index + 1} · {belief.en}
+                  </p>
+                  <h3 className="text-[18px] leading-[1.55] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                    {belief.title}
+                  </h3>
+                  <p className="text-[12px] leading-[1.85] text-[#1C1C1E]/45">{belief.description}</p>
+                </article>
+              ))}
             </div>
           </div>
         </div>
