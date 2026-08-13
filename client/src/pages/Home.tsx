@@ -16,6 +16,7 @@ import TimelineSection from "@/components/TimelineSection";
 import WhyEnterprise from "@/components/WhyEnterprise";
 import VenuesSection from "@/components/VenuesSection";
 import SpacesPartnersSection from "@/components/SpacesPartnersSection";
+import PlansSection from "@/components/PlansSection";
 import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
 
@@ -34,6 +35,7 @@ export default function Home() {
         <WhyEnterprise />
         <VenuesSection />
         <SpacesPartnersSection />
+        <PlansSection />
         <FAQSection />
       </main>
       <FooterSection />

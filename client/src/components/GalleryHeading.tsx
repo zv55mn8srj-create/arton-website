@@ -27,6 +27,8 @@ type GalleryHeadingProps = {
   description?: ReactNode;
   light?: boolean;
   className?: string;
+  /** Optional clamp() size for the display title, e.g. "clamp(2rem,3.4vw,3.25rem)" */
+  titleSize?: string;
 };
 
 export default function GalleryHeading({
@@ -36,6 +38,7 @@ export default function GalleryHeading({
   description,
   light = false,
   className = "",
+  titleSize = "clamp(2.85rem,5.6vw,5.75rem)",
 }: GalleryHeadingProps) {
   return (
     <div className={`relative ${className}`}>
@@ -44,7 +47,7 @@ export default function GalleryHeading({
         <span className="museum-label">Room {room} · {label}</span>
       </div>
       <h2
-        className={`text-[clamp(2.85rem,5.6vw,5.75rem)] leading-[0.98] font-light tracking-[-0.045em] ${
+        className={`text-[${titleSize}] leading-[0.98] font-light tracking-[-0.045em] ${
           light ? "text-white" : "text-[#1C1C1E]"
         }`}
         style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}

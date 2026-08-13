@@ -35,27 +35,28 @@ export default function EnterpriseSection() {
             room="03"
             label="Cultural ESG"
             title={<>為企業打造，<br />持續發生的 ESG。</>}
+            titleSize="clamp(2.15rem,3.6vw,3.4rem)"
             description={<>不是一年一次的活動，而是一場長期、可被看見、也能被記錄的文化行動。你的每一面牆，都在支持創作者靠作品持續生活。</>}
             className={`lg:col-span-5 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           />
 
           <div className="lg:col-span-7 lg:pt-20 grid sm:grid-cols-2 gap-10">
             <div className={`plaque transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              <p className="museum-label mb-7 text-[#1C1C1E]/40">Before · 難以累積</p>
+              <p className="museum-label mb-7 text-[#3D3A36]">Before · 難以累積</p>
               <div className="space-y-4">
                 {problems.map((problem, index) => (
-                  <div key={problem} className="flex gap-3 text-[14px] leading-[1.7] text-[#1C1C1E]/48">
-                    <span className="text-[#C4A265]/55">0{index + 1}</span>
+                  <div key={problem} className="flex gap-3 text-[14px] leading-[1.7] text-[#45423C]">
+                    <span className="text-[#B8954F]">0{index + 1}</span>
                     <span>{problem}</span>
                   </div>
                 ))}
               </div>
             </div>
             <div className={`plaque transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              <p className="museum-label mb-7">With ArtON · 持續發生</p>
+              <p className="museum-label mb-7 text-[#3D3A36]">With ArtON · 持續發生</p>
               <div className="space-y-4">
                 {provisions.map(({ icon: Icon, text }) => (
-                  <div key={text} className="flex items-center gap-3 text-[14px] text-[#1C1C1E]/70">
+                  <div key={text} className="flex items-center gap-3 text-[14px] text-[#45423C]">
                     <Icon className="w-4 h-4 text-[#C4A265]" strokeWidth={1.4} />
                     <span>{text}</span>
                   </div>

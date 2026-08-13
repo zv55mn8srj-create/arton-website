@@ -1,5 +1,5 @@
 /**
- * Room 09 — Visitor notes.
+ * Room 10 — Visitor notes.
  * Gallery Quietism: a fixed wall label beside a restrained question index.
  */
 import GalleryHeading, { PowerGlyph } from "./GalleryHeading";
@@ -7,7 +7,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useState } from "react";
 
 const questions = [
-  { q: "企業需要哪些設備？", a: "只需要一台顯示器或電視即可開始展示。ArtON 支援大多數螢幕設備，並會依空間條件提供設備建議與設定協助。" },
+  { q: "企業需要哪些設備？", a: "需搭配 ArtON Box 藝術盒。它輕巧易安裝，只要一台顯示器或電視，接上藝術盒即可開始展示。ArtON 支援大多數螢幕設備，並會依空間條件提供設備建議與設定協助。" },
   { q: "Samsung TV 可以使用嗎？", a: "可以。ArtON 支援 Samsung Smart TV 及多數品牌顯示設備；實際相容方式會依型號與現場網路條件確認。" },
   { q: "如何開始展示？", a: "選擇適合空間的策展內容，確認展示設備與時段後，即可開始讓作品走進您的空間。我們會陪同完成前期設定。" },
   { q: "如何支持創作者？", a: "每一次透過 ArtON 發生的展示，都讓創作者的作品被更多人看見，也將展示轉化為創作者持續的收入，讓他們能靠自己的作品持續生活。" },
@@ -23,7 +23,7 @@ export default function FAQSection() {
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-14 lg:gap-16 items-start">
           <GalleryHeading
-            room="09"
+            room="10"
             label="Visitor Notes"
             title={<>開始之前，<br />你可能想<br />知道的事。</>}
             description={<>如果你的空間、設備或 ESG 紀錄有不同需求，我們也會依實際情況一起規劃。</>}
@@ -51,7 +51,7 @@ export default function FAQSection() {
                   </button>
                   <div className={`grid transition-[grid-template-rows,opacity] duration-300 ${expanded ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
                     <div className="overflow-hidden">
-                      <p className="pb-8 pl-[50px] pr-8 max-w-2xl text-[14px] leading-[1.95] text-[#1C1C1E]/48">{item.a}</p>
+                      <p className="pb-8 pl-[50px] pr-8 max-w-2xl text-[14px] leading-[1.95] text-[#45423C]">{item.a}</p>
                     </div>
                   </div>
                 </article>

@@ -56,6 +56,7 @@ export default function CuratorSection() {
               room="04"
               label="For Curators"
               title={<>策展一次，<br />讓更多創作者<br />有收入。</>}
+              titleSize="clamp(2.15rem,3.6vw,3.4rem)"
               description={<>你的策展讓作品走進更多企業與生活空間，持續被看見，也讓藝術家靠作品獲得穩定、長期的收入。</>}
               className={`transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             />

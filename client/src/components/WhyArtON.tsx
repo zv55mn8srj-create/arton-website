@@ -12,6 +12,7 @@ const beliefs = [
     en: "Ability",
     title: "看見能力，而不是標籤",
     description: "身心障礙不是作品的註解。創作的專業、觀點與價值，值得被公平看見。",
+    emphasis: true,
   },
   {
     en: "Independence",
@@ -37,6 +38,7 @@ export default function WhyArtON() {
             room="01"
             label="Our Why · 品牌初心"
             title={<>讓創作者，<br />靠自己的作品<br />站穩腳步。</>}
+            titleSize="clamp(2.15rem,3.6vw,3.4rem)"
             description={<>我們相信，藝術可以改變生活，也能改變一個人的未來。</>}
             className={`lg:col-span-5 lg:sticky lg:top-32 transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -84,7 +86,15 @@ export default function WhyArtON() {
                   <h3 className="text-[18px] leading-[1.55] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                     {belief.title}
                   </h3>
-                  <p className="text-[12px] leading-[1.85] text-[#1C1C1E]/45">{belief.description}</p>
+                  <p
+                    className={`text-[12px] leading-[1.85] ${
+                      (belief as { emphasis?: boolean }).emphasis
+                        ? "text-[#3D3A36] font-medium"
+                        : "text-[#1C1C1E]/45"
+                    }`}
+                  >
+                    {belief.description}
+                  </p>
                 </article>
               ))}
             </div>
