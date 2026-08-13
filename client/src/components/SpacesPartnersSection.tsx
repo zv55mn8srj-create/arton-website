@@ -1,14 +1,12 @@
 /**
- * Room 09 — Real exhibition spaces + Partners.
- * Gallery Quietism: documentary photography of art living in everyday
- * places (clinic, café, reception, hotel, living room), followed by a
- * quiet partnership wall led by disability-art collaborators.
+ * Room 09 — Partners.
+ * Gallery Quietism: a quiet partnership wall led by disability-art
+ * collaborators.
  */
-import GalleryHeading from "./GalleryHeading";
 import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const spaces = [
+const _unused = [
   {
     name: "客廳",
     en: "Living Room",
@@ -60,63 +58,9 @@ export default function SpacesPartnersSection() {
   const { ref, isVisible } = useScrollAnimation(0.04);
 
   return (
-    <>
-      {/* Real exhibition spaces — documentary photo essay */}
-      <section className="py-28 md:py-40 bg-[#F7F4EF] overflow-hidden">
-        <div className="container" ref={ref}>
-          <div className="grid lg:grid-cols-12 gap-10 mb-14 md:mb-20">
-            <GalleryHeading
-              room="09"
-              label="Art Living In"
-              title={<>藝術，<br />正在這些<br />空間裡發生。</>}
-              description={<>不是想像，而是真實展示的場景。藝術走進客廳、診所、咖啡廳與接待區，成為空間的一部分，也成为創作者收入的一部分。
-              </>}
-              className={`lg:col-span-7 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-            />
-          </div>
-
-          <div className="grid md:grid-cols-12 gap-4 md:auto-rows-[230px]">
-            {spaces.map((space, index) => {
-              const layout = [
-                "md:col-span-7 md:row-span-2",
-                "md:col-span-5 md:row-span-1",
-                "md:col-span-5 md:row-span-1",
-                "md:col-span-4 md:row-span-1",
-                "md:col-span-4 md:row-span-1",
-              ][index];
-              return (
-                <figure
-                  key={space.name}
-                  className={`group relative min-h-[300px] md:min-h-0 overflow-hidden ${layout} transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-9"}`}
-                  style={{ transitionDelay: `${index * 75}ms` }}
-                >
-                  <img
-                    src={space.image}
-                    alt={`${space.name}藝術展示空間`}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/68 via-black/8 to-transparent" />
-                  <figcaption className="absolute inset-x-0 bottom-0 p-6 md:p-7 text-white">
-                    <div className="flex items-end justify-between gap-6">
-                      <div>
-                        <p className="text-[10px] uppercase tracking-[0.2em] text-[#E3C98D] mb-2">0{index + 1} · {space.en}</p>
-                        <h3 className="text-[25px] md:text-[30px] font-light" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                          {space.name}
-                        </h3>
-                      </div>
-                      <p className="hidden lg:block max-w-[220px] text-[12px] leading-[1.7] text-white/62 text-right">{space.description}</p>
-                    </div>
-                  </figcaption>
-                </figure>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Partners — supporting disability art creation */}
-      <section className="py-28 md:py-40 bg-white overflow-hidden">
-        <div className="container" ref={ref}>
+    // Partners — supporting disability art creation
+    <section className="py-28 md:py-40 bg-white overflow-hidden">
+      <div className="container" ref={ref}>
           <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
             <p
               className={`text-[#C4A265] text-[12px] md:text-[13px] uppercase tracking-[0.35em] mb-6 font-medium transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
@@ -173,6 +117,5 @@ export default function SpacesPartnersSection() {
           </div>
         </div>
       </section>
-    </>
   );
 }
