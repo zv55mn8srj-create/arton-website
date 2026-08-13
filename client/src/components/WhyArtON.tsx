@@ -38,7 +38,7 @@ export default function WhyArtON() {
             room="01"
             label="Our Why · 品牌初心"
             title={<>讓創作者，<br />靠自己的作品<br />站穩腳步。</>}
-            titleSize="clamp(2.15rem,3.6vw,3.4rem)"
+            titleSize="clamp(2.55rem,4.4vw,4.25rem)"
             description={<>我們相信，藝術可以改變生活，也能改變一個人的未來。</>}
             className={`lg:col-span-5 lg:sticky lg:top-32 transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
