@@ -115,7 +115,7 @@ export default function SpacesPartnersSection() {
               </p>
             </a>
           </div>
-        </div>
+      </div>
       </section>
   );
 }

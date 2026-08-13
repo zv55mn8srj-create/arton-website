@@ -29,6 +29,7 @@ export default function ExploreSection() {
             room="05"
             label="Current Exhibitions"
             title={<>把喜歡的<br />藝術，帶進<br />你的空間。</>}
+            titleSize="clamp(2.6rem,4.6vw,4.6rem)"
             className={`lg:col-span-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           />
           <div className={`lg:col-span-4 lg:col-start-9 pb-2 transition-all duration-700 delay-150 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>

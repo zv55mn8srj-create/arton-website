@@ -38,6 +38,7 @@ export default function WhyEnterprise() {
               label="Why ArtON"
               light
               title={<>企業選擇的，<br />不只是一面<br />更好看的牆。</>}
+              titleSize="clamp(2.6rem,4.6vw,4.6rem)"
               className={`transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             />
             <div className="mt-12">

@@ -26,6 +26,7 @@ export default function VenuesSection() {
             room="08"
             label="Art in Space"
             title={<>每一種空間，<br />都有一種<br />遇見藝術的方式。</>}
+            titleSize="clamp(2.6rem,4.6vw,4.6rem)"
             description={<>從診所、飯店到企業與校園，展示不需要離生活很遠；它就在每天會停留、會經過的地方。</>}
             className={`lg:col-span-7 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           />
