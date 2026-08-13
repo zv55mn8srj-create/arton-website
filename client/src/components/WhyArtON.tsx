@@ -87,10 +87,10 @@ export default function WhyArtON() {
                     {belief.title}
                   </h3>
                   <p
-                    className={`text-[12px] leading-[1.85] ${
+                    className={`text-[13.5px] leading-[1.85] ${
                       (belief as { emphasis?: boolean }).emphasis
                         ? "text-[#3D3A36] font-medium"
-                        : "text-[#1C1C1E]/45"
+                        : "text-[#1C1C1E]/72 font-medium"
                     }`}
                   >
                     {belief.description}

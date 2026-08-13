@@ -34,8 +34,8 @@ export default function Home() {
         <TimelineSection />
         <WhyEnterprise />
         <VenuesSection />
-        <SpacesPartnersSection />
         <FAQSection />
+        <SpacesPartnersSection />
         <PlansSection />
       </main>
       <FooterSection />
