@@ -141,7 +141,7 @@ export default function PlansSection() {
               </ul>
 
               <a
-                href={LINKS.customerLine}
+                href={LINKS.email}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`group inline-flex items-center justify-center gap-2.5 text-[13.5px] font-medium tracking-[0.04em] px-6 py-4 transition-all duration-200 active:scale-[0.97] ${

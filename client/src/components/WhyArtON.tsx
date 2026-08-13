@@ -38,7 +38,7 @@ export default function WhyArtON() {
             room="01"
             label="Our Why · 品牌初心"
             title={<>讓創作者，<br />靠自己的作品<br />站穩腳步。</>}
-            titleSize="clamp(2.55rem,4.4vw,4.25rem)"
+            titleSize="clamp(3.1rem,5.4vw,5.6rem)"
             description={<>我們相信，藝術可以改變生活，也能改變一個人的未來。</>}
             className={`lg:col-span-5 lg:sticky lg:top-32 transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -51,7 +51,7 @@ export default function WhyArtON() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              <p className="text-[clamp(1.55rem,2.8vw,2.65rem)] leading-[1.48] font-light tracking-[-0.03em] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+              <p className="text-[clamp(1.6rem,2.5vw,2.35rem)] leading-[1.55] font-light tracking-[-0.02em] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                 許多優秀的藝術家，並不缺少創作能力，而是缺少持續被看見的機會。
               </p>
               <p>其中，也包含許多身心障礙藝術家。他們創作出動人的作品，卻往往只能在短暫的展覽中被看見；展覽結束後，作品離開視線，創作也失去了穩定的收入來源。</p>
@@ -65,7 +65,7 @@ export default function WhyArtON() {
               }`}
             >
               <PowerGlyph className="w-7 h-7 text-[#C4A265] mb-7" />
-              <p className="text-[clamp(1.75rem,3.3vw,3.4rem)] leading-[1.45] font-light tracking-[-0.035em] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+              <p className="text-[clamp(1.65rem,2.6vw,2.5rem)] leading-[1.5] font-light tracking-[-0.025em] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                 真正的支持，不是一次性的捐助，<br className="hidden md:block" />
                 而是讓創作者能靠自己的作品，持續走下去。
               </p>
