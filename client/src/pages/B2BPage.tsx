@@ -40,29 +40,8 @@ const painSolutions = [
   { pain: "多據點管理成本高", solution: "雲端排程，所有空間統一更新" },
 ];
 
-const plans = [
-  {
-    name: "無痛體驗方案",
-    price: "999",
-    period: "/月",
-    term: "綁約 1 年",
-    badge: "隨插即用",
-    highlight: "直接送 ArtON Box 藝術盒",
-    note: "退訂收回裝置，月租低負擔、免大額採購。",
-    features: ["ArtON Box 藝術盒（隨插即用）", "自備螢幕即可展示", "每月策展內容自動更新", "雲端管理與展示紀錄"],
-  },
-  {
-    name: "ArtON 藝術展示面板",
-    price: "1,499",
-    period: "/月",
-    term: "綁約 2 年",
-    badge: "畫廊質感",
-    highlight: "專為藝術展示打造",
-    note: "精準還原色彩、霧面抗眩光，讓每件作品展現最佳質感。多種尺寸依需求配置，提供專人規劃與報價。",
-    features: ["畫廊級色彩校準與精準還原", "霧面抗眩光面板", "木質外框、展牆即視感", "每月策展內容自動更新", "雲端管理與展示紀錄"],
-    recommended: true,
-  },
-];
+// 標準月費方案卡（無痛體驗 999／藝術展示面板 1499）已依品牌方向移除，程式碼保留供日後啟用。
+const plans: never[] = [];
 
 const epaperPlan = {
   label: "OPTION 03",
@@ -211,64 +190,11 @@ export default function B2BPage() {
         <section className="py-24 md:py-32 bg-[#FBFAF7]">
           <div className="container">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-14 text-center">
-              Subscription Plans · 以租代買，零重採購
+              B2B Plans · 永續電子紙與企業客製
             </p>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
-              {plans.map((plan, i) => (
-                <div
-                  key={plan.name}
-                  className={`relative flex flex-col p-9 md:p-11 transition-all duration-700 ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                  } ${
-                    plan.recommended
-                      ? "bg-[#16202B] text-white shadow-[0_32px_90px_rgba(22,32,43,0.4)] border-t-4 border-[#E8B339] -my-4 py-14"
-                      : "bg-white border border-[#E7E0D5] shadow-[0_18px_50px_rgba(44,37,27,0.06)]"
-                  }`}
-                  style={{ transitionDelay: `${i * 130}ms` }}
-                >
-                  {plan.recommended && (
-                    <span className="absolute -top-4 left-9 bg-[#E8B339] text-[#16202B] text-[11px] font-bold tracking-[0.15em] uppercase px-3.5 py-1.5 rounded-full">
-                      {plan.badge}
-                    </span>
-                  )}
-                  <p className={`text-[11px] uppercase tracking-[0.25em] mb-4 font-semibold ${plan.recommended ? "text-[#E8B339]" : "text-[#B8954F]"}`}>
-                    {plan.name}
-                  </p>
-                  <div className="flex items-end gap-2 mb-2">
-                    <span className="text-[14px] text-[#B8954F] mb-2">NT$</span>
-                    <span className="text-[clamp(2.8rem,4vw,3.6rem)] leading-none font-light text-[#B8954F]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                      {plan.price}
-                    </span>
-                    <span className={`text-[14px] mb-1.5 ${plan.recommended ? "text-white/60" : "text-[#1C1C1E]/45"}`}>{plan.period}</span>
-                  </div>
-                  <p className={`text-[13px] mb-6 ${plan.recommended ? "text-white/65" : "text-[#1C1C1E]/50"}`}>
-                    {plan.term} · {plan.highlight}
-                  </p>
-                  <p className={`text-[13px] leading-[1.85] mb-8 ${plan.recommended ? "text-white/70" : "text-[#45423C]"}`}>{plan.note}</p>
-                  <ul className={`space-y-3 mb-10 flex-1 ${plan.recommended ? "" : ""}`}>
-                    {plan.features.map((f) => (
-                      <li key={f} className="flex items-start gap-3 text-[13.5px] leading-[1.7]">
-                        <Check className={`w-4 h-4 mt-0.5 shrink-0 ${plan.recommended ? "text-[#E8B339]" : "text-[#B8954F]"}`} strokeWidth={2.2} />
-                        <span className={plan.recommended ? "text-white/85" : "text-[#1C1C1E]/78"}>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={LINKS.customerLine}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`group inline-flex items-center justify-center gap-2.5 text-[14px] font-semibold px-6 py-4 rounded-full transition-all duration-200 active:scale-[0.97] ${
-                      plan.recommended
-                        ? "bg-[#E8B339] text-[#16202B] hover:bg-[#F0B429]"
-                        : "border border-[#1C1C1E]/35 text-[#1C1C1E] hover:border-[#B8954F] hover:text-[#B8954F]"
-                    }`}
-                  >
-                    <MessageCircle className="w-4 h-4" strokeWidth={2} />
-                    加入 LINE 諮詢方案
-                  </a>
-                </div>
-              ))}
-            </div>
+            <p className={`max-w-2xl mx-auto text-center text-[15px] md:text-[16.5px] leading-[2] text-[#45423C] mb-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+              B2B 空間以永續電子紙展示與企業客製方案為核心，尺寸與報價皆依您的空間規劃。
+            </p>
             {/* E-Paper — 洽詢方案（不標價） */}
             <div className="mt-10 flex justify-center">
               <div
