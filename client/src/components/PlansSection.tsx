@@ -45,7 +45,7 @@ const bundledPlans: BundledPlan[] = [
     term: "綁約 1 年",
     device: "直接送 ArtON Box 藝術盒",
     note: "隨插即用，退訂收回裝置。月租低負擔、免大額採購，讓藝術展示輕鬆落地。",
-    features: ["ArtON Box 藝術盒（含於月費）", "搭配自備螢幕即可展示", "每月策展內容自動更新", "雲端管理與展示紀錄"],
+    features: ["ArtON Box 藝術盒（含於月費）", "搭配自備螢幕即可展示", "每月策展內容自動更新", "雲端管理與年度 ESG 報告"],
     cta: "加入 LINE 開始訂閱",
   },
   {
@@ -55,7 +55,7 @@ const bundledPlans: BundledPlan[] = [
     term: "綁約 2 年",
     device: "附贈 21.5 吋高質感藝術面板",
     note: "一體到位、質感首選，霧面抗眩光如同真實畫布。",
-    features: ["21.5 吋高質感藝術面板（含於月費）", "博物館級色彩校準", "每月策展內容自動更新", "雲端管理與年度 ESG 報告"],
+    features: ["21.5 吋高質感藝術面板（含於月費）", "博物館級色彩校準", "每月策展內容自動更新", "雲端管理與年度 ESG 報告匯出"],
     cta: "加入 LINE 開始訂閱",
     recommended: true,
     badge: "質感首選",
