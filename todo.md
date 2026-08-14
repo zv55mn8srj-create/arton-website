@@ -136,3 +136,49 @@
 - B2BPage：Hero 新標語「讓每一面牆，成為 2026 永續報告書裡會減碳、支持創作者的 ESG 實踐」；副標定位「藝術展示服務平台…讓 ESG 的 E 與 S 同時被記錄」；四大亮點（E·減碳展示終端 / 一鍵匯出 ESG 報告 / 合法採購與完整憑證 / S·社會影響力）；新增 Why E-Paper 深色區塊（99% 省電、446 度、227 kg CO2 三個 EcoStat＋估算基準註）；「永續電子紙方案」取代面板方案為推薦（E·S 雙效益徽章、1,499/月綁約2年附 21.5 吋全彩電子紙、年省約 446 度電減碳 227 kg）；Final CTA 改為「吃最少電的展示終端，產出最高 S&E 價值的永續實踐」
 - PlansSection 電子紙卡片副標同步「1677 萬真全彩｜省電 99%｜年減碳約 227 kg」
 - TS 0 errors，首頁/ /b2b/ /curator 三頁截圖正常
+
+# 第十三輪改版待辦（2026-08-14）
+- [ ] 修正 CuratorPage 策展人 FAQ「策展上架需付費嗎？」答案：目前推廣期 ArtON 邀約的策展人不收費，日後保留收費可能；策展上架後進入 ArtON 策展目錄，企業訂閱後作品開始播放，策展人與藝術家同步獲得展示帶來的持續收益
+- [ ] /start 加入「成為 ArtON 創始合作夥伴」區塊（參照附圖：左側傾斜 FOUNDING PARTNER 名牌卡、中間 FOR THE FIRST SPACES 標籤＋「成為 ArtON 創始合作夥伴。」標題＋首批合作空間期間免費體驗文案＋「體驗期間不收月費・體驗後 NT$799／月起」＋「申請免費體驗」mail 按鈕、右側花田畫作直幅照片）
+- [ ] 裁切花田畫作直幅供該區塊使用並上傳 webdev 靜態資產（/home/ubuntu/webdev-static-assets/paintings/ 中的花開時節直幅）
+- [ ] 驗證截圖並交付
+
+## 附圖設計細節（pasted_file_AYnvhF_image.webp）
+- 區塊背景：暖白 #FAF7F0；標籤 FOR THE FIRST SPACES（金、字距寬）
+- 標題：「成為 ArtON（深藍）創始（灰底 highlight）合作夥伴。（金）」
+- 副文：首批合作空間可享有期間免費體驗，讓身障藝術展覽內容、ArtON 播放設備與平台服務，先進入你的空間。
+- 兩項 bullet：體驗期間不收月費｜體驗後 NT$799／月起
+- 按鈕：申請免費體驗（白底黑框 + mail icon）→ mailto:arton.contact@gmail.com
+- 左側：傾斜約 -6° 的白色名牌卡「ARTON FOUNDING PARTNER」金線
+- 右側：花田畫作直幅（前景紅色花田＋遠景海與山）
+
+## 第十三輪進度（截至導覽問題回報）
+- 已完成（未 checkpoint）：CuratorPage FAQ 收費答案改「推廣期不收費」；/start 新增創始合作夥伴區塊（花田直幅 /manus-storage/founding-art_d2e8df21.jpg，PlansSection 之前）；截圖驗證 /start 與 /curator 渲染正常。
+- 待辦：保存 checkpoint、交付第十三輪。
+
+# 用戶回報導覽問題（2026-08-14 新需求，優先）
+用戶測到：從三個子頁（/start、/curator、/b2b）點擊 menu「關於 ArtON、企業 ESG、探索策展、常見問題」，
+跟在主頁點擊同樣連結，行為有問題，請實際用瀏覽器測試並修正。
+- Header.tsx 現況：onAnchorClick 處理——主頁直接平滑滾動（scrollIntoView）；子頁則用 Link navigate("/") 後嘗試滾動到 hash。
+- 疑點：子頁點擊後 navigate("/") 為異步導航，scrollIntoView 在頁面尚未載入時執行 → 滾到頂部、錨點失效。需在主頁導航完成後再滾動（監聽路徑或延遲重試）。
+- 主頁上點擊的行為也需確認是否跳躍異常（可能 hash link 觸發 SPA 路由混淆）。
+
+## 瀏覽器實測發現（2026-08-14）
+測試：在 /start 點擊 menu「關於 ArtON」（href="#about"）。
+結果：URL 變成 /start#about，但視窗仍停在頂部（Hero），頁面沒有導回主頁也沒有滾動到主頁 #about。
+根因確認：Header 的 onAnchorClick 以 preventDefault + 檢查 location.pathname === "/" 決定行為。
+但生產版（部署）上的 Header 可能仍保留舊版 href="#about" 原生錨點——在子頁上 hash 錨點不會跨頁跳轉（SPA），故卡在 /start#about 頂部。
+需檢查 dev 版 Header.tsx 現況：若 onAnchorClick 已存在但生產版未發佈則可能是舊版；若已發佈則看邏輯：
+- 主頁：element.scrollIntoView({behavior:"smooth"}) 應可工作（待實測）
+- 子頁：Link("/") + 之後滾動 → 若滾動在導航完成前執行則失效
+修正方案：全部改為 <a href="#about"> 原生錨點，並用 history.replaceState + scrollIntoView 監聽 popstate？
+更簡單穩健方案：子頁連結改為完整路徑 href="/#about"，用 JS 監聽所有 a[href^="/#"]，導航到 "/" 後用 setTimeout/retry 滾動到目標 hash。
+
+## 導覽連結修正狀態（2026-08-14）
+- 已完成 Header.tsx 重寫：AnchorLink 元件，主頁直接 scrollToAnchor（帶重試），子頁 navigate('/#anchor')。
+- 已在 App.tsx 掛上 useHashScroll（從 Header 匯入），路由到達 / 帶 hash 時自動滾到目標區塊。
+- 實測（生產 /start）：點擊「關於 ArtON」→ URL 變 /start#about，但頁面停在 /start 沒有滾動到主頁 about 區塊 —— 說明 navigate('/#about') 未觸發路由導航（可能 wouter 把 hash 當成路徑 or 已在 /start）。
+- 下一步排查：wouter navigate('/#about') 的行為；測試 dev server 版是否同樣問題。
+
+### 第二次測試（dev 環境 /start）
+點「企業 ESG」→ URL 變 /start#enterprise，但頁面完全停在 /start 頂部，沒有導回主頁也沒有滾動。確認 navigate('/#enterprise') 在 wouter 中不觸發導航（同一頁面 hash 變化不觸發 Route 改變，且 wouter 可能忽略 hash）。修復方向：改為 navigate('/') 強制回到主頁，useHashScroll 在 hash 存在時於主頁掛載後滾動。需驗證 production 版使用最新版本（可能用戶測試的是舊版）。注意：sandbox 瀏覽器可能開啟的是 auto-publish 的生產版，而我們剛修的代碼需 checkpoint 才會發佈（auto-publish 開啟）。

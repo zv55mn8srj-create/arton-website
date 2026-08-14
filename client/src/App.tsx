@@ -5,12 +5,16 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import { useHashScroll } from "./components/Header";
 import StartPage from "./pages/StartPage";
 import CuratorPage from "./pages/CuratorPage";
 import B2BPage from "./pages/B2BPage";
 
 
 function Router() {
+  // Auto-scroll to the target section when arriving at the homepage with a
+  // hash (e.g. navigating "/#enterprise" from a sub-page or loading it directly).
+  useHashScroll();
   return (
     <Switch>
       <Route path={"/"} component={Home} />

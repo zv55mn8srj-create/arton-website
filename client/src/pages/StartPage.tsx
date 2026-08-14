@@ -15,6 +15,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Check, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 
 const LINE_QR = "/manus-storage/line-qr-customer_068ac53d.png";
+const FOUNDING_ART = "/manus-storage/founding-art_d2e8df21.jpg";
 
 const planComparison = [
   {
@@ -158,6 +159,68 @@ export default function StartPage() {
                   <p className="text-[13px] leading-[1.9] text-[#45423C]">{step.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Founding Partner */}
+        <section className="py-24 md:py-32 bg-[#F2EEE7] overflow-hidden">
+          <div className="container">
+            <div className="grid md:grid-cols-[2fr_3fr_2.6fr] items-center gap-10 md:gap-8">
+              {/* Tilted plaque card */}
+              <div className="hidden md:flex justify-center">
+                <div className="plaque w-52 h-52 bg-[#FBFAF7] rotate-[-4deg] flex flex-col items-center justify-center gap-5 shadow-[0_14px_44px_rgba(28,28,30,0.10)]">
+                  <span className="text-[11px] uppercase tracking-[0.42em] text-[#1C1C1E]/60">ArtON</span>
+                  <span className="text-[clamp(1.5rem,2.2vw,1.9rem)] leading-[1.3] text-[#1C1C1E] text-center font-light" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                    Founding<br />Partner
+                  </span>
+                  <span className="block w-12 h-[2px] bg-[#E8B339]" />
+                </div>
+              </div>
+              {/* Copy */}
+              <div>
+                <p className="text-[11px] md:text-[12px] uppercase tracking-[0.32em] text-[#C4A265] mb-6 font-semibold">For The First Spaces · 首批合作空間</p>
+                <h2 className="text-[clamp(2.2rem,4.2vw,4rem)] leading-[1.25] font-light text-[#1C1C1E] mb-7" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                  成為 ArtON<br />
+                  <span className="text-[#B8954F]">創始合作夥伴。</span>
+                </h2>
+                <p className="text-[14.5px] leading-[2] text-[#45423C] max-w-md mb-8">
+                  首批合作空間可享期間免費體驗，讓身障藝術展覽內容、ArtON 播放設備與平台服務，先進入你的空間。
+                </p>
+                <div className="flex flex-wrap items-center gap-x-8 gap-y-3 mb-9">
+                  <span className="inline-flex items-center gap-2.5 text-[13.5px] text-[#1C1C1E]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E8B339]" />
+                    體驗期間不收月費
+                  </span>
+                  <span className="inline-flex items-center gap-2.5 text-[13.5px] text-[#1C1C1E]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E8B339]" />
+                    體驗後 NT$799／月起
+                  </span>
+                </div>
+                <a
+                  href={LINKS.customerLine}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-3 px-8 py-4 border border-[#1C1C1E]/25 text-[#1C1C1E] text-[15px] font-medium rounded-full hover:bg-[#1C1C1E] hover:text-white transition-all duration-300 active:scale-[0.97]"
+                >
+                  申請免費體驗
+                  <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </a>
+              </div>
+              {/* Art */}
+              <div className="relative">
+                <div className="absolute -inset-4 border border-[#C4A265]/35 rotate-[1.5deg]" aria-hidden="true" />
+                <img
+                  src={FOUNDING_ART}
+                  alt="身障藝術家《花開時節與海與島》—— 首批合作空間預覽"
+                  className="relative w-full aspect-[2/3] object-cover shadow-[0_18px_50px_rgba(28,28,30,0.14)]"
+                />
+                <p className="absolute bottom-4 left-5 right-5 text-white/90 text-[10.5px] uppercase tracking-[0.24em] font-medium">
+                  Founding Spaces / Art Preview
+                </p>
+              </div>
             </div>
           </div>
         </section>
