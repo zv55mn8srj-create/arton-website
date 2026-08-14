@@ -69,3 +69,9 @@
 4. /b2b：完整正常，四大亮點、痛點→解方、兩組合包方案、LINE CTA，OK。
 5. 所有頁面 TypeScript 0 errors，devserver 無新錯誤。
 6. 尚待檢查：桌面版 Hero 是否因新增副標文字過長而溢位（截圖未細看），需放大檢視首頁首屏。
+
+# 第九輪改版待辦（2026-08-14）
+- [ ] 產生客戶 LINE QR Code 圖片（https://lin.ee/yEZxsB3），上傳為 webdev 靜態資產
+- [ ] StartPage 加入 QR Code 掃碼區塊（桌面可掃碼、行動可點擊按鈕）
+- [ ] StartPage 方案區新增價格比較表（一般訂閱 vs 組合包），凸顯以租代買優勢
+- [ ] 驗證截圖並交付

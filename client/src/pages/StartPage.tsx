@@ -14,6 +14,46 @@ import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Check, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 
+const LINE_QR = "/manus-storage/line-qr-customer_068ac53d.png";
+
+const planComparison = [
+  {
+    category: "月費",
+    general: "NT$799／月起（另需自購硬體）",
+    bundle: "NT$999／月起（含 ArtON Box）",
+  },
+  {
+    category: "硬體取得方式",
+    general: "自行採購 ArtON Box（NT$2,200）或租用",
+    bundle: "綁約即送，直接隨方案提供，退訂收回",
+  },
+  {
+    category: "前期投入",
+    general: "訂閱費 + 硬體一次性支出，啟動門檻較高",
+    bundle: "零硬體支出，以租代買，月費全包無負擔",
+  },
+  {
+    category: "策展內容更新",
+    general: "每月自動更新",
+    bundle: "每月自動更新",
+  },
+  {
+    category: "雲端管理與展示紀錄",
+    general: "✓ 含",
+    bundle: "✓ 含",
+  },
+  {
+    category: "ESG 成果紀錄",
+    general: "✓ 含",
+    bundle: "✓ 含",
+  },
+  {
+    category: "適合對象",
+    general: "已備有顯示設備、想自行管理硬體",
+    bundle: "無現成螢幕、不想花大錢採購的企業",
+  },
+];
+
 const reasons = [
   {
     title: "輕量訂閱",
@@ -124,6 +164,80 @@ export default function StartPage() {
 
         {/* Plans (subscription + hardware) */}
         <PlansSection />
+
+        {/* Price comparison */}
+        <section className="py-24 md:py-32 bg-[#F7F4EF]">
+          <div className="container">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-12 text-center">Compare Plans · 哪種方式適合您</p>
+            <h2 className="text-[clamp(1.8rem,3.2vw,3rem)] leading-[1.3] font-light text-center text-[#1C1C1E] mb-4 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+              以租代買，<br className="hidden sm:block" />啟動門檻更低。
+            </h2>
+            <p className="text-[14px] text-center text-[#45423C] max-w-xl mx-auto mb-14 leading-[1.9]">
+              一般訂閱需另購硬體，組合包方案將硬體直接納入月費，無需大額前期投入。
+            </p>
+            <div className="max-w-3xl mx-auto overflow-hidden bg-white shadow-[0_10px_40px_rgba(28,28,30,0.06)]">
+              <div className="overflow-x-auto">
+                <table className="w-full text-[14px]">
+                  <thead>
+                    <tr className="border-b border-[#1C1C1E]/10">
+                      <th className="text-left py-5 px-6 md:px-8 font-medium text-[#1C1C1E]/50 w-[28%]">比較項目</th>
+                      <th className="text-left py-5 px-6 md:px-8 font-medium text-[#1C1C1E]">一般訂閱</th>
+                      <th className="text-left py-5 px-6 md:px-8 font-semibold text-[#B8954F] bg-[#C4A265]/6">組合包方案<br /><span className="text-[11px] font-normal text-[#1C1C1E]/50">以租代買</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {planComparison.map((row) => (
+                      <tr key={row.category} className="border-b border-[#1C1C1E]/6 last:border-0 align-top">
+                        <td className="py-4.5 px-6 md:px-8 text-[#1C1C1E]/60">{row.category}</td>
+                        <td className="py-4.5 px-6 md:px-8 text-[#45423C] leading-[1.8]">{row.general}</td>
+                        <td className="py-4.5 px-6 md:px-8 text-[#1C1C1E] leading-[1.8] bg-[#C4A265]/6">{row.bundle}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p className="text-center text-[12.5px] text-[#1C1C1E]/45 mt-8">
+              詳細報價依據點數量與現場條件評估，歡迎加入 LINE 免費諮詢。
+            </p>
+          </div>
+        </section>
+
+        {/* LINE QR Code — desktop scan */}
+        <section className="py-24 md:py-28 bg-[#FBFAF7]">
+          <div className="container">
+            <div className="plaque max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
+              <div className="flex-shrink-0">
+                <div className="w-40 h-40 md:w-44 md:h-44 bg-white p-4 shadow-[0_8px_30px_rgba(28,28,30,0.08)]">
+                  <img
+                    src={LINE_QR}
+                    alt="ArtON 客戶 LINE QR Code"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div>
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#C4A265] font-semibold mb-4">Scan to Consult</p>
+                <h2 className="text-[clamp(1.6rem,2.8vw,2.6rem)] leading-[1.35] font-light text-[#1C1C1E] mb-5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                  用電腦瀏覽？<br />
+                  掃碼即可加入諮詢。
+                </h2>
+                <p className="text-[14px] leading-[1.9] text-[#45423C] max-w-md mb-7">
+                  使用手機開啟 LINE 掃描上方 QR Code，即可加入 ArtON 客戶專線，與顧問聊聊您的空間與預算。
+                </p>
+                <a
+                  href={LINKS.customerLine}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#1C1C1E] text-white text-[14px] font-medium rounded-full hover:bg-[#333336] transition-all duration-300 active:scale-[0.97]"
+                >
+                  <MessageCircle className="w-4 h-4" strokeWidth={2} />
+                  或直接點擊加入 LINE
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Final CTA */}
         <section className="py-24 md:py-32 bg-[#1C1C1E] text-white text-center">
