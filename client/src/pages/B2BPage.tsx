@@ -12,14 +12,14 @@ import { ArrowRight, Check, FileOutput, Landmark, MessageCircle, Leaf, WifiOff }
 
 const highlights = [
   {
-    icon: Leaf,
-    title: "E · 減碳展示終端",
-    description: "全彩電子紙較傳統液晶省電約 99%。一年幫你省下上百度電與數十公斤碳排放，讓每一面展示牆都成為低碳實踐。",
+    icon: Check,
+    title: "S · 身障創作者支持",
+    description: "每一次訂閱，都直接支持身心障礙創作者，讓他們靠自己的作品獲得持續收入，同時累積 DEI 與文化永續的可記錄成果。",
   },
   {
     icon: FileOutput,
     title: "一鍵匯出 ESG 報告",
-    description: "減碳量、展示據點、支持藝術家數量與年度展示紀錄，直接匯出成可放入企業永續報告書的格式。",
+    description: "支持創作者數量、展示天數與年度展示紀錄，直接匯出成可放入企業永續報告書的格式。",
   },
   {
     icon: Landmark,
@@ -27,9 +27,9 @@ const highlights = [
     description: "ArtON 是藝術展示服務平台。企業付費採購藝術服務，取得完整憑證、授權文件與發票，協助財務、稅務與 ESG 申報。",
   },
   {
-    icon: Check,
-    title: "S · 身障創作者支持",
-    description: "每一次訂閱，都直接支持身心障礙創作者，讓他們靠自己的作品獲得持續收入，同時累積 DEI 與文化永續的可記錄成果。",
+    icon: Leaf,
+    title: "E · 減碳升級選項",
+    description: "想要更進一步？可升級全彩電子紙，較傳統液晶省電約 99%，讓 ESG 的 E 與 S 同時被記錄。",
   },
 ];
 
@@ -40,17 +40,81 @@ const painSolutions = [
   { pain: "多據點管理成本高", solution: "雲端排程，所有空間統一更新" },
 ];
 
-// 標準月費方案卡（無痛體驗 999／藝術展示面板 1499）已依品牌方向移除，程式碼保留供日後啟用。
-const plans: never[] = [];
+const plans = [
+  {
+    no: "PLAN 01",
+    name: "無痛體驗方案",
+    tagline: "綁約 1 年 · 直接送 ArtON Box 藝術盒",
+    features: [
+      "軟體訂閱＋ArtON Box 藝術盒（隨插即用）",
+      "自備螢幕即可展示",
+      "每月策展內容自動更新",
+      "雲端管理與展示紀錄",
+      "年度 ESG 成果報告",
+      "支援身障創作者持續收入",
+    ],
+    price: "NT$999",
+    per: "/月",
+    note: "退訂收回裝置，月租低負擔、免大額採購。",
+    cta: "加入 LINE 諮詢方案",
+    ctaHref: "line",
+  },
+  {
+    no: "PLAN 02",
+    name: "全包輕量面板方案",
+    tagline: "綁約 2 年 · 附贈 21.5 吋高質感藝術面板",
+    features: [
+      "軟體訂閱＋21.5 吋藝術展示面板",
+      "畫廊級色彩校準與精準還原",
+      "霧面抗眩光、木質外框展牆質感",
+      "每月策展內容自動更新",
+      "雲端管理與展示紀錄",
+      "年度 ESG 成果報告",
+      "支援身障創作者持續收入",
+    ],
+    price: "NT$1,499",
+    per: "/月",
+    note: "隨方案送面板，免去採購與校準成本。",
+    cta: "加入 LINE 諮詢方案",
+    ctaHref: "line",
+  },
+];
+
+const esgMap = [
+  {
+    target: "SDG 8",
+    name: "良好工作與經濟成長",
+    description: "2030 目標明確寫明「為身心障礙者實現體面工作與同值同酬」。訂閱支持身障創作者持續獲得展示收入，即為企業日常實踐。",
+    metric: "8.5 包容性就業",
+  },
+  {
+    target: "SDG 10",
+    name: "減少不平等",
+    description: "不分身心障礙與否，讓每一位創作者的專業、觀點與價值被公平看見、被市場支持，促進社會與經濟包容。",
+    metric: "多元平等 · DEI",
+  },
+  {
+    target: "S 社會面向",
+    name: "企業永續報告指標",
+    description: "支持身障者營生、多元包容採購與在地文化支持，皆為上市櫃永續報告書「社會面向」的常見披露指標。",
+    metric: "社會 · 共融採購",
+  },
+  {
+    target: "G 治理面向",
+    name: "可稽核的完整憑證",
+    description: "合法展示授權、採購憑證與數據存證一應俱全，ESG 成果可被記錄、被稽核、被放入年報。",
+    metric: "授權 · 憑證 · 存證",
+  },
+];
 
 const epaperPlan = {
-  label: "OPTION 03",
+  label: "UPGRADE · 減碳升級選項",
   name: "ArtON 真全彩電子紙展示",
   tagline: "1677 萬真全彩｜零藍光護眼｜超低耗電。",
-  badge: "環保首選",
-  badgeNote: "多種尺寸｜依需求配置",
-  quote: "提供專人規劃與報價",
-  features: ["採用全反射電子紙顯示技術", "忠實呈現藝術作品色彩，長時間顯示舒適省電", "最適合藝術展示、企業 ESG 與公共空間"],
+  badge: "E 加分項",
+  badgeNote: "多種尺寸｜依需求配置｜洽 arton.contact@gmail.com",
+  quote: "比一般螢幕貴，但讓 ESG 的 E 與 S 同時被記錄",
+  features: ["在任一訂閱方案基礎上，升級電子紙顯示終端", "較傳統液晶省電約 99%，一年省電 446 度、減碳 227 kg", "忠實呈現藝術作品色彩，長時間顯示舒適護眼", "減碳量計入年度 ESG 成果報告"],
 };
 
 export default function B2BPage() {
@@ -84,14 +148,14 @@ export default function B2BPage() {
                 <br />
                 成為 2026 永續報告書裡
                 <br />
-                <span className="text-[#E8B339]">會減碳、支持身障創作者的 ESG 實踐。</span>
+                <span className="text-[#E8B339]">支持身障創作者的 ESG 實踐。</span>
               </h1>
               <p
                 className={`text-white/70 text-[15px] md:text-[17px] leading-[2] max-w-2xl mb-10 transition-all duration-700 delay-200 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
               >
-                ArtON 是一個藝術展示服務平台。企業付費採購藝術服務，同時創造減碳與社會影響力——低耗電的電子紙展示，讓每一位身障創作者靠作品獲得持續收入，也讓 ESG 的 E 與 S 同時被記錄。
+                ArtON 是一個藝術展示服務平台。企業付費採購藝術服務，讓每一位身障創作者靠作品獲得持續收入——支持身障創作者，就是最直接的 ESG 社會實踐；想更進一步，還可升級低耗電的電子紙展示，讓 E 與 S 同時被記錄。
               </p>
               <div
                 className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${
@@ -133,19 +197,39 @@ export default function B2BPage() {
           </div>
         </section>
 
+        {/* ESG Mapping — 支持身障創作者如何對應 ESG 指標 */}
+        <section className="py-24 md:py-32 bg-[#F7F4EF]">
+          <div className="container">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-6 text-center">
+              Your ESG Impact · 支持身障創作者，如何成為你的 ESG
+            </p>
+            <p className={`max-w-2xl mx-auto text-center text-[15px] md:text-[16.5px] leading-[2] text-[#45423C] mb-14 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+              支持身障創作者，不是公益活動，而是企業付費採購文化服務所創造的社會價值——直接對應聯合國永續發展目標與企業永續報告書的社會指標。
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12 max-w-5xl mx-auto">
+              {esgMap.map((item, i) => (
+                <EsGCard key={item.target} {...item} index={i} />
+              ))}
+            </div>
+            <p className="mt-12 text-center text-[12px] text-[#1C1C1E]/40">
+              年度 ESG 成果報告提供完整數據存證與認證憑證，方便企業年度申報。
+            </p>
+          </div>
+        </section>
+
         {/* E-Paper Carbon Impact */}
         <section className="py-24 md:py-32 bg-[#16202B] text-white overflow-hidden">
           <div className="container">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] font-semibold mb-14 text-center">
-              Why E-Paper · 為什麼主推全彩電子紙
+              Want More E? · 想進一步減碳：升級全彩電子紙
             </p>
             <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
               <div className="lg:col-span-7">
                 <p className="text-white/82 text-[15px] md:text-[16.5px] leading-[2] max-w-2xl">
-                  比起傳統液晶螢幕，電子紙只在換畫時耗電，省電高達 <span className="text-[#E8B339] font-semibold">99%</span>。一年幫企業省下約 <span className="text-[#E8B339] font-semibold">446 度電</span>（相當於減少約 <span className="text-[#E8B339] font-semibold">227 kg CO₂</span>），同時支持了 <span className="text-[#E8B339] font-semibold">24 位身障創作者</span>。
+                  比起傳統液晶螢幕，電子紙只在換畫時耗電，省電高達 <span className="text-[#E8B339] font-semibold">99%</span>。一年幫企業省下約 <span className="text-[#E8B339] font-semibold">446 度電</span>（相當於減少約 <span className="text-[#E8B339] font-semibold">227 kg CO₂</span>），是 ESG 中 <span className="text-[#E8B339] font-semibold">E（環境減碳）</span> 的升級選項。
                 </p>
                 <p className="text-white/60 text-[13.5px] leading-[2] mt-6 max-w-2xl">
-                  這是一台吃最少電、產出最高 S&E 價值的永續展示終端——環境減碳與支持身障創作者，一個展示空間同時完成。
+                  而支持身障創作者的 <span className="text-white/82">S（社會共融）</span>，每個訂閱方案都已包含。電子紙讓 E 與 S 同時被記錄——環境減碳與支持身障創作者，一個展示空間同時完成。
                 </p>
               </div>
               <div className="lg:col-span-5 grid grid-cols-3 gap-4">
@@ -190,11 +274,55 @@ export default function B2BPage() {
         <section className="py-24 md:py-32 bg-[#FBFAF7]">
           <div className="container">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-14 text-center">
-              B2B Plans · 永續電子紙與企業客製
+              B2B Plans · 訂閱即每天做 ESG
             </p>
             <p className={`max-w-2xl mx-auto text-center text-[15px] md:text-[16.5px] leading-[2] text-[#45423C] mb-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              B2B 空間以永續電子紙展示與企業客製方案為核心，尺寸與報價皆依您的空間規劃。
+              選擇任一訂閱方案，您的企業每天就在展示藝術、支持身障創作者，並累積可匯出的 ESG 成果紀錄；想進一步減碳，可升級電子紙方案。
             </p>
+            {/* 訂閱方案：999／1499 — 企業日常 ESG 的基礎 */}
+            <div className="grid md:grid-cols-2 gap-7 max-w-4xl mx-auto">
+              {plans.map((p, i) => (
+                <div
+                  key={p.no}
+                  className={`bg-[#F7F4EF] border border-[#E7E0D5] rounded-xl p-8 md:p-9 transition-all duration-700 ${
+                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  } ${i === 0 ? "md:translate-y-0" : "md:translate-y-6"}`}
+                  style={{ transitionDelay: `${i * 120}ms` }}
+                >
+                  <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/35 font-semibold mb-4">{p.no}</p>
+                  <h3 className="text-[clamp(1.6rem,2.6vw,2.2rem)] leading-[1.3] font-light text-[#1C1C1E] mb-2" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                    {p.name}
+                  </h3>
+                  <p className="text-[14px] text-[#1C1C1E]/70 mb-7">{p.tagline}</p>
+                  <div className="flex items-end gap-2 mb-2">
+                    <span className="text-[clamp(2.4rem,3.6vw,3.2rem)] font-light text-[#B8954F] leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                      {p.price}
+                    </span>
+                    <span className="text-[15px] text-[#1C1C1E]/55 pb-1">{p.per}</span>
+                  </div>
+                  <p className="text-[12.5px] text-[#1C1C1E]/45 mb-7">{p.note}</p>
+                  <div className="border-t border-[#E7E0D5] pt-6 mb-8">
+                    <ul className="space-y-3">
+                      {p.features.map((f) => (
+                        <li key={f} className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-[#1C1C1E]/78">
+                          <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#B8954F]" strokeWidth={2.2} />
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <a
+                    href={LINKS.customerLine}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center justify-center gap-2.5 text-[14px] font-semibold px-7 py-4 bg-[#1C1C1E] text-white rounded-full hover:bg-[#16202B] transition-all duration-200 active:scale-[0.97]"
+                  >
+                    <MessageCircle className="w-4 h-4" strokeWidth={2} />
+                    {p.cta}
+                  </a>
+                </div>
+              ))}
+            </div>
             {/* E-Paper — 洽詢方案（不標價） */}
             <div className="mt-10 flex justify-center">
               <div
@@ -342,7 +470,7 @@ export default function B2BPage() {
             </div>
 
             <p className={`mt-12 text-center text-[12.5px] text-[#1C1C1E]/40 transition-all duration-700 delay-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-              所有方案皆含合法展示授權與每月策展內容自動更新；多據點與大型空間另有專人規劃報價。
+              所有方案皆含合法展示授權、每月策展內容自動更新與年度 ESG 成果報告；多據點與大型空間另有專人規劃報價。升級電子紙，讓減碳與支持創作者同時被記錄。
             </p>
           </div>
         </section>
@@ -404,6 +532,24 @@ function HighlightCard({ icon: Icon, title, description, index }: { icon: typeof
         </h3>
       </div>
       <p className="text-[14px] leading-[2] text-[#45423C]">{description}</p>
+    </article>
+  );
+}
+
+function EsGCard({ target, name, description, metric, index }: { target: string; name: string; description: string; metric: string; index: number }) {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+  return (
+    <article
+      ref={ref}
+      className={`border-t border-[#1C1C1E]/12 pt-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
+      <p className="text-[12px] text-[#B8954F] font-semibold mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{target}</p>
+      <h3 className="text-[19px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+        {name}
+      </h3>
+      <p className="text-[13px] leading-[1.9] text-[#45423C] mb-4">{description}</p>
+      <p className="text-[11px] uppercase tracking-[0.2em] text-[#1C1C1E]/40 font-semibold">{metric}</p>
     </article>
   );
 }
