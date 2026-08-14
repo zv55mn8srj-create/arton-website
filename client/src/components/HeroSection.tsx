@@ -76,24 +76,25 @@ export default function HeroSection() {
               更是企業最直觀的永續行動與創作者的持續收入。
             </p>
 
+            {/* Dual-track CTA: enterprise vs creators/curators */}
             <div
-              className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-[600ms] ${
+              className={`grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl transition-all duration-1000 delay-[600ms] ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
               <a
-                href="/start"
-                className="px-8 py-4 bg-[#C4A265] text-white text-[14px] font-medium rounded-full hover:bg-[#b8954f] transition-all duration-300 hover:shadow-xl hover:shadow-[#C4A265]/20 text-center active:scale-[0.97]"
+                href="/b2b"
+                className="group px-7 py-5 bg-[#C4A265] text-white rounded-2xl hover:bg-[#b8954f] transition-all duration-300 hover:shadow-xl hover:shadow-[#C4A265]/20 active:scale-[0.97]"
               >
-                企業免費諮詢
+                <p className="text-[11px] uppercase tracking-[0.28em] text-[#F5EBD8] mb-1.5">For Enterprise</p>
+                <p className="text-[16px] font-medium leading-snug">我是企業：瀏覽 ESG 方案</p>
               </a>
               <a
-                href="https://lin.ee/7dr8uq4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-4 border border-white/38 text-white text-[14px] font-medium rounded-full hover:bg-white/10 transition-all duration-300 text-center backdrop-blur-sm active:scale-[0.97]"
+                href="/curator"
+                className="group px-7 py-5 border border-white/38 text-white rounded-2xl hover:bg-white/10 transition-all duration-300 backdrop-blur-sm active:scale-[0.97]"
               >
-                我要成為策展人
+                <p className="text-[11px] uppercase tracking-[0.28em] text-white/65 mb-1.5">For Creators & Curators</p>
+                <p className="text-[16px] font-medium leading-snug">我是創作者／策展人：加入合作</p>
               </a>
             </div>
           </div>
