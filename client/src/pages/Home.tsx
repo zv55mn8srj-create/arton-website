@@ -16,9 +16,9 @@ import TimelineSection from "@/components/TimelineSection";
 import WhyEnterprise from "@/components/WhyEnterprise";
 import VenuesSection from "@/components/VenuesSection";
 import SpacesPartnersSection from "@/components/SpacesPartnersSection";
-import PlansSection from "@/components/PlansSection";
 import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function Home() {
   return (
@@ -36,9 +36,47 @@ export default function Home() {
         <VenuesSection />
         <FAQSection />
         <SpacesPartnersSection />
-        <PlansSection />
+        <PlansTeaserSection />
       </main>
       <FooterSection />
     </div>
+  );
+}
+
+/**
+ * Lightweight plans teaser on the homepage.
+ * Full plans (subscription, bundles, hardware, comparison table) live on /start
+ * to avoid duplicating information across pages.
+ */
+function PlansTeaserSection() {
+  const { ref, isVisible } = useScrollAnimation(0.05);
+  return (
+    <section className="py-28 md:py-40 bg-[#1C2632] text-white overflow-hidden">
+      <div className="container" ref={ref}>
+        <div className={`grid lg:grid-cols-12 gap-12 items-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+          <div className="lg:col-span-7">
+            <p className="text-[11px] md:text-[12px] uppercase tracking-[0.32em] text-[#E8B339] mb-8 font-semibold">Subscribe & Exhibit · 選擇適合你的展示方式</p>
+            <h2 className="text-[clamp(2.2rem,4.4vw,4.4rem)] leading-[1.2] font-light tracking-[-0.02em] mb-8" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+              從 NT$799／月起，<br />
+              讓藝術<span className="text-[#E8B339]">持續發生。</span>
+            </h2>
+            <p className="text-white/72 text-[15px] md:text-[16px] leading-[2] max-w-xl">
+              輕量訂閱、以租代買組合包與硬體方案，完整價格與配置說明請見專屬頁面，依你的空間與預算一起規劃。
+            </p>
+          </div>
+          <div className="lg:col-span-5 flex lg:justify-end">
+            <a
+              href="/start"
+              className={`inline-flex items-center gap-3 px-8 py-4 bg-[#E8B339] text-[#1C2632] text-[15px] font-semibold tracking-[0.04em] rounded-full hover:bg-[#F0B429] transition-all duration-300 hover:shadow-xl hover:shadow-[#E8B339]/20 active:scale-[0.97] ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              } delay-200`}
+            >
+              查看完整方案與硬體
+              <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

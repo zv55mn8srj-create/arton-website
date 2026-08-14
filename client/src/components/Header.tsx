@@ -4,7 +4,20 @@
  */
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "wouter";
 import { LINKS } from "@/lib/links";
+
+// Anchors live on the homepage; from sub-pages, link back to "/" + anchor.
+const HOME_ANCHORS: Record<string, string> = {
+  about: "/#about",
+  enterprise: "/#enterprise",
+  explore: "/#explore",
+  faq: "/#faq",
+};
+
+function resolveHref(href: string): string {
+  return href.startsWith("#") ? (HOME_ANCHORS[href] ?? `/`) : href;
+}
 
 
 const navLinks = [
@@ -55,7 +68,7 @@ export default function Header() {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={resolveHref(link.href)}
               className={`text-[15px] font-normal transition-colors duration-300 tracking-wide ${
                 scrolled ? "text-[#1C1C1E]/70 hover:text-[#C4A265]" : "text-white/80 hover:text-white"
               }`}
@@ -76,20 +89,20 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <a
+          <Link
             href="/curator"
             className={`text-[15px] font-medium transition-colors duration-300 ${
               scrolled ? "text-[#1C1C1E] hover:text-[#C4A265]" : "text-white hover:text-[#C4A265]"
             }`}
           >
             成為策展人
-          </a>
-          <a
+          </Link>
+          <Link
             href="/start"
             className="px-5 py-2.5 bg-[#C4A265] text-white text-[15px] font-medium rounded-full hover:bg-[#b8954f] transition-all duration-300 hover:shadow-lg"
           >
             開始展示
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -108,7 +121,7 @@ export default function Header() {
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={resolveHref(link.href)}
                 onClick={() => setMobileOpen(false)}
                 className="text-[16px] text-[#1C1C1E]/80 py-2 hover:text-[#C4A265] transition-colors"
               >
@@ -116,12 +129,12 @@ export default function Header() {
               </a>
             ))}
             <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-[#E5E5E3]">
-              <a href="/curator" onClick={() => setMobileOpen(false)} className="text-center text-[15px] text-[#1C1C1E] font-medium py-2">
+              <Link href="/curator" onClick={() => setMobileOpen(false)} className="text-center text-[15px] text-[#1C1C1E] font-medium py-2">
                 成為策展人
-              </a>
-              <a href="/start" onClick={() => setMobileOpen(false)} className="text-center px-5 py-2.5 bg-[#C4A265] text-white text-[15px] font-medium rounded-full">
+              </Link>
+              <Link href="/start" onClick={() => setMobileOpen(false)} className="text-center px-5 py-2.5 bg-[#C4A265] text-white text-[15px] font-medium rounded-full">
                 開始展示
-              </a>
+              </Link>
             </div>
           </nav>
         </div>
