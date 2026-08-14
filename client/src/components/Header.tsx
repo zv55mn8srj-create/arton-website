@@ -9,14 +9,22 @@ import { LINKS } from "@/lib/links";
 
 // Anchors live on the homepage; from sub-pages, link back to "/" + anchor.
 const HOME_ANCHORS: Record<string, string> = {
-  about: "/#about",
-  enterprise: "/#enterprise",
-  explore: "/#explore",
-  faq: "/#faq",
+  about: "/about",
+  enterprise: "/enterprise",
+  explore: "/explore",
+  faq: "/faq",
 };
 
-function resolveHref(href: string): string {
-  return href.startsWith("#") ? (HOME_ANCHORS[href] ?? `/`) : href;
+function onAnchorClick(
+  e: React.MouseEvent<HTMLAnchorElement>,
+  anchorId: string,
+): void {
+  const target = document.getElementById(anchorId);
+  if (target) {
+    e.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    history.replaceState(null, "", `/#${anchorId}`);
+  }
 }
 
 
@@ -67,7 +75,8 @@ export default function Header() {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={resolveHref(link.href)}
+              href={link.href}
+              onClick={(e) => onAnchorClick(e, link.href.slice(1))}
               className={`text-[15px] font-normal transition-colors duration-300 tracking-wide ${
                 scrolled ? "text-[#1C1C1E]/70 hover:text-[#C4A265]" : "text-white/80 hover:text-white"
               }`}
@@ -120,8 +129,11 @@ export default function Header() {
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={resolveHref(link.href)}
-                onClick={() => setMobileOpen(false)}
+                href={link.href}
+                onClick={(e) => {
+                  setMobileOpen(false);
+                  onAnchorClick(e, link.href.slice(1));
+                }}
                 className="text-[16px] text-[#1C1C1E]/80 py-2 hover:text-[#C4A265] transition-colors"
               >
                 {link.label}
