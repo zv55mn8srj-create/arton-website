@@ -198,9 +198,7 @@ export default function StartPage() {
                   </span>
                 </div>
                 <a
-                  href={LINKS.customerLine}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={LINKS.email}
                   className="group inline-flex items-center gap-3 px-8 py-4 border border-[#1C1C1E]/25 text-[#1C1C1E] text-[15px] font-medium rounded-full hover:bg-[#1C1C1E] hover:text-white transition-all duration-300 active:scale-[0.97]"
                 >
                   申請免費體驗
@@ -225,8 +223,8 @@ export default function StartPage() {
           </div>
         </section>
 
-        {/* Plans (subscription + hardware) */}
-        <PlansSection />
+        {/* Plans (subscription only — hardware cards hidden for now) */}
+        <PlansSection hideHardware />
 
         {/* Price comparison */}
         <section className="py-24 md:py-32 bg-[#F7F4EF]">

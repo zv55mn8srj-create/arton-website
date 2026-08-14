@@ -94,7 +94,12 @@ const hardwarePlans: HardwarePlan[] = [
   },
 ];
 
-export default function PlansSection() {
+interface PlansSectionProps {
+  /** Hide the three hardware device cards (kept for future use) */
+  hideHardware?: boolean;
+}
+
+export default function PlansSection({ hideHardware = false }: PlansSectionProps) {
   const { ref, isVisible } = useScrollAnimation(0.05);
 
   return (
@@ -250,7 +255,8 @@ export default function PlansSection() {
           </div>
         </div>
 
-        {/* Hardware — three devices together */}
+        {/* Hardware — three devices together (hidden when hideHardware is true) */}
+        {!hideHardware && (
         <div className="mt-16 md:mt-20">
           <p className="text-center text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-8">Exhibiting Devices · 展示硬體</p>
           <div className="grid lg:grid-cols-3 gap-6 lg:gap-0 items-stretch max-w-6xl mx-auto">
@@ -324,10 +330,13 @@ export default function PlansSection() {
             ))}
           </div>
         </div>
+        )}
 
+        {!hideHardware && (
         <p className={`mt-14 md:mt-16 text-center text-[12.5px] text-[#1C1C1E]/40 tracking-[0.02em] transition-all duration-700 delay-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
           所有裝置皆搭配 ArtON 訂閱服務，每月策展內容自動更新，讓展示持續發生。
         </p>
+        )}
       </div>
     </section>
   );
