@@ -28,8 +28,8 @@ const highlights = [
   },
   {
     icon: Check,
-    title: "S · 社會影響力",
-    description: "每一次訂閱，都讓身心障礙創作者靠作品獲得持續收入，同時累積 DEI 與文化永續的可記錄成果。",
+    title: "S · 身障創作者支持",
+    description: "每一次訂閱，都直接支持身心障礙創作者，讓他們靠自己的作品獲得持續收入，同時累積 DEI 與文化永續的可記錄成果。",
   },
 ];
 
@@ -105,14 +105,14 @@ export default function B2BPage() {
                 <br />
                 成為 2026 永續報告書裡
                 <br />
-                <span className="text-[#E8B339]">會減碳、支持創作者的 ESG 實踐。</span>
+                <span className="text-[#E8B339]">會減碳、支持身障創作者的 ESG 實踐。</span>
               </h1>
               <p
                 className={`text-white/70 text-[15px] md:text-[17px] leading-[2] max-w-2xl mb-10 transition-all duration-700 delay-200 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
               >
-                ArtON 是一個藝術展示服務平台。企業付費採購藝術服務，同時創造減碳與社會影響力——低耗電的電子紙展示，讓 ESG 的 E 與 S 同時被記錄。
+                ArtON 是一個藝術展示服務平台。企業付費採購藝術服務，同時創造減碳與社會影響力——低耗電的電子紙展示，讓每一位身障創作者靠作品獲得持續收入，也讓 ESG 的 E 與 S 同時被記錄。
               </p>
               <div
                 className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${
@@ -163,10 +163,10 @@ export default function B2BPage() {
             <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
               <div className="lg:col-span-7">
                 <p className="text-white/82 text-[15px] md:text-[16.5px] leading-[2] max-w-2xl">
-                  比起傳統液晶螢幕，電子紙只在換畫時耗電，省電高達 <span className="text-[#E8B339] font-semibold">99%</span>。一年幫企業省下約 <span className="text-[#E8B339] font-semibold">446 度電</span>（相當於減少約 <span className="text-[#E8B339] font-semibold">227 kg CO₂</span>），同時支持了 <span className="text-[#E8B339] font-semibold">24 位創作者</span>。
+                  比起傳統液晶螢幕，電子紙只在換畫時耗電，省電高達 <span className="text-[#E8B339] font-semibold">99%</span>。一年幫企業省下約 <span className="text-[#E8B339] font-semibold">446 度電</span>（相當於減少約 <span className="text-[#E8B339] font-semibold">227 kg CO₂</span>），同時支持了 <span className="text-[#E8B339] font-semibold">24 位身障創作者</span>。
                 </p>
                 <p className="text-white/60 text-[13.5px] leading-[2] mt-6 max-w-2xl">
-                  這是一台吃最少電、產出最高 S&E 價值的永續展示終端——環境減碳與社會責任，一個展示空間同時完成。
+                  這是一台吃最少電、產出最高 S&E 價值的永續展示終端——環境減碳與支持身障創作者，一個展示空間同時完成。
                 </p>
               </div>
               <div className="lg:col-span-5 grid grid-cols-3 gap-4">
