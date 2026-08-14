@@ -386,13 +386,6 @@ export default function B2BPage() {
                         <span>依據點與空間需求配置</span>
                       </li>
                     </ul>
-                    <p className="flex items-center gap-2 text-white/40 text-[11.5px] leading-[1.7] mt-6 pt-5 border-t border-white/10">
-                      各尺寸規格與報價，請洽
-                      <a href={LINKS.email} className="inline-flex items-center gap-1.5 text-white/60 hover:text-[#E8B339] transition-colors duration-200">
-                        <Mail className="w-3 h-3" strokeWidth={2} />
-                        <span>arton.contact@gmail.com</span>
-                      </a>
-                    </p>
                   </div>
                 </div>
               </div>
