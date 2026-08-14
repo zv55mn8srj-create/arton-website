@@ -34,17 +34,13 @@ export default function FooterSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href={LINKS.curatorLine}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/curator"
                 className="px-8 py-4 bg-[#C4A265] text-white text-[15px] font-medium rounded-full hover:bg-[#b8954f] transition-all duration-300 hover:shadow-xl hover:shadow-[#C4A265]/20"
               >
                 我要成為策展人
               </a>
               <a
-                href={LINKS.customerLine}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/start"
                 className="px-8 py-4 border border-white/30 text-white text-[15px] font-medium rounded-full hover:bg-white/10 transition-all duration-300"
               >
                 我要開始展示
@@ -101,13 +97,26 @@ export default function FooterSection() {
                 服務
               </h5>
               <ul className="space-y-3">
-                {["企業展示", "策展服務", "設備支援", "ESG 報告"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-white/35 text-[14px] hover:text-[#C4A265] transition-colors duration-300">
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                <li>
+                  <a href="/start" className="text-white/35 text-[14px] hover:text-[#C4A265] transition-colors duration-300">
+                    企業展示
+                  </a>
+                </li>
+                <li>
+                  <a href="/b2b" className="text-white/35 text-[14px] hover:text-[#C4A265] transition-colors duration-300">
+                    企業 ESG 方案
+                  </a>
+                </li>
+                <li>
+                  <a href="/curator" className="text-white/35 text-[14px] hover:text-[#C4A265] transition-colors duration-300">
+                    策展服務
+                  </a>
+                </li>
+                <li>
+                  <a href="#faq" className="text-white/35 text-[14px] hover:text-[#C4A265] transition-colors duration-300">
+                    設備支援
+                  </a>
+                </li>
               </ul>
             </div>
 

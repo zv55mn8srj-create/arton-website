@@ -87,6 +87,10 @@ export default function EnterpriseSection() {
               </div>
               <span className="text-[11px] text-[#2D5A3D] border border-[#2D5A3D]/18 bg-[#2D5A3D]/5 px-3 py-1.5 rounded-full">持續展示中</span>
             </div>
+            <p className="text-[11px] text-[#2D5A3D] font-medium pt-4 flex items-center gap-2">
+              <PowerGlyph className="w-3.5 h-3.5 text-[#2D5A3D]" />
+              提供完整的數據存證與認證憑證，方便企業年度申報。
+            </p>
 
             <div className="grid grid-cols-2 gap-x-7 gap-y-8 py-8 border-b border-[#EAE5DC]">
               {statistics.map(({ label, value, icon: Icon }) => (
@@ -124,6 +128,9 @@ export default function EnterpriseSection() {
                 <button className="w-full mt-2 text-left text-[12px] text-[#1C1C1E]/65 border-t border-[#EAE5DC] pt-4 flex items-center justify-between">
                   <span>取得 ESG 成果報告</span><span className="text-[#C4A265]">↗</span>
                 </button>
+                <a href="/manus-storage/arton-esg-sample_90a82260.pdf" download className="w-full text-left text-[12px] text-[#1C1C1E]/65 border-t border-[#EAE5DC] pt-4 flex items-center justify-between hover:text-[#2D5A3D] transition-colors duration-300">
+                  <span>下載 ESG 報告範本（PDF）</span><span className="text-[#C4A265]">↓</span>
+                </a>
               </div>
             </div>
           </div>

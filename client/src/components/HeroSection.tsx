@@ -54,16 +54,26 @@ export default function HeroSection() {
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              ArtON 串連藝術家、策展人、畫廊與企業，讓藝術走進生活空間，建立持續展示的機會，也讓更多創作者能靠自己的作品，持續創作、持續生活。
+              把空間轉化為持續展示藝術的場域，
+              讓企業創造可被記錄的 ESG 影響力，
+              也讓創作者獲得持續的展示與收益。
             </p>
 
             <p
-              className={`text-[#D6B876] text-[14px] md:text-[16px] leading-[1.8] mb-9 max-w-xl font-light italic transition-all duration-1000 delay-[450ms] ${
+              className={`text-white/68 text-[14px] md:text-[15.5px] leading-[1.9] mb-9 max-w-[640px] font-light transition-all duration-1000 delay-[380ms] ${
+                loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              }`}
+            >
+              把閒置的牆，變成企業的 ESG 實踐與創作者的穩定收入。
+            </p>
+
+            <p
+              className={`text-[#D6B876] text-[14px] md:text-[15px] leading-[1.8] mb-9 max-w-xl font-light italic transition-all duration-1000 delay-[450ms] ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
               每一次展示，不只是美化空間，<br className="hidden sm:block" />
-              更是在創造一份持續的收入。
+              更是企業最直觀的永續行動與創作者的持續收入。
             </p>
 
             <div
@@ -72,12 +82,10 @@ export default function HeroSection() {
               }`}
             >
               <a
-                href="https://lin.ee/yEZxsB3"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/start"
                 className="px-8 py-4 bg-[#C4A265] text-white text-[14px] font-medium rounded-full hover:bg-[#b8954f] transition-all duration-300 hover:shadow-xl hover:shadow-[#C4A265]/20 text-center active:scale-[0.97]"
               >
-                我要開始展示
+                企業免費諮詢
               </a>
               <a
                 href="https://lin.ee/7dr8uq4"

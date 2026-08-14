@@ -24,6 +24,44 @@ interface HardwarePlan {
   recommended?: boolean;
 }
 
+interface BundledPlan {
+  name: string;
+  price: string;
+  period: string;
+  term: string;
+  device: string;
+  note: string;
+  features: PlanFeature[];
+  cta: string;
+  recommended?: boolean;
+  badge?: string;
+}
+
+const bundledPlans: BundledPlan[] = [
+  {
+    name: "無痛體驗方案",
+    price: "999",
+    period: "/月",
+    term: "綁約 1 年",
+    device: "直接送 ArtON Box 藝術盒",
+    note: "隨插即用，退訂收回裝置。月租低負擔、免大額採購，讓藝術展示輕鬆落地。",
+    features: ["ArtON Box 藝術盒（含於月費）", "搭配自備螢幕即可展示", "每月策展內容自動更新", "雲端管理與展示紀錄"],
+    cta: "加入 LINE 開始訂閱",
+  },
+  {
+    name: "全包輕量面板方案",
+    price: "1,499",
+    period: "/月",
+    term: "綁約 2 年",
+    device: "附贈 21.5 吋高質感藝術面板",
+    note: "一體到位、質感首選，霧面抗眩光如同真實畫布。",
+    features: ["21.5 吋高質感藝術面板（含於月費）", "博物館級色彩校準", "每月策展內容自動更新", "雲端管理與年度 ESG 報告"],
+    cta: "加入 LINE 開始訂閱",
+    recommended: true,
+    badge: "質感首選",
+  },
+];
+
 const hardwarePlans: HardwarePlan[] = [
   {
     icon: Smartphone,
@@ -146,6 +184,69 @@ export default function PlansSection() {
                 <Send className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" strokeWidth={2} />
               </a>
             </div>
+          </div>
+        </div>
+
+        {/* Bundled plans — hardware-as-a-service */}
+        <div className="mt-16 md:mt-20">
+          <p className="text-center text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-8">
+            Bundled Plans · 以租代買組合包
+          </p>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
+            {bundledPlans.map((plan, index) => (
+              <article
+                key={plan.name}
+                className={`relative flex flex-col p-8 md:p-10 transition-all duration-700 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                } ${
+                  plan.recommended
+                    ? "bg-[#16202B] text-white shadow-[0_32px_90px_rgba(22,32,43,0.45)] border-t-4 border-[#E8B339] lg:-my-4 lg:py-14 lg:z-10"
+                    : "bg-white border border-[#E7E0D5] shadow-[0_18px_50px_rgba(44,37,27,0.06)]"
+                }`}
+                style={{ transitionDelay: `${index * 120}ms` }}
+              >
+                {plan.recommended && (
+                  <span className="absolute -top-3.5 left-9 bg-[#E8B339] text-[#16202B] text-[11px] font-bold tracking-[0.15em] uppercase px-3.5 py-1.5 rounded-full">
+                    {plan.badge}
+                  </span>
+                )}
+                <p className={`text-[11px] uppercase tracking-[0.25em] mb-4 font-semibold ${plan.recommended ? "text-[#E8B339]" : "text-[#B8954F]"}`}>
+                  {plan.name}
+                </p>
+                <div className="flex items-end gap-2 mb-2">
+                  <span className="text-[14px] text-[#B8954F] mb-2">NT$</span>
+                  <span className="text-[clamp(2.6rem,3.8vw,3.4rem)] leading-none font-light text-[#B8954F]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                    {plan.price}
+                  </span>
+                  <span className={`text-[14px] mb-1.5 ${plan.recommended ? "text-white/60" : "text-[#1C1C1E]/45"}`}>{plan.period}</span>
+                </div>
+                <p className={`text-[13px] mb-6 ${plan.recommended ? "text-white/65" : "text-[#1C1C1E]/50"}`}>
+                  {plan.term} · {plan.device}
+                </p>
+                <p className={`text-[13px] leading-[1.85] mb-8 ${plan.recommended ? "text-white/70" : "text-[#45423C]"}`}>{plan.note}</p>
+                <ul className="space-y-3 mb-9 flex-1">
+                  {plan.features.map((f) => (
+                    <li key={f} className="flex items-start gap-3 text-[13px] leading-[1.7]">
+                      <Check className={`w-4 h-4 mt-0.5 shrink-0 ${plan.recommended ? "text-[#E8B339]" : "text-[#B8954F]"}`} strokeWidth={2} />
+                      <span className={plan.recommended ? "text-white/85" : "text-[#45423C]"}>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={LINKS.customerLine}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`group inline-flex items-center justify-center gap-2.5 text-[13px] font-medium tracking-[0.04em] px-6 py-4 transition-all duration-200 active:scale-[0.97] ${
+                    plan.recommended
+                      ? "bg-[#E8B339] text-[#16202B] hover:bg-[#F0B429]"
+                      : "border border-[#1C1C1E]/35 text-[#1C1C1E] hover:border-[#B8954F] hover:text-[#B8954F]"
+                  }`}
+                >
+                  {plan.cta}
+                  <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" strokeWidth={2} />
+                </a>
+              </article>
+            ))}
           </div>
         </div>
 
