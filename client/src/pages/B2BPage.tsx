@@ -347,7 +347,7 @@ export default function B2BPage() {
             <h2 className="text-[clamp(2rem,3.8vw,3.4rem)] leading-[1.25] font-light mb-8 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
               吃最少電的展示終端，
               <br />
-              <span className="text-[#E8B339]">產出最高 S&E 價值的永續實踐。</span>
+              <span className="text-[#E8B339]">讓減碳與支持創作者，同時發生。</span>
             </h2>
             <p className="text-white/60 text-[14px] md:text-[15px] leading-[1.9] max-w-xl mx-auto mb-10">
               與顧問聊聊據點數量與預算，取得減碳試算、方案報價與 ESG 報告範本。
