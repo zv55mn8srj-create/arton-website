@@ -66,7 +66,7 @@ const hardwarePlans: HardwarePlan[] = [
   {
     icon: Smartphone,
     title: "ArtON Box 藝術盒",
-    subtitle: "輕巧易安裝，搭配任何螢幕即可開始展示藝術作品。",
+    subtitle: "輕巧易安裝，接上你現有的螢幕即可開始展示藝術作品。適合已經有自己螢幕的空間。",
     price: "NT$2,200",
     priceNote: "一次購買",
     highlight: "或租用 NT$220／月（12 個月方案）",
@@ -252,7 +252,7 @@ export default function PlansSection() {
 
         {/* Hardware — three devices together */}
         <div className="mt-16 md:mt-20">
-          <p className="text-center text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-8">Exhibiting Devices</p>
+          <p className="text-center text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-8">Exhibiting Devices · 展示硬體</p>
           <div className="grid lg:grid-cols-3 gap-6 lg:gap-0 items-stretch max-w-6xl mx-auto">
             {hardwarePlans.map((plan, index) => (
               <article

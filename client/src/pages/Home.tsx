@@ -65,6 +65,16 @@ function PlansTeaserSection() {
             </p>
           </div>
           <div className="lg:col-span-5 flex lg:justify-end">
+            <div className="relative">
+              <img
+                src="/manus-storage/teaser-art-d_d8627ff7.jpg"
+                alt="藝術作品於空間中持續展示"
+                className="w-full max-w-md rounded-2xl shadow-2xl shadow-black/30"
+              />
+              <div className="absolute -bottom-4 -left-4 hidden md:block bg-[#E8B339] text-[#1C2632] text-[13px] font-semibold px-5 py-3 rounded-xl shadow-lg">
+                每月更新 · 雲端策展
+              </div>
+            </div>
             <a
               href="/start"
               className={`inline-flex items-center gap-3 px-8 py-4 bg-[#E8B339] text-[#1C2632] text-[15px] font-semibold tracking-[0.04em] rounded-full hover:bg-[#F0B429] transition-all duration-300 hover:shadow-xl hover:shadow-[#E8B339]/20 active:scale-[0.97] ${

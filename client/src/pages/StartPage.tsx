@@ -103,11 +103,11 @@ export default function StartPage() {
                 }`}
                 style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}
               >
-                把閒置的牆，
+                讓每一面牆，
                 <br />
-                變成企業的 <span className="text-[#E8B339]">ESG 實踐</span>
+                成為支持<span className="text-[#E8B339]">藝術創作</span>的
                 <br />
-                與創作者的穩定收入。
+                美好空間。
               </h1>
               <p
                 className={`text-white/72 text-[15px] md:text-[17px] leading-[2] max-w-2xl mb-10 transition-all duration-700 delay-200 ${

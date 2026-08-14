@@ -18,8 +18,8 @@ const highlights = [
   },
   {
     icon: Landmark,
-    title: "稅務抵扣憑證",
-    description: "藝術支持與文化採購皆有完整憑證與授權文件，協助財務與稅務申報。",
+    title: "合法採購與完整憑證",
+    description: "ArtON 是藝術展示服務平台。企業付費採購藝術服務，取得完整憑證、授權文件與發票，協助財務、稅務與 ESG 申報。",
   },
   {
     icon: WifiOff,
@@ -29,7 +29,7 @@ const highlights = [
   {
     icon: Check,
     title: "企業 CSR 品牌形象加分",
-    description: "支持身心障礙創作者靠作品獲得持續收入，成為 DEI 與文化永續的具体實踐。",
+    description: "採購藝術服務的同時支持身心障礙創作者靠作品獲得持續收入，成為 DEI 與文化永續的具體實踐。",
   },
 ];
 
@@ -91,7 +91,7 @@ export default function B2BPage() {
                 }`}
                 style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}
               >
-                讓企業閒置牆面，
+                讓企業的牆面，
                 <br />
                 變成 2026 永續報告書裡
                 <br />
@@ -102,7 +102,7 @@ export default function B2BPage() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
               >
-                不是一次性活動，而是每天持續發生的文化支持。把閒置的牆面變成企業的 ESG 實踐，也讓身心障礙創作者靠自己的作品獲得持續收入。
+                ArtON 是一個藝術展示服務平台。企業付費採購藝術服務，同時創造藝術支持與 ESG 影響——每一天的展示，都成為可被記錄的永續實踐。
               </p>
               <div
                 className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${
@@ -243,9 +243,9 @@ export default function B2BPage() {
           <div className="container">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] mb-8 font-semibold">Talk to Us · 免費諮詢</p>
             <h2 className="text-[clamp(2rem,3.8vw,3.4rem)] leading-[1.25] font-light mb-8 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-              閒置的牆面，
+              每一面牆，
               <br />
-              <span className="text-[#E8B339]">正在等待一個 ESG 答案。</span>
+              <span className="text-[#E8B339]">都可以成為企業的 ESG 答案。</span>
             </h2>
             <p className="text-white/60 text-[14px] md:text-[15px] leading-[1.9] max-w-xl mx-auto mb-10">
               與顧問聊聊據點數量與預算，取得方案建議、報價與 ESG 報告範本。

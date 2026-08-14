@@ -64,7 +64,7 @@ export default function HeroSection() {
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              把閒置的牆，變成企業的 ESG 實踐與創作者的穩定收入。
+              把每一面牆，變成企業的 ESG 實踐與創作者的穩定收入。
             </p>
 
             <p

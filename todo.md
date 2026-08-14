@@ -81,3 +81,39 @@
 - [ ] 精簡首頁：移除與 /start 重複的方案費用內容（PlansSection），保留導覽入口連結
 - [ ] 修正子頁導覽：Header 的錨點連結（關於 ArtON、企業 ESG、探索策展、常見問題等）在子頁需導回主頁對應錨點（#/why 等），而非當前頁不存在的錨點
 - [ ] 驗證截圖並交付
+
+# 第十一輪改版待辦（2026-08-14）
+- [ ] 刪除 menu「開始展示」（與右側 CTA 重複）
+- [ ] Menu 所有子頁連結移到右側（企業 ESG 方案、成為策展人、開始展示按鈕）
+- [ ] 主頁 menu「企業 ESG」→ #enterprise；「探索策展」→ #explore；「常見問題」→ #faq（錨點捲動）
+- [ ] /curator 頁尾加入策展人 LINE QR Code（需先產生 QR：https://lin.ee/7dr8uq4）
+- [ ] 首頁導覽卡（PlansTeaser）加入裝置情境小圖
+- [ ] /start 主標語改掉「閒置的牆」→ 更有溫度/支持空間美化方向
+- [ ] /start Exhibiting Devices 加中文「展示硬體」，註明 ArtON Box 適合已有自己螢幕的人
+- [ ] /b2b 稅務抵扣文案改為平台採購定位（不包裝成公益）
+- [ ] /b2b 標題去掉「閒置」一詞
+- [ ] 驗證截圖並交付
+
+## 第十一輪進度與關鍵資產（更新）
+已完成：
+- Header 刪「開始展示」nav、B2B/策展人/開始展示移到右側、mobile nav 同步
+- 策展人 QR 產生：/home/ubuntu/webdev-static-assets/line-qr-curator.png → /manus-storage/line-qr-curator_51a4f553.png（CuratorPage Final CTA 已加 QR 區塊）
+- StartPage 標語改「讓每一面牆，成為支持藝術創作的美好空間。」
+- PlansSection 硬體標題加「· 展示硬體」，ArtON Box subtitle 加「適合已經有自己螢幕的空間」
+
+待完成：
+- 首頁 PlansTeaserSection 加裝置情境小圖：已裁切 /manus-storage/teaser-art-d_d8627ff7.jpg（花開時節花田橫幅 1637x920，右下有簽名但可接受；或 /manus-storage/teaser-art-b_df95f8ac.jpg 夏日之青春滿版花卉）→ 選 teaser-art-e（同 d 更乾淨）未上傳；決定用 /manus-storage/teaser-art-d_d8627ff7.jpg
+- /b2b 修正：標題去掉「閒置」（找 B2BPage.tsx 中「閒置牆面」）；稅務文案改為平台採購定位（不包裝公益）：「藝術支持與文化採購皆有完整憑證與授權文件，協助財務與稅務申報」→ 強調「ArtON 是藝術展示服務，企業付費採購藝術服務」
+- /b2b 需確認 App.tsx import B2BPage 錯誤是否仍存在（devserver 舊 log，檢查檔案是否存在：client/src/pages/B2BPage.tsx）
+
+## 關鍵檔案路徑
+- 客戶 QR: /manus-storage/line-qr-customer_068ac53d.png
+- 策展人 QR: /manus-storage/line-qr-curator_51a4f553.png
+- 飛鳥海景: /manus-storage/bird-sea-art_65bd98be.jpg
+- 花田橫幅: /manus-storage/teaser-art-d_d8627ff7.jpg
+- 夏日之青春橫幅: /manus-storage/teaser-art-b_df95f8ac.jpg
+- links.ts: customerLine https://lin.ee/yEZxsB3、curatorLine https://lin.ee/7dr8uq4、email arton.contact@gmail.com
+- 首頁錨點: #about(Our Why), #enterprise, #explore, #faq（Header resolveHref 已對應）
+
+## 第十一輪完成確認（2026-08-14）
+全部八項已完成並截圖驗證：Header 刪「開始展示」、右側子頁入口、錨點連結、策展人 QR 區塊、導覽卡花田圖＋金色標籤、/start 標語改「讓每一面牆，成為支持藝術創作的美好空間。」、硬體加中文與適用說明、/b2b 去掉「閒置」與公益包裝（改為「藝術展示服務平台，企業付費採購藝術服務」）。devserver log 中的 B2BPage import 錯誤為舊記錄（01:38），檔案已存在、tsc 無錯、HMR 正常，不影響。

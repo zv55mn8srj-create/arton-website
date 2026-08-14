@@ -34,6 +34,8 @@ const values = [
   },
 ];
 
+const CURATOR_QR = "/manus-storage/line-qr-curator_51a4f553.png";
+
 const steps = [
   { no: "01", title: "加入策展人 LINE", description: "與團隊聊聊你的策展風格與作品資源，了解合作方式與收益機制。" },
   { no: "02", title: "上架數位策展", description: "整理作品成為有主題、有情緒的展覽，上架到 ArtON 策展目錄。" },
@@ -151,6 +153,17 @@ export default function CuratorPage() {
               <MessageCircle className="w-4.5 h-4.5" strokeWidth={2} />
               加入策展人 LINE
             </a>
+
+            {/* QR Code — scan to join (symmetric with /start) */}
+            <div className="mt-16 mx-auto max-w-md bg-white/[0.06] rounded-2xl px-8 py-8">
+              <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] mb-6 font-semibold">Scan to Join</p>
+              <div className="w-32 h-32 mx-auto bg-white p-3 shadow-[0_8px_30px_rgba(0,0,0,0.35)]">
+                <img src={CURATOR_QR} alt="ArtON 策展人 LINE QR Code" className="w-full h-full object-contain" />
+              </div>
+              <p className="text-white/55 text-[12.5px] leading-[1.8] mt-6">
+                用電腦瀏覽？用手機掃描 QR Code，即可加入策展人 LINE。
+              </p>
+            </div>
           </div>
         </section>
       </main>

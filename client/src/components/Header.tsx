@@ -23,7 +23,6 @@ function resolveHref(href: string): string {
 const navLinks = [
   { label: "關於 ArtON", href: "#about" },
   { label: "企業 ESG", href: "#enterprise" },
-  { label: "開始展示", href: "/start" },
   { label: "探索策展", href: "#explore" },
   { label: "常見問題", href: "#faq" },
 ];
@@ -76,16 +75,6 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a
-            href="/b2b"
-            className={`text-[14px] font-medium border px-4 py-2 rounded-full transition-colors duration-300 ${
-              scrolled
-                ? "border-[#C4A265]/50 text-[#B8954F] hover:bg-[#C4A265]/8"
-                : "border-white/40 text-white/90 hover:bg-white/8"
-            }`}
-          >
-            企業 ESG 方案
-          </a>
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
@@ -97,6 +86,16 @@ export default function Header() {
           >
             成為策展人
           </Link>
+          <a
+            href="/b2b"
+            className={`text-[14px] font-medium border px-4 py-2 rounded-full transition-colors duration-300 ${
+              scrolled
+                ? "border-[#C4A265]/50 text-[#B8954F] hover:bg-[#C4A265]/8"
+                : "border-white/40 text-white/90 hover:bg-white/8"
+            }`}
+          >
+            企業 ESG 方案
+          </a>
           <Link
             href="/start"
             className="px-5 py-2.5 bg-[#C4A265] text-white text-[15px] font-medium rounded-full hover:bg-[#b8954f] transition-all duration-300 hover:shadow-lg"
@@ -129,6 +128,9 @@ export default function Header() {
               </a>
             ))}
             <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-[#E5E5E3]">
+              <Link href="/b2b" onClick={() => setMobileOpen(false)} className="text-center text-[15px] text-[#1C1C1E] font-medium py-2 border border-[#C4A265]/50 rounded-full">
+                企業 ESG 方案
+              </Link>
               <Link href="/curator" onClick={() => setMobileOpen(false)} className="text-center text-[15px] text-[#1C1C1E] font-medium py-2">
                 成為策展人
               </Link>
