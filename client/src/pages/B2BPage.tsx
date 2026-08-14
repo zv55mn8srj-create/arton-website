@@ -52,17 +52,27 @@ const plans = [
     features: ["ArtON Box 藝術盒（隨插即用）", "自備螢幕即可展示", "每月策展內容自動更新", "雲端管理與展示紀錄"],
   },
   {
-    name: "永續電子紙方案",
+    name: "ArtON 藝術展示面板",
     price: "1,499",
     period: "/月",
     term: "綁約 2 年",
-    badge: "E · S 雙效益",
-    highlight: "附贈 21.5 吋全彩電子紙",
-    note: "省電 99% 的低碳展示終端，年減碳約 227 kg CO₂，同時支持創作者持續收入。",
-    features: ["21.5 吋全彩電子紙（E-Paper）", "年省約 446 度電、減碳 227 kg", "紙感顯影、霧面抗眩光", "每月策展內容自動更新", "雲端管理與年度 ESG 減碳報告"],
+    badge: "畫廊質感",
+    highlight: "專為藝術展示打造",
+    note: "精準還原色彩、霧面抗眩光，讓每件作品展現最佳質感。多種尺寸依需求配置，提供專人規劃與報價。",
+    features: ["畫廊級色彩校準與精準還原", "霧面抗眩光面板", "木質外框、展牆即視感", "每月策展內容自動更新", "雲端管理與展示紀錄"],
     recommended: true,
   },
 ];
+
+const epaperPlan = {
+  label: "OPTION 03",
+  name: "ArtON 真全彩電子紙展示",
+  tagline: "1677 萬真全彩｜零藍光護眼｜超低耗電。",
+  badge: "環保首選",
+  badgeNote: "多種尺寸｜依需求配置",
+  quote: "提供專人規劃與報價",
+  features: ["採用全反射電子紙顯示技術", "忠實呈現藝術作品色彩，長時間顯示舒適省電", "最適合藝術展示、企業 ESG 與公共空間"],
+};
 
 export default function B2BPage() {
   const { ref, isVisible } = useScrollAnimation(0.05);
@@ -259,6 +269,71 @@ export default function B2BPage() {
                 </div>
               ))}
             </div>
+            {/* E-Paper — 洽詢方案（不標價） */}
+            <div className="mt-10 flex justify-center">
+              <div
+                className={`w-full max-w-4xl bg-[#F7F4EF] border border-[#E7E0D5] rounded-xl p-9 md:p-12 transition-all duration-700 delay-200 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+              >
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/35 font-semibold mb-4">{epaperPlan.label}</p>
+                <div className="grid md:grid-cols-12 gap-8 items-start">
+                  <div className="md:col-span-8">
+                    <h3 className="text-[clamp(1.8rem,3vw,2.6rem)] leading-[1.3] font-light text-[#1C1C1E] mb-4" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                      {epaperPlan.name}
+                    </h3>
+                    <p className="text-[15px] md:text-[16.5px] text-[#1C1C1E] mb-8">{epaperPlan.tagline}</p>
+                    <div className="border-t border-[#E7E0D5] pt-7 mb-8">
+                      <p className="text-[clamp(1.5rem,2.6vw,2.2rem)] font-light text-[#B8954F] mb-2.5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                        {epaperPlan.badge}
+                      </p>
+                      <p className="text-[15px] text-[#1C1C1E] mb-1">{epaperPlan.badgeNote}</p>
+                      <p className="text-[13.5px] text-[#1C1C1E]/45">{epaperPlan.quote}</p>
+                    </div>
+                    <ul className="space-y-3 mb-9">
+                      {epaperPlan.features.map((f) => (
+                        <li key={f} className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-[#1C1C1E]/78">
+                          <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#B8954F]" strokeWidth={2.2} />
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <a
+                      href={LINKS.email}
+                      className="group inline-flex items-center justify-center gap-2.5 text-[14px] font-semibold px-7 py-4 border border-[#1C1C1E]/35 text-[#1C1C1E] rounded-full hover:border-[#B8954F] hover:text-[#B8954F] transition-all duration-200 active:scale-[0.97]"
+                    >
+                      諮詢電子紙展示方案
+                      <ArrowRight className="w-4 h-4" strokeWidth={2} />
+                    </a>
+                  </div>
+                  <div className="md:col-span-4 bg-[#16202B] text-white rounded-lg p-7 md:ml-2">
+                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#E8B339] font-semibold mb-5">E-Paper · 低碳優勢</p>
+                    <ul className="space-y-4 text-[13px] leading-[1.8] text-white/80">
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-[#E8B339] font-semibold shrink-0">99%</span>
+                        <span>較傳統液晶省電</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-[#E8B339] font-semibold shrink-0">零藍光</span>
+                        <span>紙感顯影、護眼舒適</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-[#E8B339] font-semibold shrink-0">1677 萬色</span>
+                        <span>真全彩忠實還原作品色彩</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-[#E8B339] font-semibold shrink-0">多尺寸</span>
+                        <span>依據點與空間需求配置</span>
+                      </li>
+                    </ul>
+                    <p className="text-white/40 text-[11.5px] leading-[1.7] mt-6 pt-5 border-t border-white/10">
+                      各尺寸規格與報價，請洽 arton.contact@gmail.com
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <p className={`mt-12 text-center text-[12.5px] text-[#1C1C1E]/40 transition-all duration-700 delay-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
               所有方案皆含合法展示授權與每月策展內容自動更新；多據點與大型空間另有專人規劃報價。
             </p>
