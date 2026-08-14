@@ -36,6 +36,25 @@ const values = [
 
 const CURATOR_QR = "/manus-storage/line-qr-curator_51a4f553.png";
 
+const curatorFaq = [
+  {
+    q: "加入策展人需要什麼條件？",
+    a: "只要你有策展眼光與作品資源——無論是個人策展經驗、畫廊合作管道，或熟悉的藝術家與作品，都可以加入。團隊會與你一起評估策展主題與上架方式。",
+  },
+  {
+    q: "策展上架需要付費嗎？",
+    a: "上架策展本身不收費。策展上架後進入 ArtON 策展目錄，企業訂閱後作品即開始在展示空間播放，你與藝術家同步獲得展示帶來的持續收益。",
+  },
+  {
+    q: "收益如何計算與請領？",
+    a: "收益依策展的展示據點與展示天數計算，透過 ArtON 雲端後台透明呈現。每月彙整，可依約定方式請領，讓你清楚掌握每一筆展示帶來的收入。",
+  },
+  {
+    q: "策展上架後需要我持續管理嗎？",
+    a: "策展上架一次，後續的作品更新、據點排程與內容輪播都由 ArtON 雲端完成，並搭配 AI 協助管理。你只需要偶爾更新策展內容，保持新鮮感即可。",
+  },
+];
+
 const steps = [
   { no: "01", title: "加入策展人 LINE", description: "與團隊聊聊你的策展風格與作品資源，了解合作方式與收益機制。" },
   { no: "02", title: "上架數位策展", description: "整理作品成為有主題、有情緒的展覽，上架到 ArtON 策展目錄。" },
@@ -164,6 +183,32 @@ export default function CuratorPage() {
                 用電腦瀏覽？用手機掃描 QR Code，即可加入策展人 LINE。
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Curator FAQ */}
+        <section className="py-24 md:py-32 bg-[#F7F4EF]">
+          <div className="container">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-14 text-center">
+              Curator Notes · 策展人常見問答
+            </p>
+            <div className="max-w-3xl mx-auto divide-y divide-[#1C1C1E]/10 border-y border-[#1C1C1E]/10">
+              {curatorFaq.map((item, i) => (
+                <details key={item.q} className="group py-7">
+                  <summary className="list-none flex items-center gap-4 cursor-pointer select-none">
+                    <span className="text-[12px] text-[#C4A265] font-medium">0{i + 1}</span>
+                    <span className="text-[17px] md:text-[19px] font-normal text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                      {item.q}
+                    </span>
+                    <span className="ml-auto text-[#C4A265] text-[16px] transition-transform duration-300 group-open:rotate-45">＋</span>
+                  </summary>
+                  <p className="mt-4 pl-[44px] pr-8 text-[13.5px] leading-[1.95] text-[#45423C]">{item.a}</p>
+                </details>
+              ))}
+            </div>
+            <p className="mt-10 text-center text-[13px] text-[#1C1C1E]/45">
+              還有其他問題？直接加入策展人 LINE，團隊會親自回覆。
+            </p>
           </div>
         </section>
       </main>

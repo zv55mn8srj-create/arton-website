@@ -31,6 +31,7 @@ export default function FAQSection() {
             room="10"
             label="Visitor Notes"
             title={<>開始之前，<br />你可能想<br />知道的事。</>}
+            titleSize="clamp(2.6rem,4.6vw,4.6rem)"
             description={<>如果你的空間、設備或 ESG 紀錄有不同需求，我們也會依實際情況一起規劃。</>}
             className={`lg:col-span-5 lg:sticky lg:top-32 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           />

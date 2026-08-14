@@ -86,7 +86,7 @@ const hardwarePlans: HardwarePlan[] = [
   {
     icon: Sun,
     title: "ArtON 真全彩電子紙展示",
-    subtitle: "1677 萬真全彩｜零藍光護眼｜超低耗電。",
+    subtitle: "1677 萬真全彩｜省電 99%｜年減碳約 227 kg。",
     highlight: "環保首選",
     highlightNote: "多種尺寸｜依需求配置，提供專人規劃與報價",
     features: ["採用全反射電子紙顯示技術", "忠實呈現藝術作品色彩，長時間顯示舒適省電", "最適合藝術展示、企業 ESG 與公共空間"],

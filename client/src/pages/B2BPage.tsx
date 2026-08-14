@@ -8,13 +8,18 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { ArrowRight, Check, FileOutput, Landmark, MessageCircle, WifiOff } from "lucide-react";
+import { ArrowRight, Check, FileOutput, Landmark, MessageCircle, Leaf, WifiOff } from "lucide-react";
 
 const highlights = [
   {
+    icon: Leaf,
+    title: "E · 減碳展示終端",
+    description: "全彩電子紙較傳統液晶省電約 99%。一年幫你省下上百度電與數十公斤碳排放，讓每一面展示牆都成為低碳實踐。",
+  },
+  {
     icon: FileOutput,
     title: "一鍵匯出 ESG 報告",
-    description: "展示據點、支持藝術家數量與年度展示紀錄，直接匯出成可放入企業永續報告書的格式。",
+    description: "減碳量、展示據點、支持藝術家數量與年度展示紀錄，直接匯出成可放入企業永續報告書的格式。",
   },
   {
     icon: Landmark,
@@ -22,14 +27,9 @@ const highlights = [
     description: "ArtON 是藝術展示服務平台。企業付費採購藝術服務，取得完整憑證、授權文件與發票，協助財務、稅務與 ESG 申報。",
   },
   {
-    icon: WifiOff,
-    title: "零施工雲端管理",
-    description: "不改變空間工程，接上 ArtON Box 即可開始。多據點內容雲端統一排程更新。",
-  },
-  {
     icon: Check,
-    title: "企業 CSR 品牌形象加分",
-    description: "採購藝術服務的同時支持身心障礙創作者靠作品獲得持續收入，成為 DEI 與文化永續的具體實踐。",
+    title: "S · 社會影響力",
+    description: "每一次訂閱，都讓身心障礙創作者靠作品獲得持續收入，同時累積 DEI 與文化永續的可記錄成果。",
   },
 ];
 
@@ -52,14 +52,14 @@ const plans = [
     features: ["ArtON Box 藝術盒（隨插即用）", "自備螢幕即可展示", "每月策展內容自動更新", "雲端管理與展示紀錄"],
   },
   {
-    name: "全包輕量面板方案",
+    name: "永續電子紙方案",
     price: "1,499",
     period: "/月",
     term: "綁約 2 年",
-    badge: "質感首選",
-    highlight: "附贈 21.5 吋高質感藝術面板",
-    note: "一體到位，霧面抗眩光如同真實畫布。",
-    features: ["21.5 吋高質感藝術面板", "博物館級色彩校準", "每月策展內容自動更新", "雲端管理與年度 ESG 報告"],
+    badge: "E · S 雙效益",
+    highlight: "附贈 21.5 吋全彩電子紙",
+    note: "省電 99% 的低碳展示終端，年減碳約 227 kg CO₂，同時支持創作者持續收入。",
+    features: ["21.5 吋全彩電子紙（E-Paper）", "年省約 446 度電、減碳 227 kg", "紙感顯影、霧面抗眩光", "每月策展內容自動更新", "雲端管理與年度 ESG 減碳報告"],
     recommended: true,
   },
 ];
@@ -91,18 +91,18 @@ export default function B2BPage() {
                 }`}
                 style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}
               >
-                讓企業的牆面，
+                讓每一面牆，
                 <br />
-                變成 2026 永續報告書裡
+                成為 2026 永續報告書裡
                 <br />
-                <span className="text-[#E8B339]">最亮眼的 Social KPI。</span>
+                <span className="text-[#E8B339]">會減碳、支持創作者的 ESG 實踐。</span>
               </h1>
               <p
                 className={`text-white/70 text-[15px] md:text-[17px] leading-[2] max-w-2xl mb-10 transition-all duration-700 delay-200 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
               >
-                ArtON 是一個藝術展示服務平台。企業付費採購藝術服務，同時創造藝術支持與 ESG 影響——每一天的展示，都成為可被記錄的永續實踐。
+                ArtON 是一個藝術展示服務平台。企業付費採購藝術服務，同時創造減碳與社會影響力——低耗電的電子紙展示，讓 ESG 的 E 與 S 同時被記錄。
               </p>
               <div
                 className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${
@@ -141,6 +141,33 @@ export default function B2BPage() {
                 <HighlightCard key={h.title} {...h} index={i} />
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* E-Paper Carbon Impact */}
+        <section className="py-24 md:py-32 bg-[#16202B] text-white overflow-hidden">
+          <div className="container">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] font-semibold mb-14 text-center">
+              Why E-Paper · 為什麼主推全彩電子紙
+            </p>
+            <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
+              <div className="lg:col-span-7">
+                <p className="text-white/82 text-[15px] md:text-[16.5px] leading-[2] max-w-2xl">
+                  比起傳統液晶螢幕，電子紙只在換畫時耗電，省電高達 <span className="text-[#E8B339] font-semibold">99%</span>。一年幫企業省下約 <span className="text-[#E8B339] font-semibold">446 度電</span>（相當於減少約 <span className="text-[#E8B339] font-semibold">227 kg CO₂</span>），同時支持了 <span className="text-[#E8B339] font-semibold">24 位創作者</span>。
+                </p>
+                <p className="text-white/60 text-[13.5px] leading-[2] mt-6 max-w-2xl">
+                  這是一台吃最少電、產出最高 S&E 價值的永續展示終端——環境減碳與社會責任，一個展示空間同時完成。
+                </p>
+              </div>
+              <div className="lg:col-span-5 grid grid-cols-3 gap-4">
+                <EcoStat value="99%" label="省電比例（對比液晶）" />
+                <EcoStat value="446 度" label="年省電力（單點估算）" />
+                <EcoStat value="227 kg" label="年減碳量（CO₂）" />
+              </div>
+            </div>
+            <p className="text-white/40 text-[11.5px] mt-10 text-center">
+              估算基準：65 吋液晶電視 24 小時開啟年耗約 450 度；電子紙年耗約 4–5 度。碳排係數採台灣電網平均。實際數據依現場設備與使用條件調整。
+            </p>
           </div>
         </section>
 
@@ -243,12 +270,12 @@ export default function B2BPage() {
           <div className="container">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] mb-8 font-semibold">Talk to Us · 免費諮詢</p>
             <h2 className="text-[clamp(2rem,3.8vw,3.4rem)] leading-[1.25] font-light mb-8 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-              每一面牆，
+              吃最少電的展示終端，
               <br />
-              <span className="text-[#E8B339]">都可以成為企業的 ESG 答案。</span>
+              <span className="text-[#E8B339]">產出最高 S&E 價值的永續實踐。</span>
             </h2>
             <p className="text-white/60 text-[14px] md:text-[15px] leading-[1.9] max-w-xl mx-auto mb-10">
-              與顧問聊聊據點數量與預算，取得方案建議、報價與 ESG 報告範本。
+              與顧問聊聊據點數量與預算，取得減碳試算、方案報價與 ESG 報告範本。
             </p>
             <a
               href={LINKS.customerLine}
@@ -263,6 +290,17 @@ export default function B2BPage() {
         </section>
       </main>
       <FooterSection />
+    </div>
+  );
+}
+
+function EcoStat({ value, label }: { value: string; label: string }) {
+  return (
+    <div className="bg-white/[0.06] border border-white/10 rounded-xl px-4 py-6 text-center">
+      <p className="text-[clamp(1.6rem,2.6vw,2.4rem)] font-light text-[#E8B339] leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+        {value}
+      </p>
+      <p className="text-white/55 text-[11px] leading-[1.7] mt-3">{label}</p>
     </div>
   );
 }
