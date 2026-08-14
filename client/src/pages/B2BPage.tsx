@@ -334,6 +334,87 @@ export default function B2BPage() {
               </div>
             </div>
 
+            {/* OPTION 04 — 企業客製方案（多據點） */}
+            <div className="mt-10 flex justify-center">
+              <div
+                className={`w-full max-w-4xl bg-[#16202B] text-white rounded-xl p-9 md:p-12 transition-all duration-700 delay-200 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+              >
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] font-semibold mb-4">OPTION 04 · Enterprise</p>
+                <div className="grid md:grid-cols-12 gap-8 items-start">
+                  <div className="md:col-span-8">
+                    <h3 className="text-[clamp(1.8rem,3vw,2.6rem)] leading-[1.3] font-light text-white mb-4" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                      企業客製方案
+                    </h3>
+                    <p className="text-[15px] md:text-[16.5px] text-white/85 mb-8">
+                      多據點採購 · 專人到場評估 · 年度合約彈性。
+                    </p>
+                    <div className="border-t border-white/12 pt-7 mb-8">
+                      <p className="text-[clamp(1.5rem,2.6vw,2.2rem)] font-light text-[#E8B339] mb-2.5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                        為大型採購設計
+                      </p>
+                      <p className="text-[15px] text-white/80 mb-1">5 台以上（診所、企業總部、連鎖門市）</p>
+                      <p className="text-[13.5px] text-white/45">依據點規模提供團體優惠與彈性合約，洽 arton.contact@gmail.com</p>
+                    </div>
+                    <ul className="space-y-3 mb-9">
+                      <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">
+                        <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
+                        <span>多據點團體優惠：5 台以上即享量購折讓，據點越多條件越優</span>
+                      </li>
+                      <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">
+                        <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
+                        <span>專人到場評估：免費勘查各據點空間與設備條件，提供規劃建議書</span>
+                      </li>
+                      <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">
+                        <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
+                        <span>年度合約彈性：綁約與付款方式可依企業預算客製，支援統一發票與採購憑證</span>
+                      </li>
+                      <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">
+                        <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
+                        <span>整併式 ESG 成果：所有據點展示紀錄彙整為一份年度報告，方便企業永續申報</span>
+                      </li>
+                    </ul>
+                    <a
+                      href={LINKS.email}
+                      className="group inline-flex items-center justify-center gap-2.5 text-[14px] font-semibold px-7 py-4 bg-[#E8B339] text-[#16202B] rounded-full hover:bg-[#F0B429] transition-all duration-200 active:scale-[0.97]"
+                    >
+                      申請多據點評估與報價
+                      <ArrowRight className="w-4 h-4" strokeWidth={2} />
+                    </a>
+                  </div>
+                  <div className="md:col-span-4 border border-white/15 rounded-lg p-7 md:ml-2">
+                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#E8B339] font-semibold mb-5">Custom · 企業採購流程</p>
+                    <ul className="space-y-4 text-[13px] leading-[1.8] text-white/80">
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-[#E8B339] font-semibold shrink-0">01</span>
+                        <span>提供據點清單與需求</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-[#E8B339] font-semibold shrink-0">02</span>
+                        <span>專人到場勘查評估</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-[#E8B339] font-semibold shrink-0">03</span>
+                        <span>客製報價與合約規劃</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-[#E8B339] font-semibold shrink-0">04</span>
+                        <span>統一安裝上線與教育訓練</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-[#E8B339] font-semibold shrink-0">05</span>
+                        <span>年度 ESG 成果報告交付</span>
+                      </li>
+                    </ul>
+                    <p className="text-white/40 text-[11.5px] leading-[1.7] mt-6 pt-5 border-t border-white/10">
+                      由專人為您評估據點需求與預算，全程免費、無強制採購。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <p className={`mt-12 text-center text-[12.5px] text-[#1C1C1E]/40 transition-all duration-700 delay-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
               所有方案皆含合法展示授權與每月策展內容自動更新；多據點與大型空間另有專人規劃報價。
             </p>
