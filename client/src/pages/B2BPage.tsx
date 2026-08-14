@@ -8,7 +8,7 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { ArrowRight, Check, FileOutput, Landmark, MessageCircle, Leaf, WifiOff } from "lucide-react";
+import { ArrowRight, Check, FileOutput, Landmark, MessageCircle, Leaf, Mail, WifiOff } from "lucide-react";
 
 const highlights = [
   {
@@ -112,7 +112,7 @@ const epaperPlan = {
   name: "ArtON 真全彩電子紙展示",
   tagline: "1677 萬真全彩｜零藍光護眼｜超低耗電。",
   badge: "E 加分項",
-  badgeNote: "多種尺寸｜依需求配置｜洽 arton.contact@gmail.com",
+  badgeNote: "多種尺寸｜依需求配置｜洽 ",
   quote: "比一般螢幕貴，但讓 ESG 的 E 與 S 同時被記錄",
   features: ["在任一訂閱方案基礎上，升級電子紙顯示終端", "較傳統液晶省電約 99%，一年省電 446 度、減碳 227 kg", "忠實呈現藝術作品色彩，長時間顯示舒適護眼", "減碳量計入年度 ESG 成果報告"],
 };
@@ -341,7 +341,13 @@ export default function B2BPage() {
                       <p className="text-[clamp(1.5rem,2.6vw,2.2rem)] font-light text-[#B8954F] mb-2.5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                         {epaperPlan.badge}
                       </p>
-                      <p className="text-[15px] text-[#1C1C1E] mb-1">{epaperPlan.badgeNote}</p>
+                      <p className="flex items-center gap-2 text-[15px] text-[#1C1C1E] mb-1">
+                        {epaperPlan.badgeNote}
+                        <a href={LINKS.email} className="inline-flex items-center gap-1.5 text-[#B8954F] hover:text-[#C4A265] transition-colors duration-200">
+                          <Mail className="w-3.5 h-3.5" strokeWidth={2} />
+                          <span>arton.contact@gmail.com</span>
+                        </a>
+                      </p>
                       <p className="text-[13.5px] text-[#1C1C1E]/45">{epaperPlan.quote}</p>
                     </div>
                     <ul className="space-y-3 mb-9">
@@ -380,8 +386,12 @@ export default function B2BPage() {
                         <span>依據點與空間需求配置</span>
                       </li>
                     </ul>
-                    <p className="text-white/40 text-[11.5px] leading-[1.7] mt-6 pt-5 border-t border-white/10">
-                      各尺寸規格與報價，請洽 arton.contact@gmail.com
+                    <p className="flex items-center gap-2 text-white/40 text-[11.5px] leading-[1.7] mt-6 pt-5 border-t border-white/10">
+                      各尺寸規格與報價，請洽
+                      <a href={LINKS.email} className="inline-flex items-center gap-1.5 text-white/60 hover:text-[#E8B339] transition-colors duration-200">
+                        <Mail className="w-3 h-3" strokeWidth={2} />
+                        <span>arton.contact@gmail.com</span>
+                      </a>
                     </p>
                   </div>
                 </div>
