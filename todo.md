@@ -454,3 +454,7 @@ HeroSection → WhyArtON → ProcessSection → EnterpriseSection → CuratorSec
 # 第三十四輪改版待辦（2026-08-16）
 - [ ] 策展人頁文案改為「策展後即刻分享 讓更多人訂閱你的策展藝術」
 - [ ] B2B 頁 Hero 主標語移除「2026」年份
+
+# 第三十五輪改版待辦（2026-08-16）
+- [ ] /start 頁「從 NT$799／月起」區塊右側花田小圖換為九鯉魚全圖（/home/ubuntu/upload/1.作品全圖_九鯉魚_全圖.webp）
+- [ ] 驗證截圖並保存交付

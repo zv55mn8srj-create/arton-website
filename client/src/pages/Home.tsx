@@ -71,8 +71,8 @@ function PlansTeaserSection() {
           <div className="lg:col-span-5 flex lg:justify-end">
             <div className="relative">
               <img
-                src="/assets/teaser-art-d_d8627ff7.jpg"
-                alt="藝術作品於空間中持續展示"
+                src="/manus-storage/koi-full_art_b670850f.jpg"
+                alt="鄭美珠作品《九鯉魚》作品全圖 — 藝術於空間中持續展示"
                 className="w-full max-w-md rounded-2xl shadow-2xl shadow-black/30"
               />
               <div className="absolute -bottom-4 -left-4 hidden md:block bg-[#E8B339] text-[#1C2632] text-[13px] font-semibold px-5 py-3 rounded-xl shadow-lg">
