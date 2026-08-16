@@ -91,16 +91,16 @@ export default function CuratorPage() {
               >
                 策展一次，
                 <br />
-                讓更多創作者
+                讓作品走進
                 <br />
-                <span className="text-[#E8B339]">有收入。</span>
+                <span className="text-[#E8B339]">更多空間。</span>
               </h1>
               <p
                 className={`text-white/72 text-[15px] md:text-[17px] leading-[2] max-w-2xl mb-10 transition-all duration-700 delay-200 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
               >
-                ArtON 邀請你成為策展夥伴。你的策展不只是短暫的展覽，而是一場每天在生活空間裡持續發生的展示，讓藝術家與你一起，靠作品持續走下去。
+                ArtON 邀請你成為策展夥伴。你的策展不只是短暫的展覽，而是一場每天在客廳、診所、企業與咖啡館裡持續發生的展示——你的作品被更多人看見，美學素養在日常中被慢慢累積。你策的展，可自行定價後上架，讓更多人訂閱，讓更多人看見你的創作。
               </p>
               <a
                 href={LINKS.curatorLine}
