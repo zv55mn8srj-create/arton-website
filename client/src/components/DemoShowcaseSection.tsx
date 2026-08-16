@@ -42,14 +42,14 @@ export default function DemoShowcaseSection() {
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-10 mb-14 md:mb-20">
           <div className={`lg:col-span-7 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            <p className="text-[11px] md:text-[12px] uppercase tracking-[0.32em] text-[#B38A44] mb-8 font-semibold">Demo · 實際展示畫面</p>
+            <p className="text-[11px] md:text-[12px] uppercase tracking-[0.32em] text-[#B38A44] mb-8 font-semibold">Demo · 展示情境示意</p>
             <h2 className="text-[clamp(2.6rem,4.6vw,4.6rem)] leading-[1.18] font-light tracking-[-0.02em] text-[#1C1C1E] mb-7" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
               展示情境應用，
               <br />
-              作品<span className="text-[#B38A44]">真實播放中。</span>
+              作品<span className="text-[#B38A44]">走進你的空間。</span>
             </h2>
             <p className="text-[#1C1C1E]/62 text-[15px] md:text-[16px] leading-[2] max-w-xl">
-              一位藝術家、五幅作品，就是一場新展覽。螢幕上可能是作品全圖、可能是創作故事，也可能是作者介紹，依空間而定。
+              一位藝術家、五幅作品，就是一場新展覽。作品全圖、創作故事與作者介紹輪番登場，讓每一面牆都有自己的展覽。
             </p>
           </div>
         </div>

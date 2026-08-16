@@ -583,3 +583,7 @@ Playwright 截圖顯示卡 01/03/06 仍舊白框直書殘影。但程式碼中�
 ## 第四十二輪進度更新（12:33）
 第二次裁切成功：flowers-sea-square2_29d1e34e.jpg（1200x1200 乾淨正方形，含島嶼、海面、花海與簽名，無白框）。新 URL：/manus-storage/flowers-sea-square2_29d1e34e.jpg。第一次的 flowers-sea-square_1f4b7797.jpg 不可用（含白框）。
 剩餘：找出 MonthlyUpdateSection 本月卡目前使用的夏日之青春 URL，替換為此新 URL，更新 alt，驗證，checkpoint。
+
+# 第四十三輪改版待辦（2026-08-16）：改寫「你會看到什麼」文案
+- [ ] 區塊標題/副標去掉「可能是…可能是…」與「真實播放」表述，改寫為情境展示說明
+- [ ] 驗證並保存交付
