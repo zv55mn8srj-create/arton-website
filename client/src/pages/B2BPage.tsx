@@ -13,7 +13,7 @@ import { ArrowRight, Check, FileOutput, Landmark, MessageCircle, Leaf, Mail, Wif
 const highlights = [
   {
     icon: Check,
-    title: "S · 身障創作者支持",
+    title: "S · 身心障礙創作者支持",
     description: "每一次訂閱，都直接支持身心障礙創作者，讓他們靠自己的作品獲得持續收入，同時累積 DEI 與文化永續的可記錄成果。",
   },
   {
@@ -51,7 +51,7 @@ const plans = [
       "每月策展內容自動更新",
       "雲端管理與展示紀錄",
       "年度 ESG 成果報告（OPTION）",
-      "支援身障創作者持續收入",
+      "支援身心障礙創作者持續收入",
     ],
     price: "NT$999",
     per: "/月",
@@ -70,7 +70,7 @@ const plans = [
       "每月策展內容自動更新",
       "雲端管理與展示紀錄",
       "年度 ESG 成果報告（OPTION）",
-      "支援身障創作者持續收入",
+      "支援身心障礙創作者持續收入",
     ],
     price: "NT$1,499",
     per: "/月",
@@ -84,7 +84,7 @@ const esgMap = [
   {
     target: "SDG 8",
     name: "良好工作與經濟成長",
-    description: "2030 目標明確寫明「為身心障礙者實現體面工作與同值同酬」。訂閱支持身障創作者持續獲得展示收入，即為企業日常實踐。",
+    description: "2030 目標明確寫明「為身心障礙者實現體面工作與同值同酬」。訂閱支持身心障礙創作者持續獲得展示收入，即為企業日常實踐。",
     metric: "8.5 包容性就業",
   },
   {
@@ -96,7 +96,7 @@ const esgMap = [
   {
     target: "S 社會面向",
     name: "企業永續報告指標",
-    description: "支持身障者營生、多元包容採購與在地文化支持，皆為上市櫃永續報告書「社會面向」的常見披露指標。",
+    description: "支持身心障礙者營生、多元包容採購與在地文化支持，皆為上市櫃永續報告書「社會面向」的常見披露指標。",
     metric: "社會 · 共融採購",
   },
   {
@@ -148,14 +148,14 @@ export default function B2BPage() {
                 <br />
                 成為 2026 永續報告書裡
                 <br />
-                <span className="text-[#E8B339]">支持身障創作者的 ESG 實踐。</span>
+                <span className="text-[#E8B339]">支持身心障礙創作者的 ESG 實踐。</span>
               </h1>
               <p
                 className={`text-white/70 text-[15px] md:text-[17px] leading-[2] max-w-2xl mb-10 transition-all duration-700 delay-200 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
               >
-                ArtON 是一個藝術展示服務平台。企業付費採購藝術服務，讓每一位身障創作者靠作品獲得持續收入——支持身障創作者，就是最直接的 ESG 社會實踐；想更進一步，還可升級低耗電的電子紙展示，讓 E 與 S 同時被記錄。
+                ArtON 是一個藝術展示服務平台。企業付費採購藝術服務，讓每一位身心障礙創作者靠作品獲得持續收入——支持身心障礙創作者，就是最直接的 ESG 社會實踐；想更進一步，還可升級低耗電的電子紙展示，讓 E 與 S 同時被記錄。
               </p>
               <div
                 className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${
@@ -197,14 +197,14 @@ export default function B2BPage() {
           </div>
         </section>
 
-        {/* ESG Mapping — 支持身障創作者如何對應 ESG 指標 */}
+        {/* ESG Mapping — 支持身心障礙創作者如何對應 ESG 指標 */}
         <section className="py-24 md:py-32 bg-[#F7F4EF]">
           <div className="container">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-6 text-center">
-              Your ESG Impact · 支持身障創作者，如何成為你的 ESG
+              Your ESG Impact · 支持身心障礙創作者，如何成為你的 ESG
             </p>
             <p className={`max-w-2xl mx-auto text-center text-[15px] md:text-[16.5px] leading-[2] text-[#45423C] mb-14 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              支持身障創作者，不是公益活動，而是企業付費採購文化服務所創造的社會價值——直接對應聯合國永續發展目標與企業永續報告書的社會指標。
+              支持身心障礙創作者，不是公益活動，而是企業付費採購文化服務所創造的社會價值——直接對應聯合國永續發展目標與企業永續報告書的社會指標。
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12 max-w-5xl mx-auto">
               {esgMap.map((item, i) => (
@@ -229,7 +229,7 @@ export default function B2BPage() {
                   比起傳統液晶螢幕，電子紙只在換畫時耗電，省電高達 <span className="text-[#E8B339] font-semibold">99%</span>。一年幫企業省下約 <span className="text-[#E8B339] font-semibold">446 度電</span>（相當於減少約 <span className="text-[#E8B339] font-semibold">227 kg CO₂</span>），是 ESG 中 <span className="text-[#E8B339] font-semibold">E（環境減碳）</span> 的升級選項。
                 </p>
                 <p className="text-white/60 text-[13.5px] leading-[2] mt-6 max-w-2xl">
-                  而支持身障創作者的 <span className="text-white/82">S（社會共融）</span>，每個訂閱方案都已包含。電子紙讓 E 與 S 同時被記錄——環境減碳與支持身障創作者，一個展示空間同時完成。
+                  而支持身心障礙創作者的 <span className="text-white/82">S（社會共融）</span>，每個訂閱方案都已包含。電子紙讓 E 與 S 同時被記錄——環境減碳與支持身心障礙創作者，一個展示空間同時完成。
                 </p>
               </div>
               <div className="lg:col-span-5 grid grid-cols-3 gap-4">
@@ -277,7 +277,7 @@ export default function B2BPage() {
               B2B Plans · 訂閱即每天做 ESG
             </p>
             <p className={`max-w-2xl mx-auto text-center text-[15px] md:text-[16.5px] leading-[2] text-[#45423C] mb-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              選擇任一訂閱方案，您的企業每天就在展示藝術、支持身障創作者，並累積可匯出的 ESG 成果紀錄；想進一步減碳，可升級電子紙方案。
+              選擇任一訂閱方案，您的企業每天就在展示藝術、支持身心障礙創作者，並累積可匯出的 ESG 成果紀錄；想進一步減碳，可升級電子紙方案。
             </p>
             {/* 訂閱方案：999／1499 — 企業日常 ESG 的基礎 */}
             <div className="grid md:grid-cols-2 gap-7 max-w-4xl mx-auto">

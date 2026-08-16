@@ -295,3 +295,69 @@
   9. TS 檢查：curatorSection/EnterpriseSection 已清理；需跑 tsc 全檢
   10. 其餘區塊微調：WhyArtON 描述文字已為 /58 透明度（可考慮 /68）、ExploreSection/WhyEnterprise/TimelineSection/VenuesSection 檢查對比度（白字 on 深色用 white/72 以上；淺灰字加深）
   11. 截圖全頁驗證（含 /start、/curator、/b2b 子頁）→ checkpoint → 交付
+
+# 第二十六輪改版待辦（2026-08-16）：官方 Logo 套用 + 「身障」→「身心障礙」用語統一
+- [ ] 上傳官方 Logo 圖檔（/home/ubuntu/upload/LOGOPNG檔(1).png）至 webdev 資產並取得 URL
+- [ ] Header 導覽列 Logo 改為官方圖檔（透明底、深色文字在淺底導覽列）
+- [ ] 頁尾 / 各子頁 Hero / FAQ 等處的 SVG 文字 Logo（Art + 電源符號 + N）改為官方圖檔
+- [ ] 製作 favicon（從 Logo 裁出電源符號或整枚縮圖）並更新 index.html 與設定
+- [ ] 全站搜尋「身障」字眼並改為「身心障礙」（含「身心障礙藝術展」提及處）
+- [ ] 截圖驗證各頁 Logo 顯示 → checkpoint → 交付
+
+## 關鍵資訊（第二十六輪）
+- 官方 Logo 上傳成功，URL：/manus-storage/arton-logo-official_fa5df696.png（1114x518，淺灰/白底，黑灰字+黃色電源符號 ArtON，下方有 TURN ART ON. tagline）
+- 全站 Logo 待改位置：Header.tsx（導覽列）、FooterSection.tsx（頁尾 Brand 區）、可能在 WhyArtON/其他地方出現的 Art+電源+N SVG wordmark
+- 用字替換：所有「身障」→「身心障礙」（含「身心障礙藝術展」）
+
+## 第二十六輪進度與關鍵資訊（持續更新）
+- 官方 Logo URL（已上傳）：/manus-storage/arton-logo-official_fa5df696.png（透明底，1114x518：深灰字 ArtON + 黃電源符號 + TURN ART ON. tagline）
+- Header.tsx Logo 已改 → 官方 img，h-16（含導覽列深色/淺色皆適用，logo 透明底+深灰字）
+- FooterSection.tsx Brand 區 Logo 已改 → 官方 img，h-14（深色頁尾 #1C1C1E 底）
+- favicon 裁切參數（PIL 分析結果）：黃圓 x=599-840（寬241），直線 x~715，整體黃色 y=46-443；圓心約 (720,256)，正在用 d*1.25 裁切生成 favicon.png（512）與 favicon-32.png（32）於 client/public/
+- favicon 引用待辦：client/index.html 需加 <link rel="icon"> 指向 /favicon.png
+- 「身障」→「身心障礙」待改位置（grep 結果）：
+  - ExploreSection.tsx L11: 卡片 title "身障藝術展"（保留展名？用戶說「所有身障改為身心障礙藝術展」→ 改為「身心障礙藝術展」）
+  - PlansSection.tsx L166/170: alt 與「支持身障藝術創作」→「身心障礙」
+  - SpacesPartnersSection.tsx L75: 「支持身障藝術創作」→「身心障礙」
+  - B2BPage.tsx 多處 L16/54/73/87/99/151/158/200/204/207/232/280：「身障創作者」→「身心障礙創作者」等
+  - StartPage.tsx L188/215: 「身障藝術展覽內容」→「身心障礙藝術展」
+- 子頁 Hero/其他處若有舊 SVG wordmark 未發現（已 grep 過）
+- 做完 favicon 後：跑 tsc → 截圖驗證 → checkpoint → 交付
+
+## Favicon 完成（2026-08-16）
+favicon.png 已完成：黃色電源符號（圓環+直線）、透明背景、512x512，位於 /home/ubuntu/arton/client/public/favicon.png。裁切腳本在 /home/ubuntu/make_favicon.py。
+
+## 第二十六輪剩餘待辦
+- [ ] 全站「身障」用語改為「身心障礙」（grep -rn "身障" 找出所有位置逐一修改，含 Home/HeroSection/WhyArtON/ProcessSection/CuratorSection/EnterpriseSection/FooterSection/TimelineSection/WhyEnterprise/MonthlyUpdateSection/StartPage/CuratorPage/B2BPage/header.tsx）
+- [ ] 檢查 header.tsx、links.ts、NotFound 是否也需改
+- [ ] pnpm tsc --noEmit 驗證
+- [ ] 截圖驗證 Hero logo 顯示正常
+- [ ] checkpoint 並交付（附註：官方 logo URL /manus-storage/arton-logo-official.png，深色底導覽列用白色版）
+
+## 截圖驗證結果（2026-08-16）
+首頁與 B2B 頁截圖顯示：官方 Logo 已出現在導覽列左上，但**黃色電源符號部分在深色導覽列背景中顯示異常（幾乎隱形）**，「ArtN」深色字體可辨識。原因推測：Header 中對 logo 加了白色濾鏡的 img（filter: brightness）導致黃色部分反白消失；或官方 logo 的透明背景區域包含「半透明黑色」像素（原圖有灰色漸層底紋），需處理。需修正 Header logo 處理：使用 logo 的黃色圓點做 icon，或將白色濾鏡作用於深色字體部分。頁尾部分尚未檢查。
+- 「身心障礙」用語已完成全站替換（B2B 首頁標題已正確顯示「支持身心障礙創作者的 ESG 實踐」）。
+- 剩餘：修 Header logo 濾鏡問題 → 檢查 Footer logo → checkpoint → 交付。
+
+## Logo 診斷（2026-08-16）
+官方 logo 上傳於 /manus-storage/arton-logo-official_fa5df696.png（本地 /home/ubuntu/webdev-static-assets/arton-logo-official.png，1114x518）。分析結果：無白色像素、無半透明灰色漸層問題；logo 本身是深灰字+黃圓。截圖中黃色圓「隱形」的原因：導覽列未滾動時透明底，logo 放在深色 hero 照片上——深灰字可辨識，但**黃色電源圓與 hero 背景的暖色調幾乎同色**；另外截圖顯示圓圈幾乎不可見（可能 hero 照片該區域偏黃灰）。解法：為 logo 加白色柔和陰影/光暈濾鏡？不行——白影在淺色導航列上會髒。較穩健方案：導覽列未滾動時 logo 加 drop-shadow(0 1px 6px rgba(0,0,0,0.55))；或使用 CSS filter: brightness 只在深色底。先試統一加柔和深色投影，兩種背景都可用。
+
+## 驗證結果（2026-08-16，第二次截圖）
+- 首頁/策展人頁導覽列：官方 logo 清晰可辨（深灰字+黃圓），drop-shadow 有效。
+- 頁尾：全頁截圖太小看不清 logo；需 viewport 級截圖檢查頁尾 logo 區塊。
+- 剩餘：viewport 截圖檢查頁尾 logo → checkpoint → 交付。
+
+## 導航列 logo 診斷（2026-08-16，viewport 截圖）
+深色 hero 背景上 logo 的「Art」與「N」深灰字幾乎不可見（與深背景融為一體），只有黃圓稍可見。drop-shadow 對深灰字無幫助。根本原因：官方 logo 字體顏色為深灰（#2A2E35 類），放在深色 hero 上必然隱形。
+**解法**：導覽列透明（未滾動）時改用 CSS filter: brightness(0) invert(1) 把深灰字變白色？這會連黃圓也變白。更好做法：製作兩個版本——白字版 logo（將深灰字換白、保留黃圓）。用 PIL 將 logo 的深色像素（r,g,b 均 <180 且非黃）轉白，生成 arton-logo-white.png 上傳。透明底未滾動導覽列用白版，滾動後白色導航列+頁尾用原始深灰版。
+
+## 白色版 logo
+/manus-storage/arton-logo-white_de90f326.png（深灰字轉白、保留黃圓，透明底）
+- 透明（未滾動）導覽列：白色版
+- 滾動後白底導覽列 / 深色頁尾：原始深灰版
+
+## Logo 最終驗證（2026-08-16）
+- 首頁未滾動：白色版 logo 清晰（Art白字+黃圓+N白字+細小 tagline），深色 hero 對比良好 ✓
+- /b2b 深色 hero：白色版 logo 清晰 ✓
+- 滾動後白色導航列 + 頁尾深灰底：用原始深灰版（含 drop-shadow 補對比）
+- 剩餘：確認滾動後白色導覽列 logo 顯示深灰版正常（可省，HMR 後行為可預期）→ checkpoint → 交付

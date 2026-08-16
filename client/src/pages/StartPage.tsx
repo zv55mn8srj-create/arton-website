@@ -185,7 +185,7 @@ export default function StartPage() {
                   <span className="text-[#B8954F]">創始合作夥伴。</span>
                 </h2>
                 <p className="text-[14.5px] leading-[2] text-[#45423C] max-w-md mb-8">
-                  首批合作空間可享期間免費體驗，讓身障藝術展覽內容、ArtON 播放設備與平台服務，先進入你的空間。
+                  首批合作空間可享期間免費體驗，讓身心障礙藝術展覽內容、ArtON 播放設備與平台服務，先進入你的空間。
                 </p>
                 <div className="flex flex-wrap items-center gap-x-8 gap-y-3 mb-9">
                   <span className="inline-flex items-center gap-2.5 text-[13.5px] text-[#1C1C1E]">
@@ -212,7 +212,7 @@ export default function StartPage() {
                 <div className="absolute -inset-4 border border-[#C4A265]/35 rotate-[1.5deg]" aria-hidden="true" />
                 <img
                   src={FOUNDING_ART}
-                  alt="身障藝術家《花開時節與海與島》—— 首批合作空間預覽"
+                  alt="身心障礙藝術家作品《花開時節與海與島》—— 首批合作空間預覽"
                   className="relative w-full aspect-[2/3] object-cover shadow-[0_18px_50px_rgba(28,28,30,0.14)]"
                 />
                 <p className="absolute bottom-4 left-5 right-5 text-white/90 text-[10.5px] uppercase tracking-[0.24em] font-medium">

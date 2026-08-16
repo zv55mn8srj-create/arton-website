@@ -72,7 +72,7 @@ export default function SpacesPartnersSection() {
               style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}
             >
               與 ArtON 一起，<br className="md:hidden" />
-              支持身障藝術創作
+              支持身心障礙藝術創作
             </h2>
             <p
               className={`text-[15px] leading-[1.9] text-[#1C1C1E]/50 transition-all duration-700 delay-150 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}

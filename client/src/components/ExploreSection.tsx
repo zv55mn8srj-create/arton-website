@@ -8,7 +8,7 @@ import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const exhibitions = [
-  { title: "身障藝術展", tag: "Together", image: "/assets/koi-nine_6a87b9e0.jpg", artist: "身心障礙創作者的油畫，讓每一面牆都成為展廳", featured: true },
+  { title: "身心障礙藝術展", tag: "Together", image: "/assets/koi-nine_6a87b9e0.jpg", artist: "身心障礙創作者的油畫，讓每一面牆都成為展廳", featured: true },
   { title: "旅行台灣", tag: "Taiwan", image: "/assets/exhibition-taiwan_802358d3.jpg", artist: "山海之間，留下島嶼的日常風景" },
   { title: "療癒攝影", tag: "Photography", image: "/assets/exhibition-healing_3a941b9a.jpg", artist: "讓光線慢下來，也讓心慢下來" },
   { title: "抽象藝術", tag: "Abstract", image: "/assets/exhibition-abstract_a4923795.jpg", artist: "色彩、形狀與空間之間的自由對話" },

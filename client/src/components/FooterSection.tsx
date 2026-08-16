@@ -55,17 +55,13 @@ export default function FooterSection() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             {/* Brand */}
             <div className="md:col-span-1">
-              <div className="flex items-center gap-1.5 mb-5">
-                <span className="text-[26px] font-display font-light" style={{ fontFamily: "'Cormorant Garamond', serif", color: "#FFFFFF" }}>
-                  Art
-                </span>
-                <svg viewBox="0 0 16 16" className="w-4 h-4" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 1 A7 7 0 1 1 1 8" fill="none" stroke="#C4A265" strokeWidth="1.8" strokeLinecap="round" />
-                  <line x1="8" y1="1" x2="8" y2="7" stroke="#C4A265" strokeWidth="1.8" strokeLinecap="round" />
-                </svg>
-                <span className="text-[26px] font-display font-light" style={{ fontFamily: "'Cormorant Garamond', serif", color: "#FFFFFF" }}>
-                  N
-                </span>
+              <div className="flex items-center h-14 py-2 mb-5">
+                {/* 官方 Logo（透明底：深灰字＋黃電源符號），套用於深色頁尾 */}
+                <img
+                  src="/manus-storage/arton-logo-official_fa5df696.png"
+                  alt="ArtON — Turn Art ON"
+                  className="h-full w-auto object-contain drop-shadow-[0_1px_5px_rgba(0,0,0,0.6)]"
+                />
               </div>
               <p className="text-white/35 text-[13px] leading-[1.8]">
                 藝術 · 即刻啟動

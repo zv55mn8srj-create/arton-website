@@ -89,17 +89,15 @@ export default function Header() {
     >
       <div className="container flex items-center justify-between h-20">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-1">
-          <span className="text-[28px] font-display font-light tracking-tight" style={{ fontFamily: "'Cormorant Garamond', serif", color: scrolled ? "#1C1C1E" : "#FFFFFF" }}>
-            Art
-          </span>
-          <svg viewBox="0 0 16 16" className="w-5 h-5 -mt-0.5" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 1 A7 7 0 1 1 1 8" fill="none" stroke="#C4A265" strokeWidth="1.8" strokeLinecap="round" />
-            <line x1="8" y1="1" x2="8" y2="7" stroke="#C4A265" strokeWidth="1.8" strokeLinecap="round" />
-          </svg>
-          <span className="text-[28px] font-display font-light tracking-tight" style={{ fontFamily: "'Cormorant Garamond', serif", color: scrolled ? "#1C1C1E" : "#FFFFFF" }}>
-            N
-          </span>
+        <a href="#" className="flex items-center h-16 py-2">
+          {/* 官方 Logo：透明底（深灰字＋黃色電源符號）
+              未滾動時（深色 hero 底）：白色字版，黃圓保留
+              滾動後（白色導覽列底）：原始深灰字版 */}
+          <img
+            src={scrolled ? "/manus-storage/arton-logo-official_fa5df696.png" : "/manus-storage/arton-logo-white_de90f326.png"}
+            alt="ArtON — Turn Art ON"
+            className="h-full w-auto object-contain transition-opacity duration-500"
+          />
         </a>
 
         {/* Desktop Nav */}

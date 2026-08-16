@@ -163,11 +163,11 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
               </div>
 
               <div className="overflow-hidden rounded-lg mb-6">
-                <img src="/assets/bird-sea-art_65bd98be.jpg" alt="飛翔與夕陽海景 — 身障藝術家作品" className="w-full h-[180px] md:h-[210px] object-cover" />
+                <img src="/assets/bird-sea-art_65bd98be.jpg" alt="飛翔與夕陽海景 — 身心障礙藝術家作品" className="w-full h-[180px] md:h-[210px] object-cover" />
               </div>
 
               <p className="text-[14px] leading-[1.9] text-[#1C1C1E]/70 mb-8">
-                與 ArtON 一起支持身障藝術創作，每一次訂閱都是實質的力量。
+                與 ArtON 一起支持身心障礙藝術創作，每一次訂閱都是實質的力量。
               </p>
 
               <ul className="space-y-3.5 mb-10 flex-1">
