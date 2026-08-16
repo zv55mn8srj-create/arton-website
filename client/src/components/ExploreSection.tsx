@@ -9,12 +9,12 @@ import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const exhibitions = [
-  { title: "九鯉魚", tag: "本月主打", image: "/manus-storage/koi-vertical_6657b855.jpg", artist: "藝術家 · 鄭美珠", gallery: "小光點畫廊策展" },
+  { title: "九鯉魚", tag: "本月主打", image: "/manus-storage/koi-square_a0f0802a.jpg", artist: "藝術家 · 鄭美珠", gallery: "小光點畫廊策展" },
   { title: "旅行台灣", tag: "Taiwan", image: "/assets/exhibition-taiwan_802358d3.jpg", artist: "山海之間，留下島嶼的日常風景", gallery: "" },
-  { title: "身心障礙藝術展", tag: "Together", image: "/assets/exhibition-healing_3a941b9a.jpg", artist: "療癒油彩：身心障礙創作者的創作現場", gallery: "" },
+  { title: "身心障礙藝術展", tag: "Together", image: "/manus-storage/happiness-square_5f481689.jpg", artist: "藝術家 · 鄭美珠", gallery: "小光點畫廊策展 · 《真的幸福了》" },
   { title: "抽象藝術", tag: "Abstract", image: "/assets/exhibition-abstract_a4923795.jpg", artist: "色彩、形狀與空間之間的自由對話", gallery: "" },
   { title: "自然風景", tag: "Nature", image: "/assets/exhibition-nature_c9268f72.jpg", artist: "將遠方的山林帶進每天經過的地方", gallery: "" },
-  { title: "春季療癒展", tag: "春季策展", image: "/manus-storage/flowers-sea-island-portrait_c0caeee1.jpg", artist: "藝術家 · 鄭美珠", gallery: "小光點畫廊策展" },
+  { title: "春季療癒展", tag: "春季策展", image: "/manus-storage/flowers-square_0323d166.jpg", artist: "藝術家 · 鄭美珠", gallery: "小光點畫廊策展" },
 ];
 
 export default function ExploreSection() {
@@ -46,7 +46,7 @@ export default function ExploreSection() {
             >
               <a href={index === 0 ? LINKS.customerLine : "/start"} className="block group">
                 <div className="overflow-hidden">
-                  <div className="aspect-[4/5] overflow-hidden">
+                  <div className="aspect-square overflow-hidden">
                     <img
                       src={exhibition.image}
                       alt={exhibition.title}
@@ -68,3 +68,5 @@ export default function ExploreSection() {
     </section>
   );
 }
+
+

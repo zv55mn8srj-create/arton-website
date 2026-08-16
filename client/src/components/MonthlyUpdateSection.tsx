@@ -19,7 +19,7 @@ const months = [
     en: "Next Month",
     artist: "新的藝術家",
     theme: "全新的作品與策展主題",
-    img: "/assets/exhibition-healing_3a941b9a.jpg",
+    img: "/manus-storage/sunrise-dawn_2cd344e3.jpg",
   },
 ];
 

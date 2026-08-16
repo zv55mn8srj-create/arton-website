@@ -501,3 +501,63 @@ HeroSection → WhyArtON → ProcessSection → EnterpriseSection → CuratorSec
 - 用戶截圖（pasted_file_YUhOla_image.png）顯示卡 1、3、6 仍是舊白底畫框＋QR code 樣式。
 - 計劃：重新 webdev_save_checkpoint 確保新 bundle 發布，並在 ExploreSection 加唯一標記（如 data-build="explore-v39"）驗證生產 DOM。
 - 診斷建議：檢查是否存在第二份 ExploreSection、確認 publish bundle 是否為最新 checkpoint。
+
+# 第四十輪改版待辦（2026-08-16）：探索策展區簡化
+- [ ] 六張卡圖片全部統一裁切成相同大小（統一 aspect ratio，object-cover）
+- [ ] 簡化卡面元素（移除混雜的署名小框、QR code 差異）（已完成：目前 ExploreSection.tsx 已為統一方程式，六張卡皆 aspect-[4/5] object-cover、無白框無 QR；問題僅剩用戶覺得版面還是亂）
+- [ ] 驗證截圖並保存交付
+
+## 診斷結論（2026-08-16）
+用戶截圖中「白框＋QR＋直書小字」的殘影卡其實不在 ExploreSection（它已正確為 aspect-square 統一面），而是來自 CuratorSection（Room 04 gallery-frame 卡）與 MonthlyUpdateSection（本月／下月卡）的舊白框樣式，與 ExploreSection 的圖片內容重疊（九鯉魚、花卉與海島兩張美珠作品同時出現在多個區塊），造成「版面混亂」的主觀感受。
+解法（第四十輪）：六張探索卡改為 aspect-square 統一裁切，同時讓各區塊美珠作品圖片不重複使用（ExploreSection 保留九鯉魚+花卉與海島；把 CuratorSection/MonthlyUpdateSection 其中一處換成其他作品如日出晨曦或真的幸福了），降低重複感。
+注意：Playwright 截圖有時抓到 entrance 動畫中途（opacity-0 translate-y-10 的初始狀態），需用 page.wait_for_timeout(2500) 後再截。
+用戶偏好：簡單直接解法 > 複雜重構。
+
+## 第四十輪現況（2026-08-16 12:05）
+已完成：MonthlyUpdateSection 下月卡圖改為 /manus-storage/sunrise-dawn_2cd344e3.jpg；ExploreSection 卡 03 身心障礙藝術展改為 /manus-storage/happiness-vertical_bb142614.jpg（artist 鄭美珠／gallery 小光點畫廊策展《真的幸福了》）。
+殘留問題（診斷中）：dev 預覽截圖中探索區卡 01/03/05（九鯉魚、身心障礙藝術展、春季療癒展）仍出現「白框＋直書小字＋QR」舊樣式殘影。已下載三張 /manus-storage 圖檔到 /home/ubuntu/check3/（透過頁面 fetch 轉存），下一步用 file view 檢查圖檔本身是否含白框/QR（診斷 agent 懷疑圖檔本身是舊合成展卡圖）。
+注意：manus-storage 圖片 URL 無法用 curl 直連（空），須透過 Playwright fetch 或瀏覽器轉存。
+探索區其餘三張卡（02 旅行台灣、04 抽象藝術、06 自然風景，圖在 /assets/）已正確渲染統一樣式。
+完成修復後記得 webdev_save_checkpoint（自動發布）。
+
+## 確認根因（2026-08-16 12:06）
+koi-vertical_6657b855.jpg（2000x3556）本身就是舊版合成的「展卡圖」：作品置中＋白底＋直書「游向光，也游向自己。」＋QR code＋《九鯉魚》署名全部烘焙在圖檔內。同理 happiness-vertical 與 flowers-sea-island-portrait 應也是同類。
+解法：不用這些合成圖當探索區卡面。改用作品全圖（/home/ubuntu/upload/1.作品全圖_九鯉魚_全圖.webp 等）重新裁成正方形卡面。作品全圖檔位置：
+- 九鯉魚全圖：/home/ubuntu/upload/1.作品全圖_九鯉魚_全圖.webp（已確認存在）
+- 需確認其他作品全圖是否存在於 /home/ubuntu/upload/ 或 /home/ubuntu/meizhu_works/鄭美珠老師/
+
+## 注意：devserver 報 ExploreSection.tsx:98:9 Unexpected token
+- 12:01:57 出現一次 vite 內部伺服器錯誤「Unexpected token (98:9)」但 tsc 為 0 錯誤，可能為一過性 HMR。需確認檔案第 98 行是否有語法問題，以及頁面是否正常載入。
+
+## 第四十輪進度更新（12:08）
+- 根因確認：/manus-storage 的 koi-vertical、happiness-vertical、flowers-sea-island-portrait 三張圖檔本身就是烘焙了白框＋直書小字＋QR 的舊合成展卡圖（2000x3556 等），所以裁切後仍殘留舊元素。
+- sunrise-dawn_2cd344e3.jpg 是乾淨的作品全圖（3000x1688 海景），MonthlyUpdateSection 使用無誤。
+- 已上傳乾淨全圖並更新 ExploreSection：
+  - 九鯉魚 → /manus-storage/koi-full-v_53fd78f7.jpg
+  - 真的幸福了 → /manus-storage/happiness-full-v_1a93e0c2.jpg
+  - 花卉與海島 → /manus-storage/flowers-full-v_226619f6.jpg
+- 待辦：驗證截圖 → checkpoint 發布。同時確認 CuratorSection、DemoShowcaseSection 使用的 manus-storage 圖是否乾淨（demo-lobby-sunrise_85ece1de.png 為情境合成圖，屬正常用途；需檢查 demo-meeting-author/demo-reception-flowers/demo-lounge-koi 等是否烘焙署名 QR）。
+
+## 驗證中（12:12）
+Playwright 截圖顯示卡 01/03/06 仍舊白框直書殘影。但程式碼中三張圖 URL 已改為新的乾淨全圖。
+可能原因：Playwright 截圖的圖仍是舊 URL 的快取？不——URL 已改，新圖應直接載入。需確認新圖 koi-full-v_53fd78f7.jpg 是否本身也是舊合成圖（可能上傳來源就是舊圖）。
+應下載新 URL 檢視：/manus-storage/koi-full-v_53fd78f7.jpg
+
+## 新正方形圖已上傳（12:16）
+- koi → /manus-storage/koi-square_a0f0802a.jpg
+- happiness → /manus-storage/happiness-square_5f481689.jpg
+- flowers → /manus-storage/flowers-square_0323d166.jpg
+來源：全圖版乾淨掃描檔（/home/ubuntu/meizhu_works/鄭美珠老師/*_全圖.jpg），PIL 中央裁 1200x1200。
+待辦：更新 ExploreSection.tsx 三處 URL（koi/happiness/flowers）、驗證、checkpoint。MonthlyUpdateSection sunrise-dawn_2cd344e3.jpg 已確認乾淨（不需動）。
+
+## 根因確認二（12:14）
+我上傳的「1.作品全圖_九鯉魚_直.jpg」本身就是烘焙了白框＋直書＋QR 的合成展卡（2000x3556），不是乾淨作品全圖。
+真正乾淨的素材是「1.作品全圖_九鯉魚_全圖.jpg / _橫.jpg」（用戶提供，2048x1152，無白框無文字）。
+計畫：用 PIL 從全圖 jpg 裁出正方形（object-cover 邏輯，中央裁切），產出三張乾淨正方形圖：
+- 九鯉魚：從全圖（橫式 2048x1152）裁正方形需取中段高度 1152x1152
+- 真的幸福了：從 3.作品全圖_真的幸福了_全圖.jpg 裁正方形
+- 花卉與海島：從 4.作品全圖_花開時節與海與島_全圖.jpg 裁正方形
+裁切後上傳替換 manus-storage 引用。
+
+## 最終驗證（12:18）
+探索區塊六張卡全部為乾淨正方形 1:1 裁切圖面，無白框、無直書文字、無 QR code。卡 01 九鯉魚、卡 03 真的幸福了、卡 06 花卉與海島均為美珠老師作品中央裁切，版面整齊一致。待 checkpoint。
