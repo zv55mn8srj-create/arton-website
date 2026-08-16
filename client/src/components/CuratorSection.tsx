@@ -19,10 +19,10 @@ export default function CuratorSection() {
             <div className="relative pb-14 md:pb-20 pr-0 md:pr-12">
               <div className="gallery-frame rotate-[-1.2deg]">
                 <div className="relative aspect-[16/10] overflow-hidden bg-[#D9D2C7]">
-                  <img src="/assets/flowers-sea-island_a1502703.jpg" alt="小光點作品：花卉與海島藝術在空間中播放展示" className="w-full h-full object-cover" />
+                  <img src="/assets/flowers-sea-island_a1502703.jpg" alt="小光點畫廊策展《花卉與海島》：藝術家鄭美珠的作品在空間中播放展示" className="w-full h-full object-cover" />
                   <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/62 to-transparent px-6 pt-10 pb-4">
-                    <p className="text-white text-[13px] md:text-[15px] font-medium" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>藝術家 · 小光點</p>
-                    <p className="text-white/72 text-[11px] md:text-[12px] mt-0.5">《花卉與海島》· 持續展示中</p>
+                    <p className="text-white text-[13px] md:text-[15px] font-medium" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>藝術家 · 鄭美珠</p>
+                    <p className="text-white/72 text-[11px] md:text-[12px] mt-0.5">策展 · 小光點《花卉與海島》· 持續展示中</p>
                   </div>
                 </div>
               </div>

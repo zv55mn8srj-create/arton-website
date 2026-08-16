@@ -10,8 +10,8 @@ const months = [
   {
     label: "本月",
     en: "This Month",
-    artist: "藝術家 · 小光點",
-    theme: "《花卉與海島》春季療癒展",
+    artist: "藝術家 · 鄭美珠",
+    theme: "小光點畫廊策展 · 《花卉與海島》春季療癒展",
     img: "/assets/flowers-sea-island_a1502703.jpg",
   },
   {
@@ -50,7 +50,7 @@ export default function MonthlyUpdateSection() {
                   style={{ transitionDelay: `${index * 130}ms` }}
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
-                    <img src={img} alt={theme} className={`w-full h-full object-cover ${index === 1 ? "grayscale-[0.35]" : ""}`} />
+                    <img src={img} alt={`${label}：${theme}`} className={`w-full h-full object-cover ${index === 1 ? "grayscale-[0.35]" : ""}`} />
                     <div className="absolute top-5 left-5 bg-white/92 backdrop-blur px-4 py-2 rounded-full">
                       <p className="text-[11px] uppercase tracking-[0.18em] text-[#1C1C1E]/55 font-medium">{en}</p>
                       <p className="text-[15px] font-medium text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{label}</p>

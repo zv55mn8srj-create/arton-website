@@ -465,3 +465,11 @@ HeroSection → WhyArtON → ProcessSection → EnterpriseSection → CuratorSec
 - [ ] 「探索策展」卡片区同步使用九鯉魚作為本月主打策展封面
 - [x] 全站 email arton.contact@gmail.com 改為 support@arton.tw（links.ts + B2BPage 2處）
 - [ ] 驗證截圖並保存交付
+
+# 第三十七輪改版待辦（2026-08-16）：策展歸屬更正
+- [ ] 釐清策展歸屬：「小光點」是策展單位（小光點畫廊），鄭美珠是藝術家
+- [ ] 修正 ExploreSection 春季療癒展：策展=小光點畫廊，藝術家=鄭美珠
+- [ ] 修正 CuratorSection：「藝術家 · 小光點」→「策展 · 小光點」＋藝術家=鄭美珠
+- [ ] 修正 CuratorSection（你會看到什麼）與 MonthlyUpdateSection 相關署名
+- [ ] 檢視其他策展卡片歸屬標示一致性
+- [ ] 驗證截圖並保存交付

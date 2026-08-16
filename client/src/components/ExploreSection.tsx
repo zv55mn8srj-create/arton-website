@@ -13,7 +13,7 @@ const exhibitions = [
   { title: "身心障礙藝術展", tag: "Together", image: "/manus-storage/happiness-vertical_6ee4e4f9.jpg", artist: "鄭美珠《真的幸福了》：身心障礙創作者的療癒油彩" },
   { title: "抽象藝術", tag: "Abstract", image: "/assets/exhibition-abstract_a4923795.jpg", artist: "色彩、形狀與空間之間的自由對話" },
   { title: "自然風景", tag: "Nature", image: "/manus-storage/sunrise-dawn_6b2a50b0.jpg", artist: "鄭美珠《日出晨曦》：山海之間，留下島嶼的日常風景" },
-  { title: "春季療癒展", tag: "Healing", image: "/manus-storage/flowers-sea-island-portrait_c0caeee1.jpg", artist: "鄭美珠《花開的季節與海與島》：柔光、花影與重新生長的季節" },
+  { title: "春季療癒展", tag: "Healing", image: "/manus-storage/flowers-sea-island-portrait_c0caeee1.jpg", artist: "小光點畫廊策展 · 藝術家鄭美珠：柔光、花影與重新生長的季節" },
 ];
 
 const spans = ["md:col-span-5", "md:col-span-3", "md:col-span-4", "md:col-span-4", "md:col-span-5", "md:col-span-3"];
