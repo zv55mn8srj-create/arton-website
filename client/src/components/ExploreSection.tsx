@@ -14,7 +14,7 @@ const exhibitions = [
   { title: "身心障礙藝術展", tag: "Together", image: "/manus-storage/happiness-square_5f481689.jpg", artist: "藝術家 · 鄭美珠", gallery: "小光點畫廊策展 · 《真的幸福了》" },
   { title: "抽象藝術", tag: "Abstract", image: "/assets/exhibition-abstract_a4923795.jpg", artist: "色彩、形狀與空間之間的自由對話", gallery: "" },
   { title: "自然風景", tag: "Nature", image: "/assets/exhibition-nature_c9268f72.jpg", artist: "將遠方的山林帶進每天經過的地方", gallery: "" },
-  { title: "春季療癒展", tag: "春季策展", image: "/manus-storage/flowers-square_0323d166.jpg", artist: "藝術家 · 鄭美珠", gallery: "小光點畫廊策展" },
+  { title: "春季療癒展", tag: "春季策展", image: "/manus-storage/summer-youth-square_be39c0c7.jpg", artist: "藝術家 · 鄭美珠", gallery: "小光點畫廊策展" },
 ];
 
 export default function ExploreSection() {
