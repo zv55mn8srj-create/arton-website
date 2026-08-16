@@ -163,8 +163,9 @@ export default function StartPage() {
           </div>
         </section>
 
-        {/* Founding Partner */}
-        <section className="py-24 md:py-32 bg-[#F2EEE7] overflow-hidden">
+        {/* Founding Partner — 暫時隱藏（日後需要可恢復，程式碼完整保留） */}
+        {false && <>
+          <section className="py-24 md:py-32 bg-[#F2EEE7] overflow-hidden">
           <div className="container">
             <div className="grid md:grid-cols-[2fr_3fr_2.6fr] items-center gap-10 md:gap-8">
               {/* Tilted plaque card */}
@@ -221,7 +222,7 @@ export default function StartPage() {
               </div>
             </div>
           </div>
-        </section>
+          </section></>}
 
         {/* Plans (subscription only — hardware cards hidden for now) */}
         <PlansSection hideHardware />
