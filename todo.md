@@ -488,3 +488,16 @@ HeroSection → WhyArtON → ProcessSection → EnterpriseSection → CuratorSec
 - [ ] 每月更新區：「1 位藝術家＋5 幅作品＝1 場新的數位展覽」改為不固定藝術家數量，強調 5 幅作品組成一場新的數位展覽
 - [ ] 探索策展區塊：驗證九鯉魚卡 aspect-[2/3] 生效（Playwright 截圖疑似舊快取殘影，需確認）
 - [ ] 保存並交付
+
+# 第三十九輪改版待辦（2026-08-16）：探索策展區徹底重整
+- [ ] 取消交錯高低網格，改為等高整齊網格
+- [ ] 統一六張卡的視覺語言：圖片裁切一致、標題結構一致、移除混雜的 QR code／署名樣式差異
+- [ ] 驗證截圖並保存交付
+
+## 診斷紀錄（第三十九輪，2026-08-16）
+- ExploreSection.tsx 已徹底重寫為統一版式：6 張卡、等比 aspect-[4/5]、無白底畫框、統一首碼標題結構、資料含 tag/artist/gallery，卡 01 與卡 06 帶「小光點畫廊策展」。
+- 本地 dev 預覽截圖確認新 DOM 正確渲染（Playwright explore_v3/v4.png）。
+- 生產版 https://artonart-fxacsvwk.manus.space 的 bundle 檢查結果：bundle 內有 1 次「本月主打」、2 次「Together」、1 個 aspect-[2/3]、3 個 aspect-[4/5]，與新版（6 個 tag、6 個 aspect-[4/5]）不符 → 生產版仍為舊 bundle。
+- 用戶截圖（pasted_file_YUhOla_image.png）顯示卡 1、3、6 仍是舊白底畫框＋QR code 樣式。
+- 計劃：重新 webdev_save_checkpoint 確保新 bundle 發布，並在 ExploreSection 加唯一標記（如 data-build="explore-v39"）驗證生產 DOM。
+- 診斷建議：檢查是否存在第二份 ExploreSection、確認 publish bundle 是否為最新 checkpoint。
