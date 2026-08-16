@@ -116,7 +116,7 @@ export default function Header() {
               scrolled ? "text-[#1C1C1E] hover:text-[#C4A265]" : "text-white hover:text-[#C4A265]"
             }`}
           >
-            成為策展人
+            策展人加入
           </Link>
           <a
             href="/b2b"
@@ -126,13 +126,13 @@ export default function Header() {
                 : "border-white/40 text-white/90 hover:bg-white/8"
             }`}
           >
-            企業 ESG 方案
+            企業訂閱方案
           </a>
           <Link
             href="/start"
             className="px-5 py-2.5 bg-[#C4A265] text-white text-[15px] font-medium rounded-full hover:bg-[#b8954f] transition-all duration-300 hover:shadow-lg"
           >
-            開始展示
+            選擇方案
           </Link>
         </div>
 
@@ -161,13 +161,13 @@ export default function Header() {
             ))}
             <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-[#E5E5E3]">
               <Link href="/b2b" onClick={() => setMobileOpen(false)} className="text-center text-[15px] text-[#1C1C1E] font-medium py-2 border border-[#C4A265]/50 rounded-full">
-                企業 ESG 方案
+                企業訂閱方案
               </Link>
               <Link href="/curator" onClick={() => setMobileOpen(false)} className="text-center text-[15px] text-[#1C1C1E] font-medium py-2">
-                成為策展人
+                策展人加入
               </Link>
               <Link href="/start" onClick={() => setMobileOpen(false)} className="text-center px-5 py-2.5 bg-[#C4A265] text-white text-[15px] font-medium rounded-full">
-                開始展示
+                選擇方案
               </Link>
             </div>
           </nav>

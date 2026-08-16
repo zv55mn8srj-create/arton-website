@@ -99,7 +99,7 @@ export default function FooterSection() {
                 </li>
                 <li>
                   <a href="/b2b" className="text-white/35 text-[14px] hover:text-[#C4A265] transition-colors duration-300">
-                    企業 ESG 方案
+                    企業訂閱方案
                   </a>
                 </li>
                 <li>

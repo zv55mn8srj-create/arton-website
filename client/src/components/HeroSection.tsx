@@ -84,8 +84,8 @@ export default function HeroSection() {
                 href="/b2b"
                 className="group px-7 py-5 border border-white/38 text-white rounded-2xl hover:bg-white/10 transition-all duration-300 backdrop-blur-sm active:scale-[0.97]"
               >
-                <p className="text-[11px] uppercase tracking-[0.28em] text-white/65 mb-1.5">Enterprise</p>
-                <p className="text-[16px] font-medium leading-snug">企業合作</p>
+                <p className="text-[11px] uppercase tracking-[0.28em] text-white/65 mb-1.5">For Your Space</p>
+                <p className="text-[16px] font-medium leading-snug">為我的空間訂閱藝術</p>
               </a>
             </div>
           </div>
