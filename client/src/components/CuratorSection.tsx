@@ -58,9 +58,9 @@ export default function CuratorSection() {
             <GalleryHeading
               room="04"
               label="What You Will See"
-              title={<>一件作品，<br />也可以成為<br />一場展覽。</>}
+              title={<>你看到的，<br />就是一場<br />正在發生的展覽。</>}
               titleSize="clamp(2.15rem,3.6vw,3.4rem)"
-              description={<>藝術家、作品、創作故事與展覽資訊，在螢幕裡持續播放。建議以實際播放畫面為主，文字維持精簡。</>}
+              description={<>作品在螢幕裡持續播放，藝術家、作品、創作故事與展覽資訊，一次呈現。</>}
               className={`transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             />
 
