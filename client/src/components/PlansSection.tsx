@@ -133,7 +133,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
                 <span className="text-[#E8B339]">持續發生。</span>
               </h3>
               <p className="text-[15px] md:text-[16px] leading-[2] text-white/72 max-w-xl mb-12">
-                選擇一檔喜歡的策展，加入 ArtON 訂閱。藝術內容會持續送進你的展示空間，讓空間持續有新的作品，也讓藝術創作持續獲得支持。
+                選擇一檔喜歡的策展，加入 ArtON 訂閱。藝術內容會持續送進你的展示空間，讓空間持續有新的作品，也讓藝術創作持續獲得支持。也有一種更輕量的方式——一分鐘藝術——讓每一件作品與它背後的故事，按月走進你的日常。
               </p>
 
               <div className="space-y-6 border-t border-white/12 pt-8">
@@ -148,8 +148,42 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
               <p className="mt-8 text-[13px] text-white/40">後續管理，也都在 LINE 完成。</p>
             </div>
 
-            {/* Right — cream price card with artwork */}
+            {/* Right — entry tier: One Minute Art NT$199/mo, then BASIC PLAN 799 */}
             <div className="lg:col-span-5 bg-[#F6F2E9] p-10 md:p-12 lg:p-12 flex flex-col">
+              {/* Entry plan — One Minute Art */}
+              <div className="border-b border-[#1C1C1E]/10 pb-8 mb-9">
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#B8954F] mb-4 font-semibold">ENTRY PLAN · 入門支持</p>
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <h4 className="text-[23px] md:text-[26px] font-normal text-[#1C1C1E] leading-[1.3]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                    一分鐘藝術
+                  </h4>
+                  <p className="text-right shrink-0">
+                    <span className="text-[12px] text-[#B8954F] mr-1">NT$</span>
+                    <span className="text-[clamp(2.3rem,3.4vw,3rem)] leading-none font-light text-[#B8954F]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>199</span>
+                    <span className="text-[12px] text-[#1C1C1E]/45 ml-1">／月</span>
+                  </p>
+                </div>
+                <p className="text-[13px] leading-[1.85] text-[#1C1C1E]/70 mb-4">
+                  不需要播放器。每月一份作品與約一分鐘的內容介紹，按月送達——支持藝術創作，也可以很輕。
+                </p>
+                <ul className="space-y-2.5 mb-5">
+                  {["每月一件藝術作品", "一分鐘創作故事與展覽內容", "持續支持身心障礙藝術創作"].map((f) => (
+                    <li key={f} className="flex items-start gap-2.5 text-[12.5px] leading-[1.7] text-[#1C1C1E]/72">
+                      <Check className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[#B8954F]" strokeWidth={2.2} />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={LINKS.customerLine}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2.5 text-[12.5px] font-semibold tracking-[0.05em] px-5 py-3.5 bg-transparent border border-[#1C1C1E]/40 text-[#1C1C1E] hover:border-[#B8954F] hover:text-[#B8954F] transition-all duration-200 active:scale-[0.97]"
+                >
+                  加入 LINE 開始訂閱
+                </a>
+              </div>
+
               <p className="text-[11px] uppercase tracking-[0.3em] text-[#B8954F] mb-5 font-semibold">BASIC PLAN</p>
               <div className="flex items-start justify-between gap-4 mb-6">
                 <h4 className="text-[27px] md:text-[30px] font-normal text-[#1C1C1E] leading-[1.3]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
