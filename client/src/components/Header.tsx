@@ -89,7 +89,7 @@ export default function Header() {
     >
       <div className="container flex items-center justify-between h-20">
         {/* Logo */}
-        <a href="#" className="flex items-center h-16 py-2">
+        <Link href="/" className="flex items-center h-16 py-2">
           {/* 官方 Logo：透明底（深灰字＋黃色電源符號）
               未滾動時（深色 hero 底）：白色字版，黃圓保留
               滾動後（白色導覽列底）：原始深灰字版 */}
@@ -98,7 +98,7 @@ export default function Header() {
             alt="ArtON — Turn Art ON"
             className="h-full w-auto object-contain transition-opacity duration-500"
           />
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-10">
