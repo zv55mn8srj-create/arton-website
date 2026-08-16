@@ -35,7 +35,7 @@ export default function MonthlyUpdateSection() {
             label="Monthly Renewal · 每月更新"
             title={<>每個月，<br />看見新的<br />藝術家。</>}
             titleSize="clamp(2.6rem,4.6vw,4.6rem)"
-            description={<>1 位藝術家＋5 幅作品＝1 場新的數位展覽。</>}
+            description={<>5 幅作品，組成 1 場新的數位展覽。</>}
             className={`lg:col-span-5 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           />
 

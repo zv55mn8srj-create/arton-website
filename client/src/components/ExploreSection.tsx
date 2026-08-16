@@ -8,15 +8,15 @@ import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const exhibitions = [
-  { title: "九鯉魚", tag: "本月主打", image: "/manus-storage/koi-vertical_6657b855.jpg", artist: "鄭美珠《九鯉魚》：本月主打策展，讓每一面牆都成為展廳", featured: true },
+  { title: "九鯉魚", tag: "本月主打", image: "/manus-storage/koi-vertical_6657b855.jpg", artist: "小光點畫廊策展 · 藝術家鄭美珠", caption: "游向光，也游向自己。", featured: true },
   { title: "旅行台灣", tag: "Taiwan", image: "/assets/exhibition-taiwan_802358d3.jpg", artist: "山海之間，留下島嶼的日常風景" },
-  { title: "身心障礙藝術展", tag: "Together", image: "/manus-storage/happiness-vertical_6ee4e4f9.jpg", artist: "鄭美珠《真的幸福了》：身心障礙創作者的療癒油彩" },
+  { title: "身心障礙藝術展", tag: "Together", image: "/assets/exhibition-healing_3a941b9a.jpg", artist: "療癒油彩：身心障礙創作者的創作現場" },
   { title: "抽象藝術", tag: "Abstract", image: "/assets/exhibition-abstract_a4923795.jpg", artist: "色彩、形狀與空間之間的自由對話" },
-  { title: "自然風景", tag: "Nature", image: "/manus-storage/sunrise-dawn_6b2a50b0.jpg", artist: "鄭美珠《日出晨曦》：山海之間，留下島嶼的日常風景" },
-  { title: "春季療癒展", tag: "Healing", image: "/manus-storage/flowers-sea-island-portrait_c0caeee1.jpg", artist: "小光點畫廊策展 · 藝術家鄭美珠：柔光、花影與重新生長的季節" },
+  { title: "自然風景", tag: "Nature", image: "/assets/exhibition-nature_c9268f72.jpg", artist: "將遠方的山林帶進每天經過的地方" },
+  { title: "春季療癒展", tag: "Healing", image: "/manus-storage/flowers-sea-island-portrait_c0caeee1.jpg", artist: "小光點畫廊策展 · 藝術家鄭美珠", caption: "光，在花與海裡停佇。", featured: true },
 ];
 
-const spans = ["md:col-span-5", "md:col-span-3", "md:col-span-4", "md:col-span-4", "md:col-span-5", "md:col-span-3"];
+const spans = ["md:col-span-5", "md:col-span-4", "md:col-span-3", "md:col-span-3", "md:col-span-4", "md:col-span-5"];
 
 export default function ExploreSection() {
   const { ref, isVisible } = useScrollAnimation(0.04);
@@ -47,7 +47,7 @@ export default function ExploreSection() {
             >
               <a href={exhibition.featured ? LINKS.customerLine : "/start"} className="block">
                 <div className="gallery-frame">
-                  <div className={`overflow-hidden ${index === 0 || index === 5 ? "aspect-[3/4] md:aspect-[2/3]" : "aspect-[3/4] md:aspect-[4/5]"}`}>
+                  <div className={`overflow-hidden ${index === 0 ? "aspect-[2/3]" : "aspect-[3/4] md:aspect-[4/5]"}`}>
                     <img src={exhibition.image} alt={exhibition.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" />
                   </div>
                 </div>
@@ -56,6 +56,7 @@ export default function ExploreSection() {
                     <p className="museum-label text-[#1C1C1E]/34 mb-2">0{index + 1} · {exhibition.tag}</p>
                     <h3 className="text-[20px] md:text-[23px] font-normal text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{exhibition.title}</h3>
                     <p className="text-[12px] leading-[1.7] text-[#1C1C1E]/42 mt-2">{exhibition.artist}</p>
+                    {exhibition.caption && <p className="text-[11px] leading-[1.7] text-[#1C1C1E]/28 mt-1.5">{exhibition.caption}</p>}
                   </div>
                   <span className="text-[#C4A265] opacity-0 group-hover:opacity-100 transition-opacity mt-6">↗</span>
                 </figcaption>
