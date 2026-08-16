@@ -146,7 +146,7 @@ export default function B2BPage() {
               >
                 讓每一面牆，
                 <br />
-                成為 2026 永續報告書裡
+                成為永續報告書裡
                 <br />
                 <span className="text-[#E8B339]">支持身心障礙創作者的 ESG 實踐。</span>
               </h1>

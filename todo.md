@@ -450,3 +450,7 @@ HeroSection → WhyArtON → ProcessSection → EnterpriseSection → CuratorSec
 - [ ] 找出 StartPage 中「成為 ArtON 創始合作夥伴」區塊位置
 - [ ] 暫時隱藏該區塊（保留程式碼供日後恢復）
 - [ ] 驗證並保存交付
+
+# 第三十四輪改版待辦（2026-08-16）
+- [ ] 策展人頁文案改為「策展後即刻分享 讓更多人訂閱你的策展藝術」
+- [ ] B2B 頁 Hero 主標語移除「2026」年份
