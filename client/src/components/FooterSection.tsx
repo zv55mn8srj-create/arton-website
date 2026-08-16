@@ -7,50 +7,8 @@ import { LINKS } from "@/lib/links";
 export default function FooterSection() {
   return (
     <>
-      {/* CTA Section */}
-      <section id="start" className="relative py-28 md:py-36 overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0">
-          <img
-            src="/assets/cta-bg_d96c3b82.jpg"
-            alt=""
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1C1C1E]/85 via-[#1C1C1E]/75 to-[#1C1C1E]/55" />
-        </div>
-
-        <div className="relative z-10 container text-center">
-          <div className="max-w-2xl mx-auto">
-            <p className="text-[#C4A265] text-[13px] uppercase tracking-[0.35em] mb-6 font-medium">
-              Join ArtON
-            </p>
-            <h2 className="text-[36px] md:text-[52px] lg:text-[58px] font-light text-white leading-[1.15] mb-6"
-              style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-              讓下一場展覽，<br />從你的空間開始。
-            </h2>
-            <p className="text-white/72 text-[16px] md:text-[18px] leading-[1.9] mb-12 max-w-lg mx-auto">
-              想看看 ArtON 放在你的空間會是什麼樣子？
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/start"
-                className="px-8 py-4 bg-[#C4A265] text-white text-[15px] font-medium rounded-full hover:bg-[#b8954f] transition-all duration-300 hover:shadow-xl hover:shadow-[#C4A265]/20"
-              >
-                觀看 Demo
-              </a>
-              <a
-                href={LINKS.email}
-                className="px-8 py-4 border border-white/30 text-white text-[15px] font-medium rounded-full hover:bg-white/10 transition-all duration-300"
-              >
-                聯絡我們
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
-      <footer className="bg-[#1C1C1E] py-16 md:py-20">
+      <footer className="bg-[#1C1C1E] py-10 md:py-14">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             {/* Brand */}

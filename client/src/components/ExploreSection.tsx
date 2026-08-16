@@ -45,7 +45,7 @@ export default function ExploreSection() {
               className={`${spans[index]} group transition-all duration-700 ${index === 1 || index === 4 ? "md:mt-16" : ""} ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
               style={{ transitionDelay: `${100 + index * 80}ms` }}
             >
-              <a href={exhibition.featured ? LINKS.customerLine : "#start"} className="block">
+              <a href={exhibition.featured ? LINKS.customerLine : "/start"} className="block">
                 <div className="gallery-frame">
                   <div className={`overflow-hidden ${index === 0 || index === 4 ? "aspect-[4/3]" : "aspect-[3/4] md:aspect-[4/5]"}`}>
                     <img src={exhibition.image} alt={exhibition.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" />
