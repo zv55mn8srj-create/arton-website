@@ -73,13 +73,13 @@ export default function HeroSection() {
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              <a
-                href="/start"
-                className="group px-7 py-5 bg-[#C4A265] text-white rounded-2xl hover:bg-[#b8954f] transition-all duration-300 hover:shadow-xl hover:shadow-[#C4A265]/20 active:scale-[0.97]"
+              <button
+                onClick={() => document.getElementById("demo")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+                className="group px-7 py-5 bg-[#C4A265] text-white rounded-2xl hover:bg-[#b8954f] transition-all duration-300 hover:shadow-xl hover:shadow-[#C4A265]/20 active:scale-[0.97] text-left"
               >
                 <p className="text-[11px] uppercase tracking-[0.28em] text-[#F5EBD8] mb-1.5">Watch Demo</p>
                 <p className="text-[16px] font-medium leading-snug">觀看 Demo</p>
-              </a>
+              </button>
               <a
                 href="/b2b"
                 className="group px-7 py-5 border border-white/38 text-white rounded-2xl hover:bg-white/10 transition-all duration-300 backdrop-blur-sm active:scale-[0.97]"

@@ -15,6 +15,7 @@ import MonthlyUpdateSection from "@/components/MonthlyUpdateSection";
 import ExploreSection from "@/components/ExploreSection";
 import TimelineSection from "@/components/TimelineSection";
 import WhyEnterprise from "@/components/WhyEnterprise";
+import DemoShowcaseSection from "@/components/DemoShowcaseSection";
 import VenuesSection from "@/components/VenuesSection";
 import SpacesPartnersSection from "@/components/SpacesPartnersSection";
 import FAQSection from "@/components/FAQSection";
@@ -35,6 +36,7 @@ export default function Home() {
         <ExploreSection />
         <TimelineSection />
         <WhyEnterprise />
+        <DemoShowcaseSection />
         <VenuesSection />
         <FAQSection />
         <SpacesPartnersSection />

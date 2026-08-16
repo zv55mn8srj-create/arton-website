@@ -396,3 +396,44 @@ favicon.png 已完成：黃色電源符號（圓環+直線）、透明背景、5
 ## 第三十輪進度（2026-08-16）
 已完成：FooterSection.tsx 刪除整個 CTA Section（「想看看 ArtON 放在你的空間會是什麼樣子？」＋觀看 Demo／聯絡我們按鈕＋背景圖區塊），footer 上下 padding 由 py-16/py-20 縮為 py-10/py-14。Footer 內仍保留「聯絡我們」欄位（email、LINE 客戶、IG、FB）不受影響。
 待辦：檢查 Home.tsx 是否有 id="start" 錨點對應問題、截圖驗證首頁頁尾、跑 tsc、checkpoint、交付。
+
+# 第三十一輪改版待辦（2026-08-16）：展示情境 Demo 示意圖
+- [ ] 解壓 /home/ubuntu/upload/鄭美珠老師-20260816T052414Z-1-001.zip 並檢視畫作，選定 3-4 幅代表作
+- [ ] 生成 4 張情境示意圖（參考用戶範例：企業大廳/會議室洽談室/員工休憩區/接待櫃檯）：
+  - 橫式螢幕：作品全圖
+  - 直式螢幕：作者介紹（鄭美珠）
+  - 橫式螢幕：作品介紹（標題+簡介）
+  - 直式螢幕：作品全圖或介紹
+- [ ] 將示意圖加到網站 Demo 區塊（首頁 CuratorSection 或新增區）
+- [ ] 驗證並保存交付
+
+## 第三十一輪素材檢視（2026-08-16）
+解壓目錄：/home/ubuntu/zheng-art/鄭美珠老師/（22 檔）
+- 直式海報_鄭美珠.jpg（2000x3556）：作者介紹海報，含鄭美珠肖像圓形照片（粉紅格紋上衣、白襯衫領、眼鏡）、身心障礙藝術主題、ArtON 官方 Logo、「身心障礙 藝術」「以藝術，看見勇氣與生命的光」「輕度魚鱗癬與顱顏併發症」「鄭美珠｜輕度魚鱗癬與顱顏併發症，以繪畫與分享，找回被祝福的人生。她的作品，帶來溫暖與勇氣。」QR Code（策展人 lin.ee/7dr8uq4）、底部深藍條「每一次展示，都是一份支持 TURN ART ON」
+- 1.作品全圖_九鯉魚_橫.jpg（3000x1688）：橫式九鯉魚油畫＋右側白底文字區「游向光，也游向自己。」「《九鯉魚》鄭美珠｜油畫｜10F (53 x 45.5 cm)」＋QR
+- 2.作品全圖_日出晨曦_全圖.jpg（3000x1688）：橫式日出海景油畫（黃橙天空、海面反光、白鳥飛翔、綠苔岩岸），印象派厚塗，無文字區
+- 其他可用：3.真的幸福了（全圖/直/橫）、4.花開時節與海與島（全圖/直/橫）、5.夏日之青春（全圖/直/橫）
+
+## 示意圖生成計畫（參考用戶範例 pasted_file_vASdBe_image.png：2x2 網格，標題「展示情境應用」，下方企業大廳/會議室洽談室/員工休憩區/接待櫃檯）
+生成 4 張情境照（螢幕內嵌對應作品）：
+1. 企業大廳：橫式螢幕放「日出晨曦」全圖（橫幅海景）
+2. 會議室/洽談室：直式螢幕放「直式海報_鄭美珠」作者介紹
+3. 員工休憩區：橫式螢幕放「九鯉魚」作品介紹版（含標題文字）
+4. 接待櫃檯/公共空間：直式螢幕放「真的幸福了_直」或「花開時節直」作品全圖
+生成指令需描述：溫暖現代室內空間、壁掛電視螢幕、螢幕顯示指定油畫內容、自然光、留白、Gallery Quietism 暖白米色調
+
+## 情境圖生成結果（2026-08-16）
+生成 URL（直接使用）：
+- 企業大廳（橫式螢幕日出晨曦作品全圖）：/manus-storage/demo-lobby-sunrise_85ece1de.png
+- 會議室洽談室（直式螢幕作者介紹海報）：/manus-storage/demo-meeting-author_d10ba69e.png
+- 員工休憩區（橫式螢幕九鯉魚作品介紹）：/manus-storage/demo-lounge-koi_cc1b3b7b.png
+- 接待櫃檯（直式螢幕花開時節作品全圖）：/manus-storage/demo-reception-flowers_0c36330d.png
+
+## 網站結構（Home.tsx 區塊順序）
+HeroSection → WhyArtON → ProcessSection → EnterpriseSection → CuratorSection → MonthlyUpdateSection → ExploreSection → TimelineSection → WhyEnterprise → VenuesSection → FAQSection → SpacesPartnersSection → PlansTeaserSection → FooterSection
+- VenuesSection（Room 08）現為 6 格照片網格：診所/飯店/企業/校園/公部門/咖啡館，無「展示情境應用」螢幕情境圖
+- 計畫：在 VenuesSection 前新增「展示情境應用」Demo 區（新元件 DemoShowcaseSection），4 張圖 + 標題「展示情境應用」+ 四格標籤（企業大廳/會議室洽談室/員工休憩區/接待櫃檯），對應螢幕內容：作品全圖/作者介紹/作品介紹/作品全圖（直橫式皆有）
+
+## Demo 區塊驗證（2026-08-16，全頁截圖）
+新增的「展示情境應用 Demo」區塊（米色底 #F5F0EB）已正確出現在 WhyEnterprise 之後、VenuesSection 之前。四張情境圖皆正常載入（生成圖已替換 placeholder），標籤分別為 01 作品全圖·橫式（企業大廳）、02 作者介紹·直式（會議室）、03 作品介紹·橫式（員工休憩區）、04 作品全圖·直式（接待櫃檯），底部有「鄭美珠老師創作、每月更新」註記與 CTA。Hero「觀看 Demo」按鈕已改為平滑滾動到 #demo。全頁其他區塊無異常。
+剩餘：保存 checkpoint → 交付（生成圖 URL 已用 /manus-storage/ 直接引用，部署後同樣有效）。
