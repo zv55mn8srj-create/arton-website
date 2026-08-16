@@ -11,6 +11,7 @@ import WhyArtON from "@/components/WhyArtON";
 import ProcessSection from "@/components/ProcessSection";
 import EnterpriseSection from "@/components/EnterpriseSection";
 import CuratorSection from "@/components/CuratorSection";
+import MonthlyUpdateSection from "@/components/MonthlyUpdateSection";
 import ExploreSection from "@/components/ExploreSection";
 import TimelineSection from "@/components/TimelineSection";
 import WhyEnterprise from "@/components/WhyEnterprise";
@@ -30,6 +31,7 @@ export default function Home() {
         <ProcessSection />
         <EnterpriseSection />
         <CuratorSection />
+        <MonthlyUpdateSection />
         <ExploreSection />
         <TimelineSection />
         <WhyEnterprise />
@@ -67,7 +69,7 @@ function PlansTeaserSection() {
           <div className="lg:col-span-5 flex lg:justify-end">
             <div className="relative">
               <img
-                src="/manus-storage/teaser-art-d_d8627ff7.jpg"
+                src="/assets/teaser-art-d_d8627ff7.jpg"
                 alt="藝術作品於空間中持續展示"
                 className="w-full max-w-md rounded-2xl shadow-2xl shadow-black/30"
               />

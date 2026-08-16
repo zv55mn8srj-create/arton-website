@@ -12,7 +12,7 @@ export default function FooterSection() {
         {/* Background */}
         <div className="absolute inset-0">
           <img
-            src="/manus-storage/cta-bg_d96c3b82.jpg"
+            src="/assets/cta-bg_d96c3b82.jpg"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -26,24 +26,23 @@ export default function FooterSection() {
             </p>
             <h2 className="text-[36px] md:text-[52px] lg:text-[58px] font-light text-white leading-[1.15] mb-6"
               style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-              一起讓藝術走進生活。
+              讓下一場展覽，<br />從你的空間開始。
             </h2>
-            <p className="text-white/65 text-[16px] md:text-[18px] leading-[1.9] mb-12 max-w-lg mx-auto">
-              我們不是在租畫，<br />
-              我們是在建立一個讓藝術持續被看見、讓創作者持續有收入的生態。
+            <p className="text-white/72 text-[16px] md:text-[18px] leading-[1.9] mb-12 max-w-lg mx-auto">
+              想看看 ArtON 放在你的空間會是什麼樣子？
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/curator"
+                href="/start"
                 className="px-8 py-4 bg-[#C4A265] text-white text-[15px] font-medium rounded-full hover:bg-[#b8954f] transition-all duration-300 hover:shadow-xl hover:shadow-[#C4A265]/20"
               >
-                我要成為策展人
+                觀看 Demo
               </a>
               <a
-                href="/start"
+                href={LINKS.email}
                 className="px-8 py-4 border border-white/30 text-white text-[15px] font-medium rounded-full hover:bg-white/10 transition-all duration-300"
               >
-                我要開始展示
+                聯絡我們
               </a>
             </div>
           </div>

@@ -1,20 +1,11 @@
 /**
- * Room 04 — Curators.
- * Gallery Quietism: a working curator's desk and exhibition catalogue,
- * not a conventional software feature showcase.
+ * Room 04 — What you will see（依 2026-08-16 反饋改版：產品導向）
+ * Gallery Quietism: actual playback artwork with artist names shown on frame;
+ * curator content condensed; artwork display is the focus over text.
  */
 import GalleryHeading, { PowerGlyph } from "./GalleryHeading";
 import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { BarChart3, FolderOpen, LayoutGrid, Share2, Sparkles } from "lucide-react";
-
-const tools = [
-  { icon: LayoutGrid, title: "建立數位策展" },
-  { icon: Share2, title: "分享策展" },
-  { icon: FolderOpen, title: "企業展示管理" },
-  { icon: BarChart3, title: "收益統計" },
-  { icon: Sparkles, title: "AI 協助管理" },
-];
 
 export default function CuratorSection() {
   const { ref, isVisible } = useScrollAnimation(0.06);
@@ -28,22 +19,34 @@ export default function CuratorSection() {
             <div className="relative pb-14 md:pb-20 pr-0 md:pr-12">
               <div className="gallery-frame rotate-[-1.2deg]">
                 <div className="relative aspect-[16/10] overflow-hidden bg-[#D9D2C7]">
-                  <img src="/manus-storage/curator-laptop_38899225.jpg" alt="策展人在工作桌上管理數位策展" className="w-full h-full object-cover" />
+                  <img src="/assets/flowers-sea-island_a1502703.jpg" alt="小光點作品：花卉與海島藝術在空間中播放展示" className="w-full h-full object-cover" />
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/62 to-transparent px-6 pt-10 pb-4">
+                    <p className="text-white text-[13px] md:text-[15px] font-medium" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>藝術家 · 小光點</p>
+                    <p className="text-white/72 text-[11px] md:text-[12px] mt-0.5">《花卉與海島》· 持續展示中</p>
+                  </div>
                 </div>
               </div>
 
               <div className="relative md:absolute md:-bottom-1 md:right-0 w-full md:w-[72%] bg-[#FBFAF7] shadow-[0_20px_60px_rgba(44,37,27,0.14)] border border-white p-5 md:p-6 -mt-8 md:mt-0">
                 <div className="flex items-center justify-between pb-4 border-b border-[#E2DDD4]">
-                  <div className="flex items-center gap-2.5"><PowerGlyph className="w-5 h-5 text-[#C4A265]" /><span className="text-[12px] font-medium">策展工作簿</span></div>
-                  <span className="text-[9px] uppercase tracking-[0.16em] text-[#1C1C1E]/30">Curatorial Notebook</span>
+                  <div className="flex items-center gap-2.5"><PowerGlyph className="w-5 h-5 text-[#C4A265]" /><span className="text-[12px] font-medium">正在播放</span></div>
+                  <span className="text-[9px] uppercase tracking-[0.16em] text-[#1C1C1E]/30">Now Exhibiting</span>
                 </div>
-                <div className="grid grid-cols-3 gap-2.5 py-4">
-                  {["/manus-storage/exhibition-spring_779eb4e1.jpg", "/manus-storage/exhibition-healing_3a941b9a.jpg", "/manus-storage/exhibition-abstract_a4923795.jpg"].map((src, index) => (
-                    <div key={src} className="aspect-[4/3] overflow-hidden"><img src={src} alt={`策展作品 ${index + 1}`} className="w-full h-full object-cover" /></div>
+                <div className="grid grid-cols-4 gap-3 py-4 text-[12px]">
+                  {[
+                    { label: "藝術家", note: "Artist" },
+                    { label: "作品", note: "Works" },
+                    { label: "創作故事", note: "Story" },
+                    { label: "展覽資訊", note: "Exhibition" },
+                  ].map(({ label, note }) => (
+                    <div key={label} className="border-l border-[#C4A265]/40 pl-3">
+                      <p className="text-[13px] md:text-[14px] font-medium text-[#1C1C1E]">{label}</p>
+                      <p className="text-[9px] mt-1 text-[#1C1C1E]/36 uppercase tracking-[0.1em]">{note}</p>
+                    </div>
                   ))}
                 </div>
                 <div className="grid grid-cols-3 gap-3 border-t border-[#E2DDD4] pt-4">
-                  {[{ label: "展示次數", value: "156" }, { label: "展示天數", value: "2,847" }, { label: "展示空間", value: "08" }].map(({ label, value }) => (
+                  {[{ label: "藝術家", value: "01" }, { label: "作品", value: "05" }, { label: "展覽", value: "1" }].map(({ label, value }) => (
                     <div key={label}><p className="text-[22px] md:text-[28px] leading-none font-light" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{value}</p><p className="text-[9px] mt-1.5 text-[#1C1C1E]/36">{label}</p></div>
                   ))}
                 </div>
@@ -54,19 +57,13 @@ export default function CuratorSection() {
           <div className="lg:col-span-5 lg:pl-4">
             <GalleryHeading
               room="04"
-              label="For Curators"
-              title={<>策展一次，<br />讓更多創作者<br />有收入。</>}
+              label="What You Will See"
+              title={<>一件作品，<br />也可以成為<br />一場展覽。</>}
               titleSize="clamp(2.15rem,3.6vw,3.4rem)"
-              description={<>你的策展讓作品走進更多企業與生活空間，持續被看見，也讓藝術家靠作品獲得穩定、長期的收入。</>}
+              description={<>藝術家、作品、創作故事與展覽資訊，在螢幕裡持續播放。建議以實際播放畫面為主，文字維持精簡。</>}
               className={`transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             />
-            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-1 gap-x-8 gap-y-4">
-              {tools.map(({ icon: Icon, title }, index) => (
-                <div key={title} className={`flex items-center gap-3 border-t border-[#1C1C1E]/10 pt-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`} style={{ transitionDelay: `${200 + index * 70}ms` }}>
-                  <Icon className="w-4 h-4 text-[#C4A265]" strokeWidth={1.35} /><span className="text-[13px] text-[#1C1C1E]/62">{title}</span>
-                </div>
-              ))}
-            </div>
+
             <a href={LINKS.curatorLine} target="_blank" rel="noopener noreferrer" className="inline-flex mt-10 items-center gap-4 text-[13px] font-medium text-[#1C1C1E] border-b border-[#C4A265] pb-2 hover:text-[#9B7C47] transition-colors">
               成為 ArtON 策展人 <span className="text-[#C4A265]">↗</span>
             </a>

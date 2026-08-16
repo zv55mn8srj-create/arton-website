@@ -10,31 +10,31 @@ const _unused = [
   {
     name: "客廳",
     en: "Living Room",
-    image: "/manus-storage/scene-living_919debff.jpg",
+    image: "/assets/scene-living_919debff.jpg",
     description: "家的牆，也可以每天都是展廳。",
   },
   {
     name: "醫美診所",
     en: "Medical Aesthetic",
-    image: "/manus-storage/scene-clinic_2b8800f3.jpg",
+    image: "/assets/scene-clinic_2b8800f3.jpg",
     description: "等待的時光，也能被藝術溫柔對待。",
   },
   {
     name: "咖啡廳",
     en: "Café",
-    image: "/manus-storage/scene-cafe_4d400757.jpg",
+    image: "/assets/scene-cafe_4d400757.jpg",
     description: "一杯咖啡的時間，遇見一件作品。",
   },
   {
     name: "公司接待區",
     en: "Reception",
-    image: "/manus-storage/scene-reception_c99a43ec.jpg",
+    image: "/assets/scene-reception_c99a43ec.jpg",
     description: "訪客走進公司的第一眼，就是文化的第一頁。",
   },
   {
     name: "飯店大廳",
     en: "Hotel Lobby",
-    image: "/manus-storage/scene-hotel_1b849c05.jpg",
+    image: "/assets/scene-hotel_1b849c05.jpg",
     description: "讓每一次入住，都像走進一間美術館。",
   },
 ];
@@ -43,13 +43,13 @@ const partners = [
   {
     name: "小光點畫廊",
     description: "專注身心障礙藝術家創作展示的策展平台",
-    logo: "/manus-storage/partner-logo-1_7e5ae4bc.png",
+    logo: "/assets/partner-logo-1_7e5ae4bc.png",
     type: "gallery",
   },
   {
     name: "方睿有限公司",
     description: "數位轉型與藝術科技的創新合作夥伴",
-    logo: "/manus-storage/partner-logo-2_5348f15c.png",
+    logo: "/assets/partner-logo-2_5348f15c.png",
     type: "tech",
   },
 ];

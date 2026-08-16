@@ -1,21 +1,12 @@
 /**
- * Room 03 — Enterprise ESG.
- * Gallery Quietism: impact is presented as a cultural ledger beside a real
- * exhibition space, keeping technology secondary to the art experience.
+ * Room 03 — Enterprise（依 2026-08-16 反饋改版：產品導向）
+ * Gallery Quietism: monthly content renewal + ESG value as a cultural ledger.
  */
 import GalleryHeading, { PowerGlyph } from "./GalleryHeading";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Building2, CalendarDays, FileText, MapPin, RefreshCw, Users } from "lucide-react";
+import { CalendarDays, FileText, MapPin, Users } from "lucide-react";
 
-const problems = ["不知道如何開始 ESG", "每年都要重新找活動", "活動結束就沒有成果", "難以累積影響力"];
-
-const provisions = [
-  { icon: MapPin, text: "長期藝術展示" },
-  { icon: Users, text: "讓創作者獲得持續收入" },
-  { icon: Building2, text: "多據點管理" },
-  { icon: RefreshCw, text: "雲端更新與永續展示" },
-  { icon: FileText, text: "ESG 成果紀錄" },
-];
+const keywords = ["藝術展示", "空間美學", "企業文化", "ESG"];
 
 const statistics = [
   { label: "展示據點", value: "12", icon: MapPin },
@@ -33,42 +24,37 @@ export default function EnterpriseSection() {
         <div className="grid lg:grid-cols-12 gap-14 lg:gap-12 items-start mb-20 md:mb-28">
           <GalleryHeading
             room="03"
-            label="Cultural ESG"
-            title={<>為企業打造，<br />持續發生的 ESG。</>}
+            label="For Enterprise"
+            title={<>讓空間，<br />每個月都有<br />新的內容。</>}
             titleSize="clamp(2.15rem,3.6vw,3.4rem)"
-            description={<>不是一年一次的活動，而是一場長期、可被看見、也能被記錄的文化行動。你的每一面牆，都在支持創作者靠作品持續生活。</>}
+            description={<>ArtON 將藝術、空間與企業品牌連結，讓藝術成為企業環境的一部分。藝術展示、空間美學、企業文化、ESG。</>}
             className={`lg:col-span-5 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           />
 
-          <div className="lg:col-span-7 lg:pt-20 grid sm:grid-cols-2 gap-10">
-            <div className={`plaque transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              <p className="museum-label mb-7 text-[#3D3A36]">Before · 難以累積</p>
-              <div className="space-y-4">
-                {problems.map((problem, index) => (
-                  <div key={problem} className="flex gap-3 text-[14px] leading-[1.7] text-[#45423C]">
-                    <span className="text-[#B8954F]">0{index + 1}</span>
-                    <span>{problem}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="lg:col-span-7 lg:pt-20">
             <div className={`plaque transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              <p className="museum-label mb-7 text-[#3D3A36]">With ArtON · 持續發生</p>
-              <div className="space-y-4">
-                {provisions.map(({ icon: Icon, text }) => (
-                  <div key={text} className="flex items-center gap-3 text-[14px] text-[#45423C]">
-                    <Icon className="w-4 h-4 text-[#C4A265]" strokeWidth={1.4} />
-                    <span>{text}</span>
+              <p className="museum-label mb-7 text-[#3D3A36]">ArtON · 每月更新</p>
+              <div className="grid grid-cols-2 gap-6">
+                {keywords.map((keyword, index) => (
+                  <div key={keyword} className="flex items-baseline gap-3 border-t border-[#E2DDD4] pt-5">
+                    <span className="text-[#C4A265] text-[15px] md:text-[17px]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{index + 1}</span>
+                    <span className="text-[15px] md:text-[16px] text-[#1C1C1E]/78 font-medium">{keyword}</span>
                   </div>
                 ))}
               </div>
             </div>
+            <a
+              href="/b2b"
+              className={`inline-flex mt-8 items-center gap-3 text-[13px] font-medium text-[#1C1C1E] border-b border-[#C4A265] pb-2 hover:text-[#9B7C47] transition-colors delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+            >
+              企業合作 <span className="text-[#C4A265]">↗</span>
+            </a>
           </div>
         </div>
 
         <figure className={`grid lg:grid-cols-12 items-stretch transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}>
           <div className="lg:col-span-5 relative min-h-[360px] lg:min-h-[650px] overflow-hidden">
-            <img src="/manus-storage/office-art_3453b208.jpg" alt="企業空間中的藝術展示" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="/assets/office-art_3453b208.jpg" alt="企業空間中的藝術展示" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/58 via-transparent to-transparent" />
             <figcaption className="absolute bottom-0 left-0 right-0 p-7 md:p-9 text-white">
               <span className="museum-label text-[#E2C88E]">Exhibition Site · Taipei</span>
@@ -128,7 +114,7 @@ export default function EnterpriseSection() {
                 <button className="w-full mt-2 text-left text-[12px] text-[#1C1C1E]/65 border-t border-[#EAE5DC] pt-4 flex items-center justify-between">
                   <span>取得 ESG 成果報告</span><span className="text-[#C4A265]">↗</span>
                 </button>
-                <a href="/manus-storage/arton-esg-sample_90a82260.pdf" download className="w-full text-left text-[12px] text-[#1C1C1E]/65 border-t border-[#EAE5DC] pt-4 flex items-center justify-between hover:text-[#2D5A3D] transition-colors duration-300">
+                <a href="/assets/arton-esg-sample_90a82260.pdf" download className="w-full text-left text-[12px] text-[#1C1C1E]/65 border-t border-[#EAE5DC] pt-4 flex items-center justify-between hover:text-[#2D5A3D] transition-colors duration-300">
                   <span>下載 ESG 報告範本（PDF）</span><span className="text-[#C4A265]">↓</span>
                 </a>
               </div>

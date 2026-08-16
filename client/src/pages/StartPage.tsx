@@ -14,8 +14,8 @@ import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Check, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 
-const LINE_QR = "/manus-storage/line-qr-customer_068ac53d.png";
-const FOUNDING_ART = "/manus-storage/founding-art_d2e8df21.jpg";
+const LINE_QR = "/assets/line-qr-customer_068ac53d.png";
+const FOUNDING_ART = "/assets/founding-art_d2e8df21.jpg";
 
 const planComparison = [
   {

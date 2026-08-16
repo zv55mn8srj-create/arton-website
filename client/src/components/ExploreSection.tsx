@@ -8,12 +8,12 @@ import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const exhibitions = [
-  { title: "身障藝術展", tag: "Together", image: "/manus-storage/koi-nine_6a87b9e0.jpg", artist: "身心障礙創作者的油畫，讓每一面牆都成為展廳", featured: true },
-  { title: "旅行台灣", tag: "Taiwan", image: "/manus-storage/exhibition-taiwan_802358d3.jpg", artist: "山海之間，留下島嶼的日常風景" },
-  { title: "療癒攝影", tag: "Photography", image: "/manus-storage/exhibition-healing_3a941b9a.jpg", artist: "讓光線慢下來，也讓心慢下來" },
-  { title: "抽象藝術", tag: "Abstract", image: "/manus-storage/exhibition-abstract_a4923795.jpg", artist: "色彩、形狀與空間之間的自由對話" },
-  { title: "自然風景", tag: "Nature", image: "/manus-storage/exhibition-nature_c9268f72.jpg", artist: "將遠方的山林帶進每天經過的地方" },
-  { title: "春季療癒展", tag: "Healing", image: "/manus-storage/flowers-sea-island_a1502703.jpg", artist: "柔光、花影與重新生長的季節" },
+  { title: "身障藝術展", tag: "Together", image: "/assets/koi-nine_6a87b9e0.jpg", artist: "身心障礙創作者的油畫，讓每一面牆都成為展廳", featured: true },
+  { title: "旅行台灣", tag: "Taiwan", image: "/assets/exhibition-taiwan_802358d3.jpg", artist: "山海之間，留下島嶼的日常風景" },
+  { title: "療癒攝影", tag: "Photography", image: "/assets/exhibition-healing_3a941b9a.jpg", artist: "讓光線慢下來，也讓心慢下來" },
+  { title: "抽象藝術", tag: "Abstract", image: "/assets/exhibition-abstract_a4923795.jpg", artist: "色彩、形狀與空間之間的自由對話" },
+  { title: "自然風景", tag: "Nature", image: "/assets/exhibition-nature_c9268f72.jpg", artist: "將遠方的山林帶進每天經過的地方" },
+  { title: "春季療癒展", tag: "Healing", image: "/assets/flowers-sea-island_a1502703.jpg", artist: "柔光、花影與重新生長的季節" },
 ];
 
 const spans = ["md:col-span-5", "md:col-span-3", "md:col-span-4", "md:col-span-4", "md:col-span-5", "md:col-span-3"];

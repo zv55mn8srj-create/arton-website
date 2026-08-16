@@ -1,8 +1,9 @@
 /**
- * Room 01 — Our Why.
- * Gallery Quietism: a direct, dignified origin story about disabled artists,
- * creative independence and recurring income — not charity or pity.
- * Placed right after the Hero so businesses understand why ArtON exists.
+ * Room 01 — What is ArtON（依 2026-08-16 反饋改版：產品定位優先）
+ * Gallery Quietism; product-first story: a continuously-updating digital art
+ * display combining playback device + central control + monthly renewal.
+ * Brand origin (disabled artists' sustainable income) condensed into short
+ * narrative to keep text light.
  */
 import GalleryHeading, { PowerGlyph } from "./GalleryHeading";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -36,10 +37,10 @@ export default function WhyArtON() {
         <div className="grid lg:grid-cols-12 gap-14 lg:gap-16 items-start">
           <GalleryHeading
             room="01"
-            label="Our Why · 品牌初心"
-            title={<>讓創作者，<br />靠自己的作品<br />站穩腳步。</>}
+            label="What is ArtON · 產品定位"
+            title={<>一個持續更新的<br />數位藝術展示。</>}
             titleSize="clamp(2.6rem,4.6vw,4.6rem)"
-            description={<>我們相信，藝術可以改變生活，也能改變一個人的未來。</>}
+            description={<>今天看見一場展覽，下個月，又是一場新的展覽。</>}
             className={`lg:col-span-5 lg:sticky lg:top-32 transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
@@ -52,11 +53,10 @@ export default function WhyArtON() {
               }`}
             >
               <p className="text-[clamp(1.6rem,2.5vw,2.35rem)] leading-[1.55] font-light tracking-[-0.02em] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                許多優秀的藝術家，並不缺少創作能力，而是缺少持續被看見的機會。
+                ArtON 結合數位展示設備與中控系統，<br className="hidden md:block" />讓藝術作品可以遠端更新。
               </p>
-              <p>其中，也包含許多身心障礙藝術家。他們創作出動人的作品，卻往往只能在短暫的展覽中被看見；展覽結束後，作品離開視線，創作也失去了穩定的收入來源。</p>
-              <p className="text-[#1C1C1E]/78 font-medium">ArtON 希望改變這件事。</p>
-              <p>我們不是提供一次性的幫助，而是建立一個能夠持續展示、持續被欣賞、持續創造收入的藝術生態。透過企業、診所、飯店、咖啡館與更多生活空間，每一次展示，都讓創作者獲得靠作品持續創作、持續生活的機會。</p>
+              <p className="text-[#1C1C1E]/78 font-medium">每月新的藝術家 × 新的作品 × 新的展覽。</p>
+              <p>藝術作品，不只在展場觀看。ArtON 讓藝術進入空間，持續更新——一次安裝，之後的每一個月份，都是新的展覽。</p>
             </div>
 
             <blockquote

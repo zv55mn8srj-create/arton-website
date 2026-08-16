@@ -34,7 +34,7 @@ const values = [
   },
 ];
 
-const CURATOR_QR = "/manus-storage/line-qr-curator_51a4f553.png";
+const CURATOR_QR = "/assets/line-qr-curator_51a4f553.png";
 
 const curatorFaq = [
   {

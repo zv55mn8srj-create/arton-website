@@ -8,7 +8,7 @@ import { useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { LINKS } from "@/lib/links";
 
-const LINE_QR = "/manus-storage/line-qr-customer_068ac53d.png";
+const LINE_QR = "/assets/line-qr-customer_068ac53d.png";
 
 const questions = [
   { q: "企業需要哪些設備？", a: "需搭配 ArtON Box 藝術盒。它輕巧易安裝，只要一台顯示器或電視，接上藝術盒即可開始展示。ArtON 支援大多數螢幕設備，並會依空間條件提供設備建議與設定協助。" },

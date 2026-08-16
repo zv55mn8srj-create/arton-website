@@ -7,12 +7,12 @@ import GalleryHeading from "./GalleryHeading";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const venues = [
-  { name: "診所", en: "Clinic", image: "/manus-storage/clinic-art_3362e13a.jpg", description: "讓等待的時間，也有被藝術照亮的片刻。" },
-  { name: "飯店", en: "Hotel", image: "/manus-storage/hotel-art_81b3cbf6.jpg", description: "旅程從踏進空間的第一眼開始。" },
-  { name: "企業", en: "Workplace", image: "/manus-storage/office-art_3453b208.jpg", description: "文化不是牆上的標語，而是每天的風景。" },
-  { name: "校園", en: "Campus", image: "/manus-storage/venue-school_5b921e0e.jpg", description: "讓美感教育發生在每一次經過。" },
-  { name: "公部門", en: "Public", image: "/manus-storage/venue-government_7559ed8c.jpg", description: "公共空間，也能成為城市的展廳。" },
-  { name: "咖啡館", en: "Café", image: "/manus-storage/cafe-art_65055682.jpg", description: "一杯咖啡的時間，遇見一件作品。" },
+  { name: "診所", en: "Clinic", image: "/assets/clinic-art_3362e13a.jpg", description: "讓等待的時間，也有被藝術照亮的片刻。" },
+  { name: "飯店", en: "Hotel", image: "/assets/hotel-art_81b3cbf6.jpg", description: "旅程從踏進空間的第一眼開始。" },
+  { name: "企業", en: "Workplace", image: "/assets/office-art_3453b208.jpg", description: "文化不是牆上的標語，而是每天的風景。" },
+  { name: "校園", en: "Campus", image: "/assets/venue-school_5b921e0e.jpg", description: "讓美感教育發生在每一次經過。" },
+  { name: "公部門", en: "Public", image: "/assets/venue-government_7559ed8c.jpg", description: "公共空間，也能成為城市的展廳。" },
+  { name: "咖啡館", en: "Café", image: "/assets/cafe-art_65055682.jpg", description: "一杯咖啡的時間，遇見一件作品。" },
 ];
 
 export default function VenuesSection() {

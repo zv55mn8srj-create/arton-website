@@ -239,3 +239,59 @@
 - [ ] 新增「支持身障創作者 = ESG」符合事項區塊（SDG/指標對照）
 - [ ] 方案區重構：999/1499 訂閱＋ESG 報告為企業日常 ESG 基礎；彩色電子紙降為升級選項
 - [ ] 截圖驗證並交付
+
+# 第二十四輪待辦（2026-08-14）：提供完整網站原始碼與佈署教學
+- [ ] 打包專案原始碼為 zip（排除 node_modules、.manus-logs）
+- [ ] 撰寫部署教學文件（Vercel/Netlify/Cloudflare Pages/GitHub Pages 與 VPS）
+- [ ] 交付 zip 與教學文件
+
+## 打包進度（2026-08-14）
+- 已下載 29 個 /manus-storage/ 資產到 client/public/assets/（共 6.9MB），所有 src 引用已 sed 改為 /assets/
+- pnpm build 成功（dist/public/index.html 368KB、JS 787KB gzip 199KB）
+- 用 python3 http.server 8899 於 dist/public 測試：首頁與圖片正常（/assets/hero-gallery 200）
+- /start 直接路由 404 為預期（靜態伺服器無 SPA fallback）；/#/start hash 正常，Vercel/Netlify 等平台 deploy 後 /start 會正常（SPA fallback）
+- 佈署教學需說明：推薦 Vercel/Netlify（自動 SPA fallback）；GitHub Pages 需 hash router 或 404 fallback
+- 待辦：打包 zip（排除 node_modules/.manus-logs）、寫 DEPLOY.md 教學、交付
+
+# 第二十五輪改版待辦（2026-08-16）：依反饋轉為產品價值導向文案
+反饋重點：核心句「讓藝術，持續發生在生活裡」；ArtON 是「持續更新的數位藝術展示」；產品三步驟（選內容→ArtON Box→中控遠端更新）；每月更新視覺（1 藝術家+5 作品=1 場數位展覽，本月→下月）；企業方案 CTA 企業合作；頁尾 CTA 觀看 Demo/聯絡我們；文字精簡+對比加強；LOGO 不變；小光點作品需標藝術家姓名或改實播畫面。
+- [ ] 盤點 Home.tsx 各區塊結構，記錄需要修改的區塊與元件清單
+- [ ] 確認 assets 中是否有實播畫面素材；評估「本月→下月」視覺實現方式
+- [ ] Hero 改版：標題「讓藝術，持續發生在生活裡。」副標精簡，CTA 改「觀看 Demo」
+- [ ] 新增「ArtON 是什麼」區：持續更新數位藝術展示
+- [ ] 運作流程改「一次安裝，持續更新」三步驟
+- [ ] 「你會看到什麼」區：藝術家/作品/創作故事/展覽資訊，實際播放畫面為主
+- [ ] 每月更新區：本月→下月視覺
+- [ ] 企業方案改「讓空間，每個月都有新的內容」+ CTA 企業合作
+- [ ] 頁尾 CTA 改「讓下一場展覽，從你的空間開始。」+ 觀看 Demo/聯絡我們
+- [ ] 全站文案精簡、對比度檢查（hero 字加遮罩/加深）
+- [ ] 截圖驗證全頁、存 checkpoint、交付
+
+## 本輪執行進度（截至最新編輯）
+- 背景：首頁各元件與 section id：HeroSection(no id)、WhyArtON(#about)、ProcessSection(no id)、EnterpriseSection(#enterprise)、CuratorSection(#curator)、ExploreSection(#explore)、TimelineSection(no id)、WhyEnterprise(no id)、VenuesSection(no id)、FAQSection(#faq)、SpacesPartnersSection(no id)、Home 內 PlansTeaserSection(no id)、FooterSection 內 footer CTA section id="start"
+- assets 已有（29 檔，在 client/public/assets/，代碼引用 /assets/xxx）：hero-gallery_f188e269.jpg、teaser-art-d_d8627ff7.jpg、curator-laptop_38899225.jpg、exhibition-{spring,healing,abstract,nature,taiwan}_*.jpg、koi-nine_6a87b9e0.jpg（身障展封面）、flowers-sea-island_a1502703.jpg、scene-{cafe,clinic,hotel,living,reception}_*.jpg、office/clinic/hotel/cafe-art_*.jpg、founding-art_d2e8df21.jpg、bird-sea-art_65bd98be.jpg、partner-logo-{1,2}_*.png、line-qr-customer_068ac53d.png、line-qr-curator_51a4f553.png、arton-esg-sample_90a82260.pdf
+- 已完成：
+  1. HeroSection.tsx 已重寫：標題「讓藝術，持續發生在生活裡。」副標「ArtON 是一個持續更新的數位藝術展示…遠端持續更新」「每月新的藝術家 × 新的作品 × 新的展覽」，CTA 改為「觀看 Demo」(導/start) 金色主 +「企業合作」(導/b2b) 描邊
+  2. WhyArtON.tsx 已改「ArtON 是什麼」：title「一個持續更新的數位藝術展示。」desc「今天看見一場展覽，下個月，又是一場新的展覽。」三卡改為 Remote Update 中控遠端更新 / Monthly Renewal 每月新內容（1藝術家+5作品=1場數位展覽，emphasis）/ Everyday Space 進入日常空間；正文精簡為3段
+- 待辦：
+  3. ProcessSection.tsx 改「一次安裝，持續更新」三步驟：①選擇藝術內容（典藏或每月更新）②ArtON Box 播放 ③中控遠端更新（每月更新新內容）
+  4. 新增「每月更新」區（本月→下月視覺，可在 Home.tsx 加入 MonthlyUpdateSection 元件，用 existing exhibition 圖片輪替呈現 1位藝術家+5幅作品=1場數位展覽）
+  5. CuratorSection 文案精簡（「你會看到什麼」：藝術家/作品/創作故事/展覽資訊，文字維持精簡）
+  6. EnterpriseSection 改「讓空間，每個月都有新的內容」+ 藝術展示/空間美學/企業文化/ESG + CTA 企業合作（導/b2b）
+  7. FooterSection CTA 改「讓下一場展覽，從你的空間開始。」+ 想看看 ArtON 放在你的空間會是什麼樣子？+ CTA 觀看 Demo(/start)/聯絡我們(mmailto:arton.contact@gmail.com)
+  8. PlansTeaserSection 文案精簡、EnterpriseSection/Timeline/WhyEnterprise/Venues 各區檢查文字對比與精簡
+  9. 全站字色對比檢查（尤 hero 遮罩已加深 black/82）
+  10. 截圖全頁驗證、存 checkpoint、交付
+
+## 進度更新（第二十五輪，已完成大部分）
+- 已完成（新增）：
+  3. ProcessSection 已改「一次安裝，持續更新」三步驟（選擇藝術內容→ArtON Box 播放→中控遠端更新）
+  4. MonthlyUpdateSection.tsx 已新增：「每個月，看見新的藝術家。」本月(小光點/花卉與海島/flowers-sea-island)→下月(新的藝術家/全新作品與策展主題/exhibition-healing 灰階)卡片對照+「持續更新·永不重複」分隔線
+  5. CuratorSection 已改「你會看到什麼」：主圖改 flowers-sea-island 顯示「藝術家·小光點《花卉與海島》·持續展示中」，卡片改「正在播放」含藝術家/作品/創作故事/展覽資訊四欄+01藝術家/05作品/1展覽，標題「一件作品，也可以成為一場展覽。」（未使用的 tools 陣列與 lucide import 已刪除）
+  6. EnterpriseSection 已改「讓空間，每個月都有新的內容」：label For Enterprise、desc「ArtON 將藝術、空間與企業品牌連結…」、1-4 關鍵字（藝術展示/空間美學/企業文化/ESG）、CTA「企業合作」導 /b2b（未使用 import 已清理：Building2/RefreshCw/Share2 等）
+  7. FooterSection CTA 已改：標題「讓下一場展覽，從你的空間開始。」副標「想看看 ArtON 放在你的空間會是什麼樣子？」CTA：觀看 Demo(導/start)、聯絡我們(mmailto LINKS.email)
+  8. Home.tsx 已置入 MonthlyUpdateSection（CuratorSection 之後，ExploreSection 之前）
+- 待辦（Phase 3）：
+  9. TS 檢查：curatorSection/EnterpriseSection 已清理；需跑 tsc 全檢
+  10. 其餘區塊微調：WhyArtON 描述文字已為 /58 透明度（可考慮 /68）、ExploreSection/WhyEnterprise/TimelineSection/VenuesSection 檢查對比度（白字 on 深色用 white/72 以上；淺灰字加深）
+  11. 截圖全頁驗證（含 /start、/curator、/b2b 子頁）→ checkpoint → 交付
