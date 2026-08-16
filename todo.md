@@ -458,3 +458,10 @@ HeroSection → WhyArtON → ProcessSection → EnterpriseSection → CuratorSec
 # 第三十五輪改版待辦（2026-08-16）
 - [ ] /start 頁「從 NT$799／月起」區塊右側花田小圖換為九鯉魚全圖（/home/ubuntu/upload/1.作品全圖_九鯉魚_全圖.webp）
 - [ ] 驗證截圖並保存交付
+
+# 第三十六輪改版待辦（2026-08-16）
+- [ ] 解壓美珠老師作品包，挑選適合作品並上傳為 webdev 靜態資產
+- [ ] 首頁九鯉魚圖旁加小字標註《九鯉魚》鄭美珠
+- [ ] 「探索策展」卡片区同步使用九鯉魚作為本月主打策展封面
+- [x] 全站 email arton.contact@gmail.com 改為 support@arton.tw（links.ts + B2BPage 2處）
+- [ ] 驗證截圖並保存交付

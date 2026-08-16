@@ -345,7 +345,7 @@ export default function B2BPage() {
                         {epaperPlan.badgeNote}
                         <a href={LINKS.email} className="inline-flex items-center gap-1.5 text-[#B8954F] hover:text-[#C4A265] transition-colors duration-200">
                           <Mail className="w-3.5 h-3.5" strokeWidth={2} />
-                          <span>arton.contact@gmail.com</span>
+                          <span>support@arton.tw</span>
                         </a>
                       </p>
                       <p className="text-[13.5px] text-[#1C1C1E]/45">{epaperPlan.quote}</p>
@@ -412,7 +412,7 @@ export default function B2BPage() {
                         為大型採購設計
                       </p>
                       <p className="text-[15px] text-white/80 mb-1">5 台以上（診所、企業總部、連鎖門市）</p>
-                      <p className="text-[13.5px] text-white/45">依據點規模提供團體優惠與彈性合約，洽 arton.contact@gmail.com</p>
+                      <p className="text-[13.5px] text-white/45">依據點規模提供團體優惠與彈性合約，洽 support@arton.tw</p>
                     </div>
                     <ul className="space-y-3 mb-9">
                       <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">

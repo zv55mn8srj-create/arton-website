@@ -5,8 +5,8 @@
  * all email touchpoints route to the official mailbox.
  */
 export const LINKS = {
-  email: "mailto:arton.contact@gmail.com",
-  emailDisplay: "arton.contact@gmail.com",
+  email: "mailto:support@arton.tw",
+  emailDisplay: "support@arton.tw",
   customerLine: "https://lin.ee/yEZxsB3",
   curatorLine: "https://lin.ee/7dr8uq4",
 };

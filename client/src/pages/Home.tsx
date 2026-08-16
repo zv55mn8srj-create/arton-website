@@ -75,6 +75,9 @@ function PlansTeaserSection() {
                 alt="鄭美珠作品《九鯉魚》作品全圖 — 藝術於空間中持續展示"
                 className="w-full max-w-md rounded-2xl shadow-2xl shadow-black/30"
               />
+              <p className="mt-4 text-[12px] md:text-[13px] tracking-[0.12em] text-white/45">
+                《九鯉魚》· 鄭美珠
+              </p>
               <div className="absolute -bottom-4 -left-4 hidden md:block bg-[#E8B339] text-[#1C2632] text-[13px] font-semibold px-5 py-3 rounded-xl shadow-lg">
                 每月更新 · 雲端策展
               </div>
