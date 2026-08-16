@@ -567,3 +567,19 @@ Playwright 截圖顯示卡 01/03/06 仍舊白框直書殘影。但程式碼中�
 - [ ] 從乾淨全圖裁切《夏日之青春》正方形圖並上傳
 - [ ] 全站替換：探索區春季療癒展卡改用夏日之青春，其他重複處也減少花卉與海島
 - [ ] 驗證並保存交付
+
+# 第四十二輪改版待辦（2026-08-16）：每月更新本月卡換圖
+- [ ] 裁切《花開時節與海與島》為正方形（來源：/home/ubuntu/upload/4.作品全圖_花開時節與海與島_直.webp，乾淨全圖）並上傳 webdev 資產
+- [ ] MonthlyUpdateSection 本月卡改用新圖
+- [ ] 驗證並保存交付
+
+## 第四十二輪進度（12:30）
+- 來源檔 4.作品全圖_花開時節與海與島_直.webp（1151x2048）本身是「圖＋白底＋直書＋QR」的合成卡，上半部畫作約 0~780px。
+- 第一次中央裁 1151x1151 會把白框與直書文字裁進來（檢視截圖確認：右下有「鄭美珠 2009」簽名、下方有白底與直書）。
+- 解法：裁切 box 限制在畫作區域內（0~780px 高為圖），取寬 1151、高取 1151 會超出畫作高。需改為：以寬度為基準，先將圖上移裁出 1151x1151（top 從 0 起、向下到 1151 仍含白底）。真正畫作區域約 40~760px 高？需檢視實際圖範圍後，再決定正方形裁法：可能需要先裁出畫作區域再縮放裁 1:1，或採用「保留完整畫作直式 + object-cover 容器」方式。
+- 已上傳 /manus-storage/flowers-sea-square_1f4b7797.jpg（不可用，含白框殘留，勿引用）。
+- MonthlyUpdateSection 本月卡目前 URL 待查：grep "THIS MONTH" 或 summer-youth（夏日之青春 square URL: /manus-storage/summer-youth-square_*.jpg）
+
+## 第四十二輪進度更新（12:33）
+第二次裁切成功：flowers-sea-square2_29d1e34e.jpg（1200x1200 乾淨正方形，含島嶼、海面、花海與簽名，無白框）。新 URL：/manus-storage/flowers-sea-square2_29d1e34e.jpg。第一次的 flowers-sea-square_1f4b7797.jpg 不可用（含白框）。
+剩餘：找出 MonthlyUpdateSection 本月卡目前使用的夏日之青春 URL，替換為此新 URL，更新 alt，驗證，checkpoint。

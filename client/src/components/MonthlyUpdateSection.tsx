@@ -11,8 +11,8 @@ const months = [
     label: "本月",
     en: "This Month",
     artist: "藝術家 · 鄭美珠",
-    theme: "小光點畫廊策展 · 《夏日之青春》春季療癒展",
-    img: "/manus-storage/summer-youth-square_be39c0c7.jpg",
+    theme: "小光點畫廊策展 · 《花開時節與海與島》春季療癒展",
+    img: "/manus-storage/flowers-sea-square2_29d1e34e.jpg",
   },
   {
     label: "下月",
