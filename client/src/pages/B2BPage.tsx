@@ -533,7 +533,7 @@ function EsGCard({ target, name, description, metric, index }: { target: string;
       className={`border-t border-[#1C1C1E]/12 pt-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <p className="text-[12px] text-[#E8B339] font-semibold mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{target}</p>
+      <p className="text-[clamp(1.5rem,2.4vw,2rem)] text-[#C98F0E] font-bold mb-3 tracking-[0.06em]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{target}</p>
       <h3 className="text-[19px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
         {name}
       </h3>
