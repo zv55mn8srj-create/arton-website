@@ -305,28 +305,6 @@ export default function StartPage() {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="py-24 md:py-32 bg-[#16203B] text-white text-center">
-          <div className="container">
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] mb-8 font-semibold">Ready · 隨時可以開始</p>
-            <h2 className="text-[clamp(2rem,3.8vw,3.4rem)] leading-[1.25] font-light mb-8 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-              讓下一面牆，<br />
-              <span className="text-[#E8B339]">開始說話。</span>
-            </h2>
-            <p className="text-white/60 text-[14px] md:text-[15px] leading-[1.9] max-w-xl mx-auto mb-10">
-              與顧問聊聊你的空間與預算，取得最適合的方案建議與報價。
-            </p>
-            <a
-              href={LINKS.customerLine}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-[#E8B339] text-[#1C1C1E] text-[15px] font-semibold rounded-full hover:bg-[#F0B429] transition-all duration-300 active:scale-[0.97]"
-            >
-              <MessageCircle className="w-4.5 h-4.5" strokeWidth={2} />
-              加入 LINE 開始諮詢
-            </a>
-          </div>
-        </section>
       </main>
       <FooterSection />
     </div>
