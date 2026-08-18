@@ -33,7 +33,7 @@ export default function ExploreSection() {
           />
           <div className={`lg:col-span-5 lg:pb-2 transition-all duration-700 delay-150 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <p className="text-[15px] leading-[1.9] text-[#1C1C1E]/50">每一檔策展，都有自己的情緒、節奏與故事。企業可以直接觀看，找到最適合空間的一場展覽。</p>
-            <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="inline-flex mt-6 gap-3 text-[12px] tracking-[0.08em] border-b border-[#C4A265] pb-2">查看所有策展 <span className="text-[#C4A265]">↗</span></a>
+            <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="inline-flex mt-6 gap-3 text-[12px] tracking-[0.08em] border-b border-[#F5B300] pb-2">查看所有策展 <span className="text-[#F5B300]">↗</span></a>
           </div>
         </div>
 
@@ -55,10 +55,10 @@ export default function ExploreSection() {
                   </div>
                 </div>
                 <figcaption className="pt-5">
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-[#C4A265] font-medium mb-2.5">0{index + 1} · {exhibition.tag}</p>
+                  <p className="text-[11px] uppercase tracking-[0.18em] text-[#F5B300] font-medium mb-2.5">0{index + 1} · {exhibition.tag}</p>
                   <h3 className="text-[19px] md:text-[22px] font-normal text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{exhibition.title}</h3>
                   <p className="text-[12px] leading-[1.7] text-[#1C1C1E]/45 mt-2.5">{exhibition.artist}</p>
-                  {exhibition.gallery && <p className="text-[11px] leading-[1.7] text-[#C4A265] mt-1">{exhibition.gallery}</p>}
+                  {exhibition.gallery && <p className="text-[11px] leading-[1.7] text-[#F5B300] mt-1">{exhibition.gallery}</p>}
                 </figcaption>
               </a>
             </figure>

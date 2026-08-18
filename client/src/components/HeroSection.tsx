@@ -1,9 +1,10 @@
 /**
- * ArtON Hero Section — 產品價值導向（依 2026-08-16 反饋改版）
- * Gallery Quietism: cinematic full-screen art space, exhibition-scale type.
- * 核心訊息：讓藝術，持續發生在生活裡。
- * ArtON 是「持續更新的數位藝術展示」：每月新的藝術家 × 新的作品 × 新的展覽。
- * CTA：觀看 Demo（導 /start）、瀏覽方案。
+ * ArtON Hero Section — 參考風格改版（2026-08-18）
+ * Style: 明快黃色系（明亮白底 + 深藍 #16203B + 品牌黃 #F5B300）
+ * 核心訊息：讓藝術，走進更多日常。
+ * 背景：企業大廳＋牆上電子畫框（藍黃抽象畫）＋黃圓點與弧線裝飾。
+ * CTA：黃色膠囊「探索作品→」（導 #demo）、白底描邊膠囊「合作洽詢→」（導 /b2b）。
+ * 背景左側為留白區，使用深藍字，不使用黑色遮罩。
  */
 import { useEffect, useState } from "react";
 
@@ -15,43 +16,43 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen min-h-[760px] overflow-hidden">
-      {/* Background */}
+    <section className="relative w-full min-h-[760px] overflow-hidden bg-[#FBF8F1]">
+      {/* Background — 電子畫框大廳場景，左側留白 */}
       <div className="absolute inset-0">
         <img
-          src="/assets/hero-gallery_f188e269.jpg"
-          alt="ArtON 藝術展示空間"
+          src="/manus-storage/hero-digital-frame-yellow_156c19d5.png"
+          alt="ArtON 智慧藝術畫框展示空間"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/82 via-black/58 to-black/16" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/14" />
+        {/* 左側留白：由白→透明的漸層，確保深藍標題文字清晰 */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FBF8F1]/97 via-[#FBF8F1]/72 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#FBF8F1]/55 via-transparent to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center">
-        <div className="container pt-16">
-          <div className="max-w-[820px]">
+      <div className="relative z-10 min-h-[760px] flex items-center">
+        <div className="container py-24">
+          <div className="max-w-[760px]">
             <p
-              className={`text-[#D6B876] text-[11px] md:text-[13px] uppercase tracking-[0.32em] mb-7 font-medium transition-all duration-1000 ${
+              className={`text-[#C98F0E] text-[11px] md:text-[13px] uppercase tracking-[0.32em] mb-7 font-semibold transition-all duration-1000 ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              Art · Continuity · Together
+              Art · Space · ESG · Together
             </p>
 
             <h1
-              className={`text-[clamp(2.8rem,6.1vw,5.6rem)] leading-[1.08] text-white mb-8 font-light tracking-[-0.045em] transition-all duration-1000 delay-150 ${
+              className={`text-[clamp(2.8rem,6.1vw,5.6rem)] leading-[1.12] text-[#16203B] mb-8 font-bold tracking-[-0.03em] transition-all duration-1000 delay-150 ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
-              style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}
+              style={{ fontFamily: "'Noto Sans TC', sans-serif" }}
             >
               讓藝術，<br />
-              持續發生在<br className="hidden sm:block" />
-              生活裡。
+              走進<span className="text-[#F5B300]">更多日常</span>。
             </h1>
 
             <p
-              className={`text-white/92 text-[16px] md:text-[18px] leading-[1.95] mb-5 max-w-[680px] font-light transition-all duration-1000 delay-300 ${
+              className={`text-[#33404F] text-[17px] md:text-[18px] leading-[2] mb-5 max-w-[620px] font-medium transition-all duration-1000 delay-300 ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -60,32 +61,32 @@ export default function HeroSection() {
             </p>
 
             <p
-              className={`text-[#D6B876] text-[15px] md:text-[16px] leading-[1.9] mb-10 max-w-xl font-light transition-all duration-1000 delay-[450ms] ${
+              className={`text-[#16203B] text-[16px] md:text-[17px] leading-[1.9] mb-10 max-w-xl font-semibold transition-all duration-1000 delay-[450ms] ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              每月新的藝術家 × 新的作品 × 新的展覽。
+              任何藝術，都值得被看見。
             </p>
 
-            {/* CTA：觀看 Demo 為主、瀏覽方案為輔 */}
+            {/* 雙膠囊 CTA：黃色主＋白底描邊次 */}
             <div
-              className={`grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl transition-all duration-1000 delay-[600ms] ${
+              className={`flex flex-wrap gap-4 max-w-2xl transition-all duration-1000 delay-[600ms] ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
               <button
                 onClick={() => document.getElementById("demo")?.scrollIntoView({ behavior: "smooth", block: "start" })}
-                className="group px-7 py-5 bg-[#C4A265] text-white rounded-2xl hover:bg-[#b8954f] transition-all duration-300 hover:shadow-xl hover:shadow-[#C4A265]/20 active:scale-[0.97] text-left"
+                className="group px-8 py-4 bg-[#F5B300] text-[#16203B] rounded-full font-bold hover:bg-[#e5a800] transition-all duration-300 hover:shadow-xl hover:shadow-[#F5B300]/25 active:scale-[0.97]"
               >
-                <p className="text-[11px] uppercase tracking-[0.28em] text-[#F5EBD8] mb-1.5">Watch Demo</p>
-                <p className="text-[16px] font-medium leading-snug">觀看 Demo</p>
+                <span className="text-[16px] leading-none">探索作品</span>
+                <span className="ml-2 text-[16px] leading-none transition-transform duration-300 group-hover:translate-x-1 inline-block">→</span>
               </button>
               <a
                 href="/b2b"
-                className="group px-7 py-5 border border-white/38 text-white rounded-2xl hover:bg-white/10 transition-all duration-300 backdrop-blur-sm active:scale-[0.97]"
+                className="group px-8 py-4 bg-white/85 backdrop-blur-sm border-2 border-[#16203B]/20 text-[#16203B] rounded-full font-bold hover:bg-white hover:border-[#16203B]/40 transition-all duration-300 active:scale-[0.97]"
               >
-                <p className="text-[11px] uppercase tracking-[0.28em] text-white/65 mb-1.5">For Your Space</p>
-                <p className="text-[16px] font-medium leading-snug">為我的空間訂閱藝術</p>
+                <span className="text-[16px] leading-none">合作洽詢</span>
+                <span className="ml-2 text-[16px] leading-none transition-transform duration-300 group-hover:translate-x-1 inline-block">→</span>
               </a>
             </div>
           </div>
@@ -94,9 +95,9 @@ export default function HeroSection() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10" aria-hidden="true">
-        <div className="w-px h-10 bg-gradient-to-b from-transparent to-white/38 mx-auto" />
-        <div className="w-5 h-8 border border-white/28 rounded-full flex justify-center pt-1.5 mt-2">
-          <div className="w-[2px] h-2 bg-[#C4A265] rounded-full animate-bounce" />
+        <div className="w-px h-10 bg-gradient-to-b from-transparent to-[#16203B]/30 mx-auto" />
+        <div className="w-5 h-8 border border-[#16203B]/25 rounded-full flex justify-center pt-1.5 mt-2 bg-white/60 backdrop-blur-sm">
+          <div className="w-[2px] h-2 bg-[#F5B300] rounded-full animate-bounce" />
         </div>
       </div>
     </section>

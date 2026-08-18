@@ -1,7 +1,7 @@
 /**
  * ArtON /curator — 策展人介紹子頁
  * Gallery Quietism: museum-like whitespace, warm tones, Cormorant Garamond.
- * Color palette: warm white #FAFAF8, cream #F5F0EB, art gold #C4A265/#E8B339,
+ * Color palette: warm white #FAFAF8, cream #F5F0EB, art gold #F5B300/#E8B339,
  * deep gray #1C1C1E, ink navy #16202B/#1C2632.
  * Empowerment narrative — curators build exhibitions once, value keeps flowing.
  */
@@ -140,7 +140,7 @@ export default function CuratorPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {steps.map((step, i) => (
                 <div key={step.no} className="relative border-t border-[#1C1C1E]/12 pt-6">
-                  <span className="text-[12px] text-[#C4A265] font-medium">{step.no}</span>
+                  <span className="text-[12px] text-[#F5B300] font-medium">{step.no}</span>
                   <h3 className="text-[19px] font-normal text-[#1C1C1E] mt-3 mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                     {step.title}
                   </h3>
@@ -196,11 +196,11 @@ export default function CuratorPage() {
               {curatorFaq.map((item, i) => (
                 <details key={item.q} className="group py-7">
                   <summary className="list-none flex items-center gap-4 cursor-pointer select-none">
-                    <span className="text-[12px] text-[#C4A265] font-medium">0{i + 1}</span>
+                    <span className="text-[12px] text-[#F5B300] font-medium">0{i + 1}</span>
                     <span className="text-[17px] md:text-[19px] font-normal text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                       {item.q}
                     </span>
-                    <span className="ml-auto text-[#C4A265] text-[16px] transition-transform duration-300 group-open:rotate-45">＋</span>
+                    <span className="ml-auto text-[#F5B300] text-[16px] transition-transform duration-300 group-open:rotate-45">＋</span>
                   </summary>
                   <p className="mt-4 pl-[44px] pr-8 text-[13.5px] leading-[1.95] text-[#45423C]">{item.a}</p>
                 </details>
@@ -226,7 +226,7 @@ function ValueCard({ no, title, description, index }: { no: string; title: strin
       style={{ transitionDelay: `${index * 110}ms` }}
     >
       <div className="flex items-baseline gap-4 mb-5">
-        <span className="text-[12px] text-[#C4A265] font-medium">{no}</span>
+        <span className="text-[12px] text-[#F5B300] font-medium">{no}</span>
         <h3 className="text-[24px] font-normal text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
           {title}
         </h3>

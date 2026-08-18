@@ -2,7 +2,7 @@
  * ArtON Homepage
  * Design Philosophy: Gallery Quietism
  * - Gallery Quietism: museum-like whitespace, warm tones, Cormorant Garamond display font
- * - Color palette: warm white #FAFAF8, cream #F5F0EB, art gold #C4A265, deep gray #1C1C1E
+ * - Color palette: warm white #FAFAF8, cream #F5F0EB, art gold #F5B300, deep gray #1C1C1E
  * - Layout: generous vertical spacing, asymmetric compositions, elegant card grids
  */
 import Header from "@/components/Header";

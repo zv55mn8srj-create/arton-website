@@ -3,7 +3,7 @@
  * Gallery Quietism: a live "what you actually see" preview grid,
  * four real-space mockups with screens showing Artist Profile /
  * Artwork Story / Full Artwork — landscape & portrait orientations.
- * Colors: warm white #FAFAF8, art gold #E8B339/#C4A265, deep gray #1C2632.
+ * Colors: warm white #FAFAF8, art gold #E8B339/#F5B300, deep gray #1C2632.
  */
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 

@@ -29,7 +29,7 @@ export default function CuratorSection() {
 
               <div className="relative md:absolute md:-bottom-1 md:right-0 w-full md:w-[72%] bg-[#FBFAF7] shadow-[0_20px_60px_rgba(44,37,27,0.14)] border border-white p-5 md:p-6 -mt-8 md:mt-0">
                 <div className="flex items-center justify-between pb-4 border-b border-[#E2DDD4]">
-                  <div className="flex items-center gap-2.5"><PowerGlyph className="w-5 h-5 text-[#C4A265]" /><span className="text-[12px] font-medium">正在播放</span></div>
+                  <div className="flex items-center gap-2.5"><PowerGlyph className="w-5 h-5 text-[#F5B300]" /><span className="text-[12px] font-medium">正在播放</span></div>
                   <span className="text-[9px] uppercase tracking-[0.16em] text-[#1C1C1E]/30">Now Exhibiting</span>
                 </div>
                 <div className="grid grid-cols-4 gap-3 py-4 text-[12px]">
@@ -39,7 +39,7 @@ export default function CuratorSection() {
                     { label: "創作故事", note: "Story" },
                     { label: "展覽資訊", note: "Exhibition" },
                   ].map(({ label, note }) => (
-                    <div key={label} className="border-l border-[#C4A265]/40 pl-3">
+                    <div key={label} className="border-l border-[#F5B300]/40 pl-3">
                       <p className="text-[13px] md:text-[14px] font-medium text-[#1C1C1E]">{label}</p>
                       <p className="text-[9px] mt-1 text-[#1C1C1E]/36 uppercase tracking-[0.1em]">{note}</p>
                     </div>
@@ -64,8 +64,8 @@ export default function CuratorSection() {
               className={`transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             />
 
-            <a href={LINKS.curatorLine} target="_blank" rel="noopener noreferrer" className="inline-flex mt-10 items-center gap-4 text-[13px] font-medium text-[#1C1C1E] border-b border-[#C4A265] pb-2 hover:text-[#9B7C47] transition-colors">
-              成為 ArtON 策展人 <span className="text-[#C4A265]">↗</span>
+            <a href={LINKS.curatorLine} target="_blank" rel="noopener noreferrer" className="inline-flex mt-10 items-center gap-4 text-[13px] font-medium text-[#1C1C1E] border-b border-[#F5B300] pb-2 hover:text-[#9B7C47] transition-colors">
+              成為 ArtON 策展人 <span className="text-[#F5B300]">↗</span>
             </a>
           </div>
         </div>

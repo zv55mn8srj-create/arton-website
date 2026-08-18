@@ -84,7 +84,7 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-white/95 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.06)]"
-          : "bg-transparent"
+          : "bg-[#FBF8F1]/82 backdrop-blur-md"
       }`}
     >
       <div className="container flex items-center justify-between h-20">
@@ -94,7 +94,7 @@ export default function Header() {
               未滾動時（深色 hero 底）：白色字版，黃圓保留
               滾動後（白色導覽列底）：原始深灰字版 */}
           <img
-            src={scrolled ? "/manus-storage/arton-logo-official_fa5df696.png" : "/manus-storage/arton-logo-white_de90f326.png"}
+            src={"/manus-storage/arton-logo-official_fa5df696_bb3c62fb.png"}
             alt="ArtON — Turn Art ON"
             className="h-full w-auto object-contain transition-opacity duration-500"
           />
@@ -112,25 +112,19 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-4">
           <Link
             href="/curator"
-            className={`text-[15px] font-medium transition-colors duration-300 ${
-              scrolled ? "text-[#1C1C1E] hover:text-[#C4A265]" : "text-white hover:text-[#C4A265]"
-            }`}
+            className="text-[15px] font-medium text-[#16203B]/75 hover:text-[#C98F0E] transition-colors duration-300"
           >
             策展人加入
           </Link>
           <a
             href="/b2b"
-            className={`text-[14px] font-medium border px-4 py-2 rounded-full transition-colors duration-300 ${
-              scrolled
-                ? "border-[#C4A265]/50 text-[#B8954F] hover:bg-[#C4A265]/8"
-                : "border-white/40 text-white/90 hover:bg-white/8"
-            }`}
+            className="text-[14px] font-medium border-2 border-[#16203B]/18 text-[#16203B] px-4 py-2 rounded-full hover:border-[#F5B300] hover:text-[#C98F0E] transition-colors duration-300"
           >
             企業訂閱方案
           </a>
           <Link
             href="/start"
-            className="px-5 py-2.5 bg-[#C4A265] text-white text-[15px] font-medium rounded-full hover:bg-[#b8954f] transition-all duration-300 hover:shadow-lg"
+            className="px-5 py-2.5 bg-[#F5B300] text-[#16203B] text-[15px] font-bold rounded-full hover:bg-[#e5a800] transition-all duration-300 hover:shadow-lg hover:shadow-[#F5B300]/25"
           >
             選擇方案
           </Link>
@@ -139,7 +133,7 @@ export default function Header() {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`lg:hidden p-2 ${scrolled ? "text-[#1C1C1E]" : "text-white"}`}
+          className="lg:hidden p-2 text-[#16203B]"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -160,13 +154,13 @@ export default function Header() {
               </AnchorLink>
             ))}
             <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-[#E5E5E3]">
-              <Link href="/b2b" onClick={() => setMobileOpen(false)} className="text-center text-[15px] text-[#1C1C1E] font-medium py-2 border border-[#C4A265]/50 rounded-full">
+              <Link href="/b2b" onClick={() => setMobileOpen(false)} className="text-center text-[15px] text-[#1C1C1E] font-medium py-2 border border-[#F5B300]/50 rounded-full">
                 企業訂閱方案
               </Link>
               <Link href="/curator" onClick={() => setMobileOpen(false)} className="text-center text-[15px] text-[#1C1C1E] font-medium py-2">
                 策展人加入
               </Link>
-              <Link href="/start" onClick={() => setMobileOpen(false)} className="text-center px-5 py-2.5 bg-[#C4A265] text-white text-[15px] font-medium rounded-full">
+              <Link href="/start" onClick={() => setMobileOpen(false)} className="text-center px-5 py-2.5 bg-[#F5B300] text-[#16203B] text-[15px] font-bold rounded-full">
                 選擇方案
               </Link>
             </div>
@@ -217,10 +211,10 @@ function AnchorLink({
       onClick={handleClick}
       className={
         mobile
-          ? "text-[16px] text-[#1C1C1E]/80 py-2 hover:text-[#C4A265] transition-colors"
+          ? "text-[16px] text-[#1C1C1E]/80 py-2 hover:text-[#C98F0E] transition-colors"
           : `text-[15px] font-normal transition-colors duration-300 tracking-wide ${
               scrolled
-                ? "text-[#1C1C1E]/70 hover:text-[#C4A265]"
+                ? "text-[#1C1C1E]/70 hover:text-[#C98F0E]"
                 : "text-white/80 hover:text-white"
             }`
       }

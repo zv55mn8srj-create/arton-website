@@ -45,15 +45,15 @@ export default function ProcessSection() {
 
           <div className="lg:col-span-7 lg:pl-12">
             <div className="relative">
-              <div className="absolute left-[27px] md:left-[39px] top-10 bottom-10 w-px bg-gradient-to-b from-[#C4A265]/70 via-[#C4A265]/30 to-transparent" />
+              <div className="absolute left-[27px] md:left-[39px] top-10 bottom-10 w-px bg-gradient-to-b from-[#F5B300]/70 via-[#F5B300]/30 to-transparent" />
               {steps.map((item, index) => (
                 <article
                   key={item.title}
                   className={`relative grid grid-cols-[56px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-9 pb-12 md:pb-14 last:pb-0 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}
                   style={{ transitionDelay: `${index * 130}ms` }}
                 >
-                  <div className="relative z-10 w-14 h-14 md:w-20 md:h-20 rounded-full bg-[#1C1C1E] border border-[#C4A265]/42 flex items-center justify-center shadow-[0_0_0_8px_#1C1C1E]">
-                    <span className="text-[1.7rem] md:text-[2.25rem] font-light text-[#C4A265]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  <div className="relative z-10 w-14 h-14 md:w-20 md:h-20 rounded-full bg-[#1C1C1E] border border-[#F5B300]/42 flex items-center justify-center shadow-[0_0_0_8px_#1C1C1E]">
+                    <span className="text-[1.7rem] md:text-[2.25rem] font-light text-[#F5B300]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                       0{index + 1}
                     </span>
                   </div>

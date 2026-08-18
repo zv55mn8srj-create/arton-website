@@ -19,7 +19,7 @@ const months = [
     en: "Next Month",
     artist: "新的藝術家",
     theme: "全新的作品與策展主題",
-    img: "/manus-storage/sunrise-dawn_2cd344e3.jpg",
+    img: "/manus-storage/sunrise-dawn_2cd344e3_3978a679.jpg",
   },
 ];
 
@@ -65,9 +65,9 @@ export default function MonthlyUpdateSection() {
             </div>
 
             <div className="mt-8 flex items-center gap-4 text-[12px] text-[#1C1C1E]/50">
-              <span className="h-px flex-1 bg-[#C4A265]/38" />
+              <span className="h-px flex-1 bg-[#F5B300]/38" />
               <span className="uppercase tracking-[0.24em]">持續更新 · 永不重複</span>
-              <span className="h-px flex-1 bg-[#C4A265]/38" />
+              <span className="h-px flex-1 bg-[#F5B300]/38" />
             </div>
           </div>
         </div>

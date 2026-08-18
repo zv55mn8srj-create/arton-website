@@ -33,7 +33,7 @@ export default function TimelineSection() {
         </div>
 
         <div className="relative grid md:grid-cols-5 gap-10 md:gap-0">
-          <div className="hidden md:block absolute top-[64px] left-0 right-0 h-px bg-gradient-to-r from-[#C4A265] via-[#C4A265]/35 to-transparent" />
+          <div className="hidden md:block absolute top-[64px] left-0 right-0 h-px bg-gradient-to-r from-[#F5B300] via-[#F5B300]/35 to-transparent" />
           {stages.map((stage, index) => (
             <article
               key={stage.title}
@@ -41,9 +41,9 @@ export default function TimelineSection() {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="flex md:block items-center gap-5">
-                <span className="block text-[4.9rem] leading-none font-light text-[#C4A265]/55" style={{ fontFamily: "'Cormorant Garamond', serif" }}>0{index + 1}</span>
-                <PowerGlyph className="hidden md:block relative z-10 w-4 h-4 mt-3 mb-8 text-[#C4A265] bg-[#F2EEE7]" />
-                <div className="md:hidden w-12 h-px bg-[#C4A265]/50" />
+                <span className="block text-[4.9rem] leading-none font-light text-[#F5B300]/55" style={{ fontFamily: "'Cormorant Garamond', serif" }}>0{index + 1}</span>
+                <PowerGlyph className="hidden md:block relative z-10 w-4 h-4 mt-3 mb-8 text-[#F5B300] bg-[#F2EEE7]" />
+                <div className="md:hidden w-12 h-px bg-[#F5B300]/50" />
               </div>
               <h3 className="text-[18px] md:text-[19px] font-normal text-[#1C1C1E] mt-5 md:mt-0 mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{stage.title}</h3>
               <p className="text-[12px] md:text-[13px] leading-[1.8] text-[#1C1C1E]/43">{stage.note}</p>

@@ -1,7 +1,7 @@
 /**
  * ArtON /start — 企業免費諮詢與開始展示子頁
  * Gallery Quietism: museum-like whitespace, warm tones, Cormorant Garamond.
- * Color palette: warm white #FAFAF8, cream #F5F0EB, art gold #C4A265/#E8B339,
+ * Color palette: warm white #FAFAF8, cream #F5F0EB, art gold #F5B300/#E8B339,
  * deep gray #1C1C1E, ink navy #16202B/#1C2632, forest #2D5A3D.
  * Empowerment narrative — creators earn income through sustained display.
  * This page consolidates subscription plans + hardware + steps, and points
@@ -152,7 +152,7 @@ export default function StartPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {steps.map((step, i) => (
                 <div key={step.no} className="relative border-t border-[#1C1C1E]/12 pt-6">
-                  <span className="text-[12px] text-[#C4A265] font-medium">{step.no}</span>
+                  <span className="text-[12px] text-[#F5B300] font-medium">{step.no}</span>
                   <h3 className="text-[19px] font-normal text-[#1C1C1E] mt-3 mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                     {step.title}
                   </h3>
@@ -180,10 +180,10 @@ export default function StartPage() {
               </div>
               {/* Copy */}
               <div>
-                <p className="text-[11px] md:text-[12px] uppercase tracking-[0.32em] text-[#C4A265] mb-6 font-semibold">For The First Spaces · 首批合作空間</p>
+                <p className="text-[11px] md:text-[12px] uppercase tracking-[0.32em] text-[#F5B300] mb-6 font-semibold">For The First Spaces · 首批合作空間</p>
                 <h2 className="text-[clamp(2.2rem,4.2vw,4rem)] leading-[1.25] font-light text-[#1C1C1E] mb-7" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                   成為 ArtON<br />
-                  <span className="text-[#B8954F]">創始合作夥伴。</span>
+                  <span className="text-[#C98F0E]">創始合作夥伴。</span>
                 </h2>
                 <p className="text-[14.5px] leading-[2] text-[#45423C] max-w-md mb-8">
                   首批合作空間可享期間免費體驗，讓身心障礙藝術展覽內容、ArtON 播放設備與平台服務，先進入你的空間。
@@ -210,7 +210,7 @@ export default function StartPage() {
               </div>
               {/* Art */}
               <div className="relative">
-                <div className="absolute -inset-4 border border-[#C4A265]/35 rotate-[1.5deg]" aria-hidden="true" />
+                <div className="absolute -inset-4 border border-[#F5B300]/35 rotate-[1.5deg]" aria-hidden="true" />
                 <img
                   src={FOUNDING_ART}
                   alt="身心障礙藝術家作品《花開時節與海與島》—— 首批合作空間預覽"
@@ -244,7 +244,7 @@ export default function StartPage() {
                     <tr className="border-b border-[#1C1C1E]/10">
                       <th className="text-left py-5 px-6 md:px-8 font-medium text-[#1C1C1E]/50 w-[28%]">比較項目</th>
                       <th className="text-left py-5 px-6 md:px-8 font-medium text-[#1C1C1E]">一般訂閱</th>
-                      <th className="text-left py-5 px-6 md:px-8 font-semibold text-[#B8954F] bg-[#C4A265]/6">組合包方案<br /><span className="text-[11px] font-normal text-[#1C1C1E]/50">以租代買</span></th>
+                      <th className="text-left py-5 px-6 md:px-8 font-semibold text-[#C98F0E] bg-[#F5B300]/6">組合包方案<br /><span className="text-[11px] font-normal text-[#1C1C1E]/50">以租代買</span></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -252,7 +252,7 @@ export default function StartPage() {
                       <tr key={row.category} className="border-b border-[#1C1C1E]/6 last:border-0 align-top">
                         <td className="py-4.5 px-6 md:px-8 text-[#1C1C1E]/60">{row.category}</td>
                         <td className="py-4.5 px-6 md:px-8 text-[#45423C] leading-[1.8]">{row.general}</td>
-                        <td className="py-4.5 px-6 md:px-8 text-[#1C1C1E] leading-[1.8] bg-[#C4A265]/6">{row.bundle}</td>
+                        <td className="py-4.5 px-6 md:px-8 text-[#1C1C1E] leading-[1.8] bg-[#F5B300]/6">{row.bundle}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -279,7 +279,7 @@ export default function StartPage() {
                 </div>
               </div>
               <div>
-                <p className="text-[11px] uppercase tracking-[0.3em] text-[#C4A265] font-semibold mb-4">Scan to Consult</p>
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#F5B300] font-semibold mb-4">Scan to Consult</p>
                 <h2 className="text-[clamp(1.6rem,2.8vw,2.6rem)] leading-[1.35] font-light text-[#1C1C1E] mb-5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                   用電腦瀏覽？<br />
                   掃碼即可加入諮詢。
@@ -338,7 +338,7 @@ function ReasonCard({ title, description, index }: { title: string; description:
       style={{ transitionDelay: `${index * 110}ms` }}
     >
       <div className="flex items-center gap-3 mb-5">
-        <Sparkles className="w-4 h-4 text-[#C4A265]" strokeWidth={1.5} />
+        <Sparkles className="w-4 h-4 text-[#F5B300]" strokeWidth={1.5} />
         <h3 className="text-[21px] font-normal text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
           {title}
         </h3>

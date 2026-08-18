@@ -2,7 +2,7 @@
  * ArtON /b2b — B2B Landing Page
  * Direct, outcome-first copy for procurement & ESG decision makers,
  * while keeping the Gallery Quietism visual language (warm whites,
- * Cormorant Garamond display, art gold #C4A265 / #E8B339, deep gray #1C1C1E).
+ * Cormorant Garamond display, art gold #F5B300 / #E8B339, deep gray #1C1C1E).
  */
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
@@ -259,7 +259,7 @@ export default function B2BPage() {
                   }`}
                   style={{ transitionDelay: `${i * 90}ms` }}
                 >
-                  <p className="text-[14px] text-[#1C1C1E]/45 line-through decoration-[#C4A265]/60">{row.pain}</p>
+                  <p className="text-[14px] text-[#1C1C1E]/45 line-through decoration-[#F5B300]/60">{row.pain}</p>
                   <p className="text-[15px] font-medium text-[#2D5A3D] flex items-center gap-2.5">
                     <Check className="w-4 h-4 shrink-0 text-[#2D5A3D]" strokeWidth={2.4} />
                     {row.solution}
@@ -295,7 +295,7 @@ export default function B2BPage() {
                   </h3>
                   <p className="text-[14px] text-[#1C1C1E]/70 mb-7">{p.tagline}</p>
                   <div className="flex items-end gap-2 mb-2">
-                    <span className="text-[clamp(2.4rem,3.6vw,3.2rem)] font-light text-[#B8954F] leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                    <span className="text-[clamp(2.4rem,3.6vw,3.2rem)] font-light text-[#C98F0E] leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                       {p.price}
                     </span>
                     <span className="text-[15px] text-[#1C1C1E]/55 pb-1">{p.per}</span>
@@ -305,7 +305,7 @@ export default function B2BPage() {
                     <ul className="space-y-3">
                       {p.features.map((f) => (
                         <li key={f} className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-[#1C1C1E]/78">
-                          <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#B8954F]" strokeWidth={2.2} />
+                          <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#C98F0E]" strokeWidth={2.2} />
                           <span>{f}</span>
                         </li>
                       ))}
@@ -338,12 +338,12 @@ export default function B2BPage() {
                     </h3>
                     <p className="text-[15px] md:text-[16.5px] text-[#1C1C1E] mb-8">{epaperPlan.tagline}</p>
                     <div className="border-t border-[#E7E0D5] pt-7 mb-8">
-                      <p className="text-[clamp(1.5rem,2.6vw,2.2rem)] font-light text-[#B8954F] mb-2.5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                      <p className="text-[clamp(1.5rem,2.6vw,2.2rem)] font-light text-[#C98F0E] mb-2.5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                         {epaperPlan.badge}
                       </p>
                       <p className="flex items-center gap-2 text-[15px] text-[#1C1C1E] mb-1">
                         {epaperPlan.badgeNote}
-                        <a href={LINKS.email} className="inline-flex items-center gap-1.5 text-[#B8954F] hover:text-[#C4A265] transition-colors duration-200">
+                        <a href={LINKS.email} className="inline-flex items-center gap-1.5 text-[#C98F0E] hover:text-[#F5B300] transition-colors duration-200">
                           <Mail className="w-3.5 h-3.5" strokeWidth={2} />
                           <span>support@arton.tw</span>
                         </a>
@@ -353,14 +353,14 @@ export default function B2BPage() {
                     <ul className="space-y-3 mb-9">
                       {epaperPlan.features.map((f) => (
                         <li key={f} className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-[#1C1C1E]/78">
-                          <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#B8954F]" strokeWidth={2.2} />
+                          <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#C98F0E]" strokeWidth={2.2} />
                           <span>{f}</span>
                         </li>
                       ))}
                     </ul>
                     <a
                       href={LINKS.email}
-                      className="group inline-flex items-center justify-center gap-2.5 text-[14px] font-semibold px-7 py-4 border border-[#1C1C1E]/35 text-[#1C1C1E] rounded-full hover:border-[#B8954F] hover:text-[#B8954F] transition-all duration-200 active:scale-[0.97]"
+                      className="group inline-flex items-center justify-center gap-2.5 text-[14px] font-semibold px-7 py-4 border border-[#1C1C1E]/35 text-[#1C1C1E] rounded-full hover:border-[#C98F0E] hover:text-[#C98F0E] transition-all duration-200 active:scale-[0.97]"
                     >
                       諮詢電子紙展示方案
                       <ArrowRight className="w-4 h-4" strokeWidth={2} />
@@ -527,8 +527,8 @@ function HighlightCard({ icon: Icon, title, description, index }: { icon: typeof
       style={{ transitionDelay: `${index * 110}ms` }}
     >
       <div className="flex items-center gap-3.5 mb-5">
-        <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#C4A265]/10">
-          <Icon className="w-5 h-5 text-[#B8954F]" strokeWidth={1.5} />
+        <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#F5B300]/10">
+          <Icon className="w-5 h-5 text-[#C98F0E]" strokeWidth={1.5} />
         </span>
         <h3 className="text-[24px] font-normal text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
           {title}
@@ -547,7 +547,7 @@ function EsGCard({ target, name, description, metric, index }: { target: string;
       className={`border-t border-[#1C1C1E]/12 pt-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <p className="text-[12px] text-[#B8954F] font-semibold mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{target}</p>
+      <p className="text-[12px] text-[#C98F0E] font-semibold mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{target}</p>
       <h3 className="text-[19px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
         {name}
       </h3>

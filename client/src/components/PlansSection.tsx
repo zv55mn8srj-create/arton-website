@@ -104,7 +104,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
 
   return (
     <section id="plans" className="relative py-28 md:py-40 bg-[#F7F4EF] overflow-hidden">
-      <div className="absolute -bottom-28 left-[3%] text-[20rem] leading-none text-[#C4A265]/[0.045] font-light select-none" aria-hidden="true">09</div>
+      <div className="absolute -bottom-28 left-[3%] text-[20rem] leading-none text-[#F5B300]/[0.045] font-light select-none" aria-hidden="true">09</div>
       <div className="container relative" ref={ref}>
         <div className={`text-center mb-16 md:mb-20 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <GalleryHeading
@@ -152,14 +152,14 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
             <div className="lg:col-span-5 bg-[#F6F2E9] p-10 md:p-12 lg:p-12 flex flex-col">
               {/* Entry plan — One Minute Art */}
               <div className="border-b border-[#1C1C1E]/10 pb-8 mb-9">
-                <p className="text-[11px] uppercase tracking-[0.3em] text-[#B8954F] mb-4 font-semibold">ENTRY PLAN · 入門支持</p>
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#C98F0E] mb-4 font-semibold">ENTRY PLAN · 入門支持</p>
                 <div className="flex items-start justify-between gap-4 mb-4">
                   <h4 className="text-[23px] md:text-[26px] font-normal text-[#1C1C1E] leading-[1.3]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                     一分鐘藝術
                   </h4>
                   <p className="text-right shrink-0">
-                    <span className="text-[12px] text-[#B8954F] mr-1">NT$</span>
-                    <span className="text-[clamp(2.3rem,3.4vw,3rem)] leading-none font-light text-[#B8954F]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>199</span>
+                    <span className="text-[12px] text-[#C98F0E] mr-1">NT$</span>
+                    <span className="text-[clamp(2.3rem,3.4vw,3rem)] leading-none font-light text-[#C98F0E]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>199</span>
                     <span className="text-[12px] text-[#1C1C1E]/45 ml-1">／月</span>
                   </p>
                 </div>
@@ -169,7 +169,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
                 <ul className="space-y-2.5 mb-5">
                   {["每月一件藝術作品", "一分鐘創作故事與展覽內容", "持續支持身心障礙藝術創作"].map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-[12.5px] leading-[1.7] text-[#1C1C1E]/72">
-                      <Check className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[#B8954F]" strokeWidth={2.2} />
+                      <Check className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[#C98F0E]" strokeWidth={2.2} />
                       {f}
                     </li>
                   ))}
@@ -178,20 +178,20 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
                   href={LINKS.customerLine}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2.5 text-[12.5px] font-semibold tracking-[0.05em] px-5 py-3.5 bg-transparent border border-[#1C1C1E]/40 text-[#1C1C1E] hover:border-[#B8954F] hover:text-[#B8954F] transition-all duration-200 active:scale-[0.97]"
+                  className="inline-flex items-center justify-center gap-2.5 text-[12.5px] font-semibold tracking-[0.05em] px-5 py-3.5 bg-transparent border border-[#1C1C1E]/40 text-[#1C1C1E] hover:border-[#C98F0E] hover:text-[#C98F0E] transition-all duration-200 active:scale-[0.97]"
                 >
                   加入 LINE 開始訂閱
                 </a>
               </div>
 
-              <p className="text-[11px] uppercase tracking-[0.3em] text-[#B8954F] mb-5 font-semibold">BASIC PLAN</p>
+              <p className="text-[11px] uppercase tracking-[0.3em] text-[#C98F0E] mb-5 font-semibold">BASIC PLAN</p>
               <div className="flex items-start justify-between gap-4 mb-6">
                 <h4 className="text-[27px] md:text-[30px] font-normal text-[#1C1C1E] leading-[1.3]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                   ArtON 支持夥伴
                 </h4>
                 <p className="text-right shrink-0">
-                  <span className="text-[13px] text-[#B8954F] mr-1">NT$</span>
-                  <span className="text-[clamp(2.9rem,4.2vw,3.8rem)] leading-none font-light text-[#B8954F]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>799</span>
+                  <span className="text-[13px] text-[#C98F0E] mr-1">NT$</span>
+                  <span className="text-[clamp(2.9rem,4.2vw,3.8rem)] leading-none font-light text-[#C98F0E]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>799</span>
                   <span className="text-[13px] text-[#1C1C1E]/45 ml-1">／月起</span>
                 </p>
               </div>
@@ -249,12 +249,12 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
                     {plan.badge}
                   </span>
                 )}
-                <p className={`text-[11px] uppercase tracking-[0.25em] mb-4 font-semibold ${plan.recommended ? "text-[#E8B339]" : "text-[#B8954F]"}`}>
+                <p className={`text-[11px] uppercase tracking-[0.25em] mb-4 font-semibold ${plan.recommended ? "text-[#E8B339]" : "text-[#C98F0E]"}`}>
                   {plan.name}
                 </p>
                 <div className="flex items-end gap-2 mb-2">
-                  <span className="text-[14px] text-[#B8954F] mb-2">NT$</span>
-                  <span className="text-[clamp(2.6rem,3.8vw,3.4rem)] leading-none font-light text-[#B8954F]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  <span className="text-[14px] text-[#C98F0E] mb-2">NT$</span>
+                  <span className="text-[clamp(2.6rem,3.8vw,3.4rem)] leading-none font-light text-[#C98F0E]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                     {plan.price}
                   </span>
                   <span className={`text-[14px] mb-1.5 ${plan.recommended ? "text-white/60" : "text-[#1C1C1E]/45"}`}>{plan.period}</span>
@@ -266,7 +266,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
                 <ul className="space-y-3 mb-9 flex-1">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-start gap-3 text-[13px] leading-[1.7]">
-                      <Check className={`w-4 h-4 mt-0.5 shrink-0 ${plan.recommended ? "text-[#E8B339]" : "text-[#B8954F]"}`} strokeWidth={2} />
+                      <Check className={`w-4 h-4 mt-0.5 shrink-0 ${plan.recommended ? "text-[#E8B339]" : "text-[#C98F0E]"}`} strokeWidth={2} />
                       <span className={plan.recommended ? "text-white/85" : "text-[#45423C]"}>{f}</span>
                     </li>
                   ))}
@@ -278,7 +278,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
                   className={`group inline-flex items-center justify-center gap-2.5 text-[13px] font-medium tracking-[0.04em] px-6 py-4 transition-all duration-200 active:scale-[0.97] ${
                     plan.recommended
                       ? "bg-[#E8B339] text-[#16202B] hover:bg-[#F0B429]"
-                      : "border border-[#1C1C1E]/35 text-[#1C1C1E] hover:border-[#B8954F] hover:text-[#B8954F]"
+                      : "border border-[#1C1C1E]/35 text-[#1C1C1E] hover:border-[#C98F0E] hover:text-[#C98F0E]"
                   }`}
                 >
                   {plan.cta}
@@ -307,7 +307,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
                 style={{ transitionDelay: `${index * 120}ms` }}
               >
                 <div className="flex items-center gap-3.5 mb-5">
-                  <plan.icon className={`w-5 h-5 ${plan.recommended ? "text-[#E8B339]" : "text-[#B8954F]"}`} strokeWidth={1.5} />
+                  <plan.icon className={`w-5 h-5 ${plan.recommended ? "text-[#E8B339]" : "text-[#C98F0E]"}`} strokeWidth={1.5} />
                   <h3
                     className="text-[23px] md:text-[26px] leading-[1.35] font-normal text-[#1C1C1E]"
                     style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif", ...(plan.recommended ? { color: "#FFFFFF" } : {}) }}
@@ -320,7 +320,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
 
                 {plan.price ? (
                   <div className={`pb-7 mb-7 border-b ${plan.recommended ? "border-white/14" : "border-[#EAE5DC]"}`}>
-                    <p className="text-[clamp(2rem,3.2vw,3.1rem)] leading-none font-light text-[#B8954F] mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                    <p className="text-[clamp(2rem,3.2vw,3.1rem)] leading-none font-light text-[#C98F0E] mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                       {plan.price}
                     </p>
                     <p className={`text-[13px] ${plan.recommended ? "text-white/68" : "text-[#45423C]"}`}>{plan.priceNote}</p>
@@ -328,7 +328,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
                   </div>
                 ) : (
                   <div className={`pb-7 mb-7 border-b ${plan.recommended ? "border-white/14" : "border-[#EAE5DC]"}`}>
-                    <p className={`text-[clamp(1.55rem,2.6vw,2.6rem)] leading-none font-light mb-3 ${plan.recommended ? "text-[#E8B339]" : "text-[#B8954F]"}`} style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                    <p className={`text-[clamp(1.55rem,2.6vw,2.6rem)] leading-none font-light mb-3 ${plan.recommended ? "text-[#E8B339]" : "text-[#C98F0E]"}`} style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                       {plan.highlight}
                     </p>
                     <p className={`text-[13px] ${plan.recommended ? "text-white/68" : "text-[#45423C]"}`}>{plan.highlightNote}</p>
@@ -339,7 +339,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3 text-[13px] leading-[1.7]">
                       <Check
-                        className={`w-4 h-4 mt-0.5 shrink-0 ${plan.recommended ? "text-[#E8B339]" : "text-[#B8954F]"}`}
+                        className={`w-4 h-4 mt-0.5 shrink-0 ${plan.recommended ? "text-[#E8B339]" : "text-[#C98F0E]"}`}
                         strokeWidth={2}
                       />
                       <span className={plan.recommended ? "text-white/85" : "text-[#45423C]"}>{feature}</span>
@@ -354,7 +354,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
                   className={`group inline-flex items-center justify-center gap-2.5 text-[13px] font-medium tracking-[0.04em] px-6 py-4 transition-all duration-200 active:scale-[0.97] ${
                     plan.recommended
                       ? "bg-[#E8B339] text-[#16202B] hover:bg-[#F0B429]"
-                      : "border border-[#1C1C1E]/35 text-[#1C1C1E] hover:border-[#B8954F] hover:text-[#B8954F]"
+                      : "border border-[#1C1C1E]/35 text-[#1C1C1E] hover:border-[#C98F0E] hover:text-[#C98F0E]"
                   }`}
                 >
                   {plan.cta}

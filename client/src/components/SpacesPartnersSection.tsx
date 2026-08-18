@@ -63,7 +63,7 @@ export default function SpacesPartnersSection() {
       <div className="container" ref={ref}>
           <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
             <p
-              className={`text-[#C4A265] text-[12px] md:text-[13px] uppercase tracking-[0.35em] mb-6 font-medium transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+              className={`text-[#F5B300] text-[12px] md:text-[13px] uppercase tracking-[0.35em] mb-6 font-medium transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
             >
               Trusted Partners
             </p>
@@ -104,11 +104,11 @@ export default function SpacesPartnersSection() {
               href={LINKS.curatorLine}
               target="_blank"
               rel="noopener noreferrer"
-              className={`border-2 border-dashed border-[#E3C98D] rounded-[1.5rem] p-10 flex flex-col items-center justify-center text-center transition-all duration-700 hover:border-[#C4A265] hover:bg-[#FBF7EF] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`border-2 border-dashed border-[#E3C98D] rounded-[1.5rem] p-10 flex flex-col items-center justify-center text-center transition-all duration-700 hover:border-[#F5B300] hover:bg-[#FBF7EF] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ transitionDelay: "380ms" }}
             >
               <span className="text-[28px] text-[#1C1C1E]/70 mb-3" aria-hidden="true">+</span>
-              <p className="text-[15px] font-medium text-[#B8954F] leading-[1.6]">
+              <p className="text-[15px] font-medium text-[#C98F0E] leading-[1.6]">
                 邀請更多
                 <br />
                 策展夥伴

@@ -43,7 +43,7 @@ export default function GalleryHeading({
   return (
     <div className={`relative ${className}`}>
       <div className="flex items-center gap-3 mb-6">
-        <PowerGlyph className="w-5 h-5 text-[#C4A265]" />
+        <PowerGlyph className="w-5 h-5 text-[#F5B300]" />
         <span className="museum-label">Room {room} · {label}</span>
       </div>
       <h2

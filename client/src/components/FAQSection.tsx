@@ -51,9 +51,9 @@ export default function FAQSection() {
                     className="w-full grid grid-cols-[34px_1fr_28px] gap-4 items-center py-7 text-left"
                     aria-expanded={expanded}
                   >
-                    <span className="text-[12px] text-[#C4A265]">0{index + 1}</span>
+                    <span className="text-[12px] text-[#F5B300]">0{index + 1}</span>
                     <span className="text-[17px] md:text-[20px] font-normal text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{item.q}</span>
-                    <PowerGlyph className={`w-5 h-5 text-[#C4A265] transition-transform duration-300 ${expanded ? "rotate-45" : ""}`} />
+                    <PowerGlyph className={`w-5 h-5 text-[#F5B300] transition-transform duration-300 ${expanded ? "rotate-45" : ""}`} />
                   </button>
                   <div className={`grid transition-[grid-template-rows,opacity] duration-300 ${expanded ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
                     <div className="overflow-hidden">
@@ -73,7 +73,7 @@ export default function FAQSection() {
                 </div>
               </div>
               <div>
-                <p className="text-[11px] uppercase tracking-[0.3em] text-[#C4A265] font-semibold mb-3">Scan to Consult</p>
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#F5B300] font-semibold mb-3">Scan to Consult</p>
                 <h3 className="text-[19px] md:text-[22px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                   看完問答，還有想了解的？
                 </h3>

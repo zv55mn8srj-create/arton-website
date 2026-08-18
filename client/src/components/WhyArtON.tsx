@@ -32,7 +32,7 @@ export default function WhyArtON() {
 
   return (
     <section id="about" className="relative py-28 md:py-44 bg-[#F7F4EF] overflow-hidden">
-      <div className="absolute -top-24 right-[4%] text-[21rem] leading-none text-[#C4A265]/[0.045] font-light select-none" aria-hidden="true">01</div>
+      <div className="absolute -top-24 right-[4%] text-[21rem] leading-none text-[#F5B300]/[0.045] font-light select-none" aria-hidden="true">01</div>
       <div className="container relative" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-14 lg:gap-16 items-start">
           <GalleryHeading
@@ -60,11 +60,11 @@ export default function WhyArtON() {
             </div>
 
             <blockquote
-              className={`relative my-14 md:my-20 py-10 md:py-12 border-y border-[#C4A265]/38 transition-all duration-700 delay-200 ${
+              className={`relative my-14 md:my-20 py-10 md:py-12 border-y border-[#F5B300]/38 transition-all duration-700 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              <PowerGlyph className="w-7 h-7 text-[#C4A265] mb-7" />
+              <PowerGlyph className="w-7 h-7 text-[#F5B300] mb-7" />
               <p className="text-[clamp(1.65rem,2.6vw,2.5rem)] leading-[1.5] font-light tracking-[-0.025em] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                 真正的支持，不是一次性的捐助，<br className="hidden md:block" />
                 而是讓創作者能靠自己的作品，持續走下去。
