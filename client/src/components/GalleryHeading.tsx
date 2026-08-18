@@ -21,12 +21,14 @@ export function PowerGlyph({ className = "" }: { className?: string }) {
 }
 
 type GalleryHeadingProps = {
-  room: string;
+  room?: string;
   label: string;
   title: ReactNode;
   description?: ReactNode;
   light?: boolean;
   className?: string;
+  /** 是否顯示 Room 編號（子頁不顯示） */
+  showRoom?: boolean;
   /** Optional clamp() size for the display title, e.g. "clamp(2rem,3.4vw,3.25rem)" */
   titleSize?: string;
 };
@@ -34,6 +36,7 @@ type GalleryHeadingProps = {
 export default function GalleryHeading({
   room,
   label,
+  showRoom = true,
   title,
   description,
   light = false,
@@ -44,7 +47,7 @@ export default function GalleryHeading({
     <div className={`relative ${className}`}>
       <div className="flex items-center gap-3 mb-6">
         <PowerGlyph className="w-5 h-5 text-[#F5B300]" />
-        <span className="museum-label">Room {room} · {label}</span>
+        <span className="museum-label">{showRoom && room ? `Room ${room} · ` : ""}{label}</span>
       </div>
       <h2
         className={`leading-[0.98] font-light tracking-[-0.045em] ${light ? "text-white" : "text-[#1C1C1E]"}`}

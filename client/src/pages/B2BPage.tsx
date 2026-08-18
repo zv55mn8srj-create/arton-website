@@ -275,8 +275,8 @@ export default function B2BPage() {
           </div>
         </section>
 
-        {/* Room 07 · Why ArtON */}
-        <WhyEnterprise />
+        {/* Why ArtON（子頁不顯示 Room 編號） */}
+        <WhyEnterprise showRoom={false} />
 
         {/* Plans */}
         <section className="py-24 md:py-32 bg-[#FBFAF7]">

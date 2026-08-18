@@ -14,7 +14,7 @@ const reasons = [
   { icon: Heart, title: "支持創作者自立", description: "每一個展示日，都在讓創作者靠自己的作品，持續獲得收入、持續生活。" },
 ];
 
-export default function WhyEnterprise() {
+export default function WhyEnterprise({ showRoom = true }: { showRoom?: boolean }) {
   const { ref, isVisible } = useScrollAnimation(0.05);
 
   return (
@@ -36,6 +36,7 @@ export default function WhyEnterprise() {
             <GalleryHeading
               room="07"
               label="Why ArtON"
+              showRoom={showRoom}
               light
               title={<>企業選擇的，<br />不只是一面<br />更好看的牆。</>}
               titleSize="clamp(2.6rem,4.6vw,4.6rem)"

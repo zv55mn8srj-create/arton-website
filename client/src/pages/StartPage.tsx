@@ -226,7 +226,7 @@ export default function StartPage() {
           </section></>}
 
         {/* Plans (subscription only — hardware cards hidden for now) */}
-        <PlansSection hideHardware />
+        <PlansSection hideHardware showRoom={false} />
 
         {/* Price comparison */}
         <section className="py-24 md:py-32 bg-[#F7F4EF]">

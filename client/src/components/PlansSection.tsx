@@ -97,9 +97,11 @@ const hardwarePlans: HardwarePlan[] = [
 interface PlansSectionProps {
   /** Hide the three hardware device cards (kept for future use) */
   hideHardware?: boolean;
+  /** 是否顯示 Room 編號（子頁不顯示） */
+  showRoom?: boolean;
 }
 
-export default function PlansSection({ hideHardware = false }: PlansSectionProps) {
+export default function PlansSection({ hideHardware = false, showRoom = true }: PlansSectionProps) {
   const { ref, isVisible } = useScrollAnimation(0.05);
 
   return (
@@ -110,6 +112,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
           <GalleryHeading
             room="09"
             label="Subscribe & Exhibit"
+            showRoom={showRoom}
             title="選擇適合你的展示方式。"
             description={<>訂閱讓藝術持續發生，裝置讓展示落地。無論從一次訂閱開始，還是整棟空間規劃，ArtON 都陪著你讓藝術持續被看見。</>}
             className="max-w-3xl mx-auto"
