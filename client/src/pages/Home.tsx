@@ -88,29 +88,50 @@ function PlansTeaserSection() {
               輕量訂閱、以租代買組合包與硬體方案，完整價格與配置說明請見專屬頁面，依你的空間與預算一起規劃。
             </p>
           </div>
-          <div className="lg:col-span-5 flex lg:justify-end">
-            <div className="relative">
-              <img
-                src="/manus-storage/koi-full_art_b670850f.jpg"
-                alt="鄭美珠作品《九鯉魚》作品全圖 — 藝術於空間中持續展示"
-                className="w-full max-w-md rounded-2xl shadow-2xl shadow-black/30"
-              />
-              <p className="mt-4 text-[12px] md:text-[13px] tracking-[0.12em] text-white/45">
-                《九鯉魚》· 鄭美珠
-              </p>
-              <div className="absolute -bottom-4 -left-4 hidden md:block bg-[#E8B339] text-[#1C2632] text-[13px] font-semibold px-5 py-3 rounded-xl shadow-lg">
-                每月更新 · 雲端策展
+          <div className="lg:col-span-5">
+            {/* 畫框感斜疊構圖：電子畫框（深藍卡片＋金屬描邊）承載微傾斜的作品圖卡 */}
+            <div className="relative max-w-md lg:ml-auto">
+              {/* 電子畫框本體 */}
+              <div className={`relative bg-[#0E1628] border border-white/12 rounded-[1.2rem] p-4 shadow-2xl shadow-black/40 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+                {/* 畫框頂端指示燈 */}
+                <div className="flex items-center justify-between mb-3 px-1">
+                  <span className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E8B339] shadow-[0_0_6px_#E8B339]/70" />
+                    <span className="text-[10px] uppercase tracking-[0.28em] text-white/40">ArtON Frame · On Air</span>
+                  </span>
+                  <span className="text-[10px] tracking-[0.14em] text-white/35">09:24 AM</span>
+                </div>
+                {/* 作品圖卡：微傾斜，畫框畫面 */}
+                <img
+                  src="/manus-storage/koi-full_art_b670850f.jpg"
+                  alt="鄭美珠作品《九鯉魚》作品全圖 — 藝術於空間中持續展示"
+                  className={`w-full aspect-[4/3] object-cover rounded-lg transition-transform duration-700 ${isVisible ? "rotate-0" : "-rotate-2"}`}
+                />
+                {/* 畫框名牌 */}
+                <div className={`flex items-center justify-between gap-4 border-t border-white/12 mt-3 pt-3 transition-all duration-700 delay-150 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+                  <p className="text-[12px] md:text-[13px] tracking-[0.14em] text-white/55">《九鯉魚》· 鄭美珠</p>
+                  <p className="text-[10px] uppercase tracking-[0.24em] text-[#E8B339] font-semibold whitespace-nowrap">每月更新 · 雲端策展</p>
+                </div>
               </div>
+              {/* 畫框背板陰影（層次感） */}
+              <div className="absolute -z-10 inset-0 translate-x-4 translate-y-4 rounded-[1.4rem] bg-white/[0.05]" aria-hidden="true" />
+
+              {/* plaque 式 CTA：整齊條狀，與全站 CTA 一致 */}
+              <a
+                href="/start"
+                className={`mt-10 flex items-center justify-between gap-6 bg-[#E8B339] text-[#16203B] rounded-[0.9rem] px-7 py-5 group hover:bg-[#F0B429] transition-all duration-300 hover:shadow-xl hover:shadow-[#E8B339]/15 active:scale-[0.97] ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                } delay-200`}
+              >
+                <span>
+                  <span className="block text-[10px] uppercase tracking-[0.28em] text-[#16203B]/55 font-medium">View Plans</span>
+                  <span className="block text-[16px] font-semibold tracking-[0.04em]">查看完整方案與硬體</span>
+                </span>
+                <span className="flex items-center justify-center w-11 h-11 rounded-full bg-[#16203B] text-[#E8B339] group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+                </span>
+              </a>
             </div>
-            <a
-              href="/start"
-              className={`inline-flex items-center gap-3 px-8 py-4 bg-[#E8B339] text-[#1C2632] text-[15px] font-semibold tracking-[0.04em] rounded-full hover:bg-[#F0B429] transition-all duration-300 hover:shadow-xl hover:shadow-[#E8B339]/20 active:scale-[0.97] ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              } delay-200`}
-            >
-              查看完整方案與硬體
-              <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
-            </a>
           </div>
         </div>
       </div>
