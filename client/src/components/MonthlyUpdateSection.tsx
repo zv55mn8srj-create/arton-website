@@ -27,7 +27,7 @@ export default function MonthlyUpdateSection() {
   const { ref, isVisible } = useScrollAnimation(0.05);
 
   return (
-    <section className="py-28 md:py-40 bg-[#FBFAF7] overflow-hidden">
+    <section className="py-28 md:py-44 bg-[#FBFAF7] overflow-hidden">
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           <GalleryHeading

@@ -36,7 +36,7 @@ export default function CuratorSection() {
   const { ref, isVisible } = useScrollAnimation(0.06);
 
   return (
-    <section id="curator" className="relative py-28 md:py-40 bg-[#FBFAF7] overflow-hidden">
+    <section id="curator" className="relative py-28 md:py-44 bg-[#FBFAF7] overflow-hidden">
       <div className="absolute -right-14 top-10 text-[18rem] leading-none text-[#1C1C1E]/[0.03] font-light select-none" aria-hidden="true">04</div>
       <div className="container relative" ref={ref}>
         {/* 上半：左圖右文 */}

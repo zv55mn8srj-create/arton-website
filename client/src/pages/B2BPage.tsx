@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import WhyEnterprise from "@/components/WhyEnterprise";
 import { ArrowRight, Check, FileOutput, Landmark, MessageCircle, Leaf, Mail, WifiOff } from "lucide-react";
 
 const highlights = [
@@ -125,7 +126,7 @@ export default function B2BPage() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="relative py-28 md:py-40 bg-[#16202B] text-white overflow-hidden">
+        <section className="relative py-28 md:py-44 bg-[#16203B] text-white overflow-hidden">
           <div className="absolute -bottom-16 left-[3%] text-[20rem] leading-none text-white/[0.04] font-light select-none" aria-hidden="true">
             B2B
           </div>
@@ -218,7 +219,7 @@ export default function B2BPage() {
         </section>
 
         {/* E-Paper Carbon Impact */}
-        <section className="py-24 md:py-32 bg-[#16202B] text-white overflow-hidden">
+        <section className="py-24 md:py-32 bg-[#16203B] text-white overflow-hidden">
           <div className="container">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] font-semibold mb-14 text-center">
               Want More E? · 想進一步減碳：升級全彩電子紙
@@ -270,6 +271,9 @@ export default function B2BPage() {
           </div>
         </section>
 
+        {/* Room 07 · Why ArtON */}
+        <WhyEnterprise />
+
         {/* Plans */}
         <section className="py-24 md:py-32 bg-[#FBFAF7]">
           <div className="container">
@@ -295,7 +299,7 @@ export default function B2BPage() {
                   </h3>
                   <p className="text-[14px] text-[#1C1C1E]/70 mb-7">{p.tagline}</p>
                   <div className="flex items-end gap-2 mb-2">
-                    <span className="text-[clamp(2.4rem,3.6vw,3.2rem)] font-light text-[#C98F0E] leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                    <span className="text-[clamp(2.4rem,3.6vw,3.2rem)] font-light text-[#E8B339] leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                       {p.price}
                     </span>
                     <span className="text-[15px] text-[#1C1C1E]/55 pb-1">{p.per}</span>
@@ -305,7 +309,7 @@ export default function B2BPage() {
                     <ul className="space-y-3">
                       {p.features.map((f) => (
                         <li key={f} className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-[#1C1C1E]/78">
-                          <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#C98F0E]" strokeWidth={2.2} />
+                          <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
                           <span>{f}</span>
                         </li>
                       ))}
@@ -315,7 +319,7 @@ export default function B2BPage() {
                     href={LINKS.customerLine}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center justify-center gap-2.5 text-[14px] font-semibold px-7 py-4 bg-[#1C1C1E] text-white rounded-full hover:bg-[#16202B] transition-all duration-200 active:scale-[0.97]"
+                    className="group inline-flex items-center justify-center gap-2.5 text-[14px] font-semibold px-7 py-4 bg-[#16203B] text-white rounded-full hover:bg-[#16203B] transition-all duration-200 active:scale-[0.97]"
                   >
                     <MessageCircle className="w-4 h-4" strokeWidth={2} />
                     {p.cta}
@@ -338,12 +342,12 @@ export default function B2BPage() {
                     </h3>
                     <p className="text-[15px] md:text-[16.5px] text-[#1C1C1E] mb-8">{epaperPlan.tagline}</p>
                     <div className="border-t border-[#E7E0D5] pt-7 mb-8">
-                      <p className="text-[clamp(1.5rem,2.6vw,2.2rem)] font-light text-[#C98F0E] mb-2.5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                      <p className="text-[clamp(1.5rem,2.6vw,2.2rem)] font-light text-[#E8B339] mb-2.5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                         {epaperPlan.badge}
                       </p>
                       <p className="flex items-center gap-2 text-[15px] text-[#1C1C1E] mb-1">
                         {epaperPlan.badgeNote}
-                        <a href={LINKS.email} className="inline-flex items-center gap-1.5 text-[#C98F0E] hover:text-[#F5B300] transition-colors duration-200">
+                        <a href={LINKS.email} className="inline-flex items-center gap-1.5 text-[#E8B339] hover:text-[#F5B300] transition-colors duration-200">
                           <Mail className="w-3.5 h-3.5" strokeWidth={2} />
                           <span>support@arton.tw</span>
                         </a>
@@ -353,20 +357,20 @@ export default function B2BPage() {
                     <ul className="space-y-3 mb-9">
                       {epaperPlan.features.map((f) => (
                         <li key={f} className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-[#1C1C1E]/78">
-                          <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#C98F0E]" strokeWidth={2.2} />
+                          <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
                           <span>{f}</span>
                         </li>
                       ))}
                     </ul>
                     <a
                       href={LINKS.email}
-                      className="group inline-flex items-center justify-center gap-2.5 text-[14px] font-semibold px-7 py-4 border border-[#1C1C1E]/35 text-[#1C1C1E] rounded-full hover:border-[#C98F0E] hover:text-[#C98F0E] transition-all duration-200 active:scale-[0.97]"
+                      className="group inline-flex items-center justify-center gap-2.5 text-[14px] font-semibold px-7 py-4 border border-[#1C1C1E]/35 text-[#1C1C1E] rounded-full hover:border-[#C98F0E] hover:text-[#E8B339] transition-all duration-200 active:scale-[0.97]"
                     >
                       諮詢電子紙展示方案
                       <ArrowRight className="w-4 h-4" strokeWidth={2} />
                     </a>
                   </div>
-                  <div className="md:col-span-4 bg-[#16202B] text-white rounded-lg p-7 md:ml-2">
+                  <div className="md:col-span-4 bg-[#16203B] text-white rounded-lg p-7 md:ml-2">
                     <p className="text-[11px] uppercase tracking-[0.25em] text-[#E8B339] font-semibold mb-5">E-Paper · 低碳優勢</p>
                     <ul className="space-y-4 text-[13px] leading-[1.8] text-white/80">
                       <li className="flex items-start gap-2.5">
@@ -394,7 +398,7 @@ export default function B2BPage() {
             {/* OPTION 04 — 企業客製方案（多據點） */}
             <div className="mt-10 flex justify-center">
               <div
-                className={`w-full max-w-4xl bg-[#16202B] text-white rounded-xl p-9 md:p-12 transition-all duration-700 delay-200 ${
+                className={`w-full max-w-4xl bg-[#16203B] text-white rounded-xl p-9 md:p-12 transition-all duration-700 delay-200 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
@@ -479,7 +483,7 @@ export default function B2BPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 md:py-32 bg-[#1C1C1E] text-white text-center">
+        <section className="py-24 md:py-32 bg-[#16203B] text-white text-center">
           <div className="container">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] mb-8 font-semibold">Talk to Us · 免費諮詢</p>
             <h2 className="text-[clamp(2rem,3.8vw,3.4rem)] leading-[1.25] font-light mb-8 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
@@ -494,7 +498,7 @@ export default function B2BPage() {
               href={LINKS.customerLine}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-[#E8B339] text-[#1C1C1E] text-[15px] font-semibold rounded-full hover:bg-[#F0B429] transition-all duration-300 active:scale-[0.97]"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-[#E8B339] text-[#16203B] text-[15px] font-semibold rounded-full hover:bg-[#F0B429] transition-all duration-300 active:scale-[0.97]"
             >
               <MessageCircle className="w-4.5 h-4.5" strokeWidth={2} />
               加入 LINE 免費諮詢
@@ -528,7 +532,7 @@ function HighlightCard({ icon: Icon, title, description, index }: { icon: typeof
     >
       <div className="flex items-center gap-3.5 mb-5">
         <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#F5B300]/10">
-          <Icon className="w-5 h-5 text-[#C98F0E]" strokeWidth={1.5} />
+          <Icon className="w-5 h-5 text-[#E8B339]" strokeWidth={1.5} />
         </span>
         <h3 className="text-[24px] font-normal text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
           {title}
@@ -547,7 +551,7 @@ function EsGCard({ target, name, description, metric, index }: { target: string;
       className={`border-t border-[#1C1C1E]/12 pt-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <p className="text-[12px] text-[#C98F0E] font-semibold mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{target}</p>
+      <p className="text-[12px] text-[#E8B339] font-semibold mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{target}</p>
       <h3 className="text-[19px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
         {name}
       </h3>

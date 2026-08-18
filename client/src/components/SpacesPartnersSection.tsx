@@ -59,7 +59,7 @@ export default function SpacesPartnersSection() {
 
   return (
     // Partners — supporting disability art creation
-    <section className="py-28 md:py-40 bg-white overflow-hidden">
+    <section className="py-28 md:py-44 bg-white overflow-hidden">
       <div className="container" ref={ref}>
           <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
             <p

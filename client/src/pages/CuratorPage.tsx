@@ -70,7 +70,7 @@ export default function CuratorPage() {
       <Header />
       <main>
         {/* Intro */}
-        <section className="relative py-28 md:py-36 bg-[#16202B] text-white overflow-hidden">
+        <section className="relative py-28 md:py-44 bg-[#16203B] text-white overflow-hidden">
           <div className="absolute -bottom-16 right-[3%] text-[22rem] leading-none text-white/[0.04] font-light select-none" aria-hidden="true">
             Curator
           </div>
@@ -152,7 +152,7 @@ export default function CuratorPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 md:py-32 bg-[#1C1C1E] text-white text-center">
+        <section className="py-24 md:py-32 bg-[#16203B] text-white text-center">
           <div className="container">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] mb-8 font-semibold">Join Us · 邀請加入</p>
             <h2 className="text-[clamp(2rem,3.8vw,3.4rem)] leading-[1.25] font-light mb-8 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
@@ -167,7 +167,7 @@ export default function CuratorPage() {
               href={LINKS.curatorLine}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-[#E8B339] text-[#1C1C1E] text-[15px] font-semibold rounded-full hover:bg-[#F0B429] transition-all duration-300 active:scale-[0.97]"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-[#E8B339] text-[#16203B] text-[15px] font-semibold rounded-full hover:bg-[#F0B429] transition-all duration-300 active:scale-[0.97]"
             >
               <MessageCircle className="w-4.5 h-4.5" strokeWidth={2} />
               加入策展人 LINE

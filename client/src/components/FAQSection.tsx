@@ -24,7 +24,7 @@ export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-28 md:py-40 bg-[#F7F4EF] overflow-hidden">
+    <section id="faq" className="py-28 md:py-44 bg-[#F7F4EF] overflow-hidden">
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-14 lg:gap-16 items-start">
           <GalleryHeading
@@ -84,7 +84,7 @@ export default function FAQSection() {
                   href={LINKS.customerLine}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#1C1C1E] text-white text-[13.5px] font-medium rounded-full hover:bg-[#333336] transition-all duration-300 active:scale-[0.97]"
+                  className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#16203B] text-white text-[13.5px] font-medium rounded-full hover:bg-[#333336] transition-all duration-300 active:scale-[0.97]"
                 >
                   <MessageCircle className="w-4 h-4" strokeWidth={2} />
                   直接點擊加入 LINE

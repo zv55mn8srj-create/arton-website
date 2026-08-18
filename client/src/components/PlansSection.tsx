@@ -103,7 +103,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
   const { ref, isVisible } = useScrollAnimation(0.05);
 
   return (
-    <section id="plans" className="relative py-28 md:py-40 bg-[#F7F4EF] overflow-hidden">
+    <section id="plans" className="relative py-28 md:py-44 bg-[#F7F4EF] overflow-hidden">
       <div className="absolute -bottom-28 left-[3%] text-[20rem] leading-none text-[#F5B300]/[0.045] font-light select-none" aria-hidden="true">09</div>
       <div className="container relative" ref={ref}>
         <div className={`text-center mb-16 md:mb-20 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
@@ -125,7 +125,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
         >
           <div className="grid lg:grid-cols-12">
             {/* Left — dark story panel */}
-            <div className="lg:col-span-7 bg-[#1C2632] text-white p-10 md:p-14 lg:p-16">
+            <div className="lg:col-span-7 bg-[#16203B] text-white p-10 md:p-14 lg:p-16">
               <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] mb-8 font-semibold">Monthly Plan · Make Art a Daily Presence</p>
               <h3 className="text-[clamp(2.2rem,4vw,3.6rem)] leading-[1.3] font-light mb-8" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                 讓藝術
@@ -239,7 +239,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 } ${
                   plan.recommended
-                    ? "bg-[#16202B] text-white shadow-[0_32px_90px_rgba(22,32,43,0.45)] border-t-4 border-[#E8B339] lg:-my-4 lg:py-14 lg:z-10"
+                    ? "bg-[#16203B] text-white shadow-[0_32px_90px_rgba(22,32,43,0.45)] border-t-4 border-[#E8B339] lg:-my-4 lg:py-14 lg:z-10"
                     : "bg-white border border-[#E7E0D5] shadow-[0_18px_50px_rgba(44,37,27,0.06)]"
                 }`}
                 style={{ transitionDelay: `${index * 120}ms` }}
@@ -253,8 +253,8 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
                   {plan.name}
                 </p>
                 <div className="flex items-end gap-2 mb-2">
-                  <span className="text-[14px] text-[#C98F0E] mb-2">NT$</span>
-                  <span className="text-[clamp(2.6rem,3.8vw,3.4rem)] leading-none font-light text-[#C98F0E]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  <span className="text-[14px] text-[#E8B339] mb-2">NT$</span>
+                  <span className="text-[clamp(2.6rem,3.8vw,3.4rem)] leading-none font-light text-[#E8B339]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                     {plan.price}
                   </span>
                   <span className={`text-[14px] mb-1.5 ${plan.recommended ? "text-white/60" : "text-[#1C1C1E]/45"}`}>{plan.period}</span>
@@ -301,7 +301,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 } ${
                   plan.recommended
-                    ? "lg:mx-[-1px] lg:-my-6 lg:px-9 lg:py-12 bg-[#16202B] text-white shadow-[0_32px_90px_rgba(22,32,43,0.45)] border-t-4 border-[#E8B339] lg:z-10"
+                    ? "lg:mx-[-1px] lg:-my-6 lg:px-9 lg:py-12 bg-[#16203B] text-white shadow-[0_32px_90px_rgba(22,32,43,0.45)] border-t-4 border-[#E8B339] lg:z-10"
                     : "bg-white border border-[#E7E0D5] shadow-[0_18px_50px_rgba(44,37,27,0.06)]"
                 }`}
                 style={{ transitionDelay: `${index * 120}ms` }}
@@ -320,7 +320,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
 
                 {plan.price ? (
                   <div className={`pb-7 mb-7 border-b ${plan.recommended ? "border-white/14" : "border-[#EAE5DC]"}`}>
-                    <p className="text-[clamp(2rem,3.2vw,3.1rem)] leading-none font-light text-[#C98F0E] mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                    <p className="text-[clamp(2rem,3.2vw,3.1rem)] leading-none font-light text-[#E8B339] mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                       {plan.price}
                     </p>
                     <p className={`text-[13px] ${plan.recommended ? "text-white/68" : "text-[#45423C]"}`}>{plan.priceNote}</p>

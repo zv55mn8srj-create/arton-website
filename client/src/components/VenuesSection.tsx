@@ -19,7 +19,7 @@ export default function VenuesSection() {
   const { ref, isVisible } = useScrollAnimation(0.04);
 
   return (
-    <section className="py-28 md:py-40 bg-white overflow-hidden">
+    <section className="py-28 md:py-44 bg-white overflow-hidden">
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-10 mb-14 md:mb-20">
           <GalleryHeading

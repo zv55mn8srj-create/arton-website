@@ -17,7 +17,7 @@ export default function TimelineSection() {
   const { ref, isVisible } = useScrollAnimation(0.05);
 
   return (
-    <section className="relative py-28 md:py-40 bg-[#F2EEE7] overflow-hidden">
+    <section className="relative py-28 md:py-44 bg-[#F2EEE7] overflow-hidden">
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-12 items-end mb-20 md:mb-28">
           <GalleryHeading

@@ -29,7 +29,7 @@ export default function ProcessSection() {
   const { ref, isVisible } = useScrollAnimation(0.08);
 
   return (
-    <section className="relative py-28 md:py-40 bg-[#1C1C1E] text-white overflow-hidden">
+    <section className="relative py-28 md:py-44 bg-[#16203B] text-white overflow-hidden">
       <div className="absolute inset-y-0 right-0 w-[42%] bg-[radial-gradient(circle_at_40%_35%,rgba(196,162,101,0.11),transparent_55%)]" />
       <div className="container relative" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-12 items-start">
@@ -52,7 +52,7 @@ export default function ProcessSection() {
                   className={`relative grid grid-cols-[56px_1fr] md:grid-cols-[80px_1fr] gap-6 md:gap-9 pb-12 md:pb-14 last:pb-0 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}
                   style={{ transitionDelay: `${index * 130}ms` }}
                 >
-                  <div className="relative z-10 w-14 h-14 md:w-20 md:h-20 rounded-full bg-[#1C1C1E] border border-[#F5B300]/42 flex items-center justify-center shadow-[0_0_0_8px_#1C1C1E]">
+                  <div className="relative z-10 w-14 h-14 md:w-20 md:h-20 rounded-full bg-[#16203B] border border-[#F5B300]/42 flex items-center justify-center shadow-[0_0_0_8px_#1C1C1E]">
                     <span className="text-[1.7rem] md:text-[2.25rem] font-light text-[#F5B300]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                       0{index + 1}
                     </span>

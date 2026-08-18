@@ -38,7 +38,7 @@ export default function DemoShowcaseSection() {
   const { ref, isVisible } = useScrollAnimation(0.04);
 
   return (
-    <section id="demo" className="py-28 md:py-40 bg-[#F5F0EB] overflow-hidden">
+    <section id="demo" className="py-28 md:py-44 bg-[#F5F0EB] overflow-hidden">
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-10 mb-14 md:mb-20">
           <div className={`lg:col-span-7 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
@@ -80,7 +80,7 @@ export default function DemoShowcaseSection() {
           <p className="text-[#1C1C1E]/56 text-[13px] md:text-[14px]">
             展示畫面由<span className="font-medium text-[#1C1C1E]/80">鄭美珠老師</span>創作；每月更新藝術家與作品。
           </p>
-          <a href="/start" className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#1C2632] text-white text-[14px] font-semibold rounded-full hover:bg-[#2A3646] transition-all duration-300 active:scale-[0.97]">
+          <a href="/start" className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#16203B] text-white text-[14px] font-semibold rounded-full hover:bg-[#23305C] transition-all duration-300 active:scale-[0.97]">
             為我的空間訂閱藝術
             <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
           </a>

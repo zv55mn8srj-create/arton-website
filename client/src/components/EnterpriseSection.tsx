@@ -19,7 +19,7 @@ export default function EnterpriseSection() {
   const { ref, isVisible } = useScrollAnimation(0.06);
 
   return (
-    <section id="enterprise" className="relative py-28 md:py-40 bg-[#FBFAF7] overflow-hidden">
+    <section id="enterprise" className="relative py-28 md:py-44 bg-[#FBFAF7] overflow-hidden">
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-14 lg:gap-12 items-start mb-20 md:mb-28">
           <GalleryHeading

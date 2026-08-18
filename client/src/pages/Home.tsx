@@ -13,7 +13,6 @@ import EnterpriseSection from "@/components/EnterpriseSection";
 import CuratorSection from "@/components/CuratorSection";
 import MonthlyUpdateSection from "@/components/MonthlyUpdateSection";
 import TimelineSection from "@/components/TimelineSection";
-import WhyEnterprise from "@/components/WhyEnterprise";
 import DemoShowcaseSection from "@/components/DemoShowcaseSection";
 import VenuesSection from "@/components/VenuesSection";
 import SpacesPartnersSection from "@/components/SpacesPartnersSection";
@@ -33,7 +32,6 @@ export default function Home() {
         <CuratorSection />
         <MonthlyUpdateSection />
         <TimelineSection />
-        <WhyEnterprise />
         <DemoShowcaseSection />
         <VenuesSection />
         <FAQSection />
@@ -53,7 +51,7 @@ export default function Home() {
 function PlansTeaserSection() {
   const { ref, isVisible } = useScrollAnimation(0.05);
   return (
-    <section className="py-28 md:py-40 bg-[#1C2632] text-white overflow-hidden">
+    <section className="py-28 md:py-44 bg-[#16203B] text-white overflow-hidden">
       <div className="container" ref={ref}>
         <div className={`grid lg:grid-cols-12 gap-12 items-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="lg:col-span-7">

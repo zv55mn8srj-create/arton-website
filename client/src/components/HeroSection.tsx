@@ -16,7 +16,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-[760px] overflow-hidden bg-[#FBF8F1]">
+    <section className="relative w-full min-h-[760px] overflow-hidden bg-[#FBFAF7]">
       {/* Background — 電子畫框大廳場景，左側留白 */}
       <div className="absolute inset-0">
         <img

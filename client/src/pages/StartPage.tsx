@@ -86,7 +86,7 @@ export default function StartPage() {
       <Header />
       <main>
         {/* Intro */}
-        <section className="relative py-28 md:py-36 bg-[#1C2632] text-white overflow-hidden">
+        <section className="relative py-28 md:py-44 bg-[#16203B] text-white overflow-hidden">
           <div className="absolute -bottom-16 left-[3%] text-[22rem] leading-none text-white/[0.04] font-light select-none" aria-hidden="true">
             Start
           </div>
@@ -201,7 +201,7 @@ export default function StartPage() {
                 </div>
                 <a
                   href={LINKS.email}
-                  className="group inline-flex items-center gap-3 px-8 py-4 border border-[#1C1C1E]/25 text-[#1C1C1E] text-[15px] font-medium rounded-full hover:bg-[#1C1C1E] hover:text-white transition-all duration-300 active:scale-[0.97]"
+                  className="group inline-flex items-center gap-3 px-8 py-4 border border-[#1C1C1E]/25 text-[#1C1C1E] text-[15px] font-medium rounded-full hover:bg-[#16203B] hover:text-white transition-all duration-300 active:scale-[0.97]"
                 >
                   申請免費體驗
                   <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -295,7 +295,7 @@ export default function StartPage() {
                   href={LINKS.customerLine}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#1C1C1E] text-white text-[14px] font-medium rounded-full hover:bg-[#333336] transition-all duration-300 active:scale-[0.97]"
+                  className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#16203B] text-white text-[14px] font-medium rounded-full hover:bg-[#333336] transition-all duration-300 active:scale-[0.97]"
                 >
                   <MessageCircle className="w-4 h-4" strokeWidth={2} />
                   或直接點擊加入 LINE
@@ -306,7 +306,7 @@ export default function StartPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 md:py-32 bg-[#1C1C1E] text-white text-center">
+        <section className="py-24 md:py-32 bg-[#16203B] text-white text-center">
           <div className="container">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] mb-8 font-semibold">Ready · 隨時可以開始</p>
             <h2 className="text-[clamp(2rem,3.8vw,3.4rem)] leading-[1.25] font-light mb-8 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>

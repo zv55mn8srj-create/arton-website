@@ -18,7 +18,7 @@ export default function WhyEnterprise() {
   const { ref, isVisible } = useScrollAnimation(0.05);
 
   return (
-    <section className="py-28 md:py-40 bg-[#1C1C1E] text-white overflow-hidden">
+    <section className="py-28 md:py-44 bg-[#16203B] text-white overflow-hidden">
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <figure className={`lg:col-span-7 transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
@@ -26,7 +26,7 @@ export default function WhyEnterprise() {
               <img src="/assets/public-space-art_1fe105c8.jpg" alt="公共空間中的藝術展示" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/62 via-transparent to-transparent" />
               <figcaption className="absolute bottom-0 inset-x-0 p-7 md:p-9">
-                <p className="museum-label text-[#C98F0E]">Everyday Patronage</p>
+                <p className="museum-label text-[#E8B339]">Everyday Patronage</p>
                 <p className="mt-3 text-[16px] text-white/80 max-w-md leading-[1.8]">當藝術成為每天會經過的風景，對創作者的支持也就不再只是一次性的選擇。</p>
               </figcaption>
             </div>
