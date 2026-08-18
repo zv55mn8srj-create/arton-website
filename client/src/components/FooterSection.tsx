@@ -62,12 +62,12 @@ export default function FooterSection() {
             <div className="flex items-center gap-8">
               <div className="flex items-center h-12 py-2">
                 <img
-                  src="/manus-storage/arton-logo-official_fa5df696_bb3c62fb.png"
+                  src="/manus-storage/arton-logo-white_9542d895.png"
                   alt="ArtON — Turn Art ON"
-                  className="h-full w-auto object-contain brightness-[1.85]"
+                  className="h-full w-auto object-contain"
                 />
               </div>
-              <p className="text-white/35 text-[13px] leading-[1.8]">
+              <p className="text-white/62 text-[13px] leading-[1.8]">
                 藝術 · 即刻啟動
                 <br />
                 Turn Art ON.
