@@ -23,7 +23,7 @@ export default function WhyEnterprise() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <figure className={`lg:col-span-7 transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
             <div className="relative aspect-[4/5] md:aspect-[5/4] lg:aspect-[4/5] overflow-hidden">
-              <img src="/assets/public-space-art_1fe105c8.jpg" alt="公共空間中的藝術展示" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/manus-storage/room07-whyarton-frame_8f63b7c2.png" alt="企業空間中展示藝術作品的智慧電子畫框" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/62 via-transparent to-transparent" />
               <figcaption className="absolute bottom-0 inset-x-0 p-7 md:p-9">
                 <p className="museum-label text-[#E8B339]">Everyday Patronage</p>
