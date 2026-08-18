@@ -167,7 +167,7 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
                   不需要播放器。每月一份作品與約一分鐘的內容介紹，按月送達——支持藝術創作，也可以很輕。
                 </p>
                 <ul className="space-y-2.5 mb-5">
-                  {["每月一件藝術作品", "一分鐘創作故事與展覽內容", "持續支持身心障礙藝術創作"].map((f) => (
+                  {["每月一件藝術作品", "一分鐘創作故事與展覽內容", "每月收到新的藝術內容"].map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-[12.5px] leading-[1.7] text-[#1C1C1E]/72">
                       <Check className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[#C98F0E]" strokeWidth={2.2} />
                       {f}
@@ -197,11 +197,11 @@ export default function PlansSection({ hideHardware = false }: PlansSectionProps
               </div>
 
               <div className="overflow-hidden rounded-lg mb-6">
-                <img src="/assets/bird-sea-art_65bd98be.jpg" alt="飛翔與夕陽海景 — 身心障礙藝術家作品" className="w-full h-[180px] md:h-[210px] object-cover" />
+                <img src="/assets/bird-sea-art_65bd98be.jpg" alt="飛翔與夕陽海景 — 藝術家作品" className="w-full h-[180px] md:h-[210px] object-cover" />
               </div>
 
               <p className="text-[14px] leading-[1.9] text-[#1C1C1E]/70 mb-8">
-                與 ArtON 一起支持身心障礙藝術創作，每一次訂閱都是實質的力量。
+                與 ArtON 一起，讓藝術持續走進你的空間，每一次訂閱都是實質的支持。
               </p>
 
               <ul className="space-y-3.5 mb-10 flex-1">

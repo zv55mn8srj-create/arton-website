@@ -27,7 +27,7 @@ export default function EnterpriseSection() {
             label="For Enterprise"
             title={<>讓空間，<br />每個月都有<br />新的內容。</>}
             titleSize="clamp(2.15rem,3.6vw,3.4rem)"
-            description={<>ArtON 將藝術、空間與企業品牌連結，讓藝術成為企業環境的一部分。藝術展示、空間美學、企業文化、ESG。</>}
+            description={<>ArtON 將藝術、空間與企業品牌連結，讓藝術成為企業環境的一部分。以支持身心障礙創作者的藝術展示，成為企業每天持續發生的 ESG 實踐。</>}
             className={`lg:col-span-5 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           />
 
@@ -58,7 +58,7 @@ export default function EnterpriseSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/58 via-transparent to-transparent" />
             <figcaption className="absolute bottom-0 left-0 right-0 p-7 md:p-9 text-white">
               <span className="museum-label text-[#C98F0E]">Exhibition Site · Taipei</span>
-                  <p className="mt-3 text-[17px] font-light">藝術成為空間的一部分，你的支持也成為創作者生活的一部分。</p>
+                  <p className="mt-3 text-[17px] font-light">支持身心障礙創作者的藝術展示，是企業環境的一部分，也是每天持續發生的 ESG 實踐。</p>
             </figcaption>
           </div>
 

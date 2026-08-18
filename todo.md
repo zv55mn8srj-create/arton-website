@@ -666,3 +666,20 @@ Playwright 截圖顯示卡 01/03/06 仍舊白框直書殘影。但程式碼中�
 - [ ] 頁尾 CTA 區縮小：標題字體改小改細（原版約 2rem）、區塊間距收斂（原版截圖比例）
 - [ ] 每月更新「下月」卡套用新圖與藝術家署名
 - [ ] 截圖驗證並保存交付
+
+# 第四十九輪改版待辦（2026-08-18）：訊息分層調整
+用戶要求：/start 子頁不要強調身心障礙藝術；主頁 Room 03 For Enterprise 則要強調身心障礙藝術。
+
+## 盤點結果
+/start（PlansSection）身心障礙出現處：
+- PlansSection.tsx:170 一分鐘藝術 features「持續支持身心障礙藝術創作」
+- PlansSection.tsx:200 img alt「身心障礙藝術家作品」
+- PlansSection.tsx:204 799 方案導言「與 ArtON 一起支持身心障礙藝術創作，每一次訂閱都是實質的力量。」
+
+主頁 Room 03：HeroSection 之後企業區為 EnterpriseSection.tsx（目前無身心障礙文案）。
+主頁各 Room 順序：Hero → About(01) → How(02) → Enterprise(03) → Demo(04) → MonthlyUpdate(05) → Venues → SpacesPartners → Curator → Timeline → WhyArtON → FAQ → Footer。
+
+## 修改決策
+1. PlansSection.tsx：L170「持續支持身心障礙藝術創作」→「每月收到新的藝術內容」；L200 alt 改「藝術家作品」；L204 導言改「與 ArtON 一起，讓藝術持續走進你的空間。」
+2. EnterpriseSection.tsx（Room 03）：加入身心障礙藝術強調（支持身心障礙創作者 = 企業 ESG 社會實踐）。
+
