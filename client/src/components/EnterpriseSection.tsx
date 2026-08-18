@@ -44,7 +44,7 @@ export default function EnterpriseSection() {
               </div>
             </div>
             <a
-              href="/b2b"
+              href="/start"
               className={`inline-flex mt-8 items-center gap-3 text-[13px] font-medium text-[#1C1C1E] border-b border-[#F5B300] pb-2 hover:text-[#9B7C47] transition-colors delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
             >
               為我的空間訂閱藝術 <span className="text-[#F5B300]">↗</span>

@@ -5,7 +5,7 @@
  * three hardware devices — subscription and hardware clearly separated.
  */
 import GalleryHeading from "./GalleryHeading";
-import { LINKS } from "@/lib/links";
+import { LINKS, consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ArrowUpRight, Check, Monitor, Send, Smartphone, Sun } from "lucide-react";
 
@@ -351,7 +351,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
                 </ul>
 
                 <a
-                  href={LINKS.email}
+                  href={consultMail(plan.title)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`group inline-flex items-center justify-center gap-2.5 text-[13px] font-medium tracking-[0.04em] px-6 py-4 transition-all duration-200 active:scale-[0.97] ${

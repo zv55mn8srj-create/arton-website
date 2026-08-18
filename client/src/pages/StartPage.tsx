@@ -11,7 +11,7 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import PlansSection from "@/components/PlansSection";
 import ExploreSection from "@/components/ExploreSection";
-import { LINKS } from "@/lib/links";
+import { LINKS, consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Check, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 
@@ -200,7 +200,7 @@ export default function StartPage() {
                   </span>
                 </div>
                 <a
-                  href={LINKS.email}
+                  href={consultMail("申請免費體驗")}
                   className="group inline-flex items-center gap-3 px-8 py-4 border border-[#1C1C1E]/25 text-[#1C1C1E] text-[15px] font-medium rounded-full hover:bg-[#16203B] hover:text-white transition-all duration-300 active:scale-[0.97]"
                 >
                   申請免費體驗

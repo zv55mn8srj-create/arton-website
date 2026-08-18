@@ -68,7 +68,7 @@ export default function CuratorSection() {
               className=""
             />
 
-            <a href={LINKS.curatorLine} target="_blank" rel="noopener noreferrer" className="group inline-flex mt-10 items-center gap-4 text-[13px] font-medium text-[#16203B] border-b border-[#F5B300] pb-2 hover:text-[#C98F0E] transition-colors">
+            <a href="/#demo" className="group inline-flex mt-10 items-center gap-4 text-[13px] font-medium text-[#16203B] border-b border-[#F5B300] pb-2 hover:text-[#C98F0E] transition-colors">
               看看 ArtON 如何融入空間 <span className="text-[#F5B300] transition-transform duration-300 group-hover:translate-x-1">→</span>
             </a>
           </div>

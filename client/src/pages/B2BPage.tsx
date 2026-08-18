@@ -6,7 +6,7 @@
  */
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
-import { LINKS } from "@/lib/links";
+import { LINKS, consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import WhyArtON from "@/components/WhyArtON";
 import WhyEnterprise from "@/components/WhyEnterprise";
@@ -351,7 +351,7 @@ export default function B2BPage() {
                       </p>
                       <p className="flex items-center gap-2 text-[15px] text-[#1C1C1E] mb-1">
                         {epaperPlan.badgeNote}
-                        <a href={LINKS.email} className="inline-flex items-center gap-1.5 text-[#E8B339] hover:text-[#F5B300] transition-colors duration-200">
+                        <a href={consultMail("電子紙展示方案諮詢")} className="inline-flex items-center gap-1.5 text-[#E8B339] hover:text-[#F5B300] transition-colors duration-200">
                           <Mail className="w-3.5 h-3.5" strokeWidth={2} />
                           <span>support@arton.tw</span>
                         </a>
@@ -420,7 +420,7 @@ export default function B2BPage() {
                         為大型採購設計
                       </p>
                       <p className="text-[15px] text-white/80 mb-1">5 台以上（診所、企業總部、連鎖門市）</p>
-                      <p className="text-[13.5px] text-white/45">依據點規模提供團體優惠與彈性合約，洽 support@arton.tw</p>
+                      <a href={consultMail("申請多據點評估與報價")} className="text-[13.5px] text-white/45 hover:text-[#E8B339] transition-colors duration-200">依據點規模提供團體優惠與彈性合約，洽 support@arton.tw</a>
                     </div>
                     <ul className="space-y-3 mb-9">
                       <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">

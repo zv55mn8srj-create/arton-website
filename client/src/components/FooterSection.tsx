@@ -5,7 +5,7 @@
  * 黃色膠囊 CTA「預約展示 →」＋品牌資訊列。
  */
 import { Link } from "wouter";
-import { LINKS } from "@/lib/links";
+import { LINKS, consultMail } from "@/lib/links";
 
 export default function FooterSection() {
   return (
@@ -46,7 +46,7 @@ export default function FooterSection() {
           </p>
 
           <a
-            href={LINKS.email}
+            href={consultMail("預約展示")}
             className="group inline-flex items-center gap-3 px-8 py-3.5 bg-[#F5B300] text-[#16203B] text-[14px] font-semibold rounded-full hover:bg-[#e5a800] transition-all duration-300 hover:shadow-xl hover:shadow-[#F5B300]/25 active:scale-[0.97]"
           >
             預約展示
@@ -79,7 +79,7 @@ export default function FooterSection() {
               <Link href="/start" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">開始展示</Link>
               <Link href="/b2b" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">企業 ESG 訂閱方案</Link>
               <Link href="/curator" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">策展人加入</Link>
-              <a href={LINKS.email} className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">{LINKS.emailDisplay}</a>
+              <a href={consultMail("合作洽詢")} className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">{LINKS.emailDisplay}</a>
             </div>
           </div>
 

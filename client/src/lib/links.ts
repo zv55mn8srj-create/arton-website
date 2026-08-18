@@ -10,3 +10,22 @@ export const LINKS = {
   customerLine: "https://lin.ee/yEZxsB3",
   curatorLine: "https://lin.ee/7dr8uq4",
 };
+
+/**
+ * Build a mailto link with a pre-filled subject and a short template body,
+ * so the recipient instantly knows the inquiry purpose and can reply
+ * by just filling in name / phone / email.
+ */
+export function mailLink(subject: string, body: string): string {
+  return `mailto:support@arton.tw?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+/**
+ * Standard consultation template — recipients fill in their info.
+ */
+export function consultMail(subject: string): string {
+  return mailLink(
+    `ArtON：${subject}`,
+    "您好，我想了解 ArtON 的展示方案，以下是我的資訊：\n\n姓名：\n電話：\nEmail：\n\n需求簡述：",
+  );
+}
