@@ -47,7 +47,8 @@ export default function WhyCurator() {
           </p>
         </blockquote>
 
-        <div className="grid md:grid-cols-3 gap-10 md:gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-[1.15fr_0.85fr] gap-14 md:gap-16 items-center max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-1 gap-10">
           {beliefs.map((belief, index) => (
             <article
               key={belief.title}
@@ -67,6 +68,26 @@ export default function WhyCurator() {
               </p>
             </article>
           ))}
+          </div>
+
+          <figure
+            className={`relative rounded-[6px] overflow-hidden transition-all duration-1000 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-7"
+            }`}
+            style={{ transitionDelay: "480ms" }}
+          >
+            <img
+              src="/manus-storage/curator-wall-scene_ad4739b6.png"
+              alt="策展人作品牆：多幅作品並陳的展示空間"
+              className="w-full h-full object-cover aspect-[4/3]"
+              loading="lazy"
+            />
+            <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/55 to-transparent px-5 pt-10 pb-4">
+              <p className="text-[12px] tracking-[0.14em] text-white/90 font-medium">
+                一面作品牆，一次策展，走進多個日常空間。
+              </p>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>

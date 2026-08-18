@@ -722,3 +722,63 @@ Playwright 截圖顯示卡 01/03/06 仍舊白框直書殘影。但程式碼中�
 - 決策（WhyCurator）：在 Values 之後、Steps 之前插入 WhyCurator（淺色 F7F4EF），創作者視角三信念：01 Visibility 被看見、被每天看見／02 Sustaining 創作成為可以依靠的事業（自行定價、訂閱收益）／03 Beyond 策展走出畫廊（走進日常空間）。
 - WhyArtON.tsx 結構可全盤仿寫：GalleryHeading(room, label, title, titleSize, description, className sticky)＋PowerGlyph blockquote＋三欄 beliefs，room 編號在 curatore 頁用「02」？注意 CuratorPage 無 room 編號系統，label 用英文即可，room="03" 不適用——改 omit room 或傳 "—"。GalleryHeading props：room, label, title, titleSize?, description, className。
 - GalleryHeading 元件位於 components/GalleryHeading.tsx（import { PowerGlyph } from "./GalleryHeading" 可行）。
+
+# 第五十四輪改版待辦（2026-08-18）：策展人頁圖、箭頭動畫、三子頁流暢感
+- [ ] 生成作品牆情境小圖並上傳（curator wall scene）
+- [ ] WhyCurator 區塊改為左右排版（文字＋作品牆情境圖）
+- [ ] 首頁過渡導言下方加向下箭頭滾動動畫（framer-motion bounce，點一下也滾到流程區）
+- [ ] 全面檢視 /start、/b2b、/curator 三子頁敘事流暢感（冗餘資訊、情境突變、斷點）
+- [ ] 修復三子頁流暢問題，統一銜接語氣
+- [ ] 驗證並保存交付
+
+## 第五十四輪技術備忘
+- 首頁 Home.tsx 順序（第五十三輪後）：Header → Hero → 過渡導言區（新增）→ ProcessSection → EnterpriseSection → CuratorSection → MonthlyUpdate → Timeline → FAQ → Footer
+- 過渡導言區為新內聯段落（在 Home.tsx），非獨立元件；導言區背景 bg-[#FBFAF7]
+- WhyCurator.tsx：components/WhyCurator.tsx（三信念卡），插入 CuratorPage Values 之後 Steps 之前
+- GalleryHeading props: room, label, title, titleSize?, description, className；PowerGlyph 同檔匯出
+- 全站深色統一 #16203B；淺色 #FBFAF7 / #F7F4EF；品牌黃 #F5B300、深金 #C98F0E、深區亮金 #E8B339
+- 箭頭動畫用 framer-motion animate y 迴圈（專案已裝 framer-motion，HeroSection 用 motion.div）
+
+## 第五十四輪進度（截至 WhyCurator 改版）
+作品牆圖已生成（生成中佔位後自動替換，直接用 URL 不需重試）：
+- 橫幅 4:3：`/manus-storage/curator-wall-scene_ad4739b6.png`（三幅框作品牆）
+- 直幅 3:4 備用：`/manus-storage/curator-wall-close_6563cf6e.png`
+- WhyCurator.tsx 已改為左右排版：左三信念卡、右作品牆圖＋圖說（一面作品牆，一次策展，走進多個日常空間）✅
+
+## 剩餘工作
+1. 首頁過渡導言區（Home.tsx Hero 之後）加向下箭頭動畫：framer-motion animate y 迴圈 + 點擊滾到 #process；該區目前為 Home.tsx 內聯段落（Hero 後、ProcessSection 前）
+2. 三子頁流暢感全面檢視與修復：
+   - /start：順序為 Hero → 流程/導言？→ 方案（PlansSection）→ 比較表？→ ExploreSection(#explore) → QR；檢查：Final CTA 已刪，LINE QR 前過渡
+   - /b2b：Hero(深藍) → Highlights → WhyArtON(信念) → ESG Mapping → E-Paper(深藍) → Pain/Solution → WhyEnterprise(Room 07, 深藍) → Plans(淺) → FAQ → Footer；檢查信念段與 Highlights/ESG Mapping 銜接、E-Paper 深藍段位置、Plans 之後是否有終結感
+   - /curator：Hero(深藍) → Values → WhyCurator(新+圖) → Steps → Final CTA(深藍+QR) → FAQ → Footer；檢查 Values→WhyCurator 主題重複度（Values 四卡 vs 信念三卡，可能有資訊冗餘）
+3. 統一子頁銜接語氣：檢查各區塊 label 風格（Room XX 編號 vs 英文 label）、深淺色交替節奏
+4. 截圖驗證（/、/start、/b2b、/curator 全頁）→ checkpoint → 交付
+
+## 第五十四輪：三子頁流暢感檢視結果（診斷完成）
+### 已完成
+- WhyCurator 左右排版（文字+作品牆圖）✅
+- 首頁過渡導言加向下箭頭（scrollIntoView #process）✅ 注意：ProcessSection 須有 id="process"
+
+### 待修
+A. 首頁箭頭目標：確認 ProcessSection 有 id="process"，沒有就加上。
+B. /curator 資訊冗餘：Values 卡 02 結尾「我們相信真正的支持，不是一次性的捐助...」與下方 WhyCurator blockquote「真正的支持，不是委託一次就結束」幾乎重複 → Values 02 結尾刪去重複信念句，改為聚焦「共享成長」具體描述。
+C. /curator Values 01「策展一次，價值持續」與 Hero 副標/WhyCurator 01 略有重複屬呼應可接受；Hero 副標第 104 行過長（「...而是一場每天在客廳、診所、企業與咖啡館裡持續發生的展示...」與「讓作品走進更多空間」重複）→ 精簡 Hero 副標。
+D. /curator Steps 04「持續獲得回報」與 Values 04「被記錄的影響力」主題相近但可接受；FAQ 前深藍 Final CTA 區與 Steps 區緊接，節奏可接受。
+E. /b2b 節奏：Highlights(淺 FBFAF7) → WhyArtON(元件內為 FBFAF7 淺色) → ESG Mapping(F7F4EF) 連續三個淺色區塊 → 中段可能單調，但色系 FBFAF7/F7F4EF 交替尚可；WhyEnterprise(深 16203B) 之後 Plans(淺)。檢查 WhyArtON 底色：第 31 行確認 bg-[#FBFAF7] → Highlights/WhyArtON 都是 FBFAF7 需區隔，可把 WhyArtON 改 F7F4EF 或 Highlights 保持，ESG Mapping 已是 F7F4EF；方案：WhyArtON 改 F7F4EF 造成連續兩塊 F7F4EF(WhyArtON+ESG Mapping) 更糟 → 改 Highlights 保持 FBFAF7、WhyArtON 改 #F3EEE6（略深一階的 cream）製造層次？簡化：WhyArtON 改為 #F7F4EF、ESG Mapping 保持 F7F4EF → 仍連續。最佳：WhyArtON 改 F7F4EF，ESG Mapping 改 FBFAF7（互換）。
+F. /start 檢查：reasons 區 label「Why start with us」與 PlansSection 敘事連貫 OK；Founding Partners 區塊隱藏中 OK。
+G. /start ExploreSection 在方案後，label 與首頁不同需確認：ExploreSection 用 Room 05 標籤，/start 裡應顯示同標 OK。
+H. /b2b Plan 區導言「訂閱即每天做 ESG」OK；PlansSection 元件內也有深色 PlansTeaser 在首頁（16203B）與 /start  PlansSection 淺色卡——確認 /start PlansSection 頂部有浅色導言區 OK。
+
+### 待執行清單
+1. Home.tsx：確認 process id；箭頭 hover 已含。
+2. CuratorPage.tsx：精簡 Hero 副標（刪「而是一場每天在客廳...展示」重複句）、Values 02 刪信念重複句。
+3. B2BPage.tsx：WhyArtON 與 ESG Mapping 背景互換（WhyArtON → F7F4EF、ESG Mapping → FBFAF7）避免三淺連排無層次。
+4. 全頁截圖驗證 /curator /b2b /start /
+
+## 第五十四輪截圖驗證結果（全頁 4 頁確認）
+- 首頁 /：過渡導言區＋箭頭正常、深淺節奏順暢、FAQ 新增題正常、頁尾正常 ✅
+- /start：淺深交錯順暢，方案卡排列 799→199→999→1499 正常，Explore 六卡正常，QR 收束 ✅
+- /b2b：Hero → Highlights → WhyArtON(信念) → ESG Mapping → E-Paper(深) → Pain/Solution → WhyEnterprise(深) → Plans → FAQ → Final CTA。WhyArtON 與 ESG Mapping 背景仍同色但中間有白色間隔，可接受 ✅
+- /curator：Hero → Values → WhyCurator(含作品牆圖) → Steps → Final CTA → FAQ → Footer，整體順暢 ✅
+- 判定：三子頁診斷項 A-G 多數已完成（精簡 Hero 副標、Values 02 刪重複句、B2B 背景互換皆已做）。全頁截圖無明顯冗餘或情境突變。
+- 待執行：僅存最後截圖交付＋checkpoint。

@@ -36,6 +36,18 @@ export default function Home() {
               選一個喜歡的展，<br className="md:hidden" />剩下的交給 ArtON。
             </p>
             <p className="text-[13px] text-[#1C1C1E]/45 mt-6">一次安裝，持續更新。</p>
+
+            {/* 向下箭頭：引導進入流程區塊 */}
+            <button
+              aria-label="往下查看 ArtON 如何運作"
+              onClick={() => document.getElementById("process")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+              className="mt-10 inline-flex flex-col items-center gap-1.5 text-[#1C1C1E]/40 hover:text-[#C98F0E] transition-colors duration-300 group"
+            >
+              <svg viewBox="0 0 24 24" className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 5v14M5 12l7 7 7-7" />
+              </svg>
+              <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+            </button>
           </div>
         </section>
 

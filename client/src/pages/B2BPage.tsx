@@ -203,7 +203,7 @@ export default function B2BPage() {
         <WhyArtON />
 
         {/* ESG Mapping — 支持身心障礙創作者如何對應 ESG 指標 */}
-        <section className="py-24 md:py-32 bg-[#F7F4EF]">
+        <section className="py-24 md:py-32 bg-[#FBFAF7]">
           <div className="container">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-6 text-center">
               Your ESG Impact · 支持身心障礙創作者，如何成為你的 ESG

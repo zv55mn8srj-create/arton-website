@@ -29,7 +29,7 @@ export default function ProcessSection() {
   const { ref, isVisible } = useScrollAnimation(0.08);
 
   return (
-    <section className="relative py-28 md:py-44 bg-[#16203B] text-white overflow-hidden">
+    <section id="process" className="relative py-28 md:py-44 bg-[#16203B] text-white overflow-hidden">
       <div className="absolute inset-y-0 right-0 w-[42%] bg-[radial-gradient(circle_at_40%_35%,rgba(196,162,101,0.11),transparent_55%)]" />
       <div className="container relative" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-12 items-start">
