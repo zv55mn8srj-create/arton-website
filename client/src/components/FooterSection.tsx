@@ -11,7 +11,7 @@ export default function FooterSection() {
   return (
     <>
       {/* 深藍圓環 CTA */}
-      <section className="relative bg-[#16203B] text-white overflow-hidden py-32 md:py-44">
+      <section className="relative bg-[#16203B] text-white overflow-hidden py-20 md:py-28">
         {/* 黃色細同心圓環（置中） */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
           <div className="absolute w-[min(110vw,1400px)] h-[min(110vw,1400px)] rounded-full border border-[#F5B300]/25" />
@@ -24,7 +24,7 @@ export default function FooterSection() {
         <div className="absolute top-[46%] left-[6%] w-3 h-3 rounded-full bg-[#F5B300]/70" aria-hidden="true" />
 
         <div className="container relative z-10 text-center">
-          <div className="inline-flex items-center gap-4 mb-10">
+          <div className="inline-flex items-center gap-4 mb-7">
             <span className="w-10 h-px bg-[#E8B339]" />
             <p className="text-[11px] md:text-[12px] uppercase tracking-[0.34em] text-[#E8B339] font-semibold">
               Make Space For Art
@@ -33,7 +33,7 @@ export default function FooterSection() {
           </div>
 
           <h2
-            className="text-[clamp(2.4rem,5.4vw,5rem)] leading-[1.32] font-bold mb-8"
+            className="text-[clamp(1.6rem,2.6vw,2.2rem)] leading-[1.55] font-normal mb-7"
             style={{ fontFamily: "'Noto Serif TC', 'Noto Sans TC', serif" }}
           >
             讓下一面牆，
@@ -41,7 +41,7 @@ export default function FooterSection() {
             開始說故事。
           </h2>
 
-          <p className="text-white/72 text-[15px] md:text-[16px] leading-[2] max-w-lg mx-auto mb-12">
+          <p className="text-white/72 text-[14px] md:text-[15px] leading-[1.9] max-w-lg mx-auto mb-9">
             預約專人展示，看看 ArtON 如何成為你的空間風景。
           </p>
 
@@ -49,7 +49,7 @@ export default function FooterSection() {
             href={LINKS.customerLine}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 px-9 py-4 bg-[#F5B300] text-[#16203B] text-[15px] font-bold rounded-full hover:bg-[#e5a800] transition-all duration-300 hover:shadow-xl hover:shadow-[#F5B300]/25 active:scale-[0.97]"
+            className="group inline-flex items-center gap-3 px-8 py-3.5 bg-[#F5B300] text-[#16203B] text-[14px] font-semibold rounded-full hover:bg-[#e5a800] transition-all duration-300 hover:shadow-xl hover:shadow-[#F5B300]/25 active:scale-[0.97]"
           >
             預約展示
             <span className="text-[16px] transition-transform duration-300 group-hover:translate-x-1 inline-block">→</span>

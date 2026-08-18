@@ -19,7 +19,7 @@ const months = [
     en: "Next Month",
     artist: "新的藝術家",
     theme: "全新的作品與策展主題",
-    img: "/manus-storage/sunrise-dawn_2cd344e3_3978a679.jpg",
+    img: "/manus-storage/next-artist-moonlight-village_19057bd2.png",
   },
 ];
 
