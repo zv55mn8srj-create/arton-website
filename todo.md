@@ -708,3 +708,17 @@ Playwright 截圖顯示卡 01/03/06 仍舊白框直書殘影。但程式碼中�
 - B2BPage.tsx 順序：Hero(#16203B) → Highlights(#FBFAF7, line 188) → ESG Mapping(#F7F4EF) → E-Paper(#16203B) → Pain/Solution(#F7F4EF) → WhyEnterprise(Room 07, line 274-275) → Plans(#FBFAF7, line 278)。
 - 決策：WhyArtON 插入點選在 Highlights 與 ESG Mapping 之間（淺色 #F7F4EF 順接），作為品牌信念段落，銜接後面的 ESG Mapping。淺色元件保留原樣式不動，僅確認背景與前後區塊銜接。
 - GalleryHeading props: room, label, title, titleSize, description, className。
+
+# 第五十三輪改版待辦（2026-08-18）：過渡導言＋策展人版信念段落
+- [ ] 首頁 Hero 與 ProcessSection 之間補過渡導言（淺色、置中或左排、一句話）
+- [ ] 建立 WhyCurator.tsx（創作者視角：被看見／被訂閱／持續創作）
+- [ ] CuratorPage 引入並插在合適位置
+- [ ] 驗證並保存交付
+
+## 第五十三輪盤點結果（已確認）
+- 首頁 Home.tsx 順序：Header → Hero → ProcessSection（深藍 #16203B, py-28/44）→ EnterpriseSection → CuratorSection → MonthlyUpdate → Timeline → FAQ → Footer。ProcessSection 是深色區，無「過渡導言」。
+- 決策（過渡導言）：在 Home.tsx 的 Hero 與 ProcessSection 之間加一段淺色（bg-[#FBFAF7]）導言區：小 label「From the wall」＋一句「從你的一面牆開始——選一個喜歡的展，剩下的交給 ArtON。」＋導向下箭頭。py-20 md:py-28 較輕。
+- CuratorPage.tsx 順序：Hero(深藍) → Values(FBFAF7) → Steps(F7F4EF) → Final CTA(深藍+QR) → Curator FAQ(F7F4EF) → Footer。
+- 決策（WhyCurator）：在 Values 之後、Steps 之前插入 WhyCurator（淺色 F7F4EF），創作者視角三信念：01 Visibility 被看見、被每天看見／02 Sustaining 創作成為可以依靠的事業（自行定價、訂閱收益）／03 Beyond 策展走出畫廊（走進日常空間）。
+- WhyArtON.tsx 結構可全盤仿寫：GalleryHeading(room, label, title, titleSize, description, className sticky)＋PowerGlyph blockquote＋三欄 beliefs，room 編號在 curatore 頁用「02」？注意 CuratorPage 無 room 編號系統，label 用英文即可，room="03" 不適用——改 omit room 或傳 "—"。GalleryHeading props：room, label, title, titleSize?, description, className。
+- GalleryHeading 元件位於 components/GalleryHeading.tsx（import { PowerGlyph } from "./GalleryHeading" 可行）。

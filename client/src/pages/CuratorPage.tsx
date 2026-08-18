@@ -6,6 +6,7 @@
  * Empowerment narrative — curators build exhibitions once, value keeps flowing.
  */
 import Header from "@/components/Header";
+import WhyCurator from "@/components/WhyCurator";
 import FooterSection from "@/components/FooterSection";
 import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -130,6 +131,9 @@ export default function CuratorPage() {
             </div>
           </div>
         </section>
+
+        {/* Quiet Belief — for curators */}
+        <WhyCurator />
 
         {/* Steps */}
         <section className="py-24 md:py-32 bg-[#F7F4EF]">

@@ -25,6 +25,20 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
+
+        {/* Transition — bridge from hero to how-it-works */}
+        <section className="py-16 md:py-24 bg-[#FBFAF7] text-center">
+          <div className="container">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-6">
+              From the wall · 從你的牆開始
+            </p>
+            <p className="text-[clamp(1.35rem,2.2vw,2rem)] leading-[1.6] font-light tracking-[-0.02em] text-[#1C1C1E]/85 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+              選一個喜歡的展，<br className="md:hidden" />剩下的交給 ArtON。
+            </p>
+            <p className="text-[13px] text-[#1C1C1E]/45 mt-6">一次安裝，持續更新。</p>
+          </div>
+        </section>
+
         <ProcessSection />
         <EnterpriseSection />
         <CuratorSection />
