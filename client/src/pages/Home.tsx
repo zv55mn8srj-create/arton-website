@@ -7,7 +7,6 @@
  */
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import WhyArtON from "@/components/WhyArtON";
 import ProcessSection from "@/components/ProcessSection";
 import EnterpriseSection from "@/components/EnterpriseSection";
 import CuratorSection from "@/components/CuratorSection";
@@ -26,7 +25,6 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <WhyArtON />
         <ProcessSection />
         <EnterpriseSection />
         <CuratorSection />

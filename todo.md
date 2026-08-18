@@ -694,3 +694,17 @@ Playwright 截圖顯示卡 01/03/06 仍舊白框直書殘影。但程式碼中�
 - [ ] 找出 StartPage 中「Ready · 隨時可以開始」區塊（「讓下一面牆，開始說話。」＋LINE 諮詢按鈕）
 - [ ] 刪除該區塊（程式碼保留可恢復或完全刪除）
 - [ ] 驗證並保存交付
+
+# 第五十二輪改版待辦（2026-08-18）：「真正的支持」區塊由首頁移至 /b2b
+- [ ] 找出首頁「真正的支持」區塊（Ability／Independence／Continuity）所在元件
+- [ ] 從首頁移除該區塊
+- [ ] 移至 /b2b 頁適當位置（深色底 #16203B 一致樣式）
+- [ ] 驗證並保存交付
+
+## 第五十二輪盤點結果（已確認）
+- 「真正的支持」區塊位於 client/src/components/WhyArtON.tsx（blockquote＋beliefs 三張卡：01 Ability／02 Independence／03 Continuity），整元件為淺色底 #F7F4EF 大區塊，id="about"，淺色 GalleryQuietism 樣式（PowerGlyph 黃、引用 Cormorant 襯線）。
+- Home.tsx:10 import WhyArtON、line 29 <WhyArtON /> — 僅首頁使用。CuratorPage.tsx 有提及但無此元件引用。
+- 用戶要求：從首頁移除，移至 /b2b。理由：首頁定位改回「藝術」，身心障礙敘事集中到企業頁。
+- B2BPage.tsx 順序：Hero(#16203B) → Highlights(#FBFAF7, line 188) → ESG Mapping(#F7F4EF) → E-Paper(#16203B) → Pain/Solution(#F7F4EF) → WhyEnterprise(Room 07, line 274-275) → Plans(#FBFAF7, line 278)。
+- 決策：WhyArtON 插入點選在 Highlights 與 ESG Mapping 之間（淺色 #F7F4EF 順接），作為品牌信念段落，銜接後面的 ESG Mapping。淺色元件保留原樣式不動，僅確認背景與前後區塊銜接。
+- GalleryHeading props: room, label, title, titleSize, description, className。

@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import WhyArtON from "@/components/WhyArtON";
 import WhyEnterprise from "@/components/WhyEnterprise";
 import { ArrowRight, Check, FileOutput, Landmark, MessageCircle, Leaf, Mail, WifiOff } from "lucide-react";
 
@@ -197,6 +198,9 @@ export default function B2BPage() {
             </div>
           </div>
         </section>
+
+        {/* Why ArtON — 真正的支持，是讓創作者持續走下去 */}
+        <WhyArtON />
 
         {/* ESG Mapping — 支持身心障礙創作者如何對應 ESG 指標 */}
         <section className="py-24 md:py-32 bg-[#F7F4EF]">
