@@ -486,29 +486,7 @@ export default function B2BPage() {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="py-24 md:py-32 bg-[#16203B] text-white text-center">
-          <div className="container">
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] mb-8 font-semibold">Talk to Us · 免費諮詢</p>
-            <h2 className="text-[clamp(2rem,3.8vw,3.4rem)] leading-[1.25] font-light mb-8 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-              吃最少電的展示終端，
-              <br />
-              <span className="text-[#E8B339]">讓減碳與支持創作者，同時發生。</span>
-            </h2>
-            <p className="text-white/60 text-[14px] md:text-[15px] leading-[1.9] max-w-xl mx-auto mb-10">
-              與顧問聊聊據點數量與預算，取得減碳試算、方案報價與 ESG 報告範本。
-            </p>
-            <a
-              href={LINKS.customerLine}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-[#E8B339] text-[#16203B] text-[15px] font-semibold rounded-full hover:bg-[#F0B429] transition-all duration-300 active:scale-[0.97]"
-            >
-              <MessageCircle className="w-4.5 h-4.5" strokeWidth={2} />
-              加入 LINE 免費諮詢
-            </a>
-          </div>
-        </section>
+
       </main>
       <FooterSection />
     </div>
