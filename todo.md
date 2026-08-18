@@ -805,3 +805,8 @@ H. /b2b Plan 區導言「訂閱即每天做 ESG」OK；PlansSection 元件內也
 - 版面佔比明顯縮減，圖文並排不顯冗長
 - 整頁結構流暢：Hero（深藍）→ Highlights（四亮點）→ Room 01（淺色重排）→ ESG Mapping（深藍）→ 痛點方案 → Why ArtON 企業 → 方案 → E-Paper → 客製方案 → 頁尾
 - 已通過，可保存 checkpoint
+
+# 第五十六輪改版待辦（2026-08-18）：FAQ 新增 E-Paper 諮詢題
+- [ ] 找出 FAQSection 與各頁面 FAQ 引入狀況，盤點 E-Paper 相關既有內容
+- [ ] 新增一題 E-Paper 諮詢方式（尺寸/報價/規劃洽詢管道），承接被移除的 CTA
+- [ ] 驗證並保存交付
