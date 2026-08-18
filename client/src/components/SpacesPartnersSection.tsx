@@ -113,6 +113,11 @@ export default function SpacesPartnersSection() {
                 <br />
                 策展夥伴
               </p>
+              <p className="text-[12px] leading-[1.7] text-[#1C1C1E]/40 mt-3">
+                更多合作夥伴徵集中
+                <br />
+                歡迎策展人、畫廊與藝術機構加入
+              </p>
             </a>
           </div>
       </div>
