@@ -613,3 +613,43 @@ Playwright 截圖顯示卡 01/03/06 仍舊白框直書殘影。但程式碼中�
 - [ ] VenuesSection 改用咖啡廳/企業門口電子畫框圖；其餘場景圖改電子畫框版
 - [ ] Header CTA 黃膠囊化；全站黃色點綴統一
 - [ ] 截圖驗證 + checkpoint + 交付
+
+# 第四十六輪改版待辦（2026-08-18）：七項反饋
+- [ ] 1. 修復 bug：滑到頁面底部後點導覽列三個鈕（策展人加入/企業訂閱方案/選擇方案），跳轉後停在子頁底部——子頁載入後應滾動到頂部（ScrollToTop 元件）
+- [ ] 2. Hero CTA「合作洽詢」改為「為我的空間訂閱藝術」
+- [ ] 3. 導覽列文字色：明亮背景改為深黃 #C98F0E 提升可讀性
+- [ ] 4. Room 05 探索策展（ExploreSection）移至 /start 子頁
+- [ ] 5. 頁尾改版：深藍圓環風「讓下一面牆，開始說故事。」＋「預約展示」CTA（參考 erJcvP 圖：深藍 #16203B 背景、黃色細圓環、金色細線 label「MAKE SPACE FOR ART」）
+- [ ] 6. 導覽列「企業訂閱方案」改名（聚焦 ESG 產出＋訂閱服務＋專案客製），如「企業 ESG 訂閱方案」
+- [ ] 7. Room 04 What You Will See 改版：參考 RKwtqH 圖的 Wall Label 卡片式設計——三張卡：01 一面會呼吸的展牆／02 為空間保留品味／03 收藏隨手啟動，標題「把生活的視線，留給喜歡的作品。」，主圖用 W9OSzM 直幅（藍金電子畫框）
+
+## 關鍵資產
+- 頁尾參考: /home/ubuntu/upload/pasted_file_erJcvP_image.webp（深藍 #16203B、黃圓環、金色 label MAKE SPACE FOR ART、標題「讓下一面牆，開始說故事。」副標「預約專人展示，看看 Arton 如何成為你的空間風景。」黃膠囊「預約展示 →」）
+- Room04 參考: /home/ubuntu/upload/pasted_file_RKwtqH_image.webp
+- 主圖: /home/ubuntu/upload/pasted_file_W9OSzM_image.png（直幅藍金電子畫框 886x1058）→ 需上傳 webdev 靜態資產
+
+## 第四十六輪進度（截至 Room 04 改版完成）
+已完成（未 checkpoint）：
+1. App.tsx 加 ScrollToTop（跨頁導航滾回頂部，修復 bug）✅
+2. HeroSection：「合作洽詢」→「為我的空間訂閱藝術」（15px）✅
+3. Header：導覽文字色改 #C98F0E（未滾動時也適用明亮背景）、hover #A77A08；「企業訂閱方案」→「企業 ESG 訂閱方案」（桌面與行動）✅
+4. Room 05 ExploreSection 移至 /start（價格比較表後、LINE QR 前），Home.tsx 已移除 ✅
+7. Room 04 CuratorSection 全面改版：淺底 #FBFAF7、左側直幅主圖（/manus-storage/wall-label-main_09d5fac2.png，tag「01 / Living Space」）、右側大標題「把生活的視線，留給喜歡的作品。」＋新描述、下方三張 WALL LABEL 白卡（01 一面會呼吸的展牆／02 為空間保留品味／03 收藏隨手啟動，hover 黃底線動畫）✅
+
+待辦：
+5. 頁尾改版為深藍圓環風（FooterSection.tsx）：深藍 #16203B 背景、黃色細圓環（同心圓）、金色細線 label「MAKE SPACE FOR ART」、大標題「讓下一面牆，開始說故事。」副標「預約專人展示，看看 Arton 如何成為你的空間風景。」黃色膠囊「預約展示 →」（導 customerLine）；參考 /home/ubuntu/upload/pasted_file_erJcvP_image.webp
+6. 驗證截圖（/、/start、/b2b、/curator）
+7. 保存 checkpoint 交付
+
+關鍵資訊：
+- /start Final CTA「讓下一面牆，開始說話。」深黑底 #1C1C1E——若頁尾改成深藍圓環風，該 Final CTA 可考慮也改深藍圓環樣式或移除重複（需判斷）
+- ExploreSection id="explore" 仍在（供首頁 menu 錨點? 首頁已無 explore 錨點，Header navLinks 仍有「探索策展 anchor:explore」——需從 Header navLinks 移除或改導 /start#explore）
+- Header navLinks: about/enterprise/explore/faq；explore 在首頁已無對應 section（已移至 /start）→ 應改為 Link /start 或在 /start 有 #explore 錨點，ExploreSection 的 id="explore" 存在，所以 /start#explore 可行 → 改 AnchorLink href 為 /start#explore
+
+## 進度更新
+- Header navLinks explore 改 page="/start"、AnchorLink 支援 page prop、未滾動字色 #7A6218→hover #C98F0E、ScrollToTop 已確認存在於 App.tsx ✅
+- FooterSection 深藍圓環風改版完成（圓環、MAKE SPACE FOR ART、讓下一面牆開始說故事、預約展示→LINE、資訊列）✅
+- 剩：截圖驗證（/、/start、/b2b）→ checkpoint → 交付
+
+## 驗證狀態（截圖確認）
+全頁截圖確認：首頁導覽列「關於 ArtON 企業 ESG 探索策展 常見問題」深黃字清晰可讀；Hero「為我的空間訂閱藝術」膠囊 CTA 正常；頁尾深藍圓環風「讓下一面牆，開始說故事。」＋黃色膠囊「預約展示」正常。/start 頁 ExploreSection 六張策展卡正常插入價格比較表後。視窗截圖中 /start 有兩次 Header 渲染（sticky header + 捲動時浮動 header 各一次，屬截圖工具偽影，非 bug）。未見明顯問題。剩 checkpoint 保存後交付。

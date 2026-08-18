@@ -85,7 +85,7 @@ export default function HeroSection() {
                 href="/b2b"
                 className="group px-8 py-4 bg-white/85 backdrop-blur-sm border-2 border-[#16203B]/20 text-[#16203B] rounded-full font-bold hover:bg-white hover:border-[#16203B]/40 transition-all duration-300 active:scale-[0.97]"
               >
-                <span className="text-[16px] leading-none">合作洽詢</span>
+                <span className="text-[15px] leading-none">為我的空間訂閱藝術</span>
                 <span className="ml-2 text-[16px] leading-none transition-transform duration-300 group-hover:translate-x-1 inline-block">→</span>
               </a>
             </div>

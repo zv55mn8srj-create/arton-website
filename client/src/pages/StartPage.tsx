@@ -10,6 +10,7 @@
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import PlansSection from "@/components/PlansSection";
+import ExploreSection from "@/components/ExploreSection";
 import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Check, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
@@ -264,6 +265,9 @@ export default function StartPage() {
             </p>
           </div>
         </section>
+
+        {/* Room 05 — 探索策展（移至 /start 子頁） */}
+        <ExploreSection />
 
         {/* LINE QR Code — desktop scan */}
         <section className="py-24 md:py-28 bg-[#FBFAF7]">

@@ -12,7 +12,6 @@ import ProcessSection from "@/components/ProcessSection";
 import EnterpriseSection from "@/components/EnterpriseSection";
 import CuratorSection from "@/components/CuratorSection";
 import MonthlyUpdateSection from "@/components/MonthlyUpdateSection";
-import ExploreSection from "@/components/ExploreSection";
 import TimelineSection from "@/components/TimelineSection";
 import WhyEnterprise from "@/components/WhyEnterprise";
 import DemoShowcaseSection from "@/components/DemoShowcaseSection";
@@ -33,7 +32,6 @@ export default function Home() {
         <EnterpriseSection />
         <CuratorSection />
         <MonthlyUpdateSection />
-        <ExploreSection />
         <TimelineSection />
         <WhyEnterprise />
         <DemoShowcaseSection />

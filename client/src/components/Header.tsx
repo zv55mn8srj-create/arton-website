@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 import { useLocation, Link } from "wouter";
 import { LINKS } from "@/lib/links";
 
-const NAV_ANCHORS = ["about", "enterprise", "explore", "faq"] as const;
+const NAV_ANCHORS = ["about", "enterprise", "faq"] as const;
 
 /**
  * Smooth-scroll to a section on the homepage, retrying until the section
@@ -61,10 +61,10 @@ export function useHashScroll(): void {
 
 
 const navLinks = [
-  { label: "關於 ArtON", anchor: "about" },
-  { label: "企業 ESG", anchor: "enterprise" },
-  { label: "探索策展", anchor: "explore" },
-  { label: "常見問題", anchor: "faq" },
+  { label: "關於 ArtON", anchor: "about", page: "/" },
+  { label: "企業 ESG", anchor: "enterprise", page: "/" },
+  { label: "探索策展", anchor: "explore", page: "/start" },
+  { label: "常見問題", anchor: "faq", page: "/" },
 ];
 
 export default function Header() {
@@ -103,7 +103,7 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-10">
           {navLinks.map((link) => (
-            <AnchorLink key={link.anchor} anchor={link.anchor} scrolled={scrolled}>
+            <AnchorLink key={link.anchor} anchor={link.anchor} page={link.page} scrolled={scrolled}>
               {link.label}
             </AnchorLink>
           ))}
@@ -112,7 +112,7 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-4">
           <Link
             href="/curator"
-            className="text-[15px] font-medium text-[#16203B]/75 hover:text-[#C98F0E] transition-colors duration-300"
+            className="text-[15px] font-medium text-[#C98F0E] hover:text-[#A77A08] transition-colors duration-300"
           >
             策展人加入
           </Link>
@@ -120,7 +120,7 @@ export default function Header() {
             href="/b2b"
             className="text-[14px] font-medium border-2 border-[#16203B]/18 text-[#16203B] px-4 py-2 rounded-full hover:border-[#F5B300] hover:text-[#C98F0E] transition-colors duration-300"
           >
-            企業訂閱方案
+            企業 ESG 訂閱方案
           </a>
           <Link
             href="/start"
@@ -154,8 +154,8 @@ export default function Header() {
               </AnchorLink>
             ))}
             <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-[#E5E5E3]">
-              <Link href="/b2b" onClick={() => setMobileOpen(false)} className="text-center text-[15px] text-[#1C1C1E] font-medium py-2 border border-[#F5B300]/50 rounded-full">
-                企業訂閱方案
+              <Link href="/b2b" onClick={() => setMobileOpen(false)} className="text-center text-[15px] text-[#C98F0E] font-medium py-2 border border-[#F5B300]/50 rounded-full">
+                企業 ESG 訂閱方案
               </Link>
               <Link href="/curator" onClick={() => setMobileOpen(false)} className="text-center text-[15px] text-[#1C1C1E] font-medium py-2">
                 策展人加入
@@ -179,12 +179,14 @@ export default function Header() {
  */
 function AnchorLink({
   anchor,
+  page = "/",
   scrolled = false,
   mobile,
   onClose,
   children,
 }: {
   anchor: string;
+  page?: string;
   scrolled?: boolean;
   mobile?: boolean;
   onClose?: () => void;
@@ -192,16 +194,19 @@ function AnchorLink({
 }) {
   const [location] = useLocation();
   const isHome = location === "/";
+  const isTargetPage = location === page;
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     onClose?.();
-    if (isHome) {
+    if (isTargetPage) {
+      // 已在目標頁：直接滾到區塊
       scrollToAnchor(anchor);
     } else {
-      // From a sub-page: a full navigation to /#<anchor> guarantees the
-      // homepage loads with the hash, so useHashScroll scrolls to the target.
-      window.location.href = `/#${anchor}`;
+      // 跨頁：前往目標頁並滾到區塊，進入後會滾回頂部（ScrollToTop）
+      // 用 scrollRestoration 避免瀏覽器預設還原舊捲動位置
+      window.scrollTo({ top: 0 });
+      window.location.href = `${page}#${anchor}`;
     }
   };
 
@@ -211,11 +216,11 @@ function AnchorLink({
       onClick={handleClick}
       className={
         mobile
-          ? "text-[16px] text-[#1C1C1E]/80 py-2 hover:text-[#C98F0E] transition-colors"
+          ? "text-[16px] text-[#C98F0E] py-2 hover:text-[#A77A08] transition-colors"
           : `text-[15px] font-normal transition-colors duration-300 tracking-wide ${
               scrolled
-                ? "text-[#1C1C1E]/70 hover:text-[#C98F0E]"
-                : "text-white/80 hover:text-white"
+                ? "text-[#C98F0E] hover:text-[#A77A08]"
+                : "text-[#7A6218] hover:text-[#C98F0E]"
             }`
       }
     >
