@@ -782,3 +782,26 @@ H. /b2b Plan 區導言「訂閱即每天做 ESG」OK；PlansSection 元件內也
 - /curator：Hero → Values → WhyCurator(含作品牆圖) → Steps → Final CTA → FAQ → Footer，整體順暢 ✅
 - 判定：三子頁診斷項 A-G 多數已完成（精簡 Hero 副標、Values 02 刪重複句、B2B 背景互換皆已做）。全頁截圖無明顯冗餘或情境突變。
 - 待執行：僅存最後截圖交付＋checkpoint。
+
+# 第五十五輪改版待辦（2026-08-18）：/b2b Room 01 重新整理
+- [ ] 盤點 B2BPage 中 Room 01（產品定位）區塊與 WhyArtON 元件結構
+- [ ] 精簡重複文案、加入小圖、縮減版面佔比
+- [ ] 驗證並保存交付
+
+## 第五十五輪盤點
+
+## 第五十五輪盤點結果（WhyArtON.tsx 全文已讀）
+- B2B 頁結構：Hero(深藍) → Highlights(FBFAF7) → WhyArtON(F7F4EF, id=about) → ESG Mapping(FBFAF7) → E-Paper(深藍) → Pain/Solution(F7F4EF) → ...
+- WhyArtON 目前佔 ~70 行：左欄 GalleryHeading（標題 4.6rem + sticky）＋右欄三段產品文案＋my-14~20 大 blockquote「真正的支持」＋三欄 beliefs
+- 問題：文字密集、blockquote 間距大、無圖片；Hero 副標已包含「每月新的藝術家」等內容，右欄第一段部分重複
+- 重排決策：改左欄為 heading+精簡導言（sticky），右欄上段改為「小圖＋精簡文案」並排卡（一張電子畫框小圖＋一句話），blockquote 縮 my-14→my-10、字體縮小，beliefs 保留但 description 更精簡
+- 待補小圖：用現有 venue-office-digital 或 venue-clinic-digital（已上傳 asset URL 在 ref-style-notes.md）；檢查 ref-style-notes.md 中的 asset URL 清單
+
+## 第五十五輪實作狀態
+- [ ] 重寫 WhyArtON：左右結構、補圖、縮間距與字級
+
+## 第五十五輪驗證狀態（/b2b 全頁截圖確認）
+- Room 01 產品定位區塊重新排版成功：左側標題＋副標、右側電子畫框情境小圖＋精簡信念句＋三欄精簡版 Ability/Independence/Continuity
+- 版面佔比明顯縮減，圖文並排不顯冗長
+- 整頁結構流暢：Hero（深藍）→ Highlights（四亮點）→ Room 01（淺色重排）→ ESG Mapping（深藍）→ 痛點方案 → Why ArtON 企業 → 方案 → E-Paper → 客製方案 → 頁尾
+- 已通過，可保存 checkpoint
