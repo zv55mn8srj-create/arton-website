@@ -34,7 +34,7 @@ export default function ProcessSection() {
       <div className="container relative" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-12 items-start">
           <GalleryHeading
-            room="02"
+            room="01"
             label="How It Works"
             light
             title={<>一次安裝，<br />持續更新。</>}

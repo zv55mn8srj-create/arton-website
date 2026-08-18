@@ -23,7 +23,7 @@ export default function VenuesSection() {
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-10 mb-14 md:mb-20">
           <GalleryHeading
-            room="08"
+            room="07"
             label="Art in Space"
             title={<>每一種空間，<br />都有一種<br />遇見藝術的方式。</>}
             titleSize="clamp(2.6rem,4.6vw,4.6rem)"

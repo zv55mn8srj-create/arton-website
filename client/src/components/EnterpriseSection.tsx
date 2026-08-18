@@ -23,7 +23,7 @@ export default function EnterpriseSection() {
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-14 lg:gap-12 items-start mb-20 md:mb-28">
           <GalleryHeading
-            room="03"
+            room="02"
             label="For Enterprise"
             title={<>讓空間，<br />每個月都有<br />新的內容。</>}
             titleSize="clamp(2.15rem,3.6vw,3.4rem)"

@@ -31,7 +31,7 @@ export default function MonthlyUpdateSection() {
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           <GalleryHeading
-            room="05"
+            room="04"
             label="Monthly Renewal · 每月更新"
             title={<>每個月，<br />看見新的<br />藝術家。</>}
             titleSize="clamp(2.6rem,4.6vw,4.6rem)"

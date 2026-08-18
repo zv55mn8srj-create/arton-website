@@ -65,7 +65,7 @@ export default function SpacesPartnersSection() {
             <p
               className={`text-[#F5B300] text-[12px] md:text-[13px] uppercase tracking-[0.35em] mb-6 font-medium transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
             >
-              Trusted Partners
+              Room 09 · Trusted Partners
             </p>
             <h2
               className={`text-[32px] md:text-[46px] font-light text-[#1C1C1E] leading-[1.25] mb-6 transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}

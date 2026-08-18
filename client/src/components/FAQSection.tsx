@@ -30,7 +30,7 @@ export default function FAQSection() {
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-14 lg:gap-16 items-start">
           <GalleryHeading
-            room="10"
+            room="08"
             label="Visitor Notes"
             title={<>開始之前，<br />你可能想<br />知道的事。</>}
             titleSize="clamp(2.6rem,4.6vw,4.6rem)"

@@ -21,7 +21,7 @@ export default function TimelineSection() {
       <div className="container" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-12 items-end mb-20 md:mb-28">
           <GalleryHeading
-            room="06"
+            room="05"
             label="A Living Exhibition"
             title={<>一次策展，<br />五個持續<br />發生的瞬間。</>}
             titleSize="clamp(2.6rem,4.6vw,4.6rem)"

@@ -60,7 +60,7 @@ export default function CuratorSection() {
 
           <div className={`lg:col-span-7 lg:pl-8 transition-all duration-1000 delay-100 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
             <GalleryHeading
-              room="04"
+              room="03"
               label="What You Will See"
               title={<>把生活的視線，<br />留給喜歡的<br />作品。</>}
               titleSize="clamp(2.4rem,4.2vw,4.4rem)"
