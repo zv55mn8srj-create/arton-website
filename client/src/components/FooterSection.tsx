@@ -46,9 +46,7 @@ export default function FooterSection() {
           </p>
 
           <a
-            href={LINKS.customerLine}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={LINKS.email}
             className="group inline-flex items-center gap-3 px-8 py-3.5 bg-[#F5B300] text-[#16203B] text-[14px] font-semibold rounded-full hover:bg-[#e5a800] transition-all duration-300 hover:shadow-xl hover:shadow-[#F5B300]/25 active:scale-[0.97]"
           >
             預約展示
