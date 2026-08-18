@@ -18,6 +18,7 @@ import SpacesPartnersSection from "@/components/SpacesPartnersSection";
 import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   return (
@@ -62,6 +63,8 @@ export default function Home() {
         <SpacesPartnersSection />
         <PlansTeaserSection />
       </main>
+      {/* 細金線分隔：深藍 CTA 區塊與頁尾之間的視覺收束 */}
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-[#E8B339]/70 to-transparent" aria-hidden="true" />
       <FooterSection />
     </div>
   );
@@ -72,8 +75,22 @@ export default function Home() {
  * Full plans (subscription, bundles, hardware, comparison table) live on /start
  * to avoid duplicating information across pages.
  */
+const FRAME_ARTWORKS = [
+  { src: "/manus-storage/koi-full_art_b670850f.jpg", alt: "鄭美珠作品《九鯉魚》作品全圖 — 藝術於空間中持續展示", name: "《九鯉魚》· 鄭美珠" },
+  { src: "/manus-storage/next-artist-moonlight-village_19057bd2.jpg", alt: "月光村莊作品 — 每月更新的數位展覽內容", name: "《月光村莊》· 月度新作" },
+  { src: "/manus-storage/koi-square_a0f0802a.jpg", alt: "夏日主題作品 — 雲端策展每月輪替", name: "《夏日之青春》· 小光點畫廊" },
+];
+
 function PlansTeaserSection() {
   const { ref, isVisible } = useScrollAnimation(0.05);
+  const [active, setActive] = useState(0);
+
+  // 三幅作品自動輪替，每 5 秒切換一次，營造「每月更新」的感受
+  useEffect(() => {
+    const timer = setInterval(() => setActive((prev) => (prev + 1) % FRAME_ARTWORKS.length), 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="py-28 md:py-44 bg-[#16203B] text-white overflow-hidden">
       <div className="container" ref={ref}>
@@ -101,16 +118,37 @@ function PlansTeaserSection() {
                   </span>
                   <span className="text-[10px] tracking-[0.14em] text-white/35">09:24 AM</span>
                 </div>
-                {/* 作品圖卡：微傾斜，畫框畫面 */}
-                <img
-                  src="/manus-storage/koi-full_art_b670850f.jpg"
-                  alt="鄭美珠作品《九鯉魚》作品全圖 — 藝術於空間中持續展示"
-                  className={`w-full aspect-[4/3] object-cover rounded-lg transition-transform duration-700 ${isVisible ? "rotate-0" : "-rotate-2"}`}
-                />
-                {/* 畫框名牌 */}
+                {/* 作品圖卡：三幅自動輪替，交叉淡入，營造每月更新感 */}
+                <div className={`relative w-full aspect-[4/3] overflow-hidden rounded-lg ${isVisible ? "" : "-rotate-2"}`}>
+                  {FRAME_ARTWORKS.map((art, i) => (
+                    <img
+                      key={art.src}
+                      src={art.src}
+                      alt={art.alt}
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+                      style={{ opacity: active === i ? 1 : 0 }}
+                      loading="lazy"
+                    />
+                  ))}
+                </div>
+                {/* 畫框名牌：隨輪播同步切換 */}
                 <div className={`flex items-center justify-between gap-4 border-t border-white/12 mt-3 pt-3 transition-all duration-700 delay-150 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-                  <p className="text-[12px] md:text-[13px] tracking-[0.14em] text-white/55">《九鯉魚》· 鄭美珠</p>
+                  <p className="text-[12px] md:text-[13px] tracking-[0.14em] text-white/55 min-w-0 transition-opacity duration-500" key={FRAME_ARTWORKS[active].name}>
+                    {FRAME_ARTWORKS[active].name}
+                  </p>
                   <p className="text-[10px] uppercase tracking-[0.24em] text-[#E8B339] font-semibold whitespace-nowrap">每月更新 · 雲端策展</p>
+                </div>
+                {/* 輪播指標點 */}
+                <div className="flex items-center justify-center gap-2 mt-3" aria-hidden="true">
+                  {FRAME_ARTWORKS.map((_, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      onClick={() => setActive(i)}
+                      className={`h-1 rounded-full transition-all duration-300 ${active === i ? "w-5 bg-[#E8B339]" : "w-1.5 bg-white/25 hover:bg-white/45"}`}
+                      aria-label={`切換至第 ${i + 1} 幅作品`}
+                    />
+                  ))}
                 </div>
               </div>
               {/* 畫框背板陰影（層次感） */}
