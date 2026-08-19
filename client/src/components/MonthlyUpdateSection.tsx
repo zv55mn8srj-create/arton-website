@@ -19,7 +19,7 @@ const months = [
     en: "Next Month",
     artist: "新的藝術家",
     theme: "全新的作品與策展主題",
-    img: "/manus-storage/next-artist-moonlight-village_19057bd2_web.jpg",
+    img: "/manus-storage/next-moonlight-photography_1339ca1d.png",
   },
 ];
 
