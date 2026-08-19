@@ -42,15 +42,27 @@ const _unused = [
 const partners = [
   {
     name: "小光點畫廊",
-    description: "專注身心障礙藝術家創作展示的策展平台",
+    tagEn: "Founding Partner",
+    tagZh: "創始合作夥伴",
+    description: "臺灣共融藝術推手，致力於策展與藝術授權，賦予身心障礙藝術家創作多元價值與展現舞台。",
     logo: "/assets/partner-logo-1_7e5ae4bc.png",
-    type: "gallery",
+    icon: "gallery",
   },
   {
     name: "方睿有限公司",
-    description: "數位轉型與藝術科技的創新合作夥伴",
+    tagEn: "Platform & Technology",
+    tagZh: "平台服務",
+    description: "ArtON 平台營運與藝術科技服務。",
     logo: "/assets/partner-logo-2_5348f15c.png",
-    type: "tech",
+    icon: "tech",
+  },
+  {
+    name: "中華社會福利基金會",
+    tagEn: "Content Partner",
+    tagZh: "內容合作夥伴",
+    description: "長期深耕社會福利與社區照顧，支持慢飛天使展現純粹的藝術創作與生命力。",
+    logo: null,
+    icon: "welfare",
   },
 ];
 
@@ -77,9 +89,8 @@ export default function SpacesPartnersSection() {
             <p
               className={`text-[15px] leading-[1.9] text-[#1C1C1E]/50 transition-all duration-700 delay-150 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
-              ArtON 與策展人、畫廊、藝術機構合作，共同建立永續藝術展示生態。
-              <br />
-              若您是策展人或畫廊，歡迎聯絡我們探討合作機會。
+              ArtON 與不同領域的夥伴攜手，<br className="md:hidden" />
+              讓藝術走進更多生活場景。
             </p>
           </div>
 
@@ -90,10 +101,19 @@ export default function SpacesPartnersSection() {
                 className={`border border-[#E5E5E3] rounded-[1.5rem] p-10 flex flex-col items-center text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
                 style={{ transitionDelay: `${200 + index * 90}ms` }}
               >
+                <span className="text-[11px] md:text-[12px] uppercase tracking-[0.25em] text-[#C98F0E] font-medium mb-5">
+                  {partner.tagEn}
+                  <span className="mx-2 text-[#E5E5E3]">｜</span>
+                  {partner.tagZh}
+                </span>
                 <div className="h-14 flex items-center justify-center mb-6">
-                  <img src={partner.logo} alt={partner.name} className="max-h-14 max-w-[180px] object-contain" />
+                  {partner.logo ? (
+                    <img src={partner.logo} alt={partner.name} className="max-h-14 max-w-[180px] object-contain" />
+                  ) : (
+                    <span className="text-[34px] text-[#1C1C1E]/60" aria-hidden="true">✦</span>
+                  )}
                 </div>
-                <h3 className="text-[19px] font-medium text-[#1C1C1E] mb-2" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                <h3 className="text-[19px] font-medium text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                   {partner.name}
                 </h3>
                 <p className="text-[13px] leading-[1.7] text-[#1C1C1E]/50">{partner.description}</p>
@@ -109,14 +129,15 @@ export default function SpacesPartnersSection() {
             >
               <span className="text-[28px] text-[#1C1C1E]/70 mb-3" aria-hidden="true">+</span>
               <p className="text-[15px] font-medium text-[#C98F0E] leading-[1.6]">
-                邀請更多
-                <br />
-                策展夥伴
+                XXX 咖啡館
+              </p>
+              <p className="text-[11px] uppercase tracking-[0.22em] text-[#1C1C1E]/40 mt-2">
+                Display Partner｜展示合作夥伴
               </p>
               <p className="text-[12px] leading-[1.7] text-[#1C1C1E]/40 mt-3">
                 更多合作夥伴徵集中
                 <br />
-                歡迎策展人、畫廊與藝術機構加入
+                歡迎空間、咖啡館與企業加入
               </p>
             </a>
           </div>
