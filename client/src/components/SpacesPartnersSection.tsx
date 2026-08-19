@@ -41,20 +41,20 @@ const _unused = [
 
 const partners = [
   {
+    name: "方睿有限公司",
+    tagEn: "Platform & Technology",
+    tagZh: "ArtON 平台服務",
+    description: "ArtON 平台營運與藝術科技服務。",
+    logo: "/assets/partner-logo-2_5348f15c.png",
+    icon: "tech",
+  },
+  {
     name: "小光點畫廊",
     tagEn: "Founding Partner",
     tagZh: "創始合作夥伴",
     description: "臺灣共融藝術推手，致力於策展與藝術授權，賦予身心障礙藝術家創作多元價值與展現舞台。",
     logo: "/assets/partner-logo-1_7e5ae4bc.png",
     icon: "gallery",
-  },
-  {
-    name: "方睿有限公司",
-    tagEn: "Platform & Technology",
-    tagZh: "平台服務",
-    description: "ArtON 平台營運與藝術科技服務。",
-    logo: "/assets/partner-logo-2_5348f15c.png",
-    icon: "tech",
   },
   {
     name: "中華社會福利基金會",
