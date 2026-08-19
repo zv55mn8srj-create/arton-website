@@ -17,8 +17,9 @@ const months = [
   {
     label: "下月",
     en: "Next Month",
-    artist: "貓咪與星空下",
-    theme: "溫暖水彩插畫 · 下月即將登場",
+    badge: "9 月預告",
+    artist: "《貓咪與星空下》",
+    theme: "溫暖水彩插畫 · 待藝術家署名",
     img: "/manus-storage/next-cat-painting_335a3719.png",
   },
 ];
@@ -41,7 +42,7 @@ export default function MonthlyUpdateSection() {
 
           <div className="lg:col-span-7 lg:pt-10">
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
-              {months.map(({ label, en, artist, theme, img }, index) => (
+              {months.map(({ label, en, badge, artist, theme, img }, index) => (
                 <figure
                   key={label}
                   className={`relative overflow-hidden rounded-2xl bg-[#EDE8DF] transition-all duration-700 ${
@@ -55,6 +56,11 @@ export default function MonthlyUpdateSection() {
                       <p className="text-[11px] uppercase tracking-[0.18em] text-[#1C1C1E]/55 font-medium">{en}</p>
                       <p className="text-[15px] font-medium text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{label}</p>
                     </div>
+                    {badge && (
+                      <div className="absolute top-5 right-5 bg-[#F5B300] text-[#16203B] px-3.5 py-1.5 rounded-full text-[12px] font-semibold tracking-[0.12em]">
+                        {badge}
+                      </div>
+                    )}
                   </div>
                   <figcaption className="p-6">
                     <p className="text-[14px] font-medium text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{artist}</p>
