@@ -17,9 +17,9 @@ const months = [
   {
     label: "下月",
     en: "Next Month",
-    artist: "新的藝術家",
-    theme: "全新的作品與策展主題",
-    img: "/manus-storage/next-moonlight-photography_1339ca1d.png",
+    artist: "貓咪與星空下",
+    theme: "溫暖水彩插畫 · 下月即將登場",
+    img: "/manus-storage/next-cat-painting_335a3719.png",
   },
 ];
 
