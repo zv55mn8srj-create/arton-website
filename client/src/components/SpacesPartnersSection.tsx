@@ -57,7 +57,7 @@ const partners = [
     icon: "gallery",
   },
   {
-    name: "中華社會福利基金會",
+    name: "OO 基金會",
     tagEn: "Content Partner",
     tagZh: "內容合作夥伴",
     description: "長期深耕社會福利與社區照顧，支持慢飛天使展現純粹的藝術創作與生命力。",
