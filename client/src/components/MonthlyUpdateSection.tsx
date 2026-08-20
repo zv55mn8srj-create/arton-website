@@ -20,7 +20,7 @@ const months = [
     badge: "9 月預告",
     artist: "《兩顆柿子》",
     theme: "溫暖水彩插畫 · 下月即將登場",
-    img: "/manus-storage/next-persimmon-painting_0c834f5b.png",
+    img: "/manus-storage/next-persimmon-painting_0c834f5b.jpg",
   },
 ];
 

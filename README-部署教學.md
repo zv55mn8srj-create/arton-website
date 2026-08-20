@@ -10,7 +10,7 @@
 |---|---|
 | `client/src/pages/` | 四個頁面：Home（首頁）、B2BPage（企業 ESG）、StartPage（選擇方案）、CuratorPage（策展人加入） |
 | `client/src/components/` | 各區塊元件（Hero、流程、方案、FAQ 等） |
-| `client/public/manus-storage/` | 網站全部 24 張圖片（本次本地化重點） |
+| `client/public/manus-storage/` | 網站全部 26 張圖片（已本地化，任何主機皆可顯示） |
 | `client/public/assets/` | LINE QR Code、夥伴 logo、ESG 報告範本等素材 |
 | `package.json` / `vite.config.ts` | 專案設定 |
 
@@ -83,3 +83,4 @@ Netlify / Vercel 皆支援單頁應用路由，子頁面（/start、/b2b、/cura
 - 請不要在 GitHub 上傳 `.env` 等含有金鑰的檔案（本專案無敏感金鑰，可安心上傳原始碼）
 - 聯絡入口：信箱 support@arton.tw、客戶 LINE https://lin.ee/yEZxsB3、策展人 LINE https://lin.ee/7dr8uq4，如需更換請編輯 `client/src/lib/links.ts`
 - 本次已修正的問題：原本部分圖片引用 Manus 雲端專屬路徑（/manus-storage/），在您自行部署的主機上無法存取；現已全部改為專案內本地路徑，任何主機皆可正常顯示
+- 常用維護位置：合作夥伴名單在 `client/src/components/SpacesPartnersSection.tsx`；「每月更新」本月／下月卡面在 `client/src/components/MonthlyUpdateSection.tsx`，更換圖片只需替換 img 路徑與文字即可
