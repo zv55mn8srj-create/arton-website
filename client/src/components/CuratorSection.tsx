@@ -45,7 +45,7 @@ export default function CuratorSection() {
             <div className="relative max-w-md mx-auto lg:mx-0">
               <div className="absolute -inset-3 border border-[#16203B]/10" aria-hidden="true" />
               <img
-                src="/manus-storage/wall-label-main-frame_29b103b3.jpg"
+                src="/manus-storage/wall-label-main-frame_29b103b3_c7a949c0.jpg"
                 alt="ArtON 智慧藝術畫框：極窄邊框與霧面顯示，作品安靜地融入日常"
                 className="relative w-full object-cover shadow-[0_24px_70px_rgba(22,32,59,0.18)]"
               />
