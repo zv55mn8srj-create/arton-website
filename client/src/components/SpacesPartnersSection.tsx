@@ -45,7 +45,7 @@ const partners = [
     tagEn: "Platform & Technology",
     tagZh: "ArtON 平台服務",
     description: "ArtON 平台營運與藝術科技服務。",
-    logo: "/manus-storage/fangrui-logo-new.webp",
+    logo: "/manus-storage/fangrui-logo-new_63324092.webp",
     icon: "tech",
   },
   {
