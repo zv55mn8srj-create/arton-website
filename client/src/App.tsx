@@ -10,6 +10,7 @@ import { useHashScroll } from "./components/Header";
 import StartPage from "./pages/StartPage";
 import CuratorPage from "./pages/CuratorPage";
 import B2BPage from "./pages/B2BPage";
+import { installClickTracking, trackPageView } from "./lib/analytics";
 
 
 function ScrollToTop() {
@@ -45,12 +46,58 @@ function Router() {
   );
 }
 
+const PAGE_META: Record<string, { title: string; description: string }> = {
+  "/": {
+    title: "ArtON — Turn Art ON | 智慧藝術畫框與數位藝術展示",
+    description: "ArtON 以智慧藝術畫框與數位策展，讓藝術走進企業、診所、飯店與生活空間；企業訂閱藝術，也能持續支持創作者並累積 ESG 影響力。",
+  },
+  "/start": {
+    title: "選擇藝術展示方案｜ArtON 智慧藝術畫框",
+    description: "從輕量訂閱、ArtON Box 到企業展示配置，選擇適合你的藝術展示方案，讓空間持續更新作品。",
+  },
+  "/b2b": {
+    title: "企業 ESG 訂閱方案｜ArtON 文化永續展示",
+    description: "企業訂閱 ArtON，持續展示藝術、支持身心障礙創作者，並累積可記錄的 ESG 社會影響與永續成果。",
+  },
+  "/curator": {
+    title: "策展人加入合作｜ArtON 數位策展",
+    description: "將你的策展眼光帶進更多展示空間，自行定價後上架，讓更多人看見你的創作與策展故事。",
+  },
+};
+
+function SeoAndAnalytics() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    const pathname = location.split("#")[0] || "/";
+    const meta = PAGE_META[pathname] || PAGE_META["/"];
+    const canonicalPath = pathname === "/" ? "/" : pathname;
+    const canonicalUrl = `https://arton.tw${canonicalPath}`;
+
+    document.title = meta.title;
+    const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    description?.setAttribute("content", meta.description);
+    const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    canonical?.setAttribute("href", canonicalUrl);
+    document.querySelector('meta[property="og:title"]')?.setAttribute("content", meta.title);
+    document.querySelector('meta[property="og:description"]')?.setAttribute("content", meta.description);
+    document.querySelector('meta[property="og:url"]')?.setAttribute("content", canonicalUrl);
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute("content", meta.title);
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute("content", meta.description);
+    trackPageView(`${pathname}${location.includes("#") ? location.slice(location.indexOf("#")) : ""}`);
+  }, [location]);
+
+  useEffect(() => installClickTracking(), []);
+  return null;
+}
+
 function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
+          <SeoAndAnalytics />
           <Router />
         </TooltipProvider>
       </ThemeProvider>

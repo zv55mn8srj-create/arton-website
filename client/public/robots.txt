@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arton.tw/sitemap.xml
+
+# ArtON public brand website; no private application routes are exposed.
