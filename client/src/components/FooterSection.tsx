@@ -74,12 +74,41 @@ export default function FooterSection() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-x-8 gap-y-3">
-              <Link href="/" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">關於 ArtON</Link>
-              <Link href="/start" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">開始展示</Link>
-              <Link href="/b2b" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">企業 ESG 訂閱方案</Link>
-              <Link href="/curator" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">策展人加入</Link>
-              <a href={consultMail("合作洽詢")} className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">{LINKS.emailDisplay}</a>
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-10">
+              {/* 聯絡資訊 */}
+              <div className="flex items-center gap-6 pr-10 border-r border-white/10 hidden lg:flex">
+                <div className="flex flex-col gap-2">
+                  <a href={LINKS.phone} className="text-white/70 text-[14px] hover:text-[#F5B300] transition-colors flex items-center gap-2">
+                    <span className="text-[11px] uppercase tracking-wider text-white/30">Tel</span>
+                    {LINKS.phoneDisplay}
+                  </a>
+                  <a href={LINKS.email} className="text-white/70 text-[14px] hover:text-[#F5B300] transition-colors flex items-center gap-2">
+                    <span className="text-[11px] uppercase tracking-wider text-white/30">Email</span>
+                    {LINKS.emailDisplay}
+                  </a>
+                </div>
+                <div className="group relative">
+                  <div className="w-16 h-16 bg-white p-1 rounded-sm overflow-hidden">
+                    <img src={LINKS.lineQr} alt="Official LINE" className="w-full h-full object-contain" />
+                  </div>
+                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-white text-[#16203B] text-[10px] font-bold rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                    官方 LINE
+                  </div>
+                </div>
+              </div>
+
+              {/* 選單連結 */}
+              <div className="flex flex-wrap gap-x-8 gap-y-3">
+                <Link href="/" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">關於 ArtON</Link>
+                <Link href="/start" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">開始展示</Link>
+                <Link href="/b2b" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">企業 ESG 訂閱方案</Link>
+                <Link href="/curator" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">策展人加入</Link>
+                {/* 手機版顯示聯絡資訊 */}
+                <div className="flex flex-col gap-2 mt-4 md:hidden w-full pt-4 border-t border-white/5">
+                  <a href={LINKS.phone} className="text-white/50 text-[14px]">{LINKS.phoneDisplay}</a>
+                  <a href={LINKS.email} className="text-white/50 text-[14px]">{LINKS.emailDisplay}</a>
+                </div>
+              </div>
             </div>
           </div>
 

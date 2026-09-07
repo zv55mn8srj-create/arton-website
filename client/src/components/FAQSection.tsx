@@ -8,7 +8,7 @@ import { useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { LINKS } from "@/lib/links";
 
-const LINE_QR = "/assets/line-qr-customer_068ac53d.png";
+const LINE_QR = LINKS.lineQr;
 
 const questions = [
   { q: "企業需要哪些設備？", a: "需搭配 ArtON Box 藝術盒。它輕巧易安裝，只要一台顯示器或電視，接上藝術盒即可開始展示。ArtON 支援大多數螢幕設備，並會依空間條件提供設備建議與設定協助。" },
@@ -80,7 +80,7 @@ export default function FAQSection() {
                   看完問答，還有想了解的？
                 </h3>
                 <p className="text-[13.5px] leading-[1.9] text-[#45423C] mb-6 max-w-md">
-                  用手機開啟 LINE 掃描 QR Code，即可加入 ArtON 客戶專線，與顧問聊聊您的空間與需求。
+                  用手機開啟 LINE 掃描 QR Code，或撥打專線 <a href={LINKS.phone} className="font-semibold text-[#16203B] hover:text-[#F5B300] transition-colors">{LINKS.phoneDisplay}</a>，與顧問聊聊您的空間與需求。
                 </p>
                 <a
                   href={LINKS.customerLine}

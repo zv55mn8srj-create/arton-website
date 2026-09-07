@@ -287,14 +287,15 @@ export default function B2BPage() {
             <p className={`max-w-2xl mx-auto text-center text-[15px] md:text-[16.5px] leading-[2] text-[#45423C] mb-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               選擇任一訂閱方案，您的企業每天就在展示藝術、支持身心障礙創作者，並累積可匯出的 ESG 成果紀錄；想進一步減碳，可升級電子紙方案。
             </p>
-            {/* 訂閱方案：999／1499 — 企業日常 ESG 的基礎 */}
+            {/* 訂閱方案：999／1499 — 企業日常 ESG 的基礎 (暫時隱藏) */}
+            {/* 
             <div className="grid md:grid-cols-2 gap-7 max-w-4xl mx-auto">
               {plans.map((p, i) => (
                 <div
                   key={p.no}
                   className={`bg-[#F7F4EF] border border-[#E7E0D5] rounded-xl p-8 md:p-9 transition-all duration-700 ${
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                  } ${i === 0 ? "md:translate-y-0" : "md:translate-y-6"}`}
+                  }`}
                   style={{ transitionDelay: `${i * 120}ms` }}
                 >
                   <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/35 font-semibold mb-4">{p.no}</p>
@@ -331,6 +332,7 @@ export default function B2BPage() {
                 </div>
               ))}
             </div>
+            */}
             {/* E-Paper — 洽詢方案（不標價） */}
             <div className="mt-10 flex justify-center">
               <div
@@ -353,7 +355,7 @@ export default function B2BPage() {
                         {epaperPlan.badgeNote}
                         <a href={consultMail("電子紙展示方案諮詢")} className="inline-flex items-center gap-1.5 text-[#E8B339] hover:text-[#F5B300] transition-colors duration-200">
                           <Mail className="w-3.5 h-3.5" strokeWidth={2} />
-                          <span>support@arton.tw</span>
+                          <span>{LINKS.emailDisplay}</span>
                         </a>
                       </p>
                       <p className="text-[13.5px] text-[#1C1C1E]/45">{epaperPlan.quote}</p>
@@ -420,7 +422,7 @@ export default function B2BPage() {
                         為大型採購設計
                       </p>
                       <p className="text-[15px] text-white/80 mb-1">5 台以上（診所、企業總部、連鎖門市）</p>
-                      <a href={consultMail("申請多據點評估與報價")} className="text-[13.5px] text-white/45 hover:text-[#E8B339] transition-colors duration-200">依據點規模提供團體優惠與彈性合約，洽 support@arton.tw</a>
+                      <a href={consultMail("申請多據點評估與報價")} className="text-[13.5px] text-white/45 hover:text-[#E8B339] transition-colors duration-200">依據點規模提供團體優惠與彈性合約，洽 {LINKS.emailDisplay}</a>
                     </div>
                     <ul className="space-y-3 mb-9">
                       <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">
