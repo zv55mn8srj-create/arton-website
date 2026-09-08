@@ -2569,3 +2569,13 @@ SEO 決策：上傳後應確認 `/robots.txt`、`/sitemap.xml`、首頁 title、
 - [ ] 更新第 8 頁規格說明，加入縮圖與清楚標籤
 - [ ] 重新生成或更新全中文講稿
 - [ ] 呈現簡報並確認縮圖不影響文字可讀性
+
+
+## LINE QR Code 更換與重新打包
+
+- [ ] 將使用者提供的新 LINE QR Code 複製到網站資產位置並上傳至 WebDev 靜態資產
+- [ ] 更新 Footer、FAQ 與其他網站元件中的 QR Code 引用
+- [ ] 執行檢查與 production build
+- [ ] 驗證網站中的新 QR Code 與 B2B 方案隱藏狀態
+- [ ] 重新打包完整 React + Vite 原始碼、圖片與 dist
+- [ ] 交付新版 ZIP 與部署說明
