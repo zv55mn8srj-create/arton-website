@@ -2579,3 +2579,14 @@ SEO 決策：上傳後應確認 `/robots.txt`、`/sitemap.xml`、首頁 title、
 - [ ] 驗證網站中的新 QR Code 與 B2B 方案隱藏狀態
 - [ ] 重新打包完整 React + Vite 原始碼、圖片與 dist
 - [ ] 交付新版 ZIP 與部署說明
+
+
+## SPA 子路由 404 修復與重新打包
+
+- [ ] 檢查 `/b2b`、`/curator` 與 `/start` 的路由及 Vite production 輸出
+- [ ] 在 `dist/public/` 加入 Apache SPA fallback 設定與必要的部署備援檔
+- [ ] 更新繁體中文 FileZilla 部署說明，明確標示上傳 `.htaccess` 與根目錄檔案
+- [ ] 重新執行 TypeScript check 與 production build
+- [ ] 驗證首頁、`/b2b`、`/curator`、`/start` 與資產路徑
+- [ ] 重新打包完整 React + Vite 原始碼、dist、圖片與 sample-artwork-reference
+- [ ] 交付新版 ZIP 與部署步驟

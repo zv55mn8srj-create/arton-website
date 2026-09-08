@@ -1,0 +1,12 @@
+# ArtON React SPA fallback for Apache hosting
+# Upload this hidden file to the same document root as index.html.
+Options -MultiViews
+RewriteEngine On
+
+# Keep real files and real directories (assets, images, favicon, etc.) untouched.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Let Wouter handle client-side routes such as /start, /b2b and /curator.
+RewriteRule ^ index.html [L]
