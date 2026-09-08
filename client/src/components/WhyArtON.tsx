@@ -53,7 +53,7 @@ export default function WhyArtON() {
               }`}
             >
               <img
-                src="/manus-storage/venue-office-digital_a460b0a5.png"
+                src="/assets/venue-office-digital_a460b0a5.png"
                 alt="企業空間中的 ArtON 電子畫框"
                 className="w-full h-52 md:h-64 object-cover"
               />

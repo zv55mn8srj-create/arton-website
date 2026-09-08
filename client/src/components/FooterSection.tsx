@@ -62,7 +62,7 @@ export default function FooterSection() {
             <div className="flex items-center gap-8">
               <div className="flex items-center h-12 py-2">
                 <img
-                  src="/manus-storage/arton-logo-white_9542d895.png"
+                  src="/assets/arton-logo-white_9542d895.png"
                   alt="ArtON — Turn Art ON"
                   className="h-full w-auto object-contain"
                 />

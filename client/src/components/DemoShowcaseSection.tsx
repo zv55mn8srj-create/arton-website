@@ -11,25 +11,25 @@ const scenes = [
   {
     name: "企業大廳",
     tag: "01 · 作品全圖 · 橫式",
-    image: "/manus-storage/demo-lobby-sunrise_85ece1de.png",
+    image: "/assets/demo-lobby-sunrise_85ece1de.png",
     caption: "日出晨曦橫式呈現，作品以完整構圖填滿大廳螢幕。",
   },
   {
     name: "會議室／洽談室",
     tag: "02 · 作者介紹 · 直式",
-    image: "/manus-storage/demo-meeting-author_d10ba69e.png",
+    image: "/assets/demo-meeting-author_d10ba69e.png",
     caption: "鄭美珠老師的創作故事與肖像，讓觀者認識作品背後的人。",
   },
   {
     name: "員工休憩區",
     tag: "03 · 作品介紹 · 橫式",
-    image: "/manus-storage/demo-lounge-koi_cc1b3b7b.png",
+    image: "/assets/demo-lounge-koi_cc1b3b7b.png",
     caption: "作品旁附上故事說明，每一幅畫都有自己的導覽。",
   },
   {
     name: "接待櫃檯／公共空間",
     tag: "04 · 作品全圖 · 直式",
-    image: "/manus-storage/demo-reception-flowers_0c36330d.png",
+    image: "/assets/demo-reception-flowers_0c36330d.png",
     caption: "直式螢幕以作品全圖呈現，成為空間裡最亮眼的風景。",
   },
 ];

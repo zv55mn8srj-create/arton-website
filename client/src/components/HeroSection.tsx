@@ -20,7 +20,7 @@ export default function HeroSection() {
       {/* Background — 電子畫框大廳場景，左側留白 */}
       <div className="absolute inset-0">
         <img
-          src="/manus-storage/hero-digital-frame-yellow_156c19d5.png"
+          src="/assets/hero-digital-frame-yellow_156c19d5.png"
           alt="ArtON 智慧藝術畫框展示空間"
           className="w-full h-full object-cover"
         />

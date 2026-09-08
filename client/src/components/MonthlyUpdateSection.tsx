@@ -12,7 +12,7 @@ const months = [
     en: "This Month",
     artist: "藝術家 · 鄭美珠",
     theme: "小光點畫廊策展 · 《花開時節與海與島》春季療癒展",
-    img: "/manus-storage/flowers-sea-square2_29d1e34e.jpg",
+    img: "/assets/flowers-sea-square2_29d1e34e.jpg",
   },
   {
     label: "下月",
@@ -20,7 +20,7 @@ const months = [
     badge: "9 月預告",
     artist: "《兩顆柿子》",
     theme: "溫暖水彩插畫 · 下月即將登場",
-    img: "/manus-storage/next-persimmon-painting_0c834f5b_50af0cfa.jpg",
+    img: "/assets/next-persimmon-painting_0c834f5b_50af0cfa.jpg",
   },
 ];
 

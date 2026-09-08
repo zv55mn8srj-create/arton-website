@@ -94,7 +94,7 @@ export default function Header() {
               未滾動時（深色 hero 底）：白色字版，黃圓保留
               滾動後（白色導覽列底）：原始深灰字版 */}
           <img
-            src={"/manus-storage/arton-logo-official_fa5df696_bb3c62fb.png"}
+            src={"/assets/arton-logo-official_fa5df696_bb3c62fb.png"}
             alt="ArtON — Turn Art ON"
             className="h-full w-auto object-contain transition-opacity duration-500"
           />

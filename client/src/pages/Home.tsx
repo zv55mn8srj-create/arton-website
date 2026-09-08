@@ -76,9 +76,9 @@ export default function Home() {
  * to avoid duplicating information across pages.
  */
 const FRAME_ARTWORKS = [
-  { src: "/manus-storage/koi-full_art_b670850f.jpg", alt: "鄭美珠作品《九鯉魚》作品全圖 — 藝術於空間中持續展示", name: "《九鯉魚》· 鄭美珠" },
-  { src: "/manus-storage/artwork-sunrise-morning_2007fa87.png", alt: "鄭美珠作品《日出晨曦》 — 每月更新的數位展覽內容", name: "《日出晨曦》· 鄭美珠" },
-  { src: "/manus-storage/artwork-summer-youth_2167bd53.png", alt: "鄭美珠作品《夏日之青春》 — 雲端策展每月輪替", name: "《夏日之青春》· 鄭美珠" },
+  { src: "/assets/koi-full_art_b670850f.jpg", alt: "鄭美珠作品《九鯉魚》作品全圖 — 藝術於空間中持續展示", name: "《九鯉魚》· 鄭美珠" },
+  { src: "/assets/artwork-sunrise-morning_2007fa87.png", alt: "鄭美珠作品《日出晨曦》 — 每月更新的數位展覽內容", name: "《日出晨曦》· 鄭美珠" },
+  { src: "/assets/artwork-summer-youth_2167bd53.png", alt: "鄭美珠作品《夏日之青春》 — 雲端策展每月輪替", name: "《夏日之青春》· 鄭美珠" },
 ];
 
 function PlansTeaserSection() {

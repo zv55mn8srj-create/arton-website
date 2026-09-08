@@ -54,7 +54,7 @@ export default function EnterpriseSection() {
 
         <figure className={`grid lg:grid-cols-12 items-stretch transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}>
           <div className="lg:col-span-5 relative min-h-[360px] lg:min-h-[650px] overflow-hidden">
-            <img src="/manus-storage/venue-office-digital_a460b0a5.png" alt="企業空間中的智慧藝術畫框展示" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="/assets/venue-office-digital_a460b0a5.png" alt="企業空間中的智慧藝術畫框展示" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/58 via-transparent to-transparent" />
             <figcaption className="absolute bottom-0 left-0 right-0 p-7 md:p-9 text-white">
               <span className="museum-label text-[#C98F0E]">Exhibition Site · Taipei</span>

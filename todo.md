@@ -2590,3 +2590,14 @@ SEO 決策：上傳後應確認 `/robots.txt`、`/sitemap.xml`、首頁 title、
 - [ ] 驗證首頁、`/b2b`、`/curator`、`/start` 與資產路徑
 - [ ] 重新打包完整 React + Vite 原始碼、dist、圖片與 sample-artwork-reference
 - [ ] 交付新版 ZIP 與部署步驟
+
+
+## 底圖與完整圖片資產修復
+
+- [ ] 盤點所有 CSS、inline style 與元件中的圖片來源
+- [ ] 找出仍依賴 `/manus-storage/` 或外部路徑而未隨 ZIP 部署的圖片
+- [ ] 將自行部署需要的底圖與網站圖片統一納入本地可部署資產
+- [ ] 修正建置後資產 URL 與 FileZilla 部署結構
+- [ ] 重新執行 TypeScript check 與 production build
+- [ ] 驗證首頁、/start、/b2b、/curator 的圖片與底圖
+- [ ] 打包完整 React + Vite 原始碼、dist、所有網站圖片與部署說明

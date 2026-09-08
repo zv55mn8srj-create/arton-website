@@ -77,7 +77,7 @@ export default function WhyCurator() {
             style={{ transitionDelay: "480ms" }}
           >
             <img
-              src="/manus-storage/curator-wall-scene_ad4739b6.png"
+              src="/assets/curator-wall-scene_ad4739b6.png"
               alt="策展人作品牆：多幅作品並陳的展示空間"
               className="w-full h-full object-cover aspect-[4/3]"
               loading="lazy"

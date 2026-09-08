@@ -5,7 +5,7 @@
  * 01 一面會呼吸的展牆 — 讓作品隨季節、心情與空間節奏自然更迭。
  * 02 為空間保留品味 — 極窄邊框與霧面顯示，作品安靜地融入日常。
  * 03 收藏，隨手啟動 — 從手機選擇作品，讓每一次切換都簡單自在。
- * 主圖：/manus-storage/wall-label-main-frame_29b103b3.jpg（直幅藍金電子畫框）
+ * 主圖：/assets/wall-label-main-frame_29b103b3_c7a949c0.jpg（直幅藍金電子畫框）
  */
 import GalleryHeading from "./GalleryHeading";
 import { LINKS } from "@/lib/links";
@@ -45,7 +45,7 @@ export default function CuratorSection() {
             <div className="relative max-w-md mx-auto lg:mx-0">
               <div className="absolute -inset-3 border border-[#16203B]/10" aria-hidden="true" />
               <img
-                src="/manus-storage/wall-label-main-frame_29b103b3_c7a949c0.jpg"
+                src="/assets/wall-label-main-frame_29b103b3_c7a949c0.jpg"
                 alt="ArtON 智慧藝術畫框：極窄邊框與霧面顯示，作品安靜地融入日常"
                 className="relative w-full object-cover shadow-[0_24px_70px_rgba(22,32,59,0.18)]"
               />

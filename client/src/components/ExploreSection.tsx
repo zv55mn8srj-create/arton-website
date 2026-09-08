@@ -17,7 +17,7 @@ const exhibitions = [
   { 
     title: "九鯉魚", 
     tag: "本月主打", 
-    image: "/manus-storage/koi-square_a0f0802a.jpg", 
+    image: "/assets/koi-square_a0f0802a.jpg", 
     artist: "藝術家 · 鄭美珠", 
     gallery: "小光點畫廊策展",
     categories: ["style-oriental", "esg-inclusive"],
@@ -35,7 +35,7 @@ const exhibitions = [
   { 
     title: "身心障礙藝術展", 
     tag: "Together", 
-    image: "/manus-storage/happiness-square_5f481689.jpg", 
+    image: "/assets/happiness-square_5f481689.jpg", 
     artist: "藝術家 · 鄭美珠", 
     gallery: "小光點畫廊策展 · 《真的幸福了》",
     categories: ["style-healing", "esg-inclusive"],
@@ -62,7 +62,7 @@ const exhibitions = [
   { 
     title: "春季療癒展", 
     tag: "春季策展", 
-    image: "/manus-storage/summer-youth-square_be39c0c7.jpg", 
+    image: "/assets/summer-youth-square_be39c0c7.jpg", 
     artist: "藝術家 · 鄭美珠", 
     gallery: "小光點畫廊策展",
     categories: ["style-healing", "esg-inclusive"],

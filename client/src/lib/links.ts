@@ -11,7 +11,7 @@ export const LINKS = {
   phoneDisplay: "0975-678-388",
   customerLine: "https://lin.ee/yEZxsB3",
   curatorLine: "https://lin.ee/7dr8uq4",
-  lineQr: "/manus-storage/artonline-line-qr-new_e5c21675.png",
+  lineQr: "/assets/artonline-line-qr-new_e5c21675.png",
 };
 
 /**
