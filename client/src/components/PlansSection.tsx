@@ -206,16 +206,19 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
                   <th className="w-[27.3%] border-l border-[#E2DCCF] px-6 py-6 text-left align-top">
                     <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C98F0E]">ARTON BOX</p>
                     <p className="text-[21px] font-normal leading-[1.35] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>ArtON Box</p>
+                    <span className="inline-flex mt-3 border border-[#1C1C1E]/18 px-2.5 py-1 text-[10px] tracking-[0.08em] text-[#1C1C1E]/60">適合：家庭／商用</span>
                     <p className="mt-4 text-[#1C1C1E]"><span className="text-[12px] text-[#C98F0E]">NT$</span><span className="mx-1 text-[32px] font-light leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>2,990</span><span className="text-[12px] text-[#1C1C1E]/50">／一次買斷</span></p>
                   </th>
                   <th className="w-[27.3%] border-l border-[#E2DCCF] px-6 py-6 text-left align-top">
                     <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C98F0E]">ART FRAME</p>
                     <p className="text-[21px] font-normal leading-[1.35] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>21 吋藝術框</p>
+                    <span className="inline-flex mt-3 border border-[#1C1C1E]/18 px-2.5 py-1 text-[10px] tracking-[0.08em] text-[#1C1C1E]/60">適合：家庭／商用</span>
                     <p className="mt-4 text-[#1C1C1E]"><span className="text-[12px] text-[#C98F0E]">NT$</span><span className="mx-1 text-[32px] font-light leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>13,900</span><span className="text-[12px] text-[#1C1C1E]/50">／一次買斷</span></p>
                   </th>
                   <th className="w-[27.3%] border-l border-[#E2DCCF] px-6 py-6 text-left align-top">
                     <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C98F0E]">E-PAPER</p>
                     <p className="text-[21px] font-normal leading-[1.35] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>全彩電子紙</p>
+                    <span className="inline-flex mt-3 border border-[#1C1C1E]/18 px-2.5 py-1 text-[10px] tracking-[0.08em] text-[#1C1C1E]/60">適合：商用／ESG 優先</span>
                     <p className="mt-4 text-[24px] font-light leading-none text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>專案報價</p>
                   </th>
                 </tr>
