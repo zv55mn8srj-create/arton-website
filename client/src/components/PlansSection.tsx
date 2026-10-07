@@ -79,8 +79,8 @@ const hardwarePlans: HardwarePlan[] = [
     title: "ArtON Box 藝術盒",
     subtitle: "輕巧易安裝，接上你現有的螢幕即可開始展示藝術作品。適合已經有自己螢幕的空間。",
     price: "NT$2,990",
-    priceNote: "一次購買",
-    highlight: "ArtON Box｜一次買斷",
+    priceNote: "設備售價",
+    highlight: "ArtON Box｜設備售價",
     features: ["隨插即用，支援 HDMI 輸出", "雲端排程與自動更新展覽", "穩定流暢，適合企業與診所"],
     cta: "諮詢專屬播放器",
   },
@@ -207,13 +207,13 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
                     <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C98F0E]">ARTON BOX</p>
                     <p className="text-[21px] font-normal leading-[1.35] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>ArtON Box</p>
                     <span className="inline-flex mt-3 border border-[#1C1C1E]/18 px-2.5 py-1 text-[10px] tracking-[0.08em] text-[#1C1C1E]/60">適合：家庭／商用</span>
-                    <p className="mt-4 text-[#1C1C1E]"><span className="text-[12px] text-[#C98F0E]">NT$</span><span className="mx-1 text-[32px] font-light leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>2,990</span><span className="text-[12px] text-[#1C1C1E]/50">／一次買斷</span></p>
+                    <p className="mt-4 text-[#1C1C1E]"><span className="text-[12px] text-[#C98F0E]">NT$</span><span className="mx-1 text-[32px] font-light leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>2,990</span><span className="text-[12px] text-[#1C1C1E]/50"></span></p>
                   </th>
                   <th className="w-[27.3%] border-l border-[#E2DCCF] px-6 py-6 text-left align-top">
                     <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C98F0E]">ART FRAME</p>
                     <p className="text-[21px] font-normal leading-[1.35] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>21 吋藝術框</p>
                     <span className="inline-flex mt-3 border border-[#1C1C1E]/18 px-2.5 py-1 text-[10px] tracking-[0.08em] text-[#1C1C1E]/60">適合：家庭／商用</span>
-                    <p className="mt-4 text-[#1C1C1E]"><span className="text-[12px] text-[#C98F0E]">NT$</span><span className="mx-1 text-[32px] font-light leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>13,900</span><span className="text-[12px] text-[#1C1C1E]/50">／一次買斷</span></p>
+                    <p className="mt-4 text-[#1C1C1E]"><span className="text-[12px] text-[#C98F0E]">NT$</span><span className="mx-1 text-[32px] font-light leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>13,900</span><span className="text-[12px] text-[#1C1C1E]/50"></span></p>
                   </th>
                   <th className="w-[27.3%] border-l border-[#E2DCCF] px-6 py-6 text-left align-top">
                     <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C98F0E]">E-PAPER</p>
@@ -228,7 +228,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
                   ["是否需要自備螢幕", "需要；接上既有螢幕", "不需要；設備含藝術框與顯示面板", "不需要；設備含全彩電子紙面板"],
                   ["適合情境", "已有螢幕，想快速開始展示", "想要完整藝術框與一體化展示", "想強化 ESG 節能與低耗電展示"],
                   ["搭配授權", "ArtON Home／Commercial", "ArtON Home／Commercial", "ArtON Commercial／專案配置"],
-                  ["設備形式", "播放器／訊號盒，一次買斷", "21 吋藝術展示面板，一次買斷", "尺寸依空間需求配置，一次買斷"],
+                  ["設備形式", "播放器／訊號盒，設備售價另列", "21 吋藝術展示面板，設備售價另列", "尺寸依空間需求配置，依專案報價"],
                   ["ESG 相關", "依訂閱方案提供展示紀錄", "依訂閱方案提供展示紀錄", "可另行加購 Impact Tracking，提供節能與展示佐證"],
                 ].map(([label, ...values]) => (
                   <tr key={label} className="border-t border-[#EAE5DC] align-top">
@@ -239,7 +239,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
               </tbody>
             </table>
           </div>
-          <p className="mt-5 text-center text-[12px] leading-[1.8] text-[#1C1C1E]/45">設備採一次買斷，不提供租賃；全彩電子紙價格依尺寸、數量與場域條件由 ArtON 提供專案報價。</p>
+          <p className="mt-5 text-center text-[12px] leading-[1.8] text-[#1C1C1E]/45">設備採購與內容訂閱分開；全彩電子紙價格依尺寸、數量與場域條件由 ArtON 提供專案報價。</p>
         </div>
 
         {/* Hardware — three devices together (hidden when hideHardware is true) */}
