@@ -39,7 +39,7 @@ interface BundledPlan {
 
 const bundledPlans: BundledPlan[] = [
   {
-    name: "ArtON Commercial",
+    name: "ArtON Commercial｜商用方案",
     price: "999",
     period: "/月",
     term: "商業／公開空間",
@@ -49,7 +49,7 @@ const bundledPlans: BundledPlan[] = [
     cta: "加入 LINE 開始訂閱",
   },
   {
-    name: "ArtON Home",
+    name: "ArtON Home｜家庭方案",
     price: "699",
     period: "/月",
     term: "私人住宅",
@@ -57,8 +57,7 @@ const bundledPlans: BundledPlan[] = [
     note: "適用於自宅客廳、房間、書房與其他私人住宅空間。",
     features: ["私人住宅內的非商業展示授權", "博物館級色彩校準", "每月策展內容自動更新", "展示內容每月更新"],
     cta: "加入 LINE 開始訂閱",
-    recommended: true,
-    badge: "質感首選",
+    recommended: false,
   },
 ];
 
@@ -151,14 +150,14 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
               <p className="mt-8 text-[13px] text-white/40">後續管理，也都在 LINE 完成。</p>
             </div>
 
-            {/* Right — entry tier: One Minute Art NT$199/mo, then Home NT$699 */}
+            {/* Right — One Minute Art without a panel, then Home family license */}
             <div className="lg:col-span-5 bg-[#F6F2E9] p-10 md:p-12 lg:p-12 flex flex-col">
               {/* Entry plan — One Minute Art */}
               <div className="border-b border-[#1C1C1E]/10 pb-8 mb-9">
-                <p className="text-[11px] uppercase tracking-[0.3em] text-[#C98F0E] mb-4 font-semibold">ENTRY PLAN · 入門支持</p>
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#C98F0E] mb-4 font-semibold">ONE MINUTE ART · 無面板內容訂閱</p>
                 <div className="flex items-start justify-between gap-4 mb-4">
                   <h4 className="text-[23px] md:text-[26px] font-normal text-[#1C1C1E] leading-[1.3]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                    一分鐘藝術
+                    一分鐘藝術｜無面板方案
                   </h4>
                   <p className="text-right shrink-0">
                     <span className="text-[12px] text-[#C98F0E] mr-1">NT$</span>
@@ -167,7 +166,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
                   </p>
                 </div>
                 <p className="text-[13px] leading-[1.85] text-[#1C1C1E]/70 mb-4">
-                  不需要播放器。每月一份作品與約一分鐘的內容介紹，按月送達——支持藝術創作，也可以很輕。
+                  這是一種不需要面板、也不需要播放器的內容訂閱。每月收到一件作品與約一分鐘的藝術內容，支持藝術創作，也可以很輕。
                 </p>
                 <ul className="space-y-2.5 mb-5">
                   {["每月一件藝術作品", "一分鐘創作故事與展覽內容", "每月收到新的藝術內容"].map((f) => (
@@ -187,10 +186,10 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
                 </a>
               </div>
 
-              <p className="text-[11px] uppercase tracking-[0.3em] text-[#C98F0E] mb-5 font-semibold">ARTON HOME</p>
+              <p className="text-[11px] uppercase tracking-[0.3em] text-[#C98F0E] mb-5 font-semibold">ARTON HOME · 家庭授權</p>
               <div className="flex items-start justify-between gap-4 mb-6">
                 <h4 className="text-[27px] md:text-[30px] font-normal text-[#1C1C1E] leading-[1.3]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                  ArtON 支持夥伴
+                  家庭展示方案
                 </h4>
                 <p className="text-right shrink-0">
                   <span className="text-[13px] text-[#C98F0E] mr-1">NT$</span>
@@ -204,7 +203,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
               </div>
 
               <p className="text-[14px] leading-[1.9] text-[#1C1C1E]/70 mb-8">
-                與 ArtON 一起，讓藝術持續走進你的空間，每一次訂閱都是實質的支持。
+                適用於私人住宅的家庭授權。讓藝術持續走進客廳、房間與書房；本方案不適用於商業或公開空間。
               </p>
 
               <ul className="space-y-3.5 mb-10 flex-1">
@@ -229,10 +228,10 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
           </div>
         </div>
 
-        {/* Standard subscription plans — Home / Commercial */}
+        {/* Standard licenses — Home family / Commercial business */}
         <div className="mt-16 md:mt-20">
           <p className="text-center text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-8">
-            Standard Plans · 住宅與商業展示方案
+            Standard Licenses · 家庭與商用授權
           </p>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
             {bundledPlans.map((plan, index) => (

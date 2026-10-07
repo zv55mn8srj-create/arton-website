@@ -20,39 +20,34 @@ const FOUNDING_ART = "/assets/founding-art_d2e8df21.jpg";
 
 const planComparison = [
   {
-    category: "月費",
-    general: "ArtON Home｜NT$699／月",
-    bundle: "ArtON Commercial｜NT$999／月",
+    category: "方案價格",
+    home: "NT$699／月",
+    commercial: "NT$999／月",
   },
   {
-    category: "硬體取得方式",
-    general: "私人住宅內的非商業展示授權",
-    bundle: "商業／公開空間的展示授權，設備另行買斷",
+    category: "授權類型",
+    home: "家庭授權｜僅限私人住宅、非商業使用",
+    commercial: "商用授權｜企業、診所、飯店、店家與公開空間",
   },
   {
-    category: "前期投入",
-    general: "適用於自宅客廳、房間與其他私人住宅空間",
-    bundle: "適用於企業、診所、飯店、店家與其他公開空間",
+    category: "展示設備",
+    home: "不含面板；可搭配自有設備，設備另行買斷",
+    commercial: "不含面板；可搭配自有設備，設備另行買斷或專案配置",
   },
   {
-    category: "策展內容更新",
-    general: "每月自動更新",
-    bundle: "每月自動更新",
+    category: "策展內容",
+    home: "每月更新的藝術策展",
+    commercial: "每月更新的藝術策展",
   },
   {
-    category: "雲端管理與展示紀錄",
-    general: "✓ 含",
-    bundle: "✓ 含",
-  },
-  {
-    category: "ESG 成果紀錄",
-    general: "✓ 含",
-    bundle: "✓ 含",
+    category: "展示紀錄",
+    home: "提供一般展示紀錄",
+    commercial: "提供展示與藝術支持佐證數據",
   },
   {
     category: "適合對象",
-    general: "已備有顯示設備、想自行管理硬體",
-    bundle: "無現成螢幕、不想花大錢採購的企業",
+    home: "家庭客廳、房間、書房與私人住宅",
+    commercial: "公司、診所、飯店、店家與其他商業／公開空間",
   },
 ];
 
@@ -97,7 +92,7 @@ export default function StartPage() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
               >
-                Enterprise Consultation · 開始展示
+                Choose Your ArtON Plan · 選擇展示方案
               </p>
               <h1
                 className={`text-[clamp(2.6rem,5.2vw,4.8rem)] leading-[1.12] font-light tracking-[-0.04em] mb-8 transition-all duration-700 delay-100 ${
@@ -116,7 +111,7 @@ export default function StartPage() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
               >
-                每一次展示，不只是美化空間，更是企業最直觀的永續行動與創作者的持續收入。無論單一據點還是多據點規劃，我們都會依空間條件一起完成。
+                從家庭日常到商業空間，選擇適合的 ArtON 授權方案，讓藝術內容持續走進你的生活與展示場域。
               </p>
               <a
                 href={LINKS.customerLine}
@@ -236,7 +231,7 @@ export default function StartPage() {
               清楚的授權，<br className="hidden sm:block" />從適合你的空間開始。
             </h2>
             <p className="text-[14px] text-center text-[#45423C] max-w-xl mx-auto mb-14 leading-[1.9]">
-              Home 與 Commercial 依展示場景區分；ArtON Box、藝術畫框與其他展示設備皆採買斷或專案報價。
+              一分鐘藝術是「無面板」的內容訂閱；Home 與 Commercial 則是不同使用場景的展示授權，設備皆另行買斷或專案配置。
             </p>
             <div className="max-w-3xl mx-auto overflow-hidden bg-white shadow-[0_10px_40px_rgba(28,28,30,0.06)]">
               <div className="overflow-x-auto">
@@ -244,16 +239,16 @@ export default function StartPage() {
                   <thead>
                     <tr className="border-b border-[#1C1C1E]/10">
                       <th className="text-left py-5 px-6 md:px-8 font-medium text-[#1C1C1E]/50 w-[28%]">比較項目</th>
-                      <th className="text-left py-5 px-6 md:px-8 font-medium text-[#1C1C1E]">一般訂閱</th>
-                      <th className="text-left py-5 px-6 md:px-8 font-semibold text-[#C98F0E] bg-[#F5B300]/6">ArtON Commercial<br /><span className="text-[11px] font-normal text-[#1C1C1E]/50">商業／公開空間</span></th>
+                      <th className="text-left py-5 px-6 md:px-8 font-semibold text-[#1C1C1E]">ArtON Home<br /><span className="text-[11px] font-normal text-[#1C1C1E]/55">家庭授權</span></th>
+                      <th className="text-left py-5 px-6 md:px-8 font-semibold text-[#1C1C1E]">ArtON Commercial<br /><span className="text-[11px] font-normal text-[#1C1C1E]/55">商用授權</span></th>
                     </tr>
                   </thead>
                   <tbody>
                     {planComparison.map((row) => (
                       <tr key={row.category} className="border-b border-[#1C1C1E]/6 last:border-0 align-top">
                         <td className="py-4.5 px-6 md:px-8 text-[#1C1C1E]/60">{row.category}</td>
-                        <td className="py-4.5 px-6 md:px-8 text-[#45423C] leading-[1.8]">{row.general}</td>
-                        <td className="py-4.5 px-6 md:px-8 text-[#1C1C1E] leading-[1.8] bg-[#F5B300]/6">{row.bundle}</td>
+                        <td className="py-4.5 px-6 md:px-8 text-[#45423C] leading-[1.8]">{row.home}</td>
+                        <td className="py-4.5 px-6 md:px-8 text-[#45423C] leading-[1.8]">{row.commercial}</td>
                       </tr>
                     ))}
                   </tbody>
