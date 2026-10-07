@@ -9,10 +9,10 @@ import { CalendarDays, FileText, MapPin, Users } from "lucide-react";
 const keywords = ["藝術展示", "空間美學", "企業文化", "ESG"];
 
 const statistics = [
-  { label: "展示據點", value: "12", icon: MapPin },
-  { label: "展示策展", value: "08", icon: CalendarDays },
-  { label: "支持創作者", value: "24", icon: Users },
-  { label: "展示天數", value: "365", icon: FileText },
+  { label: "展示據點", value: "可查閱", icon: MapPin },
+  { label: "展示策展", value: "可查閱", icon: CalendarDays },
+  { label: "支持創作者", value: "依紀錄", icon: Users },
+  { label: "展示天數", value: "依期間", icon: FileText },
 ];
 
 export default function EnterpriseSection() {
@@ -75,7 +75,7 @@ export default function EnterpriseSection() {
             </div>
             <p className="text-[11px] text-[#2D5A3D] font-medium pt-4 flex items-center gap-2">
               <PowerGlyph className="w-3.5 h-3.5 text-[#2D5A3D]" />
-              提供完整的數據存證與認證憑證，方便企業年度申報。
+              提供展示與藝術支持的佐證數據，協助企業整理文化參與、共融支持與永續行動素材。
             </p>
 
             <div className="grid grid-cols-2 gap-x-7 gap-y-8 py-8 border-b border-[#EAE5DC]">
@@ -105,10 +105,10 @@ export default function EnterpriseSection() {
                 </div>
               </div>
               <div className="space-y-5">
-                {[{ label: "文化支持", value: 92 }, { label: "社區參與", value: 78 }, { label: "藝術教育", value: 85 }].map(({ label, value }) => (
+                {["展示期間", "展示作品", "支持創作者"].map((label) => (
                   <div key={label}>
-                    <div className="flex justify-between mb-2 text-[11px]"><span className="text-[#1C1C1E]/48">{label}</span><span className="text-[#F5B300]">{value}%</span></div>
-                    <div className="h-px bg-[#EAE5DC]"><div className="h-px bg-[#F5B300]" style={{ width: `${value}%` }} /></div>
+                    <div className="flex justify-between mb-2 text-[11px]"><span className="text-[#1C1C1E]/48">{label}</span><span className="text-[#F5B300]">可查閱</span></div>
+                    <div className="h-px bg-[#EAE5DC]"><div className="h-px bg-[#F5B300] w-2/3" /></div>
                   </div>
                 ))}
                 <button className="w-full mt-2 text-left text-[12px] text-[#1C1C1E]/65 border-t border-[#EAE5DC] pt-4 flex items-center justify-between">

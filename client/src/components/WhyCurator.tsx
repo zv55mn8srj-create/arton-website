@@ -15,7 +15,7 @@ const beliefs = [
   {
     en: "Sustainability",
     title: "讓策展成為可以依靠的事業",
-    description: "你策的展可以自行定價後上架，訂閱越多、展示越久，收益越穩定。",
+    description: "公開策展由 ArtON 依展示場景統一設定訂閱價格，訂閱與展示紀錄依合作約定計算內容權利金。",
   },
   {
     en: "Beyond",

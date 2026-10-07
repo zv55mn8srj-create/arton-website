@@ -39,23 +39,23 @@ interface BundledPlan {
 
 const bundledPlans: BundledPlan[] = [
   {
-    name: "無痛體驗方案",
+    name: "ArtON Commercial",
     price: "999",
     period: "/月",
-    term: "綁約 1 年",
-    device: "直接送 ArtON Box 藝術盒",
-    note: "隨插即用，退訂收回裝置。月租低負擔、免大額採購，讓藝術展示輕鬆落地。",
-    features: ["ArtON Box 藝術盒（含於月費）", "搭配自備螢幕即可展示", "每月策展內容自動更新", "雲端管理與年度 ESG 報告"],
+    term: "商業／公開空間",
+    device: "設備另行買斷或專案配置",
+    note: "適用於公司、診所、飯店、店家與其他商業或公開空間。",
+    features: ["ArtON 合法展示授權", "搭配自備螢幕即可展示", "每月策展內容自動更新", "展示與藝術支持佐證數據"],
     cta: "加入 LINE 開始訂閱",
   },
   {
-    name: "全包輕量面板方案",
-    price: "1,499",
+    name: "ArtON Home",
+    price: "699",
     period: "/月",
-    term: "綁約 2 年",
-    device: "附贈 21.5 吋高質感藝術面板",
-    note: "一體到位、質感首選，霧面抗眩光如同真實畫布。",
-    features: ["21.5 吋高質感藝術面板（含於月費）", "博物館級色彩校準", "每月策展內容自動更新", "雲端管理與年度 ESG 報告匯出"],
+    term: "私人住宅",
+    device: "設備另行買斷或專案配置",
+    note: "適用於自宅客廳、房間、書房與其他私人住宅空間。",
+    features: ["私人住宅內的非商業展示授權", "博物館級色彩校準", "每月策展內容自動更新", "展示內容每月更新"],
     cta: "加入 LINE 開始訂閱",
     recommended: true,
     badge: "質感首選",
@@ -67,9 +67,9 @@ const hardwarePlans: HardwarePlan[] = [
     icon: Smartphone,
     title: "ArtON Box 藝術盒",
     subtitle: "輕巧易安裝，接上你現有的螢幕即可開始展示藝術作品。適合已經有自己螢幕的空間。",
-    price: "NT$2,200",
+    price: "NT$2,990",
     priceNote: "一次購買",
-    highlight: "或租用 NT$220／月（12 個月方案）",
+    highlight: "ArtON Box｜一次買斷",
     features: ["隨插即用，支援 HDMI 輸出", "雲端排程與自動更新展覽", "穩定流暢，適合企業與診所"],
     cta: "諮詢專屬播放器",
   },
@@ -86,7 +86,7 @@ const hardwarePlans: HardwarePlan[] = [
   {
     icon: Sun,
     title: "ArtON 真全彩電子紙展示",
-    subtitle: "1677 萬真全彩｜省電 99%｜年減碳約 227 kg。",
+    subtitle: "1677 萬真全彩｜依空間需求專案配置。",
     highlight: "環保首選",
     highlightNote: "多種尺寸｜依需求配置，提供專人規劃與報價",
     features: ["採用全反射電子紙顯示技術", "忠實呈現藝術作品色彩，長時間顯示舒適省電", "最適合藝術展示、企業 ESG 與公共空間"],
@@ -120,7 +120,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
           />
         </div>
 
-        {/* Subscription — ArtON Supporter, 799/mo, with artwork photo */}
+        {/* Subscription — Home and Commercial */}
         <div
           className={`relative max-w-6xl mx-auto rounded-[2rem] overflow-hidden shadow-[0_40px_100px_rgba(44,37,27,0.16)] transition-all duration-700 delay-100 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -151,7 +151,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
               <p className="mt-8 text-[13px] text-white/40">後續管理，也都在 LINE 完成。</p>
             </div>
 
-            {/* Right — entry tier: One Minute Art NT$199/mo, then BASIC PLAN 799 */}
+            {/* Right — entry tier: One Minute Art NT$199/mo, then Home NT$699 */}
             <div className="lg:col-span-5 bg-[#F6F2E9] p-10 md:p-12 lg:p-12 flex flex-col">
               {/* Entry plan — One Minute Art */}
               <div className="border-b border-[#1C1C1E]/10 pb-8 mb-9">
@@ -187,14 +187,14 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
                 </a>
               </div>
 
-              <p className="text-[11px] uppercase tracking-[0.3em] text-[#C98F0E] mb-5 font-semibold">BASIC PLAN</p>
+              <p className="text-[11px] uppercase tracking-[0.3em] text-[#C98F0E] mb-5 font-semibold">ARTON HOME</p>
               <div className="flex items-start justify-between gap-4 mb-6">
                 <h4 className="text-[27px] md:text-[30px] font-normal text-[#1C1C1E] leading-[1.3]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                   ArtON 支持夥伴
                 </h4>
                 <p className="text-right shrink-0">
                   <span className="text-[13px] text-[#C98F0E] mr-1">NT$</span>
-                  <span className="text-[clamp(2.9rem,4.2vw,3.8rem)] leading-none font-light text-[#C98F0E]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>799</span>
+                  <span className="text-[clamp(2.9rem,4.2vw,3.8rem)] leading-none font-light text-[#C98F0E]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>699</span>
                   <span className="text-[13px] text-[#1C1C1E]/45 ml-1">／月起</span>
                 </p>
               </div>
@@ -229,10 +229,10 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
           </div>
         </div>
 
-        {/* Bundled plans — hardware-as-a-service */}
+        {/* Standard subscription plans — Home / Commercial */}
         <div className="mt-16 md:mt-20">
           <p className="text-center text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-8">
-            Bundled Plans · 以租代買組合包
+            Standard Plans · 住宅與商業展示方案
           </p>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
             {bundledPlans.map((plan, index) => (
@@ -371,7 +371,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
 
         {!hideHardware && (
         <p className={`mt-14 md:mt-16 text-center text-[12.5px] text-[#1C1C1E]/40 tracking-[0.02em] transition-all duration-700 delay-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-          所有裝置皆搭配 ArtON 訂閱服務，每月策展內容自動更新，讓展示持續發生。
+          所有設備皆採買斷或專案報價；藝術內容依 Home 或 Commercial 訂閱方案提供，每月策展內容更新。
         </p>
         )}
       </div>

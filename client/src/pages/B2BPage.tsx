@@ -20,8 +20,8 @@ const highlights = [
   },
   {
     icon: FileOutput,
-    title: "一鍵匯出 ESG 報告",
-    description: "支持創作者數量、展示天數與年度展示紀錄，直接匯出成可放入企業永續報告書的格式。",
+    title: "可查閱的支持佐證",
+    description: "展示據點、展示天數、展示作品數與支持創作者數等資料可查閱，協助企業整理永續行動素材。",
   },
   {
     icon: Landmark,
@@ -38,7 +38,7 @@ const highlights = [
 const painSolutions = [
   { pain: "每年都要重新找 ESG 活動", solution: "一次策展，全年 365 天持續展示" },
   { pain: "活動結束就沒有成果", solution: "展示天數、據點與創作者支持紀錄可匯出" },
-  { pain: "難以向董事會證明 ESG 價值", solution: "年度 ESG 成果報告與數據存證憑證" },
+  { pain: "難以向董事會證明 ESG 價值", solution: "展示與藝術支持佐證數據可查閱" },
   { pain: "多據點管理成本高", solution: "雲端排程，所有空間統一更新" },
 ];
 
@@ -52,7 +52,7 @@ const plans = [
       "自備螢幕即可展示",
       "每月策展內容自動更新",
       "雲端管理與展示紀錄",
-      "年度 ESG 成果報告（OPTION · 加價購）",
+      "展示與藝術支持佐證數據",
       "支援身心障礙創作者持續收入",
     ],
     price: "NT$999",
@@ -71,10 +71,10 @@ const plans = [
       "霧面抗眩光、木質外框展牆質感",
       "每月策展內容自動更新",
       "雲端管理與展示紀錄",
-      "年度 ESG 成果報告（OPTION · 加價購）",
+      "展示與藝術支持佐證數據",
       "支援身心障礙創作者持續收入",
     ],
-    price: "NT$1,499",
+    price: "NT$999",
     per: "/月",
     note: "隨方案送面板，免去採購與校準成本。",
     cta: "加入 LINE 諮詢方案",
@@ -116,7 +116,7 @@ const epaperPlan = {
   badge: "E 加分項",
   badgeNote: "多種尺寸｜依需求配置｜洽 ",
   quote: "高質感顯示，讓 ESG 的 E 與 S 同時被記錄",
-  features: ["在任一訂閱方案基礎上，升級電子紙顯示終端", "較傳統液晶省電約 99%，一年省電 446 度、減碳 227 kg", "忠實呈現藝術作品色彩，長時間顯示舒適護眼", "減碳量計入年度 ESG 成果報告"],
+  features: ["在任一訂閱方案基礎上，升級電子紙顯示終端", "較傳統液晶省電約 99%，一年省電 446 度、減碳 227 kg", "忠實呈現藝術作品色彩，長時間顯示舒適護眼", "提供電子紙配置與節能估算佐證"],
 };
 
 export default function B2BPage() {
@@ -171,7 +171,7 @@ export default function B2BPage() {
                   className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#E8B339] text-[#16202B] text-[15px] font-semibold rounded-full hover:bg-[#F0B429] transition-all duration-300 active:scale-[0.97]"
                 >
                   <MessageCircle className="w-4.5 h-4.5" strokeWidth={2} />
-                  加入 LINE 免費諮詢
+                  加入 LINE 諮詢方案
                 </a>
                 <a
                   href="/start"
@@ -217,7 +217,7 @@ export default function B2BPage() {
               ))}
             </div>
             <p className="mt-12 text-center text-[12px] text-[#1C1C1E]/40">
-              年度 ESG 成果報告提供完整數據存證與認證憑證，方便企業年度申報。
+              ArtON 提供展示與藝術支持的佐證數據；資料可作為企業整理永續行動素材的依據，不等同第三方 ESG 認證或法定申報。
             </p>
           </div>
         </section>
@@ -234,7 +234,7 @@ export default function B2BPage() {
                   比起傳統液晶螢幕，電子紙只在換畫時耗電，省電高達 <span className="text-[#E8B339] font-semibold">99%</span>。一年幫企業省下約 <span className="text-[#E8B339] font-semibold">446 度電</span>（相當於減少約 <span className="text-[#E8B339] font-semibold">227 kg CO₂</span>），是 ESG 中 <span className="text-[#E8B339] font-semibold">E（環境減碳）</span> 的升級選項。
                 </p>
                 <p className="text-white/60 text-[13.5px] leading-[2] mt-6 max-w-2xl">
-                  而支持身心障礙創作者的 <span className="text-white/82">S（社會共融）</span>，每個訂閱方案都已包含。電子紙讓 E 與 S 同時被記錄——環境減碳與支持身心障礙創作者，一個展示空間同時完成。
+                  而支持身心障礙創作者的 <span className="text-white/82">S（社會共融）</span>，符合 ESG 標示的內容可依策展選擇；電子紙則提供節能估算與配置佐證，實際數據依設備與場域條件調整——環境減碳與支持身心障礙創作者，一個展示空間同時完成。
                 </p>
               </div>
               <div className="lg:col-span-5 grid grid-cols-3 gap-4">
@@ -282,12 +282,12 @@ export default function B2BPage() {
         <section className="py-24 md:py-32 bg-[#FBFAF7]">
           <div className="container">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-14 text-center">
-              B2B Plans · 訂閱即每天做 ESG
+              B2B Plans · 訂閱即持續累積支持佐證
             </p>
             <p className={`max-w-2xl mx-auto text-center text-[15px] md:text-[16.5px] leading-[2] text-[#45423C] mb-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              選擇任一訂閱方案，您的企業每天就在展示藝術、支持身心障礙創作者，並累積可匯出的 ESG 成果紀錄；想進一步減碳，可升級電子紙方案。
+              選擇任一訂閱方案，您的企業每天就在展示藝術、支持身心障礙創作者，並累積可查閱的展示與藝術支持佐證數據；電子紙則可另行專案配置。
             </p>
-            {/* 訂閱方案：999／1499 — 企業日常 ESG 的基礎 (暫時隱藏) */}
+            {/* Standard Commercial：NT$999／月；此區塊目前保留為後續企業方案擴充 */}
             {/* 
             <div className="grid md:grid-cols-2 gap-7 max-w-4xl mx-auto">
               {plans.map((p, i) => (
@@ -471,7 +471,7 @@ export default function B2BPage() {
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="text-[#E8B339] font-semibold shrink-0">05</span>
-                        <span>年度 ESG 成果報告交付</span>
+                        <span>展示與藝術支持佐證資料整理</span>
                       </li>
                     </ul>
                     <p className="text-white/40 text-[11.5px] leading-[1.7] mt-6 pt-5 border-t border-white/10">
@@ -483,7 +483,7 @@ export default function B2BPage() {
             </div>
 
             <p className={`mt-12 text-center text-[12.5px] text-[#1C1C1E]/40 transition-all duration-700 delay-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-              所有方案皆含合法展示授權、每月策展內容自動更新與年度 ESG 成果報告；多據點與大型空間另有專人規劃報價。升級電子紙，讓減碳與支持創作者同時被記錄。
+              所有方案皆含合法展示授權、每月策展內容更新與展示／支持佐證數據；多據點、大型空間與電子紙另行專案報價。
             </p>
           </div>
         </section>

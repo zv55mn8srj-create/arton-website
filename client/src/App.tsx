@@ -61,7 +61,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   "/curator": {
     title: "策展人加入合作｜ArtON 數位策展",
-    description: "將你的策展眼光帶進更多展示空間，自行定價後上架，讓更多人看見你的創作與策展故事。",
+    description: "將你的策展眼光帶進更多展示空間，依 ArtON 合作規格上架策展，讓更多人看見你的創作與策展故事。",
   },
 };
 

@@ -98,11 +98,11 @@ function PlansTeaserSection() {
           <div className="lg:col-span-7">
             <p className="text-[11px] md:text-[12px] uppercase tracking-[0.32em] text-[#E8B339] mb-8 font-semibold">Subscribe & Exhibit · 選擇適合你的展示方式</p>
             <h2 className="text-[clamp(2.2rem,4.4vw,4.4rem)] leading-[1.2] font-light tracking-[-0.02em] mb-8" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-              從 NT$799／月起，<br />
+              從 NT$699／月起，<br />
               讓藝術<span className="text-[#E8B339]">持續發生。</span>
             </h2>
             <p className="text-white/72 text-[15px] md:text-[16px] leading-[2] max-w-xl">
-              輕量訂閱、以租代買組合包與硬體方案，完整價格與配置說明請見專屬頁面，依你的空間與預算一起規劃。
+              從私人住宅到商業空間，ArtON 提供清楚的訂閱授權與買斷設備選擇；完整價格與配置說明請見專屬頁面。
             </p>
           </div>
           <div className="lg:col-span-5">

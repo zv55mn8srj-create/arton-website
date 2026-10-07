@@ -21,18 +21,18 @@ const FOUNDING_ART = "/assets/founding-art_d2e8df21.jpg";
 const planComparison = [
   {
     category: "月費",
-    general: "NT$799／月起（另需自購硬體）",
-    bundle: "NT$999／月起（含 ArtON Box）",
+    general: "ArtON Home｜NT$699／月",
+    bundle: "ArtON Commercial｜NT$999／月",
   },
   {
     category: "硬體取得方式",
-    general: "自行採購 ArtON Box（NT$2,200）或租用",
-    bundle: "綁約即送，直接隨方案提供，退訂收回",
+    general: "私人住宅內的非商業展示授權",
+    bundle: "商業／公開空間的展示授權，設備另行買斷",
   },
   {
     category: "前期投入",
-    general: "訂閱費 + 硬體一次性支出，啟動門檻較高",
-    bundle: "零硬體支出，以租代買，月費全包無負擔",
+    general: "適用於自宅客廳、房間與其他私人住宅空間",
+    bundle: "適用於企業、診所、飯店、店家與其他公開空間",
   },
   {
     category: "策展內容更新",
@@ -196,7 +196,7 @@ export default function StartPage() {
                   </span>
                   <span className="inline-flex items-center gap-2.5 text-[13.5px] text-[#1C1C1E]">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#E8B339]" />
-                    體驗後 NT$799／月起
+                    訂閱後依方案收費：Home NT$699／月、Commercial NT$999／月
                   </span>
                 </div>
                 <a
@@ -233,10 +233,10 @@ export default function StartPage() {
           <div className="container">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-12 text-center">Compare Plans · 哪種方式適合您</p>
             <h2 className="text-[clamp(1.8rem,3.2vw,3rem)] leading-[1.3] font-light text-center text-[#1C1C1E] mb-4 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-              以租代買，<br className="hidden sm:block" />啟動門檻更低。
+              清楚的授權，<br className="hidden sm:block" />從適合你的空間開始。
             </h2>
             <p className="text-[14px] text-center text-[#45423C] max-w-xl mx-auto mb-14 leading-[1.9]">
-              一般訂閱需另購硬體，組合包方案將硬體直接納入月費，無需大額前期投入。
+              Home 與 Commercial 依展示場景區分；ArtON Box、藝術畫框與其他展示設備皆採買斷或專案報價。
             </p>
             <div className="max-w-3xl mx-auto overflow-hidden bg-white shadow-[0_10px_40px_rgba(28,28,30,0.06)]">
               <div className="overflow-x-auto">
@@ -245,7 +245,7 @@ export default function StartPage() {
                     <tr className="border-b border-[#1C1C1E]/10">
                       <th className="text-left py-5 px-6 md:px-8 font-medium text-[#1C1C1E]/50 w-[28%]">比較項目</th>
                       <th className="text-left py-5 px-6 md:px-8 font-medium text-[#1C1C1E]">一般訂閱</th>
-                      <th className="text-left py-5 px-6 md:px-8 font-semibold text-[#C98F0E] bg-[#F5B300]/6">組合包方案<br /><span className="text-[11px] font-normal text-[#1C1C1E]/50">以租代買</span></th>
+                      <th className="text-left py-5 px-6 md:px-8 font-semibold text-[#C98F0E] bg-[#F5B300]/6">ArtON Commercial<br /><span className="text-[11px] font-normal text-[#1C1C1E]/50">商業／公開空間</span></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -261,7 +261,7 @@ export default function StartPage() {
               </div>
             </div>
             <p className="text-center text-[12.5px] text-[#1C1C1E]/45 mt-8">
-              詳細報價依據點數量與現場條件評估，歡迎加入 LINE 免費諮詢。
+              ArtON Box、藝術畫框與電子紙等設備採買斷或專案報價；詳細配置依據點數量與現場條件評估。
             </p>
           </div>
         </section>
