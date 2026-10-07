@@ -31,7 +31,7 @@ const highlights = [
   {
     icon: Leaf,
     title: "E · 減碳升級選項",
-    description: "想要更進一步？可升級全彩電子紙，較傳統液晶省電約 99%，讓 ESG 的 E 與 S 同時被記錄。",
+    description: "想要更進一步？可升級全彩電子紙，以全反射、低耗能的展示方式，讓 ESG 的 E 與 S 同時被記錄；實際節能效果依設備與場域條件估算。",
   },
 ];
 
@@ -112,11 +112,11 @@ const esgMap = [
 const epaperPlan = {
   label: "UPGRADE · 減碳升級選項",
   name: "ArtON 真全彩電子紙展示",
-  tagline: "1677 萬真全彩｜零藍光護眼｜超低耗電。",
+  tagline: "真全彩 1,677 萬色｜全反射顯示｜低耗能、舒適觀看。",
   badge: "E 加分項",
-  badgeNote: "多種尺寸｜依需求配置｜洽 ",
+  badgeNote: "全彩電子紙面板｜依展示需求配置｜洽 ",
   quote: "高質感顯示，讓 ESG 的 E 與 S 同時被記錄",
-  features: ["在任一訂閱方案基礎上，升級電子紙顯示終端", "較傳統液晶省電約 99%，一年省電 446 度、減碳 227 kg", "忠實呈現藝術作品色彩，長時間顯示舒適護眼", "提供電子紙配置與節能估算佐證"],
+  features: ["在任一訂閱方案基礎上，升級 ArtON 使用的全彩電子紙面板", "全反射顯示，借助環境光呈現畫面，減少長時間自發光的能源需求", "雙穩態特性：畫面靜止時維持顯示，適合長時間展示藝術作品", "真全彩 1,677 萬色，搭配無藍光自發光的舒適觀看體驗", "ArtON 控制端需連網，以進行內容控制與展示管理；面板本身以藝術顯示為核心"],
 };
 
 export default function B2BPage() {
@@ -231,20 +231,20 @@ export default function B2BPage() {
             <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
               <div className="lg:col-span-7">
                 <p className="text-white/82 text-[15px] md:text-[16.5px] leading-[2] max-w-2xl">
-                  比起傳統液晶螢幕，電子紙只在換畫時耗電，省電高達 <span className="text-[#E8B339] font-semibold">99%</span>。一年幫企業省下約 <span className="text-[#E8B339] font-semibold">446 度電</span>（相當於減少約 <span className="text-[#E8B339] font-semibold">227 kg CO₂</span>），是 ESG 中 <span className="text-[#E8B339] font-semibold">E（環境減碳）</span> 的升級選項。
+                  全彩電子紙以環境光反射成像，畫面靜止時不需要持續自發光，適合長時間展示藝術與品牌內容。它是 ESG 中 <span className="text-[#E8B339] font-semibold">E（環境與節能）</span> 的升級選項；實際節能表現則依設備尺寸、更新頻率、環境光與場域條件評估。
                 </p>
                 <p className="text-white/60 text-[13.5px] leading-[2] mt-6 max-w-2xl">
-                  而支持身心障礙創作者的 <span className="text-white/82">S（社會共融）</span>，符合 ESG 標示的內容可依策展選擇；電子紙則提供節能估算與配置佐證，實際數據依設備與場域條件調整——環境減碳與支持身心障礙創作者，一個展示空間同時完成。
+                  而支持身心障礙創作者的 <span className="text-white/82">S（社會共融）</span>，可透過符合 ESG 標示的策展內容選擇；電子紙則提供設備配置與節能估算佐證。讓環境節能與支持創作者，在同一個展示空間裡同時發生。
                 </p>
               </div>
               <div className="lg:col-span-5 grid grid-cols-3 gap-4">
-                <EcoStat value="99%" label="省電比例（對比液晶）" />
-                <EcoStat value="446 度" label="年省電力（單點估算）" />
-                <EcoStat value="227 kg" label="年減碳量（CO₂）" />
+                <EcoStat value="全反射" label="借助環境光呈現畫面" />
+                <EcoStat value="低耗能" label="適合長時間靜態展示" />
+                <EcoStat value="1,677 萬色" label="真全彩藝術呈現" />
               </div>
             </div>
             <p className="text-white/40 text-[11.5px] mt-10 text-center">
-              估算基準：65 吋液晶電視 24 小時開啟年耗約 450 度；電子紙年耗約 4–5 度。碳排係數採台灣電網平均。實際數據依現場設備與使用條件調整。
+              節能估算需依設備尺寸、環境光、內容更新頻率、每日展示時數與場域條件計算；ArtON 可依專案配置提供估算與展示佐證，不代表固定節能比例或第三方 ESG 認證。
             </p>
           </div>
         </section>
@@ -377,23 +377,23 @@ export default function B2BPage() {
                     </a>
                   </div>
                   <div className="md:col-span-4 bg-[#16203B] text-white rounded-lg p-7 md:ml-2">
-                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#E8B339] font-semibold mb-5">E-Paper · 低碳優勢</p>
+                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#E8B339] font-semibold mb-5">E-Paper · 展示優勢</p>
                     <ul className="space-y-4 text-[13px] leading-[1.8] text-white/80">
                       <li className="flex items-start gap-2.5">
-                        <span className="text-[#E8B339] font-semibold shrink-0">99%</span>
-                        <span>較傳統液晶省電</span>
+                        <span className="text-[#E8B339] font-semibold shrink-0">全反射</span>
+                        <span>借助環境光呈現畫面</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="text-[#E8B339] font-semibold shrink-0">零藍光</span>
-                        <span>紙感顯影、護眼舒適</span>
+                        <span className="text-[#E8B339] font-semibold shrink-0">低耗能</span>
+                        <span>畫面靜止時維持顯示</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="text-[#E8B339] font-semibold shrink-0">1677 萬色</span>
+                        <span className="text-[#E8B339] font-semibold shrink-0">1,677 萬色</span>
                         <span>真全彩忠實還原作品色彩</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="text-[#E8B339] font-semibold shrink-0">多尺寸</span>
-                        <span>依據點與空間需求配置</span>
+                        <span className="text-[#E8B339] font-semibold shrink-0">單一面板</span>
+                        <span>聚焦 ArtON 的藝術展示情境</span>
                       </li>
                     </ul>
                   </div>
