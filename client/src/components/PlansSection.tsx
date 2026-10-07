@@ -37,27 +37,39 @@ interface BundledPlan {
   badge?: string;
 }
 
-const bundledPlans: BundledPlan[] = [
+const planTable = [
   {
-    name: "ArtON Commercial｜商用方案",
-    price: "999",
-    period: "/月",
-    term: "商業／公開空間",
-    device: "設備另行買斷或專案配置",
-    note: "適用於公司、診所、飯店、店家與其他商業或公開空間。",
-    features: ["ArtON 合法展示授權", "搭配自備螢幕即可展示", "每月策展內容自動更新", "展示與藝術支持佐證數據"],
+    name: "一分鐘藝術",
+    english: "ONE MINUTE ART",
+    price: "199",
+    license: "無面板內容訂閱",
+    device: "不含面板與播放器",
+    content: "每月一件作品＋約一分鐘藝術內容",
+    audience: "想以輕量方式接收藝術內容的使用者",
+    record: "內容訂閱紀錄",
     cta: "加入 LINE 開始訂閱",
   },
   {
-    name: "ArtON Home｜家庭方案",
+    name: "ArtON Home",
+    english: "家庭授權",
     price: "699",
-    period: "/月",
-    term: "私人住宅",
+    license: "私人住宅、非商業使用",
     device: "設備另行買斷或專案配置",
-    note: "適用於自宅客廳、房間、書房與其他私人住宅空間。",
-    features: ["私人住宅內的非商業展示授權", "博物館級色彩校準", "每月策展內容自動更新", "展示內容每月更新"],
+    content: "每月更新的藝術策展",
+    audience: "家庭客廳、房間、書房與私人住宅",
+    record: "一般展示紀錄",
     cta: "加入 LINE 開始訂閱",
-    recommended: false,
+  },
+  {
+    name: "ArtON Commercial",
+    english: "商用授權",
+    price: "999",
+    license: "企業、診所、飯店、店家與公開空間",
+    device: "設備另行買斷或專案配置",
+    content: "每月更新的藝術策展",
+    audience: "需要商業展示與合法授權的空間",
+    record: "展示與藝術支持佐證數據",
+    cta: "加入 LINE 開始訂閱",
   },
 ];
 
@@ -119,175 +131,62 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
           />
         </div>
 
-        {/* Subscription — Home and Commercial */}
+        {/* Three plans — one clear comparison table */}
         <div
-          className={`relative max-w-6xl mx-auto rounded-[2rem] overflow-hidden shadow-[0_40px_100px_rgba(44,37,27,0.16)] transition-all duration-700 delay-100 ${
+          className={`max-w-6xl mx-auto transition-all duration-700 delay-100 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="grid lg:grid-cols-12">
-            {/* Left — dark story panel */}
-            <div className="lg:col-span-7 bg-[#16203B] text-white p-10 md:p-14 lg:p-16">
-              <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] mb-8 font-semibold">Monthly Plan · Make Art a Daily Presence</p>
-              <h3 className="text-[clamp(2.2rem,4vw,3.6rem)] leading-[1.3] font-light mb-8" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                讓藝術
-                <br />
-                <span className="text-[#E8B339]">持續發生。</span>
-              </h3>
-              <p className="text-[15px] md:text-[16px] leading-[2] text-white/72 max-w-xl mb-12">
-                選擇一檔喜歡的策展，加入 ArtON 訂閱。藝術內容會持續送進你的展示空間，讓空間持續有新的作品，也讓藝術創作持續獲得支持。也有一種更輕量的方式——一分鐘藝術——讓每一件作品與它背後的故事，按月走進你的日常。
-              </p>
-
-              <div className="space-y-6 border-t border-white/12 pt-8">
-                {["加入 ArtON LINE", "選擇展覽與訂閱", "綁定設備，開始展示"].map((step, i) => (
-                  <div key={step} className="grid grid-cols-[40px_1fr] gap-4 items-center border-b border-white/12 pb-6 last:border-0 last:pb-0">
-                    <span className="text-[13px] text-[#E8B339] font-medium">0{i + 1}</span>
-                    <p className="text-[15px] font-medium tracking-[0.03em]">{step}</p>
-                  </div>
-                ))}
-              </div>
-
-              <p className="mt-8 text-[13px] text-white/40">後續管理，也都在 LINE 完成。</p>
-            </div>
-
-            {/* Right — One Minute Art without a panel, then Home family license */}
-            <div className="lg:col-span-5 bg-[#F6F2E9] p-10 md:p-12 lg:p-12 flex flex-col">
-              {/* Entry plan — One Minute Art */}
-              <div className="border-b border-[#1C1C1E]/10 pb-8 mb-9">
-                <p className="text-[11px] uppercase tracking-[0.3em] text-[#C98F0E] mb-4 font-semibold">ONE MINUTE ART · 無面板內容訂閱</p>
-                <div className="flex items-start justify-between gap-4 mb-4">
-                  <h4 className="text-[23px] md:text-[26px] font-normal text-[#1C1C1E] leading-[1.3]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                    一分鐘藝術｜無面板方案
-                  </h4>
-                  <p className="text-right shrink-0">
-                    <span className="text-[12px] text-[#C98F0E] mr-1">NT$</span>
-                    <span className="text-[clamp(2.3rem,3.4vw,3rem)] leading-none font-light text-[#C98F0E]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>199</span>
-                    <span className="text-[12px] text-[#1C1C1E]/45 ml-1">／月</span>
-                  </p>
-                </div>
-                <p className="text-[13px] leading-[1.85] text-[#1C1C1E]/70 mb-4">
-                  這是一種不需要面板、也不需要播放器的內容訂閱。每月收到一件作品與約一分鐘的藝術內容，支持藝術創作，也可以很輕。
-                </p>
-                <ul className="space-y-2.5 mb-5">
-                  {["每月一件藝術作品", "一分鐘創作故事與展覽內容", "每月收到新的藝術內容"].map((f) => (
-                    <li key={f} className="flex items-start gap-2.5 text-[12.5px] leading-[1.7] text-[#1C1C1E]/72">
-                      <Check className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[#C98F0E]" strokeWidth={2.2} />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href={LINKS.customerLine}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2.5 text-[12.5px] font-semibold tracking-[0.05em] px-5 py-3.5 bg-transparent border border-[#1C1C1E]/40 text-[#1C1C1E] hover:border-[#C98F0E] hover:text-[#C98F0E] transition-all duration-200 active:scale-[0.97]"
-                >
-                  加入 LINE 開始訂閱
-                </a>
-              </div>
-
-              <p className="text-[11px] uppercase tracking-[0.3em] text-[#C98F0E] mb-5 font-semibold">ARTON HOME · 家庭授權</p>
-              <div className="flex items-start justify-between gap-4 mb-6">
-                <h4 className="text-[27px] md:text-[30px] font-normal text-[#1C1C1E] leading-[1.3]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                  家庭展示方案
-                </h4>
-                <p className="text-right shrink-0">
-                  <span className="text-[13px] text-[#C98F0E] mr-1">NT$</span>
-                  <span className="text-[clamp(2.9rem,4.2vw,3.8rem)] leading-none font-light text-[#C98F0E]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>699</span>
-                  <span className="text-[13px] text-[#1C1C1E]/45 ml-1">／月起</span>
-                </p>
-              </div>
-
-              <div className="overflow-hidden rounded-lg mb-6">
-                <img src="/assets/bird-sea-art_65bd98be.jpg" alt="飛翔與夕陽海景 — 藝術家作品" className="w-full h-[180px] md:h-[210px] object-cover" />
-              </div>
-
-              <p className="text-[14px] leading-[1.9] text-[#1C1C1E]/70 mb-8">
-                適用於私人住宅的家庭授權。讓藝術持續走進客廳、房間與書房；本方案不適用於商業或公開空間。
-              </p>
-
-              <ul className="space-y-3.5 mb-10 flex-1">
-                {["ArtON 平台展示服務", "藝術內容支持與合法展示授權", "ArtON 藝術內容持續更新", "雲端管理與展示紀錄"].map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-[#1C1C1E]/78">
-                    <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href={LINKS.customerLine}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-2.5 text-[14px] font-semibold tracking-[0.05em] px-6 py-4.5 bg-[#F0B429] text-[#1C1C1E] hover:bg-[#F6C03C] transition-all duration-200 active:scale-[0.97]"
-              >
-                加入 LINE 開始訂閱
-                <Send className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" strokeWidth={2} />
-              </a>
-            </div>
+          <div className="text-center mb-10">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/40 mb-4 font-semibold">Three Plans · 三種方案</p>
+            <p className="text-[14px] md:text-[15px] leading-[1.9] text-[#45423C] max-w-2xl mx-auto">
+              一分鐘藝術是不含面板的內容訂閱；ArtON Home 是家庭授權；ArtON Commercial 是商用授權。三者的使用對象與授權範圍不同。
+            </p>
           </div>
-        </div>
 
-        {/* Standard licenses — Home family / Commercial business */}
-        <div className="mt-16 md:mt-20">
-          <p className="text-center text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-8">
-            Standard Licenses · 家庭與商用授權
-          </p>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
-            {bundledPlans.map((plan, index) => (
-              <article
-                key={plan.name}
-                className={`relative flex flex-col p-8 md:p-10 transition-all duration-700 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                } ${
-                  plan.recommended
-                    ? "bg-[#16203B] text-white shadow-[0_32px_90px_rgba(22,32,43,0.45)] border-t-4 border-[#E8B339] lg:-my-4 lg:py-14 lg:z-10"
-                    : "bg-white border border-[#E7E0D5] shadow-[0_18px_50px_rgba(44,37,27,0.06)]"
-                }`}
-                style={{ transitionDelay: `${index * 120}ms` }}
-              >
-                {plan.recommended && (
-                  <span className="absolute -top-3.5 left-9 bg-[#E8B339] text-[#16202B] text-[11px] font-bold tracking-[0.15em] uppercase px-3.5 py-1.5 rounded-full">
-                    {plan.badge}
-                  </span>
-                )}
-                <p className={`text-[11px] uppercase tracking-[0.25em] mb-4 font-semibold ${plan.recommended ? "text-[#E8B339]" : "text-[#C98F0E]"}`}>
-                  {plan.name}
-                </p>
-                <div className="flex items-end gap-2 mb-2">
-                  <span className="text-[14px] text-[#E8B339] mb-2">NT$</span>
-                  <span className="text-[clamp(2.6rem,3.8vw,3.4rem)] leading-none font-light text-[#E8B339]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                    {plan.price}
-                  </span>
-                  <span className={`text-[14px] mb-1.5 ${plan.recommended ? "text-white/60" : "text-[#1C1C1E]/45"}`}>{plan.period}</span>
-                </div>
-                <p className={`text-[13px] mb-6 ${plan.recommended ? "text-white/65" : "text-[#1C1C1E]/50"}`}>
-                  {plan.term} · {plan.device}
-                </p>
-                <p className={`text-[13px] leading-[1.85] mb-8 ${plan.recommended ? "text-white/70" : "text-[#45423C]"}`}>{plan.note}</p>
-                <ul className="space-y-3 mb-9 flex-1">
-                  {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-3 text-[13px] leading-[1.7]">
-                      <Check className={`w-4 h-4 mt-0.5 shrink-0 ${plan.recommended ? "text-[#E8B339]" : "text-[#C98F0E]"}`} strokeWidth={2} />
-                      <span className={plan.recommended ? "text-white/85" : "text-[#45423C]"}>{f}</span>
-                    </li>
+          <div className="overflow-x-auto rounded-xl border border-[#E2DCCF] bg-white shadow-[0_18px_50px_rgba(44,37,27,0.06)]">
+            <table className="w-full min-w-[900px] text-[13px]">
+              <thead>
+                <tr className="border-b border-[#E2DCCF]">
+                  <th className="w-[18%] px-6 py-6 text-left text-[12px] font-medium text-[#1C1C1E]/50">比較項目</th>
+                  {planTable.map((plan) => (
+                    <th key={plan.name} className="w-[27.3%] border-l border-[#E2DCCF] px-6 py-6 text-left align-top">
+                      <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C98F0E]">{plan.english}</p>
+                      <p className="text-[21px] font-normal leading-[1.35] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{plan.name}</p>
+                      <p className="mt-4 text-[#1C1C1E]">
+                        <span className="text-[12px] text-[#C98F0E]">NT$</span>
+                        <span className="mx-1 text-[32px] font-light leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{plan.price}</span>
+                        <span className="text-[12px] text-[#1C1C1E]/50">／月</span>
+                      </p>
+                    </th>
                   ))}
-                </ul>
-                <a
-                  href={LINKS.customerLine}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`group inline-flex items-center justify-center gap-2.5 text-[13px] font-medium tracking-[0.04em] px-6 py-4 transition-all duration-200 active:scale-[0.97] ${
-                    plan.recommended
-                      ? "bg-[#E8B339] text-[#16202B] hover:bg-[#F0B429]"
-                      : "border border-[#1C1C1E]/35 text-[#1C1C1E] hover:border-[#C98F0E] hover:text-[#C98F0E]"
-                  }`}
-                >
-                  {plan.cta}
-                  <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" strokeWidth={2} />
-                </a>
-              </article>
-            ))}
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["授權／內容類型", ...planTable.map((p) => p.license)],
+                  ["面板與設備", ...planTable.map((p) => p.device)],
+                  ["每月提供", ...planTable.map((p) => p.content)],
+                  ["適合對象", ...planTable.map((p) => p.audience)],
+                  ["可查閱紀錄", ...planTable.map((p) => p.record)],
+                ].map(([label, ...values]) => (
+                  <tr key={label} className="border-t border-[#EAE5DC] align-top">
+                    <th className="px-6 py-5 text-left font-medium text-[#1C1C1E]/55">{label}</th>
+                    {values.map((value, i) => <td key={`${label}-${i}`} className="border-l border-[#EAE5DC] px-6 py-5 leading-[1.8] text-[#45423C]">{value}</td>)}
+                  </tr>
+                ))}
+                <tr className="border-t border-[#EAE5DC] align-top">
+                  <th className="px-6 py-6 text-left font-medium text-[#1C1C1E]/55">開始方式</th>
+                  {planTable.map((plan) => (
+                    <td key={plan.name} className="border-l border-[#EAE5DC] px-6 py-6">
+                      <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border border-[#1C1C1E]/35 px-4 py-3 text-[12px] font-medium text-[#1C1C1E] transition-colors hover:border-[#C98F0E] hover:text-[#C98F0E]">
+                        {plan.cta}<ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2} />
+                      </a>
+                    </td>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 

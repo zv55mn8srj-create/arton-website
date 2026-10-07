@@ -223,44 +223,6 @@ export default function StartPage() {
         {/* Plans (subscription only — hardware cards hidden for now) */}
         <PlansSection hideHardware showRoom={false} />
 
-        {/* Price comparison */}
-        <section className="py-24 md:py-32 bg-[#F7F4EF]">
-          <div className="container">
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-12 text-center">Compare Plans · 哪種方式適合您</p>
-            <h2 className="text-[clamp(1.8rem,3.2vw,3rem)] leading-[1.3] font-light text-center text-[#1C1C1E] mb-4 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-              清楚的授權，<br className="hidden sm:block" />從適合你的空間開始。
-            </h2>
-            <p className="text-[14px] text-center text-[#45423C] max-w-xl mx-auto mb-14 leading-[1.9]">
-              一分鐘藝術是「無面板」的內容訂閱；Home 與 Commercial 則是不同使用場景的展示授權，設備皆另行買斷或專案配置。
-            </p>
-            <div className="max-w-3xl mx-auto overflow-hidden bg-white shadow-[0_10px_40px_rgba(28,28,30,0.06)]">
-              <div className="overflow-x-auto">
-                <table className="w-full text-[14px]">
-                  <thead>
-                    <tr className="border-b border-[#1C1C1E]/10">
-                      <th className="text-left py-5 px-6 md:px-8 font-medium text-[#1C1C1E]/50 w-[28%]">比較項目</th>
-                      <th className="text-left py-5 px-6 md:px-8 font-semibold text-[#1C1C1E]">ArtON Home<br /><span className="text-[11px] font-normal text-[#1C1C1E]/55">家庭授權</span></th>
-                      <th className="text-left py-5 px-6 md:px-8 font-semibold text-[#1C1C1E]">ArtON Commercial<br /><span className="text-[11px] font-normal text-[#1C1C1E]/55">商用授權</span></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {planComparison.map((row) => (
-                      <tr key={row.category} className="border-b border-[#1C1C1E]/6 last:border-0 align-top">
-                        <td className="py-4.5 px-6 md:px-8 text-[#1C1C1E]/60">{row.category}</td>
-                        <td className="py-4.5 px-6 md:px-8 text-[#45423C] leading-[1.8]">{row.home}</td>
-                        <td className="py-4.5 px-6 md:px-8 text-[#45423C] leading-[1.8]">{row.commercial}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <p className="text-center text-[12.5px] text-[#1C1C1E]/45 mt-8">
-              ArtON Box、藝術畫框與電子紙等設備採買斷或專案報價；詳細配置依據點數量與現場條件評估。
-            </p>
-          </div>
-        </section>
-
         {/* Room 05 — 探索策展（移至 /start 子頁） */}
         <ExploreSection />
 
