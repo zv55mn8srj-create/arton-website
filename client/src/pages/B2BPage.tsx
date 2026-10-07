@@ -209,7 +209,7 @@ export default function B2BPage() {
               Your ESG Impact · 支持身心障礙創作者，如何成為你的 ESG
             </p>
             <p className={`max-w-2xl mx-auto text-center text-[15px] md:text-[16.5px] leading-[2] text-[#45423C] mb-14 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              支持身心障礙創作者，不是公益活動，而是企業付費採購文化服務所創造的社會價值——直接對應聯合國永續發展目標與企業永續報告書的社會指標。
+              支持身心障礙創作者，不是一次性的捐助，而是企業付費採購文化服務所創造的社會價值。扣除平台／服務費後，內容費的 60% 回饋藝術家與策展人端，讓創作者能靠作品持續創作；這份支持也直接對應聯合國永續發展目標與企業永續報告書的社會指標。
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12 max-w-5xl mx-auto">
               {esgMap.map((item, i) => (
@@ -285,7 +285,7 @@ export default function B2BPage() {
               B2B Plans · 訂閱即持續累積支持佐證
             </p>
             <p className={`max-w-2xl mx-auto text-center text-[15px] md:text-[16.5px] leading-[2] text-[#45423C] mb-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              選擇任一訂閱方案，您的企業每天就在展示藝術、支持身心障礙創作者，並累積可查閱的展示與藝術支持佐證數據；電子紙則可另行專案配置。
+              選擇任一訂閱方案，您的企業每天就在展示藝術、支持身心障礙創作者，並累積可查閱的展示與藝術支持佐證數據；電子紙則可另行專案配置。每月費用扣除平台／服務費後，內容費的 60% 回饋藝術家與策展人端，讓支持成為創作者能持續創作的收入。
             </p>
             {/* Standard Commercial：NT$999／月；此區塊目前保留為後續企業方案擴充 */}
             {/* 

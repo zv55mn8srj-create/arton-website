@@ -31,8 +31,8 @@ const planComparison = [
   },
   {
     category: "展示設備",
-    home: "不含面板；可搭配自有設備，設備另行買斷",
-    commercial: "不含面板；可搭配自有設備，設備另行買斷或專案配置",
+    home: "不含面板；可搭配自有設備，設備另行選購",
+    commercial: "不含面板；可搭配自有設備，設備另行選購或專案配置",
   },
   {
     category: "策展內容",

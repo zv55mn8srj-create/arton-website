@@ -102,7 +102,7 @@ function PlansTeaserSection() {
               讓藝術<span className="text-[#E8B339]">持續發生。</span>
             </h2>
             <p className="text-white/72 text-[15px] md:text-[16px] leading-[2] max-w-xl">
-              從私人住宅到商業空間，ArtON 提供清楚的訂閱授權與買斷設備選擇；完整價格與配置說明請見專屬頁面。
+              從私人住宅到商業空間，ArtON 提供清楚的訂閱授權與設備選擇；完整價格與配置說明請見專屬頁面。
             </p>
           </div>
           <div className="lg:col-span-5">
