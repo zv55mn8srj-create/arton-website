@@ -44,7 +44,7 @@ export default function MonthlyUpdateSection() {
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
               {months.map(({ label, en, badge, artist, theme, img }, index) => (
                 <figure
-                  key={label}
+                  key={`${label}-${index}`}
                   className={`relative overflow-hidden rounded-2xl bg-[#EDE8DF] transition-all duration-700 ${
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                   }`}
