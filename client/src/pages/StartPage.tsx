@@ -31,18 +31,18 @@ const planComparison = [
   },
   {
     category: "展示設備",
-    home: "不含面板；可搭配自有設備，設備另行選購",
-    commercial: "不含面板；可搭配自有設備，設備另行選購或專案配置",
+    home: "不含面板；相容螢幕可搭配 ArtON Box（設備一次買斷）",
+    commercial: "不含面板；相容螢幕可搭配 ArtON Box（設備一次買斷）",
   },
   {
     category: "策展內容",
-    home: "每月更新的藝術策展",
-    commercial: "每月更新的藝術策展",
+    home: "公開策展目錄依方案與排程提供",
+    commercial: "公開策展目錄依方案與排程提供",
   },
   {
     category: "展示紀錄",
-    home: "提供一般展示紀錄",
-    commercial: "提供展示與藝術支持佐證數據",
+    home: "提供基本展示紀錄",
+    commercial: "基本展示紀錄；Impact Tracking 另行加購",
   },
   {
     category: "適合對象",
@@ -54,15 +54,15 @@ const planComparison = [
 const reasons = [
   {
     title: "輕量訂閱",
-    description: "每月策展內容自動更新，零施工、雲端管理，現有螢幕即可開始。",
+    description: "依方案與排程提供公開策展內容；已有相容螢幕可搭配 ArtON Box。",
   },
   {
     title: "合法授權",
-    description: "所有作品皆經藝術家與策展方授權，企業安心展示、安心累積成果。",
+    description: "公開策展的展示範圍與素材授權，依 ArtON 合作約定確認。",
   },
   {
     title: "ESG 可紀錄",
-    description: "展示據點、支持創作者數量與展示天數皆可匯出，放進年度永續報告。",
+    description: "基本展示紀錄與 Impact Tracking 加購分開，實際資料範圍依方案確認。",
   },
 ];
 
@@ -70,7 +70,7 @@ const steps = [
   { no: "01", title: "加入 ArtON LINE", description: "與顧問聊聊空間、據點與預算，確認最適合的展示方式。" },
   { no: "02", title: "選擇策展與方案", description: "從每月更新的策展中挑選，並確認訂閱方案與裝置配置。" },
   { no: "03", title: "綁定設備，開始展示", description: "接上 ArtON Box 或配置藝術面板，作品即進入你的空間。" },
-  { no: "04", title: "每月自動更新", description: "內容雲端排程更新，ESG 成果持續累積，管理都在 LINE 完成。" },
+  { no: "04", title: "依排程開始展示", description: "ArtON 控制端需連網；設備綁定與展示管理依平台操作流程完成，內容異動依合作流程處理。" },
 ];
 
 export default function StartPage() {

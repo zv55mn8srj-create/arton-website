@@ -16,17 +16,17 @@ const highlights = [
   {
     icon: Check,
     title: "S · 身心障礙創作者支持",
-    description: "每一次訂閱，都直接支持身心障礙創作者，讓他們靠自己的作品獲得持續收入，同時累積 DEI 與文化永續的可記錄成果。",
+    description: "訂閱公開策展，支持參與該展覽的藝術家與策展夥伴；若希望支持身心障礙創作者，可選擇具 ESG 標示的展覽。",
   },
   {
     icon: FileOutput,
     title: "可查閱的支持佐證",
-    description: "展示據點、展示天數、展示作品數與支持創作者數等資料可查閱，協助企業整理永續行動素材。",
+    description: "基本展示紀錄可依方案查閱；Impact Tracking 則是獨立加購，不將紀錄當成 ESG 分數。",
   },
   {
     icon: Landmark,
     title: "合法採購與完整憑證",
-    description: "ArtON 是藝術展示服務平台。企業付費採購藝術服務，取得完整憑證、授權文件與發票，協助財務、稅務與 ESG 申報。",
+    description: "ArtON 提供藝術展示服務。企業付費採購藝術服務，取得完整憑證、授權文件與發票，協助財務、稅務與 ESG 資料整理。",
   },
   {
     icon: Leaf,
@@ -36,57 +36,19 @@ const highlights = [
 ];
 
 const painSolutions = [
-  { pain: "每年都要重新找 ESG 活動", solution: "一次策展，全年 365 天持續展示" },
-  { pain: "活動結束就沒有成果", solution: "展示天數、據點與創作者支持紀錄可匯出" },
+  { pain: "每年都要重新找 ESG 活動", solution: "以公開策展訂閱，讓藝術展示成為日常行動" },
+  { pain: "活動結束就沒有成果", solution: "依方案查閱展示與藝術支持基本紀錄" },
   { pain: "難以向董事會證明 ESG 價值", solution: "展示與藝術支持佐證數據可查閱" },
-  { pain: "多據點管理成本高", solution: "雲端排程，所有空間統一更新" },
+  { pain: "多據點採購需求複雜", solution: "依據點、設備與展示需求評估與報價" },
 ];
 
-const plans = [
-  {
-    no: "PLAN 01",
-    name: "無痛體驗方案",
-    tagline: "綁約 1 年 · 直接送 ArtON Box 藝術盒",
-    features: [
-      "軟體訂閱＋ArtON Box 藝術盒（隨插即用）",
-      "自備螢幕即可展示",
-      "每月策展內容自動更新",
-      "雲端管理與展示紀錄",
-      "展示與藝術支持佐證數據",
-      "支援身心障礙創作者持續收入",
-    ],
-    price: "NT$999",
-    per: "/月",
-    note: "退訂收回裝置，月租低負擔、免大額採購。",
-    cta: "加入 LINE 諮詢方案",
-    ctaHref: "line",
-  },
-  {
-    no: "PLAN 02",
-    name: "全包輕量面板方案",
-    tagline: "綁約 2 年 · 附贈 21.5 吋高質感藝術面板",
-    features: [
-      "軟體訂閱＋21.5 吋藝術展示面板",
-      "畫廊級色彩校準與精準還原",
-      "霧面抗眩光、木質外框展牆質感",
-      "每月策展內容自動更新",
-      "雲端管理與展示紀錄",
-      "展示與藝術支持佐證數據",
-      "支援身心障礙創作者持續收入",
-    ],
-    price: "NT$999",
-    per: "/月",
-    note: "隨方案送面板，免去採購與校準成本。",
-    cta: "加入 LINE 諮詢方案",
-    ctaHref: "line",
-  },
-];
+
 
 const esgMap = [
   {
     target: "SDG 8",
     name: "良好工作與經濟成長",
-    description: "2030 目標明確寫明「為身心障礙者實現體面工作與同值同酬」。訂閱支持身心障礙創作者持續獲得展示收入，即為企業日常實踐。",
+    description: "2030 目標明確寫明「為身心障礙者實現體面工作與同值同酬」。選擇具 ESG 標示的公開策展，可依該展覽的合作與展示紀錄整理支持內容。",
     metric: "8.5 包容性就業",
   },
   {
@@ -116,7 +78,7 @@ const epaperPlan = {
   badge: "E 加分項",
   badgeNote: "全彩電子紙面板｜依展示需求配置｜洽 ",
   quote: "高質感顯示，讓 ESG 的 E 與 S 同時被記錄",
-  features: ["在任一訂閱方案基礎上，升級 ArtON 使用的全彩電子紙面板", "全反射顯示，借助環境光呈現畫面，減少長時間自發光的能源需求", "雙穩態特性：畫面靜止時維持顯示，適合長時間展示藝術作品", "真全彩 1,677 萬色，搭配無藍光自發光的舒適觀看體驗", "ArtON 控制端需連網，以進行內容控制與展示管理；面板本身以藝術顯示為核心"],
+  features: ["在內容訂閱方案上，另行配置 ArtON 使用的全彩電子紙面板", "全反射顯示，借助環境光呈現畫面，減少長時間自發光的能源需求", "雙穩態特性：畫面靜止時維持顯示，適合長時間展示藝術作品", "真全彩 1,677 萬色，搭配無藍光自發光的舒適觀看體驗", "ArtON 控制端需連網，以進行內容控制與展示管理；面板本身以藝術顯示為核心"],
 };
 
 export default function B2BPage() {
@@ -157,7 +119,7 @@ export default function B2BPage() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
               >
-                ArtON 是一個藝術展示服務平台。企業付費採購藝術服務，讓每一位身心障礙創作者靠作品獲得持續收入——支持身心障礙創作者，就是最直接的 ESG 社會實踐；想更進一步，還可升級低耗電的電子紙展示，讓 E 與 S 同時被記錄。
+                ArtON 提供藝術展示與內容訂閱服務。企業訂閱公開策展，支持參與該展覽的藝術家與策展夥伴；若希望支持身心障礙創作者，可選擇具 ESG 標示的展覽。電子紙面板則是另行採購的展示設備，節能效果依實際條件估算。
               </p>
               <div
                 className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${
@@ -209,7 +171,7 @@ export default function B2BPage() {
               Your ESG Impact · 支持身心障礙創作者，如何成為你的 ESG
             </p>
             <p className={`max-w-2xl mx-auto text-center text-[15px] md:text-[16.5px] leading-[2] text-[#45423C] mb-14 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              支持身心障礙創作者，不是一次性的捐助，而是企業付費採購文化服務所創造的社會價值。扣除平台／服務費後，內容費的 60% 回饋藝術家與策展人端，讓創作者能靠作品持續創作；這份支持也直接對應聯合國永續發展目標與企業永續報告書的社會指標。
+              公開策展的內容費與權利金，依藝術家、策展夥伴與 ArtON 的合作約定結算；若選擇具 ESG 標示的展覽，可整理相應的藝術支持紀錄。
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12 max-w-5xl mx-auto">
               {esgMap.map((item, i) => (
@@ -285,54 +247,16 @@ export default function B2BPage() {
               B2B Plans · 訂閱即持續累積支持佐證
             </p>
             <p className={`max-w-2xl mx-auto text-center text-[15px] md:text-[16.5px] leading-[2] text-[#45423C] mb-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              選擇任一訂閱方案，您的企業每天就在展示藝術、支持身心障礙創作者，並累積可查閱的展示與藝術支持佐證數據；電子紙則可另行專案配置。每月費用扣除平台／服務費後，內容費的 60% 回饋藝術家與策展人端，讓支持成為創作者能持續創作的收入。
+              ArtON Commercial 為 NT$999／月，適用企業、診所、飯店、店家與公開空間。公開策展提供訂閱選擇，基本展示紀錄依方案提供；Impact Tracking 輕量級可另加購 NT$1／月／設備（工作值＋1），不代表售價或 ESG 分數。電子紙與其他硬體另行採購。
             </p>
-            {/* Standard Commercial：NT$999／月；此區塊目前保留為後續企業方案擴充 */}
-            {/* 
-            <div className="grid md:grid-cols-2 gap-7 max-w-4xl mx-auto">
-              {plans.map((p, i) => (
-                <div
-                  key={p.no}
-                  className={`bg-[#F7F4EF] border border-[#E7E0D5] rounded-xl p-8 md:p-9 transition-all duration-700 ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                  }`}
-                  style={{ transitionDelay: `${i * 120}ms` }}
-                >
-                  <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/35 font-semibold mb-4">{p.no}</p>
-                  <h3 className="text-[clamp(1.6rem,2.6vw,2.2rem)] leading-[1.3] font-light text-[#1C1C1E] mb-2" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                    {p.name}
-                  </h3>
-                  <p className="text-[14px] text-[#1C1C1E]/70 mb-7">{p.tagline}</p>
-                  <div className="flex items-end gap-2 mb-2">
-                    <span className="text-[clamp(2.4rem,3.6vw,3.2rem)] font-light text-[#E8B339] leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                      {p.price}
-                    </span>
-                    <span className="text-[15px] text-[#1C1C1E]/55 pb-1">{p.per}</span>
-                  </div>
-                  <p className="text-[12.5px] text-[#1C1C1E]/45 mb-7">{p.note}</p>
-                  <div className="border-t border-[#E7E0D5] pt-6 mb-8">
-                    <ul className="space-y-3">
-                      {p.features.map((f) => (
-                        <li key={f} className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-[#1C1C1E]/78">
-                          <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
-                          <span>{f}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <a
-                    href={LINKS.customerLine}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center justify-center gap-2.5 text-[14px] font-semibold px-7 py-4 bg-[#16203B] text-white rounded-full hover:bg-[#16203B] transition-all duration-200 active:scale-[0.97]"
-                  >
-                    <MessageCircle className="w-4 h-4" strokeWidth={2} />
-                    {p.cta}
-                  </a>
-                </div>
-              ))}
+            <div className="mt-10 flex justify-center">
+              <div className="w-full max-w-4xl border border-[#DDE4D8] bg-[#F3F7F1] rounded-xl p-8">
+                <p className="text-[11px] uppercase tracking-[0.24em] text-[#2D5A3D] font-semibold mb-3">IMPACT · 影響紀錄加購</p>
+                <h3 className="text-[25px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>輕量級 NT$1／月／設備</h3>
+                <p className="text-[14px] leading-[1.9] text-[#45423C]">工作值＋1，提供約定範圍的 ESG 展示資料；不代表訂閱售價、ESG 分數或第三方認證。</p>
+              </div>
             </div>
-            */}
+
             {/* E-Paper — 洽詢方案（不標價） */}
             <div className="mt-10 flex justify-center">
               <div
@@ -401,21 +325,21 @@ export default function B2BPage() {
               </div>
             </div>
 
-            {/* OPTION 04 — 企業客製方案（多據點） */}
+            {/* MULTI-SITE — 企業多據點採購 */}
             <div className="mt-10 flex justify-center">
               <div
                 className={`w-full max-w-4xl bg-[#16203B] text-white rounded-xl p-9 md:p-12 transition-all duration-700 delay-200 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] font-semibold mb-4">OPTION 04 · Enterprise</p>
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] font-semibold mb-4">MULTI-SITE · 多據點採購諮詢</p>
                 <div className="grid md:grid-cols-12 gap-8 items-start">
                   <div className="md:col-span-8">
                     <h3 className="text-[clamp(1.8rem,3vw,2.6rem)] leading-[1.3] font-light text-white mb-4" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
                       企業客製方案
                     </h3>
                     <p className="text-[15px] md:text-[16.5px] text-white/85 mb-8">
-                      多據點採購 · 專人到場評估 · 年度合約彈性。
+                      多據點採購、場勘及報告整理服務，依需求評估與報價。
                     </p>
                     <div className="border-t border-white/12 pt-7 mb-8">
                       <p className="text-[clamp(1.5rem,2.6vw,2.2rem)] font-light text-[#E8B339] mb-2.5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
@@ -427,19 +351,19 @@ export default function B2BPage() {
                     <ul className="space-y-3 mb-9">
                       <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">
                         <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
-                        <span>多據點團體優惠：5 台以上即享量購折讓，據點越多條件越優</span>
+                        <span>多據點採購：依據點數量、設備與展示需求評估</span>
                       </li>
                       <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">
                         <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
-                        <span>專人到場評估：免費勘查各據點空間與設備條件，提供規劃建議書</span>
+                        <span>場勘與規劃：依需求評估空間、設備與展示條件</span>
                       </li>
                       <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">
                         <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
-                        <span>年度合約彈性：綁約與付款方式可依企業預算客製，支援統一發票與採購憑證</span>
+                        <span>合約與付款：依專案內容、採購流程與付款條件確認</span>
                       </li>
                       <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">
                         <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
-                        <span>整併式 ESG 成果：所有據點展示紀錄彙整為一份年度報告，方便企業永續申報</span>
+                        <span>報告整理：依約定範圍整理展示與藝術支持資料</span>
                       </li>
                     </ul>
                     <a
@@ -475,7 +399,7 @@ export default function B2BPage() {
                       </li>
                     </ul>
                     <p className="text-white/40 text-[11.5px] leading-[1.7] mt-6 pt-5 border-t border-white/10">
-                      由專人為您評估據點需求與預算，全程免費、無強制採購。
+                      服務內容與費用依據點需求評估與報價。
                     </p>
                   </div>
                 </div>
@@ -483,7 +407,7 @@ export default function B2BPage() {
             </div>
 
             <p className={`mt-12 text-center text-[12.5px] text-[#1C1C1E]/40 transition-all duration-700 delay-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-              所有方案皆含合法展示授權、每月策展內容更新與展示／支持佐證數據；多據點、大型空間與電子紙另行專案報價。
+              公開策展、Impact Tracking 與硬體採購各自適用不同規則；詳細內容依方案與專案確認。
             </p>
           </div>
         </section>

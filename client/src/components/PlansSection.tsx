@@ -43,33 +43,33 @@ const planTable = [
     english: "ONE MINUTE ART",
     price: "199",
     license: "無面板內容訂閱",
-    device: "不含面板與播放器",
+    device: "不含面板；內容訂閱獨立計費",
     content: "每月一件作品＋約一分鐘藝術內容",
     audience: "想以輕量方式接收藝術內容的使用者",
     record: "內容訂閱紀錄",
-    cta: "加入 LINE 開始訂閱",
+    cta: "諮詢一分鐘藝術",
   },
   {
     name: "ArtON Home",
     english: "家庭授權",
     price: "699",
     license: "私人住宅、非商業使用",
-    device: "設備另行選購或專案配置",
-    content: "每月更新的藝術策展",
+    device: "硬體另行選購；一次買斷，不含內容訂閱",
+    content: "公開策展目錄依方案與排程提供",
     audience: "家庭客廳、房間、書房與私人住宅",
-    record: "一般展示紀錄",
-    cta: "加入 LINE 開始訂閱",
+    record: "基本展示紀錄",
+    cta: "諮詢 Home",
   },
   {
     name: "ArtON Commercial",
     english: "商用授權",
     price: "999",
     license: "企業、診所、飯店、店家與公開空間",
-    device: "設備另行選購或專案配置",
-    content: "每月更新的藝術策展",
+    device: "硬體另行選購；一次買斷，不含內容訂閱",
+    content: "公開策展目錄依方案與排程提供",
     audience: "需要商業展示與合法授權的空間",
-    record: "展示與藝術支持佐證數據",
-    cta: "加入 LINE 開始訂閱",
+    record: "基本展示紀錄；Impact 另行加購",
+    cta: "諮詢 Commercial",
   },
 ];
 
@@ -79,28 +79,28 @@ const hardwarePlans: HardwarePlan[] = [
     title: "ArtON Box 藝術盒",
     subtitle: "輕巧易安裝，接上你現有的螢幕即可開始展示藝術作品。適合已經有自己螢幕的空間。",
     price: "NT$2,990",
-    priceNote: "設備售價",
-    highlight: "ArtON Box｜設備售價",
+    priceNote: "一次買斷；不含內容訂閱",
+    highlight: "ArtON Box｜一次買斷",
     features: ["隨插即用，支援 HDMI 輸出", "雲端排程與自動更新展覽", "穩定流暢，適合企業與診所"],
-    cta: "諮詢專屬播放器",
+    cta: "諮詢 ArtON Box",
   },
   {
     icon: Monitor,
     title: "ArtON 藝術展示面板",
     subtitle: "專為藝術展示打造，精準還原色彩，讓每件作品展現最佳質感。",
-    highlight: "專業展示",
-    highlightNote: "多種尺寸｜依需求配置，提供專人規劃與報價",
-    features: ["霧面抗眩光，如同真實畫布", "博物館級色彩校準與木質外框", "結合 ArtON 訂閱服務一體到位"],
+    highlight: "一次買斷",
+    highlightNote: "21 吋 NT$13,900；其他尺寸請洽詢",
+    features: ["霧面抗眩光，如同真實畫布", "博物館級色彩校準與木質外框", "設備一次買斷，內容訂閱另計"],
     cta: "取得專人規劃報價",
     recommended: true,
   },
   {
     icon: Sun,
     title: "ArtON 真全彩電子紙展示",
-    subtitle: "1677 萬真全彩｜依空間需求專案配置。",
-    highlight: "環保首選",
-    highlightNote: "多種尺寸｜依需求配置，提供專人規劃與報價",
-    features: ["採用全反射電子紙顯示技術", "忠實呈現藝術作品色彩，長時間顯示舒適省電", "最適合藝術展示、企業 ESG 與公共空間"],
+    subtitle: "1,677 萬真全彩｜全反射顯示｜依空間需求配置。",
+    highlight: "一次買斷",
+    highlightNote: "全彩電子紙面板；其他尺寸請洽詢",
+    features: ["採用全反射、雙穩態電子紙顯示技術", "忠實呈現藝術作品色彩，適合長時間展示", "設備一次買斷，節能估算依實際條件評估"],
     cta: "諮詢電子紙展示方案",
   },
 ];
@@ -188,10 +188,19 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
               </tbody>
             </table>
           </div>
+          <div className="mt-10 grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="border border-[#DDE4D8] bg-[#F3F7F1] rounded-xl p-7 md:p-8">
+              <p className="text-[11px] uppercase tracking-[0.24em] text-[#2D5A3D] font-semibold mb-3">Impact Tracking · 影響紀錄加購</p>
+              <h3 className="text-[25px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>輕量級 Impact</h3>
+              <p className="text-[14px] leading-[1.9] text-[#45423C] mb-4">NT$1／月／設備，工作值＋1。提供基本 ESG 展示資料，不是內容訂閱售價，也不是 ESG 分數或第三方認證。</p>
+              <p className="text-[12.5px] leading-[1.8] text-[#1C1C1E]/55">適用設備範圍與紀錄欄位，依 ArtON 現行方案與專案確認。</p>
+            </div>
+          </div>
+
           <div className="mt-8 mx-auto max-w-4xl border-l-2 border-[#C98F0E] bg-[#F3EEE5] px-6 py-5 md:px-8 md:py-6">
             <p className="text-[11px] uppercase tracking-[0.24em] text-[#C98F0E] font-semibold mb-2">A meaningful subscription · 訂閱如何支持創作</p>
             <p className="text-[14px] md:text-[15px] leading-[1.9] text-[#45423C]">
-              每月費用扣除平台／服務費後，內容費的 <strong className="font-semibold text-[#1C1C1E]">60% 回饋藝術家與策展人端</strong>，讓每一次展示不只是看見作品，也能支持創作者持續創作。
+              公開策展的內容費與權利金，依藝術家、策展夥伴與 ArtON 的合作約定結算。
             </p>
           </div>
         </div>
@@ -235,7 +244,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
                   ["適合情境", "已有螢幕，想快速開始展示", "想要完整藝術框與一體化展示", "想強化 ESG 節能與低耗電展示"],
                   ["搭配授權", "ArtON Home／Commercial", "ArtON Home／Commercial", "ArtON Commercial／專案配置"],
                   ["設備形式", "播放器／訊號盒，適合搭配既有螢幕", "21 吋藝術展示面板；其他尺寸請洽詢", "尺寸依空間需求配置，依專案報價"],
-                  ["ESG 相關", "依訂閱方案提供展示紀錄", "依訂閱方案提供展示紀錄", "可另行加購 Impact Tracking，提供節能與展示佐證"],
+                  ["基本紀錄", "依方案提供基本展示紀錄", "依方案提供基本展示紀錄", "依方案提供基本展示紀錄"],
                 ].map(([label, ...values]) => (
                   <tr key={label} className="border-t border-[#EAE5DC] align-top">
                     <th className="px-6 py-5 text-left font-medium text-[#1C1C1E]/55">{label}</th>
@@ -245,7 +254,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
               </tbody>
             </table>
           </div>
-          <p className="mt-5 text-center text-[12px] leading-[1.8] text-[#1C1C1E]/45">設備採購與內容訂閱分開；全彩電子紙價格依尺寸、數量與場域條件由 ArtON 提供專案報價。</p>
+          <p className="mt-5 text-center text-[12px] leading-[1.8] text-[#1C1C1E]/45">設備皆為一次買斷，不含內容訂閱；全彩電子紙價格依尺寸、數量與場域條件由 ArtON 提供專案報價。</p>
         </div>
 
         {/* Hardware — three devices together (hidden when hideHardware is true) */}

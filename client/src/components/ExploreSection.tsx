@@ -16,7 +16,7 @@ type FilterType = "all" | "style" | "esg";
 const exhibitions = [
   { 
     title: "九鯉魚", 
-    tag: "本月主打", 
+    tag: "精選展覽", 
     image: "/assets/koi-square_a0f0802a.jpg", 
     artist: "藝術家 · 鄭美珠", 
     gallery: "小光點畫廊策展",
@@ -60,8 +60,8 @@ const exhibitions = [
     isInclusive: false
   },
   { 
-    title: "春季療癒展", 
-    tag: "春季策展", 
+    title: "療癒展", 
+    tag: "精選展覽", 
     image: "/assets/summer-youth-square_be39c0c7.jpg", 
     artist: "藝術家 · 鄭美珠", 
     gallery: "小光點畫廊策展",
@@ -105,7 +105,7 @@ export default function ExploreSection() {
           />
           <div className={`lg:col-span-5 lg:pb-2 transition-all duration-700 delay-150 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <p className="text-[15px] leading-[1.9] text-[#1C1C1E]/50">每一檔策展，都有自己的情緒、節奏與故事。企業可以直接觀看，找到最適合空間的一場展覽。</p>
-            <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="inline-flex mt-6 gap-3 text-[12px] tracking-[0.08em] border-b border-[#F5B300] pb-2">查看所有策展 <span className="text-[#F5B300]">↗</span></a>
+            <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="inline-flex mt-6 gap-3 text-[12px] tracking-[0.08em] border-b border-[#F5B300] pb-2">向顧問索取策展目錄 <span className="text-[#F5B300]">↗</span></a>
           </div>
         </div>
 
@@ -166,7 +166,7 @@ export default function ExploreSection() {
                 className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                 style={{ transitionDelay: `${index * 70}ms` }}
               >
-                <a href={index === 0 ? LINKS.customerLine : "/start"} className="block group">
+                <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="block group">
                   <div className="overflow-hidden">
                     <div className="aspect-square overflow-hidden relative">
                       <img

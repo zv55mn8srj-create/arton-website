@@ -10,7 +10,7 @@ const stages = [
   { title: "分享策展", note: "策展被看見，也被更多合適的空間選擇。" },
   { title: "企業開始展示", note: "藝術進入企業、診所、飯店與生活場域。" },
   { title: "藝術持續被看見", note: "一場展覽離開單一展期，持續與人相遇。" },
-  { title: "創作者獲得持續收入", note: "每一次展示，都在支持創作者靠作品持續走下去。" },
+  { title: "創作者獲得內容回饋", note: "公開策展依合作約定結算內容權利金，讓支持回到創作者的創作。" },
 ];
 
 export default function TimelineSection() {

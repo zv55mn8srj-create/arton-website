@@ -56,14 +56,6 @@ const partners = [
     logo: "/assets/partner-logo-1_7e5ae4bc.png",
     icon: "gallery",
   },
-  {
-    name: "OO 基金會",
-    tagEn: "Content Partner",
-    tagZh: "內容合作夥伴",
-    description: "長期深耕社會福利與社區照顧，支持慢飛天使展現純粹的藝術創作與生命力。",
-    logo: null,
-    icon: "welfare",
-  },
 ];
 
 export default function SpacesPartnersSection() {
@@ -129,14 +121,12 @@ export default function SpacesPartnersSection() {
             >
               <span className="text-[28px] text-[#1C1C1E]/70 mb-3" aria-hidden="true">+</span>
               <p className="text-[15px] font-medium text-[#C98F0E] leading-[1.6]">
-                XXX 咖啡館
+                更多合作夥伴徵集中
               </p>
               <p className="text-[11px] uppercase tracking-[0.22em] text-[#1C1C1E]/40 mt-2">
                 Display Partner｜展示合作夥伴
               </p>
               <p className="text-[12px] leading-[1.7] text-[#1C1C1E]/40 mt-3">
-                更多合作夥伴徵集中
-                <br />
                 歡迎空間、咖啡館與企業加入
               </p>
             </a>

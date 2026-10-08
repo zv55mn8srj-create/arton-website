@@ -16,12 +16,12 @@ const steps = [
   {
     title: "ArtON Box 播放",
     note: "Art plays in your space",
-    description: "作品直接進入你的空間，輕巧易安裝，搭配任何螢幕即可開始展示。",
+    description: "作品進入你的空間；已有相容螢幕可搭配 ArtON Box，設備相容性依場域確認。",
   },
   {
-    title: "中控遠端更新",
-    note: "Remote content renewal",
-    description: "無需重新更換設備，每個月透過中控系統更新新的藝術內容。",
+    title: "ArtON 控制端管理",
+    note: "Connected content control",
+    description: "控制端需連網，依方案與排程進行內容控制與展示管理；面板本身以藝術顯示為核心。",
   },
 ];
 
