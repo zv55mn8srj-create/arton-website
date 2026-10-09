@@ -102,7 +102,7 @@ function PlansTeaserSection() {
               讓藝術<span className="text-[#E8B339]">持續發生。</span>
             </h2>
             <p className="text-white/72 text-[15px] md:text-[16px] leading-[2] max-w-xl">
-              藝術內容訂閱與空間展示授權分開說明；硬體一次買斷，內容與 Impact 服務依方案另計。
+              藝術內容訂閱與空間展示授權分開說明；硬體一次買斷，Commercial 方案含 Impact 服務。
             </p>
           </div>
           <div className="lg:col-span-5">

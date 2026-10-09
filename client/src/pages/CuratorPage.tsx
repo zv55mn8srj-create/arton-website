@@ -31,7 +31,7 @@ const values = [
   {
     no: "04",
     title: "被記錄的影響力",
-    description: "公開策展可依方案查閱展示與藝術支持紀錄；Impact 或報告服務則依專案約定。",
+    description: "公開策展可依方案查閱展示與藝術支持紀錄；報告服務則依專案約定。",
   },
 ];
 
@@ -44,7 +44,7 @@ const curatorFaq = [
   },
   {
     q: "策展上架需要付費嗎？",
-    a: "公開策展的訂閱價格由 ArtON 依展示場景與方案統一設定；內容權利金依藝術家、策展夥伴與 ArtON 的合作約定結算。"
+    a: "上架費用與合作條件，會於確認合作前向你說明；內容權利金與後續結算方式，則依藝術家、策展夥伴與 ArtON 的合作約定辦理。"
   },
   {
     q: "收益如何計算與請領？",
@@ -101,7 +101,7 @@ export default function CuratorPage() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
               >
-                ArtON 邀請你成為策展夥伴。策展後即刻分享，讓更多人訂閱你的策展藝術——你的策展不只是短暫的展覽，而是每天在空間裡持續發生的展示，讓美學在日常中被慢慢累積。公開策展的訂閱價格由 ArtON 統一設定，讓不同展示場景有清楚一致的方案。
+                ArtON 邀請你成為策展夥伴。策展後即刻分享，讓更多人訂閱你的策展藝術——你的策展不只是短暫的展覽，而是每天在空間裡持續發生的展示，讓美學在日常中被慢慢累積。
               </p>
               <a
                 href={LINKS.curatorLine}
@@ -216,7 +216,7 @@ export default function CuratorPage() {
           </div>
         </section>
       </main>
-      <FooterSection />
+      <FooterSection curatorMode />
     </div>
   );
 }

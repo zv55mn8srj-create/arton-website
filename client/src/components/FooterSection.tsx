@@ -7,7 +7,7 @@
 import { Link } from "wouter";
 import { LINKS, consultMail } from "@/lib/links";
 
-export default function FooterSection() {
+export default function FooterSection({ curatorMode = false }: { curatorMode?: boolean }) {
   return (
     <>
       {/* 深藍圓環 CTA */}
@@ -46,10 +46,10 @@ export default function FooterSection() {
           </p>
 
           <a
-            href={consultMail("預約展示")}
+            href={consultMail(curatorMode ? "洽詢策展合作" : "預約展示")}
             className="group inline-flex items-center gap-3 px-8 py-3.5 bg-[#F5B300] text-[#16203B] text-[14px] font-semibold rounded-full hover:bg-[#e5a800] transition-all duration-300 hover:shadow-xl hover:shadow-[#F5B300]/25 active:scale-[0.97]"
           >
-            預約展示
+            {curatorMode ? "洽詢策展合作" : "預約展示"}
             <span className="text-[16px] transition-transform duration-300 group-hover:translate-x-1 inline-block">→</span>
           </a>
         </div>

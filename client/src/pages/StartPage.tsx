@@ -42,7 +42,7 @@ const planComparison = [
   {
     category: "展示紀錄",
     home: "提供基本展示紀錄",
-    commercial: "基本展示紀錄；Impact Tracking 另行加購",
+    commercial: "基本展示紀錄；含 Impact 服務",
   },
   {
     category: "適合對象",
@@ -62,7 +62,7 @@ const reasons = [
   },
   {
     title: "ESG 可紀錄",
-    description: "基本展示紀錄與 Impact Tracking 加購分開，實際資料範圍依方案確認。",
+    description: "Commercial 方案含 Impact 服務；實際展示與支持紀錄範圍依方案確認。",
   },
 ];
 

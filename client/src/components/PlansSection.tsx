@@ -68,7 +68,7 @@ const planTable = [
     device: "硬體另行選購；一次買斷，不含內容訂閱",
     content: "公開策展目錄依方案與排程提供",
     audience: "需要商業展示與合法授權的空間",
-    record: "基本展示紀錄；Impact 另行加購",
+    record: "基本展示紀錄；含 Impact 服務",
     cta: "諮詢 Commercial",
   },
 ];
@@ -190,10 +190,10 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
           </div>
           <div className="mt-10 grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             <div className="border border-[#DDE4D8] bg-[#F3F7F1] rounded-xl p-7 md:p-8">
-              <p className="text-[11px] uppercase tracking-[0.24em] text-[#2D5A3D] font-semibold mb-3">Impact Tracking · 影響紀錄加購</p>
-              <h3 className="text-[25px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>輕量級 Impact</h3>
-              <p className="text-[14px] leading-[1.9] text-[#45423C] mb-4">NT$1／月／設備，工作值＋1。提供基本 ESG 展示資料，不是內容訂閱售價，也不是 ESG 分數或第三方認證。</p>
-              <p className="text-[12.5px] leading-[1.8] text-[#1C1C1E]/55">適用設備範圍與紀錄欄位，依 ArtON 現行方案與專案確認。</p>
+              <p className="text-[11px] uppercase tracking-[0.24em] text-[#2D5A3D] font-semibold mb-3">Impact · 內容支持與紀錄</p>
+              <h3 className="text-[25px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>Commercial 方案內含</h3>
+              <p className="text-[14px] leading-[1.9] text-[#45423C] mb-4">ArtON Commercial 方案內含 Impact 服務，提供與展示及藝術支持相關的資料整理。</p>
+              <p className="text-[12.5px] leading-[1.8] text-[#1C1C1E]/55">實際紀錄範圍依方案、設備與專案條件確認；不等同 ESG 分數或第三方認證。</p>
             </div>
           </div>
 

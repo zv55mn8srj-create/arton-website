@@ -49,7 +49,7 @@ export default function DemoShowcaseSection() {
               作品<span className="text-[#B38A44]">走進你的空間。</span>
             </h2>
             <p className="text-[#1C1C1E]/62 text-[15px] md:text-[16px] leading-[2] max-w-xl">
-              一位藝術家、五幅作品，就是一場新展覽。作品全圖、創作故事與作者介紹輪番登場，讓每一面牆都有自己的展覽。
+              每一場策展，都是一場新的展覽。作品全圖、創作故事與作者介紹輪番登場，讓每一面牆都有自己的展覽。
             </p>
           </div>
         </div>

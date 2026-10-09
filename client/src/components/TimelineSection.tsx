@@ -23,7 +23,7 @@ export default function TimelineSection() {
           <GalleryHeading
             room="05"
             label="A Living Exhibition"
-            title={<>一次策展，<br />五個持續<br />發生的瞬間。</>}
+            title={<>一場策展，<br />持續發生<br />在日常裡。</>}
             titleSize="clamp(2.6rem,4.6vw,4.6rem)"
             className={`lg:col-span-7 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           />

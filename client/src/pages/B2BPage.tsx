@@ -10,6 +10,7 @@ import { LINKS, consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import WhyArtON from "@/components/WhyArtON";
 import WhyEnterprise from "@/components/WhyEnterprise";
+import ExploreSection from "@/components/ExploreSection";
 import { ArrowRight, Check, FileOutput, Landmark, MessageCircle, Leaf, Mail, WifiOff } from "lucide-react";
 
 const highlights = [
@@ -21,7 +22,7 @@ const highlights = [
   {
     icon: FileOutput,
     title: "可查閱的支持佐證",
-    description: "基本展示紀錄可依方案查閱；Impact Tracking 則是獨立加購，不將紀錄當成 ESG 分數。",
+    description: "ArtON Commercial 方案含 Impact 服務，提供與展示及藝術支持相關的資料整理；不將紀錄當成 ESG 分數。",
   },
   {
     icon: Landmark,
@@ -78,7 +79,7 @@ const epaperPlan = {
   badge: "E 加分項",
   badgeNote: "全彩電子紙面板｜依展示需求配置｜洽 ",
   quote: "高質感顯示，讓 ESG 的 E 與 S 同時被記錄",
-  features: ["在內容訂閱方案上，另行配置 ArtON 使用的全彩電子紙面板", "全反射顯示，借助環境光呈現畫面，減少長時間自發光的能源需求", "雙穩態特性：畫面靜止時維持顯示，適合長時間展示藝術作品", "真全彩 1,677 萬色，搭配無藍光自發光的舒適觀看體驗", "ArtON 控制端需連網，以進行內容控制與展示管理；面板本身以藝術顯示為核心"],
+  features: ["在內容訂閱方案上，另行配置 ArtON 使用的全彩電子紙面板", "全反射顯示，借助環境光呈現畫面，減少長時間自發光的能源需求", "雙穩態特性：畫面靜止時維持顯示，適合長時間展示藝術作品", "真全彩 1,677 萬色，搭配無藍光自發光的舒適觀看體驗"],
 };
 
 export default function B2BPage() {
@@ -133,7 +134,7 @@ export default function B2BPage() {
                   className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#E8B339] text-[#16202B] text-[15px] font-semibold rounded-full hover:bg-[#F0B429] transition-all duration-300 active:scale-[0.97]"
                 >
                   <MessageCircle className="w-4.5 h-4.5" strokeWidth={2} />
-                  加入 LINE 諮詢方案
+                  諮詢 Commercial 內容訂閱
                 </a>
                 <a
                   href="/start"
@@ -164,6 +165,9 @@ export default function B2BPage() {
         {/* Why ArtON — 真正的支持，是讓創作者持續走下去 */}
         <WhyArtON />
 
+        {/* Representative exhibitions — let enterprises meet the content before the equipment */}
+        <ExploreSection />
+
         {/* ESG Mapping — 支持身心障礙創作者如何對應 ESG 指標 */}
         <section className="py-24 md:py-32 bg-[#FBFAF7]">
           <div className="container">
@@ -180,33 +184,6 @@ export default function B2BPage() {
             </div>
             <p className="mt-12 text-center text-[12px] text-[#1C1C1E]/40">
               ArtON 提供展示與藝術支持的佐證數據；資料可作為企業整理永續行動素材的依據，不等同第三方 ESG 認證或法定申報。
-            </p>
-          </div>
-        </section>
-
-        {/* E-Paper Carbon Impact */}
-        <section className="py-24 md:py-32 bg-[#16203B] text-white overflow-hidden">
-          <div className="container">
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] font-semibold mb-14 text-center">
-              Want More E? · 想進一步減碳：升級全彩電子紙
-            </p>
-            <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
-              <div className="lg:col-span-7">
-                <p className="text-white/82 text-[15px] md:text-[16.5px] leading-[2] max-w-2xl">
-                  全彩電子紙以環境光反射成像，畫面靜止時不需要持續自發光，適合長時間展示藝術與品牌內容。它是 ESG 中 <span className="text-[#E8B339] font-semibold">E（環境與節能）</span> 的升級選項；實際節能表現則依設備尺寸、更新頻率、環境光與場域條件評估。
-                </p>
-                <p className="text-white/60 text-[13.5px] leading-[2] mt-6 max-w-2xl">
-                  而支持身心障礙創作者的 <span className="text-white/82">S（社會共融）</span>，可透過符合 ESG 標示的策展內容選擇；電子紙則提供設備配置與節能估算佐證。讓環境節能與支持創作者，在同一個展示空間裡同時發生。
-                </p>
-              </div>
-              <div className="lg:col-span-5 grid grid-cols-3 gap-4">
-                <EcoStat value="全反射" label="借助環境光呈現畫面" />
-                <EcoStat value="低耗能" label="適合長時間靜態展示" />
-                <EcoStat value="1,677 萬色" label="真全彩藝術呈現" />
-              </div>
-            </div>
-            <p className="text-white/40 text-[11.5px] mt-10 text-center">
-              節能估算需依設備尺寸、環境光、內容更新頻率、每日展示時數與場域條件計算；ArtON 可依專案配置提供估算與展示佐證，不代表固定節能比例或第三方 ESG 認證。
             </p>
           </div>
         </section>
@@ -247,13 +224,13 @@ export default function B2BPage() {
               B2B Plans · 訂閱即持續累積支持佐證
             </p>
             <p className={`max-w-2xl mx-auto text-center text-[15px] md:text-[16.5px] leading-[2] text-[#45423C] mb-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              ArtON Commercial 為 NT$999／月，適用企業、診所、飯店、店家與公開空間。公開策展提供訂閱選擇，基本展示紀錄依方案提供；Impact Tracking 輕量級可另加購 NT$1／月／設備（工作值＋1），不代表售價或 ESG 分數。電子紙與其他硬體另行採購。
+              ArtON Commercial 為 NT$999／月，適用企業、診所、飯店、店家與公開空間。公開策展提供訂閱選擇，方案含 Impact 服務與基本展示紀錄；電子紙與其他硬體另行採購。
             </p>
             <div className="mt-10 flex justify-center">
               <div className="w-full max-w-4xl border border-[#DDE4D8] bg-[#F3F7F1] rounded-xl p-8">
-                <p className="text-[11px] uppercase tracking-[0.24em] text-[#2D5A3D] font-semibold mb-3">IMPACT · 影響紀錄加購</p>
-                <h3 className="text-[25px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>輕量級 NT$1／月／設備</h3>
-                <p className="text-[14px] leading-[1.9] text-[#45423C]">工作值＋1，提供約定範圍的 ESG 展示資料；不代表訂閱售價、ESG 分數或第三方認證。</p>
+                <p className="text-[11px] uppercase tracking-[0.24em] text-[#2D5A3D] font-semibold mb-3">IMPACT · 內容支持與紀錄</p>
+                <h3 className="text-[25px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>Commercial 方案內含</h3>
+                <p className="text-[14px] leading-[1.9] text-[#45423C]">提供與展示及藝術支持相關的資料整理，協助企業累積可查閱的永續行動素材；不等同 ESG 分數或第三方認證。</p>
               </div>
             </div>
 
@@ -407,7 +384,7 @@ export default function B2BPage() {
             </div>
 
             <p className={`mt-12 text-center text-[12.5px] text-[#1C1C1E]/40 transition-all duration-700 delay-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-              公開策展、Impact Tracking 與硬體採購各自適用不同規則；詳細內容依方案與專案確認。
+              公開策展、Commercial 內含的 Impact 服務與硬體採購各自適用不同規則；詳細內容依方案與專案確認。
             </p>
           </div>
         </section>
