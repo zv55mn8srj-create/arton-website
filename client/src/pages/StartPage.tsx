@@ -15,7 +15,6 @@ import { LINKS, consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Check, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 
-const LINE_QR = "/assets/line-qr-customer_068ac53d.png";
 const FOUNDING_ART = "/assets/founding-art_d2e8df21.jpg";
 
 const planComparison = [
@@ -223,44 +222,10 @@ export default function StartPage() {
         {/* Plans (subscription only — hardware cards hidden for now) */}
         <PlansSection hideHardware showRoom={false} />
 
-        {/* Room 05 — 探索策展（移至 /start 子頁） */}
+        {/* 策展內容預覽（保留於 /start 方案頁） */}
         <ExploreSection />
 
-        {/* LINE QR Code — desktop scan */}
-        <section className="py-24 md:py-28 bg-[#FBFAF7]">
-          <div className="container">
-            <div className="plaque max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
-              <div className="flex-shrink-0">
-                <div className="w-40 h-40 md:w-44 md:h-44 bg-white p-4 shadow-[0_8px_30px_rgba(28,28,30,0.08)]">
-                  <img
-                    src={LINE_QR}
-                    alt="ArtON 客戶 LINE QR Code"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-              <div>
-                <p className="text-[11px] uppercase tracking-[0.3em] text-[#F5B300] font-semibold mb-4">Scan to Consult</p>
-                <h2 className="text-[clamp(1.6rem,2.8vw,2.6rem)] leading-[1.35] font-light text-[#1C1C1E] mb-5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                  用電腦瀏覽？<br />
-                  掃碼即可加入諮詢。
-                </h2>
-                <p className="text-[14px] leading-[1.9] text-[#45423C] max-w-md mb-7">
-                  使用手機開啟 LINE 掃描上方 QR Code，即可加入 ArtON 客戶專線，與顧問聊聊您的空間與預算。
-                </p>
-                <a
-                  href={LINKS.customerLine}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#16203B] text-white text-[14px] font-medium rounded-full hover:bg-[#333336] transition-all duration-300 active:scale-[0.97]"
-                >
-                  <MessageCircle className="w-4 h-4" strokeWidth={2} />
-                  或直接點擊加入 LINE
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+
 
       </main>
       <FooterSection />

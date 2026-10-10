@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
-import ExploreSection from "@/components/ExploreSection";
 import { LINKS, consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ArrowRight, Check, FileOutput, Leaf, Mail, MessageCircle, Users } from "lucide-react";
@@ -18,7 +17,7 @@ const benefits = [
   {
     icon: FileOutput,
     title: "Commercial 方案含 ESG 報告",
-    body: "以展示紀錄、藝術支持內容與合作資料為基礎，整理企業可查閱的 ESG 行動素材；不等同第三方認證或法定申報。",
+    body: "以展示紀錄、藝術支持內容與合作資料為基礎，整理企業可使用的 ESG 行動素材；不等同第三方認證或法定申報。",
   },
   {
     icon: Users,
@@ -103,7 +102,6 @@ export default function B2BPage() {
           </div>
         </section>
 
-        <ExploreSection />
 
         <section className="py-24 md:py-32 bg-[#16203B] text-white">
           <div className="container">
@@ -130,7 +128,7 @@ export default function B2BPage() {
                 <p className="text-[15px] leading-[2] text-[#45423C] mb-7">企業可以選擇與身心障礙藝術創作者進行聯名展示，讓作品在辦公空間、接待區或公共場域持續展出。這不是一次性的活動，而是一個能被看見、被記錄、持續發生的企業行動。</p>
                 <p className="text-[13px] leading-[1.9] text-[#1C1C1E]/52">實際展示內容、授權範圍與合作名稱，於確認策展與企業需求後共同規劃。</p>
               </div>
-              <figure className="lg:col-span-7 overflow-hidden rounded-xl bg-white shadow-[0_18px_50px_rgba(44,37,27,0.1)]"><img src="/assets/venue-office-digital_a460b0a5.png" alt="企業空間長期展示身心障礙藝術作品的情境" className="w-full aspect-[4/3] object-cover" /><figcaption className="px-6 py-4 text-[12px] tracking-[0.12em] text-[#1C1C1E]/55">企業空間 · 聯名藝術展示情境</figcaption></figure>
+              <figure className="lg:col-span-7 overflow-hidden rounded-xl bg-white shadow-[0_18px_50px_rgba(44,37,27,0.1)]"><img src="/assets/scene-corporate-lobby.webp" alt="企業空間長期展示身心障礙藝術作品的情境" className="w-full aspect-[4/3] object-cover" /><figcaption className="px-6 py-4 text-[12px] tracking-[0.12em] text-[#1C1C1E]/55">企業空間 · 聯名藝術展示情境</figcaption></figure>
             </div>
           </div>
         </section>

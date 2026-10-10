@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 import { useLocation, Link } from "wouter";
 import { LINKS } from "@/lib/links";
 
-const NAV_ANCHORS = ["about", "enterprise", "explore", "faq"] as const;
+const NAV_ANCHORS = ["about", "enterprise", "demo", "faq"] as const;
 
 /**
  * Smooth-scroll to a section on the homepage, retrying until the section
@@ -63,7 +63,7 @@ export function useHashScroll(): void {
 const navLinks = [
   { label: "關於 ArtON", anchor: "about", page: "/" },
   { label: "企業 ESG", anchor: "enterprise", page: "/" },
-  { label: "探索策展", anchor: "explore", page: "/" },
+  { label: "展示情境", anchor: "demo", page: "/" },
   { label: "常見問題", anchor: "faq", page: "/" },
 ];
 

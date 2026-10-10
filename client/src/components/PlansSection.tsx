@@ -168,7 +168,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
                   ["面板與設備", ...planTable.map((p) => p.device)],
                   ["每月提供", ...planTable.map((p) => p.content)],
                   ["適合對象", ...planTable.map((p) => p.audience)],
-                  ["可查閱紀錄", ...planTable.map((p) => p.record)],
+                  ["展示紀錄", ...planTable.map((p) => p.record)],
                 ].map(([label, ...values]) => (
                   <tr key={label} className="border-t border-[#EAE5DC] align-top">
                     <th className="px-6 py-5 text-left font-medium text-[#1C1C1E]/55">{label}</th>
@@ -188,20 +188,17 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
               </tbody>
             </table>
           </div>
-          <div className="mt-10 grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            <div className="border border-[#DDE4D8] bg-[#F3F7F1] rounded-xl p-7 md:p-8">
-              <p className="text-[11px] uppercase tracking-[0.24em] text-[#2D5A3D] font-semibold mb-3">Impact · 內容支持與紀錄</p>
-              <h3 className="text-[25px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>Commercial 方案內含</h3>
-              <p className="text-[14px] leading-[1.9] text-[#45423C] mb-4">ArtON Commercial 方案內含 Impact 服務，提供與展示及藝術支持相關的資料整理。</p>
-              <p className="text-[12.5px] leading-[1.8] text-[#1C1C1E]/55">實際紀錄範圍依方案、設備與專案條件確認；不等同 ESG 分數或第三方認證。</p>
+          <div className="mt-10 max-w-5xl mx-auto border border-[#DDE4D8] bg-[#F3F7F1] rounded-xl p-7 md:p-8">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+              <div className="md:max-w-sm">
+                <p className="text-[11px] uppercase tracking-[0.24em] text-[#2D5A3D] font-semibold mb-3">Commercial · 方案包含</p>
+                <h3 className="text-[25px] font-normal text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>把展示，整理成可說明的行動。</h3>
+              </div>
+              <div className="grid sm:grid-cols-3 gap-5 md:max-w-2xl">
+                {["展示期間與據點", "策展與作品內容", "藝術支持與合作紀錄"].map((item) => <div key={item} className="border-l border-[#2D5A3D]/25 pl-4"><p className="text-[13px] leading-[1.8] text-[#2D5A3D]">{item}</p><p className="text-[12px] leading-[1.75] text-[#1C1C1E]/55 mt-1">依方案與合作條件整理</p></div>)}
+              </div>
             </div>
-          </div>
-
-          <div className="mt-8 mx-auto max-w-4xl border-l-2 border-[#C98F0E] bg-[#F3EEE5] px-6 py-5 md:px-8 md:py-6">
-            <p className="text-[11px] uppercase tracking-[0.24em] text-[#C98F0E] font-semibold mb-2">A meaningful subscription · 訂閱如何支持創作</p>
-            <p className="text-[14px] md:text-[15px] leading-[1.9] text-[#45423C]">
-              公開策展的內容費與權利金，依藝術家、策展夥伴與 ArtON 的合作約定結算。
-            </p>
+            <p className="text-[12.5px] leading-[1.8] text-[#1C1C1E]/55 mt-6 pt-5 border-t border-[#2D5A3D]/15">Commercial 方案提供相關資料整理，協助企業形成 ESG 行動素材；不等同 ESG 分數、第三方認證或法定申報。</p>
           </div>
         </div>
 

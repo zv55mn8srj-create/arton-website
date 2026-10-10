@@ -9,9 +9,9 @@ import { CalendarDays, FileText, MapPin, Users } from "lucide-react";
 const keywords = ["藝術展示", "空間美學", "企業文化", "ESG"];
 
 const statistics = [
-  { label: "展示據點", value: "可查閱", icon: MapPin },
-  { label: "展示策展", value: "可查閱", icon: CalendarDays },
-  { label: "支持創作者", value: "依紀錄", icon: Users },
+  { label: "展示據點", value: "依據點", icon: MapPin },
+  { label: "展示策展", value: "依展期", icon: CalendarDays },
+  { label: "支持創作者", value: "依內容", icon: Users },
   { label: "展示天數", value: "依期間", icon: FileText },
 ];
 
@@ -107,16 +107,11 @@ export default function EnterpriseSection() {
               <div className="space-y-5">
                 {["展示期間", "展示作品", "支持創作者"].map((label) => (
                   <div key={label}>
-                    <div className="flex justify-between mb-2 text-[11px]"><span className="text-[#1C1C1E]/48">{label}</span><span className="text-[#F5B300]">可查閱</span></div>
+                    <div className="flex justify-between mb-2 text-[11px]"><span className="text-[#1C1C1E]/48">{label}</span><span className="text-[#2D5A3D]">依紀錄</span></div>
                     <div className="h-px bg-[#EAE5DC]"><div className="h-px bg-[#F5B300] w-2/3" /></div>
                   </div>
                 ))}
-                <button className="w-full mt-2 text-left text-[12px] text-[#1C1C1E]/65 border-t border-[#EAE5DC] pt-4 flex items-center justify-between">
-                  <span>取得 ESG 成果報告</span><span className="text-[#F5B300]">↗</span>
-                </button>
-                <a href="/assets/arton-esg-sample_90a82260.pdf" download className="w-full text-left text-[12px] text-[#1C1C1E]/65 border-t border-[#EAE5DC] pt-4 flex items-center justify-between hover:text-[#2D5A3D] transition-colors duration-300">
-                  <span>下載 ESG 報告範本（PDF）</span><span className="text-[#F5B300]">↓</span>
-                </a>
+                <p className="w-full mt-2 text-[12px] leading-[1.8] text-[#1C1C1E]/48 border-t border-[#EAE5DC] pt-4">Commercial 方案可依展示期間、內容與支持紀錄整理 ESG 行動素材。</p>
               </div>
             </div>
           </div>
