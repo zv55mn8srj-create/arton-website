@@ -103,6 +103,22 @@ export default function B2BPage() {
         </section>
 
 
+        <section className="py-24 md:py-32 bg-[#F7F4EF]">
+          <div className="container">
+            <div className="max-w-3xl mb-12">
+              <p className="text-[11px] uppercase tracking-[0.3em] text-[#2D5A3D] font-semibold mb-5">ESG in the everyday · 企業日常場域</p>
+              <h2 className="text-[clamp(2rem,3.5vw,3.4rem)] font-light text-[#1C1C1E] mb-5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>不只在大廳，<br />茶水間與工廠也能成為共好的日常。</h2>
+              <p className="text-[15px] leading-[2] text-[#45423C]">企業 ESG 不只發生在正式接待空間，也可以進入員工每天經過的茶水間、休憩區與工廠現場，讓藝術支持成為組織文化的一部分。</p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl">
+              {[
+                { image: "/assets/scene-pantry.webp", title: "茶水間／員工休憩區", text: "在日常休息的片刻，讓作品成為同事之間自然發生的交流。" },
+                { image: "/assets/scene-factory.webp", title: "工廠／工作現場", text: "讓支持創作者的企業行動，也被每天投入工作的團隊看見。" },
+              ].map((scene) => <figure key={scene.title} className="bg-white border border-[#E7E0D5] rounded-xl overflow-hidden"><div className="aspect-[16/9] overflow-hidden"><img src={scene.image} alt={`${scene.title}藝術展示情境`} className="w-full h-full object-cover" /></div><figcaption className="p-6"><h3 className="text-[21px] font-normal text-[#1C1C1E] mb-2" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{scene.title}</h3><p className="text-[13px] leading-[1.8] text-[#45423C]">{scene.text}</p></figcaption></figure>)}
+            </div>
+          </div>
+        </section>
+
         <section className="py-24 md:py-32 bg-[#16203B] text-white">
           <div className="container">
             <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
@@ -124,8 +140,8 @@ export default function B2BPage() {
             <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
               <div className="lg:col-span-5">
                 <p className="text-[11px] uppercase tracking-[0.3em] text-[#B38A44] font-semibold mb-6">A lasting collaboration · 聯名展示</p>
-                <h2 className="text-[clamp(2rem,3.6vw,3.5rem)] leading-[1.25] font-light text-[#1C1C1E] mb-6" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>讓一間公司，<br />長期展出一群創作者的作品。</h2>
-                <p className="text-[15px] leading-[2] text-[#45423C] mb-7">企業可以選擇與身心障礙藝術創作者進行聯名展示，讓作品在辦公空間、接待區或公共場域持續展出。這不是一次性的活動，而是一個能被看見、被記錄、持續發生的企業行動。</p>
+                <h2 className="text-[clamp(2rem,3.6vw,3.5rem)] leading-[1.25] font-light text-[#1C1C1E] mb-6" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>讓企業空間，<br />持續遇見不同的創作者。</h2>
+                <p className="text-[15px] leading-[2] text-[#45423C] mb-7">企業可以依照每期策展與空間需求，選擇不同藝術家與主題的作品進行展示；也可以在符合合作條件時，支持身心障礙藝術創作者。讓作品被看見、被記錄，成為持續發生的企業文化行動。</p>
                 <p className="text-[13px] leading-[1.9] text-[#1C1C1E]/52">實際展示內容、授權範圍與合作名稱，於確認策展與企業需求後共同規劃。</p>
               </div>
               <figure className="lg:col-span-7 overflow-hidden rounded-xl bg-white shadow-[0_18px_50px_rgba(44,37,27,0.1)]"><img src="/assets/scene-corporate-lobby.webp" alt="企業空間長期展示身心障礙藝術作品的情境" className="w-full aspect-[4/3] object-cover" /><figcaption className="px-6 py-4 text-[12px] tracking-[0.12em] text-[#1C1C1E]/55">企業空間 · 聯名藝術展示情境</figcaption></figure>

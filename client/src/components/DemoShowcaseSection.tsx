@@ -54,23 +54,24 @@ export default function DemoShowcaseSection() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-5">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-10">
           {scenes.map((scene, index) => (
             <figure
               key={scene.name}
-              className={`group relative min-h-[320px] md:min-h-[400px] overflow-hidden transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-9"}`}
+              className={`group transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-9"}`}
               style={{ transitionDelay: `${index * 90}ms` }}
             >
-              <img
-                src={scene.image}
-                alt={`${scene.name}展示情境`}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/6 to-transparent" />
-              <figcaption className="absolute inset-x-0 bottom-0 p-6 text-white">
-                <p className="text-[10px] uppercase tracking-[0.18em] text-[#E8B339] mb-2 font-medium">{scene.tag}</p>
-                <h3 className="text-[22px] md:text-[24px] font-light mb-2" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{scene.name}</h3>
-                <p className="text-[12px] leading-[1.7] text-white/66">{scene.caption}</p>
+              <div className="aspect-[16/9] overflow-hidden bg-[#E9E2D8]">
+                <img
+                  src={scene.image}
+                  alt={`${scene.name}展示情境`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
+                />
+              </div>
+              <figcaption className="pt-5 px-1">
+                <p className="text-[10px] uppercase tracking-[0.18em] text-[#B38A44] mb-2 font-medium">{scene.tag}</p>
+                <h3 className="text-[22px] md:text-[24px] font-light text-[#1C1C1E] mb-2" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{scene.name}</h3>
+                <p className="text-[12px] leading-[1.7] text-[#1C1C1E]/55">{scene.caption}</p>
               </figcaption>
             </figure>
           ))}

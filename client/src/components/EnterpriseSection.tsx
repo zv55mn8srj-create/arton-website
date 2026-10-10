@@ -85,7 +85,7 @@ export default function EnterpriseSection() {
                     <Icon className="w-3.5 h-3.5 text-[#F5B300]" strokeWidth={1.4} />
                     <span className="text-[11px] tracking-[0.09em]">{label}</span>
                   </div>
-                  <p className="text-[clamp(2.35rem,4vw,4rem)] leading-none font-light text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{value}</p>
+                  <p className="text-[clamp(1.55rem,2.4vw,2.35rem)] leading-none font-light text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{value}</p>
                 </div>
               ))}
             </div>
