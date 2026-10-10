@@ -55,7 +55,7 @@ export default function FAQSection() {
                     className="w-full grid grid-cols-[34px_1fr_28px] gap-4 items-center py-7 text-left"
                     aria-expanded={expanded}
                   >
-                    <span className="text-[12px] text-[#F5B300]">0{index + 1}</span>
+                    <span className="text-[12px] text-[#F5B300]">{String(index + 1).padStart(2, "0")}</span>
                     <span className="text-[17px] md:text-[20px] font-normal text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{item.q}</span>
                     <PowerGlyph className={`w-5 h-5 text-[#F5B300] transition-transform duration-300 ${expanded ? "rotate-45" : ""}`} />
                   </button>

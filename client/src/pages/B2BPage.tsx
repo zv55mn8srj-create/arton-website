@@ -1,86 +1,36 @@
-/**
- * ArtON /b2b — B2B Landing Page
- * Direct, outcome-first copy for procurement & ESG decision makers,
- * while keeping the Gallery Quietism visual language (warm whites,
- * Cormorant Garamond display, art gold #F5B300 / #E8B339, deep gray #1C1C1E).
- */
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
+import ExploreSection from "@/components/ExploreSection";
 import { LINKS, consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import WhyArtON from "@/components/WhyArtON";
-import WhyEnterprise from "@/components/WhyEnterprise";
-import ExploreSection from "@/components/ExploreSection";
-import { ArrowRight, Check, FileOutput, Landmark, MessageCircle, Leaf, Mail, WifiOff } from "lucide-react";
+import { ArrowRight, Check, FileOutput, Leaf, Mail, MessageCircle, Users } from "lucide-react";
 
-const highlights = [
-  {
-    icon: Check,
-    title: "S · 身心障礙創作者支持",
-    description: "訂閱公開策展，支持參與該展覽的藝術家與策展夥伴；若希望支持身心障礙創作者，可選擇具 ESG 標示的展覽。",
-  },
+const comparisonRows = [
+  ["適用對象", "家庭、個人生活空間", "企業、診所、飯店、店家與公開空間"],
+  ["授權方式", "家庭展示授權", "商用／公開空間展示授權"],
+  ["內容訂閱", "NT$699／月", "NT$999／月"],
+  ["展示紀錄", "依方案提供基本紀錄", "含展示與藝術支持紀錄整理"],
+  ["ESG 報告", "不含", "含 ESG 報告整理服務"],
+  ["設備配置", "可搭配 ArtON Box 或展示面板", "可依據點與場域配置設備"],
+];
+
+const benefits = [
   {
     icon: FileOutput,
-    title: "可查閱的支持佐證",
-    description: "ArtON Commercial 方案含 Impact 服務，提供與展示及藝術支持相關的資料整理；不將紀錄當成 ESG 分數。",
+    title: "Commercial 方案含 ESG 報告",
+    body: "以展示紀錄、藝術支持內容與合作資料為基礎，整理企業可查閱的 ESG 行動素材；不等同第三方認證或法定申報。",
   },
   {
-    icon: Landmark,
-    title: "合法採購與完整憑證",
-    description: "ArtON 提供藝術展示服務。企業付費採購藝術服務，取得完整憑證、授權文件與發票，協助財務、稅務與 ESG 資料整理。",
+    icon: Users,
+    title: "讓支持成為日常展示",
+    body: "企業可選擇具 ESG 標誌的策展，支持身心障礙創作者與策展夥伴，讓作品在空間裡持續被看見。",
   },
   {
     icon: Leaf,
-    title: "E · 減碳升級選項",
-    description: "想要更進一步？可升級全彩電子紙，以全反射、低耗能的展示方式，讓 ESG 的 E 與 S 同時被記錄；實際節能效果依設備與場域條件估算。",
+    title: "想加強 E，再選全彩電子紙",
+    body: "全彩電子紙是額外的展示設備選項，具全反射與低耗能特性；實際節能效果依尺寸、更新頻率與場域條件估算。",
   },
 ];
-
-const painSolutions = [
-  { pain: "每年都要重新找 ESG 活動", solution: "以公開策展訂閱，讓藝術展示成為日常行動" },
-  { pain: "活動結束就沒有成果", solution: "依方案查閱展示與藝術支持基本紀錄" },
-  { pain: "難以向董事會證明 ESG 價值", solution: "展示與藝術支持佐證數據可查閱" },
-  { pain: "多據點採購需求複雜", solution: "依據點、設備與展示需求評估與報價" },
-];
-
-
-
-const esgMap = [
-  {
-    target: "SDG 8",
-    name: "良好工作與經濟成長",
-    description: "2030 目標明確寫明「為身心障礙者實現體面工作與同值同酬」。選擇具 ESG 標示的公開策展，可依該展覽的合作與展示紀錄整理支持內容。",
-    metric: "8.5 包容性就業",
-  },
-  {
-    target: "SDG 10",
-    name: "減少不平等",
-    description: "不分身心障礙與否，讓每一位創作者的專業、觀點與價值被公平看見、被市場支持，促進社會與經濟包容。",
-    metric: "多元平等 · DEI",
-  },
-  {
-    target: "S 社會面向",
-    name: "企業永續報告指標",
-    description: "支持身心障礙者營生、多元包容採購與在地文化支持，皆為上市櫃永續報告書「社會面向」的常見披露指標。",
-    metric: "社會 · 共融採購",
-  },
-  {
-    target: "G 治理面向",
-    name: "可稽核的完整憑證",
-    description: "合法展示授權、採購憑證與數據存證一應俱全，ESG 成果可被記錄、被稽核、被放入年報。",
-    metric: "授權 · 憑證 · 存證",
-  },
-];
-
-const epaperPlan = {
-  label: "UPGRADE · 減碳升級選項",
-  name: "ArtON 真全彩電子紙展示",
-  tagline: "真全彩 1,677 萬色｜全反射顯示｜低耗能、舒適觀看。",
-  badge: "E 加分項",
-  badgeNote: "全彩電子紙面板｜依展示需求配置｜洽 ",
-  quote: "高質感顯示，讓 ESG 的 E 與 S 同時被記錄",
-  features: ["在內容訂閱方案上，另行配置 ArtON 使用的全彩電子紙面板", "全反射顯示，借助環境光呈現畫面，減少長時間自發光的能源需求", "雙穩態特性：畫面靜止時維持顯示，適合長時間展示藝術作品", "真全彩 1,677 萬色，搭配無藍光自發光的舒適觀看體驗"],
-};
 
 export default function B2BPage() {
   const { ref, isVisible } = useScrollAnimation(0.05);
@@ -89,359 +39,105 @@ export default function B2BPage() {
     <div className="min-h-screen bg-[#FAFAF8]">
       <Header />
       <main>
-        {/* Hero */}
-        <section className="relative py-28 md:py-44 bg-[#16203B] text-white overflow-hidden">
-          <div className="absolute -bottom-16 left-[3%] text-[20rem] leading-none text-white/[0.04] font-light select-none" aria-hidden="true">
-            B2B
-          </div>
+        <section className="relative py-28 md:py-40 bg-[#16203B] text-white overflow-hidden">
+          <div className="absolute -bottom-20 left-[3%] text-[20rem] leading-none text-white/[0.035] font-light select-none" aria-hidden="true">B2B</div>
           <div className="container relative" ref={ref}>
-            <div className="max-w-3xl">
-              <p
-                className={`text-[11px] md:text-[12px] uppercase tracking-[0.32em] text-[#E8B339] mb-8 font-semibold transition-all duration-700 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
-              >
-                For Enterprises · ESG 採購方案
-              </p>
-              <h1
-                className={`text-[clamp(2.4rem,4.8vw,4.4rem)] leading-[1.15] font-light tracking-[-0.03em] mb-8 transition-all duration-700 delay-100 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
-                style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}
-              >
-                讓每一面牆，
+            <div className="max-w-4xl">
+              <p className="text-[11px] md:text-[12px] uppercase tracking-[0.32em] text-[#E8B339] mb-8 font-semibold">For Enterprises · 商業展示方案</p>
+              <h1 className="text-[clamp(2.35rem,4.7vw,4.4rem)] leading-[1.16] font-light tracking-[-0.03em] mb-8" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                讓企業選對方案，
                 <br />
-                成為永續報告書裡
+                讓藝術與 ESG
                 <br />
-                <span className="text-[#E8B339]">支持身心障礙創作者的 ESG 實踐。</span>
+                <span className="text-[#E8B339]">持續發生。</span>
               </h1>
-              <p
-                className={`text-white/70 text-[15px] md:text-[17px] leading-[2] max-w-2xl mb-10 transition-all duration-700 delay-200 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
-              >
-                ArtON 提供藝術展示與內容訂閱服務。企業訂閱公開策展，支持參與該展覽的藝術家與策展夥伴；若希望支持身心障礙創作者，可選擇具 ESG 標示的展覽。電子紙面板則是另行採購的展示設備，節能效果依實際條件估算。
+              <p className="text-white/72 text-[15px] md:text-[17px] leading-[2] max-w-2xl mb-10">
+                ArtON Commercial 是給企業與公開空間的商用授權。除了藝術內容訂閱，也包含 ESG 報告整理；若希望進一步強化節能展示，再選擇全彩電子紙。
               </p>
-              <div
-                className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
-              >
-                <a
-                  href={LINKS.customerLine}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#E8B339] text-[#16202B] text-[15px] font-semibold rounded-full hover:bg-[#F0B429] transition-all duration-300 active:scale-[0.97]"
-                >
-                  <MessageCircle className="w-4.5 h-4.5" strokeWidth={2} />
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#E8B339] text-[#16202B] text-[15px] font-semibold rounded-full hover:bg-[#F0B429] transition-all duration-300 active:scale-[0.97]">
+                  <MessageCircle className="w-4 h-4" strokeWidth={2} />
                   諮詢 Commercial 內容訂閱
                 </a>
-                <a
-                  href="/start"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/30 text-white text-[15px] font-medium rounded-full hover:bg-white/10 transition-all duration-300"
-                >
-                  查看全部方案
-                  <ArrowRight className="w-4 h-4" strokeWidth={2} />
+                <a href="#plans" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/30 text-white text-[15px] font-medium rounded-full hover:bg-white/10 transition-all duration-300">
+                  查看方案差異 <ArrowRight className="w-4 h-4" strokeWidth={2} />
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Highlights */}
-        <section className="py-24 md:py-32 bg-[#FBFAF7]">
+        <section id="plans" className="py-24 md:py-32 bg-[#FBFAF7]">
           <div className="container">
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-14 text-center">
-              What You Get · 四大亮點
-            </p>
-            <div className="grid sm:grid-cols-2 gap-x-16 gap-y-14 max-w-5xl mx-auto">
-              {highlights.map((h, i) => (
-                <HighlightCard key={h.title} {...h} index={i} />
-              ))}
+            <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/35 font-semibold mb-6 text-center">Choose the right license · 先分清楚授權</p>
+            <h2 className="text-center text-[clamp(2rem,3.6vw,3.5rem)] font-light text-[#1C1C1E] mb-5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>一般方案，與商業方案。</h2>
+            <p className="max-w-2xl mx-auto text-center text-[15px] leading-[2] text-[#45423C] mb-14">兩種方案的差異不只是價格，而是使用對象、展示授權與企業 ESG 需求不同。</p>
+            <div className="max-w-5xl mx-auto overflow-x-auto rounded-xl border border-[#E2DCCF] bg-white shadow-[0_18px_50px_rgba(44,37,27,0.06)]">
+              <table className="w-full min-w-[760px] text-[13.5px]">
+                <thead>
+                  <tr className="border-b border-[#E2DCCF]">
+                    <th className="w-[24%] px-6 py-6 text-left text-[12px] font-medium text-[#1C1C1E]/45">比較項目</th>
+                    <th className="w-[38%] border-l border-[#E2DCCF] px-6 py-6 text-left align-top"><p className="text-[10px] uppercase tracking-[0.22em] text-[#C98F0E] mb-2">HOME</p><p className="text-[22px] font-normal text-[#1C1C1E]">ArtON Home</p><p className="text-[#1C1C1E]/55 mt-2">一般／家庭授權</p></th>
+                    <th className="w-[38%] border-l border-[#E2DCCF] px-6 py-6 text-left align-top bg-[#F3F7F1]"><p className="text-[10px] uppercase tracking-[0.22em] text-[#2D5A3D] mb-2">COMMERCIAL</p><p className="text-[22px] font-normal text-[#1C1C1E]">ArtON Commercial</p><p className="text-[#1C1C1E]/55 mt-2">商用／公開空間授權</p></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonRows.map(([label, home, commercial]) => <tr key={label} className="border-b border-[#E2DCCF] last:border-b-0"><td className="px-6 py-5 font-medium text-[#1C1C1E]/55">{label}</td><td className="border-l border-[#E2DCCF] px-6 py-5 text-[#45423C]">{home}</td><td className="border-l border-[#E2DCCF] bg-[#F3F7F1]/70 px-6 py-5 text-[#2D5A3D] font-medium">{commercial}</td></tr>)}
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
 
-        {/* Why ArtON — 真正的支持，是讓創作者持續走下去 */}
-        <WhyArtON />
-
-        {/* Representative exhibitions — let enterprises meet the content before the equipment */}
-        <ExploreSection />
-
-        {/* ESG Mapping — 支持身心障礙創作者如何對應 ESG 指標 */}
-        <section className="py-24 md:py-32 bg-[#FBFAF7]">
-          <div className="container">
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-6 text-center">
-              Your ESG Impact · 支持身心障礙創作者，如何成為你的 ESG
-            </p>
-            <p className={`max-w-2xl mx-auto text-center text-[15px] md:text-[16.5px] leading-[2] text-[#45423C] mb-14 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              公開策展的內容費與權利金，依藝術家、策展夥伴與 ArtON 的合作約定結算；若選擇具 ESG 標示的展覽，可整理相應的藝術支持紀錄。
-            </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12 max-w-5xl mx-auto">
-              {esgMap.map((item, i) => (
-                <EsGCard key={item.target} {...item} index={i} />
-              ))}
-            </div>
-            <p className="mt-12 text-center text-[12px] text-[#1C1C1E]/40">
-              ArtON 提供展示與藝術支持的佐證數據；資料可作為企業整理永續行動素材的依據，不等同第三方 ESG 認證或法定申報。
-            </p>
-          </div>
-        </section>
-
-        {/* Pain → Solution */}
         <section className="py-24 md:py-32 bg-[#F7F4EF]">
           <div className="container">
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-14 text-center">
-              Before → With ArtON · 從痛點到解方
-            </p>
-            <div className="max-w-4xl mx-auto space-y-5">
-              {painSolutions.map((row, i) => (
-                <div
-                  key={row.pain}
-                  className={`grid md:grid-cols-2 gap-4 md:gap-10 items-center bg-white border border-[#E7E0D5] rounded-xl px-7 py-6 shadow-[0_14px_40px_rgba(44,37,27,0.05)] transition-all duration-700 ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                  }`}
-                  style={{ transitionDelay: `${i * 90}ms` }}
-                >
-                  <p className="text-[14px] text-[#1C1C1E]/45 line-through decoration-[#F5B300]/60">{row.pain}</p>
-                  <p className="text-[15px] font-medium text-[#2D5A3D] flex items-center gap-2.5">
-                    <Check className="w-4 h-4 shrink-0 text-[#2D5A3D]" strokeWidth={2.4} />
-                    {row.solution}
-                  </p>
-                </div>
-              ))}
+            <div className="max-w-3xl mx-auto text-center mb-14">
+              <p className="text-[11px] uppercase tracking-[0.3em] text-[#2D5A3D] font-semibold mb-5">Commercial · 商業方案內容</p>
+              <h2 className="text-[clamp(2rem,3.5vw,3.4rem)] font-light text-[#1C1C1E] mb-5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>不只是展示藝術，<br />也把 ESG 行動整理好。</h2>
+              <p className="text-[15px] leading-[2] text-[#45423C]">Commercial NT$999／月，適用企業、診所、飯店、店家與其他公開空間。方案包含公開策展內容訂閱、商用展示授權、展示與藝術支持紀錄，以及 ESG 報告整理服務。</p>
             </div>
+            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {benefits.map(({ icon: Icon, title, body }) => <article key={title} className="bg-white border border-[#E7E0D5] rounded-xl p-8"><span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#2D5A3D]/10 mb-6"><Icon className="w-5 h-5 text-[#2D5A3D]" strokeWidth={1.6} /></span><h3 className="text-[21px] font-normal text-[#1C1C1E] mb-4" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{title}</h3><p className="text-[14px] leading-[1.9] text-[#45423C]">{body}</p></article>)}
+            </div>
+            <p className="max-w-3xl mx-auto text-center text-[12px] leading-[1.8] text-[#1C1C1E]/45 mt-10">ESG 報告內容依方案與合作資料整理，不等同第三方 ESG 認證、法定申報或固定 ESG 分數。</p>
           </div>
         </section>
 
-        {/* Why ArtON（子頁不顯示 Room 編號） */}
-        <WhyEnterprise showRoom={false} />
+        <ExploreSection />
 
-        {/* Plans */}
-        <section className="py-24 md:py-32 bg-[#FBFAF7]">
+        <section className="py-24 md:py-32 bg-[#16203B] text-white">
           <div className="container">
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/32 font-semibold mb-14 text-center">
-              B2B Plans · 訂閱即持續累積支持佐證
-            </p>
-            <p className={`max-w-2xl mx-auto text-center text-[15px] md:text-[16.5px] leading-[2] text-[#45423C] mb-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-              ArtON Commercial 為 NT$999／月，適用企業、診所、飯店、店家與公開空間。公開策展提供訂閱選擇，方案含 Impact 服務與基本展示紀錄；電子紙與其他硬體另行採購。
-            </p>
-            <div className="mt-10 flex justify-center">
-              <div className="w-full max-w-4xl border border-[#DDE4D8] bg-[#F3F7F1] rounded-xl p-8">
-                <p className="text-[11px] uppercase tracking-[0.24em] text-[#2D5A3D] font-semibold mb-3">IMPACT · 內容支持與紀錄</p>
-                <h3 className="text-[25px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>Commercial 方案內含</h3>
-                <p className="text-[14px] leading-[1.9] text-[#45423C]">提供與展示及藝術支持相關的資料整理，協助企業累積可查閱的永續行動素材；不等同 ESG 分數或第三方認證。</p>
+            <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
+              <div className="lg:col-span-5">
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] font-semibold mb-6">E · Optional upgrade</p>
+                <h2 className="text-[clamp(2rem,3.7vw,3.6rem)] leading-[1.25] font-light mb-6" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>想再加強 ESG 的 E，<br /><span className="text-[#E8B339]">再選全彩電子紙。</span></h2>
+                <p className="text-white/72 text-[15px] leading-[2] mb-8">全彩電子紙是額外的展示設備，不取代 Commercial 內容訂閱。全反射、雙穩態與低耗能特性，適合長時間展示藝術作品；其他尺寸與數量請洽詢。</p>
+                <a href={consultMail("全彩電子紙展示方案諮詢")} className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#E8B339] text-[#16203B] rounded-full text-[14px] font-semibold hover:bg-[#F0B429] transition-colors">諮詢電子紙升級 <Mail className="w-4 h-4" /></a>
+              </div>
+              <div className="lg:col-span-7 grid sm:grid-cols-2 gap-5">
+                {["全反射顯示，借助環境光呈現畫面", "畫面靜止時維持顯示，適合長時間展示", "真全彩 1,677 萬色，呈現作品色彩", "設備依尺寸、數量與場域條件配置"].map((text) => <div key={text} className="border border-white/12 rounded-lg p-6"><Check className="w-5 h-5 text-[#E8B339] mb-5" strokeWidth={2} /><p className="text-[14px] leading-[1.8] text-white/78">{text}</p></div>)}
               </div>
             </div>
-
-            {/* E-Paper — 洽詢方案（不標價） */}
-            <div className="mt-10 flex justify-center">
-              <div
-                className={`w-full max-w-4xl bg-[#F7F4EF] border border-[#E7E0D5] rounded-xl p-9 md:p-12 transition-all duration-700 delay-200 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
-              >
-                <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/35 font-semibold mb-4">{epaperPlan.label}</p>
-                <div className="grid md:grid-cols-12 gap-8 items-start">
-                  <div className="md:col-span-8">
-                    <h3 className="text-[clamp(1.8rem,3vw,2.6rem)] leading-[1.3] font-light text-[#1C1C1E] mb-4" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                      {epaperPlan.name}
-                    </h3>
-                    <p className="text-[15px] md:text-[16.5px] text-[#1C1C1E] mb-8">{epaperPlan.tagline}</p>
-                    <div className="border-t border-[#E7E0D5] pt-7 mb-8">
-                      <p className="text-[clamp(1.5rem,2.6vw,2.2rem)] font-light text-[#E8B339] mb-2.5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                        {epaperPlan.badge}
-                      </p>
-                      <p className="flex items-center gap-2 text-[15px] text-[#1C1C1E] mb-1">
-                        {epaperPlan.badgeNote}
-                        <a href={consultMail("電子紙展示方案諮詢")} className="inline-flex items-center gap-1.5 text-[#E8B339] hover:text-[#F5B300] transition-colors duration-200">
-                          <Mail className="w-3.5 h-3.5" strokeWidth={2} />
-                          <span>{LINKS.emailDisplay}</span>
-                        </a>
-                      </p>
-                      <p className="text-[13.5px] text-[#1C1C1E]/45">{epaperPlan.quote}</p>
-                    </div>
-                    <ul className="space-y-3 mb-9">
-                      {epaperPlan.features.map((f) => (
-                        <li key={f} className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-[#1C1C1E]/78">
-                          <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
-                          <span>{f}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <a
-                      href={LINKS.email}
-                      className="group inline-flex items-center justify-center gap-2.5 text-[14px] font-semibold px-7 py-4 border border-[#1C1C1E]/35 text-[#1C1C1E] rounded-full hover:border-[#C98F0E] hover:text-[#E8B339] transition-all duration-200 active:scale-[0.97]"
-                    >
-                      諮詢電子紙展示方案
-                      <ArrowRight className="w-4 h-4" strokeWidth={2} />
-                    </a>
-                  </div>
-                  <div className="md:col-span-4 bg-[#16203B] text-white rounded-lg p-7 md:ml-2">
-                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#E8B339] font-semibold mb-5">E-Paper · 展示優勢</p>
-                    <ul className="space-y-4 text-[13px] leading-[1.8] text-white/80">
-                      <li className="flex items-start gap-2.5">
-                        <span className="text-[#E8B339] font-semibold shrink-0">全反射</span>
-                        <span>借助環境光呈現畫面</span>
-                      </li>
-                      <li className="flex items-start gap-2.5">
-                        <span className="text-[#E8B339] font-semibold shrink-0">低耗能</span>
-                        <span>畫面靜止時維持顯示</span>
-                      </li>
-                      <li className="flex items-start gap-2.5">
-                        <span className="text-[#E8B339] font-semibold shrink-0">1,677 萬色</span>
-                        <span>真全彩忠實還原作品色彩</span>
-                      </li>
-                      <li className="flex items-start gap-2.5">
-                        <span className="text-[#E8B339] font-semibold shrink-0">單一面板</span>
-                        <span>聚焦 ArtON 的藝術展示情境</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* MULTI-SITE — 企業多據點採購 */}
-            <div className="mt-10 flex justify-center">
-              <div
-                className={`w-full max-w-4xl bg-[#16203B] text-white rounded-xl p-9 md:p-12 transition-all duration-700 delay-200 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
-              >
-                <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] font-semibold mb-4">MULTI-SITE · 多據點採購諮詢</p>
-                <div className="grid md:grid-cols-12 gap-8 items-start">
-                  <div className="md:col-span-8">
-                    <h3 className="text-[clamp(1.8rem,3vw,2.6rem)] leading-[1.3] font-light text-white mb-4" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                      企業客製方案
-                    </h3>
-                    <p className="text-[15px] md:text-[16.5px] text-white/85 mb-8">
-                      多據點採購、場勘及報告整理服務，依需求評估與報價。
-                    </p>
-                    <div className="border-t border-white/12 pt-7 mb-8">
-                      <p className="text-[clamp(1.5rem,2.6vw,2.2rem)] font-light text-[#E8B339] mb-2.5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                        為大型採購設計
-                      </p>
-                      <p className="text-[15px] text-white/80 mb-1">5 台以上（診所、企業總部、連鎖門市）</p>
-                      <a href={consultMail("申請多據點評估與報價")} className="text-[13.5px] text-white/45 hover:text-[#E8B339] transition-colors duration-200">依據點規模提供團體優惠與彈性合約，洽 {LINKS.emailDisplay}</a>
-                    </div>
-                    <ul className="space-y-3 mb-9">
-                      <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">
-                        <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
-                        <span>多據點採購：依據點數量、設備與展示需求評估</span>
-                      </li>
-                      <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">
-                        <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
-                        <span>場勘與規劃：依需求評估空間、設備與展示條件</span>
-                      </li>
-                      <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">
-                        <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
-                        <span>合約與付款：依專案內容、採購流程與付款條件確認</span>
-                      </li>
-                      <li className="flex items-start gap-3 text-[13.5px] leading-[1.7] text-white/85">
-                        <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#E8B339]" strokeWidth={2.2} />
-                        <span>報告整理：依約定範圍整理展示與藝術支持資料</span>
-                      </li>
-                    </ul>
-                    <a
-                      href={LINKS.email}
-                      className="group inline-flex items-center justify-center gap-2.5 text-[14px] font-semibold px-7 py-4 bg-[#E8B339] text-[#16202B] rounded-full hover:bg-[#F0B429] transition-all duration-200 active:scale-[0.97]"
-                    >
-                      申請多據點評估與報價
-                      <ArrowRight className="w-4 h-4" strokeWidth={2} />
-                    </a>
-                  </div>
-                  <div className="md:col-span-4 border border-white/15 rounded-lg p-7 md:ml-2">
-                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#E8B339] font-semibold mb-5">Custom · 企業採購流程</p>
-                    <ul className="space-y-4 text-[13px] leading-[1.8] text-white/80">
-                      <li className="flex items-start gap-2.5">
-                        <span className="text-[#E8B339] font-semibold shrink-0">01</span>
-                        <span>提供據點清單與需求</span>
-                      </li>
-                      <li className="flex items-start gap-2.5">
-                        <span className="text-[#E8B339] font-semibold shrink-0">02</span>
-                        <span>專人到場勘查評估</span>
-                      </li>
-                      <li className="flex items-start gap-2.5">
-                        <span className="text-[#E8B339] font-semibold shrink-0">03</span>
-                        <span>客製報價與合約規劃</span>
-                      </li>
-                      <li className="flex items-start gap-2.5">
-                        <span className="text-[#E8B339] font-semibold shrink-0">04</span>
-                        <span>統一安裝上線與教育訓練</span>
-                      </li>
-                      <li className="flex items-start gap-2.5">
-                        <span className="text-[#E8B339] font-semibold shrink-0">05</span>
-                        <span>展示與藝術支持佐證資料整理</span>
-                      </li>
-                    </ul>
-                    <p className="text-white/40 text-[11.5px] leading-[1.7] mt-6 pt-5 border-t border-white/10">
-                      服務內容與費用依據點需求評估與報價。
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <p className={`mt-12 text-center text-[12.5px] text-[#1C1C1E]/40 transition-all duration-700 delay-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-              公開策展、Commercial 內含的 Impact 服務與硬體採購各自適用不同規則；詳細內容依方案與專案確認。
-            </p>
           </div>
         </section>
 
+        <section className="py-24 md:py-36 bg-[#F5F0EB]">
+          <div className="container">
+            <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
+              <div className="lg:col-span-5">
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#B38A44] font-semibold mb-6">A lasting collaboration · 聯名展示</p>
+                <h2 className="text-[clamp(2rem,3.6vw,3.5rem)] leading-[1.25] font-light text-[#1C1C1E] mb-6" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>讓一間公司，<br />長期展出一群創作者的作品。</h2>
+                <p className="text-[15px] leading-[2] text-[#45423C] mb-7">企業可以選擇與身心障礙藝術創作者進行聯名展示，讓作品在辦公空間、接待區或公共場域持續展出。這不是一次性的活動，而是一個能被看見、被記錄、持續發生的企業行動。</p>
+                <p className="text-[13px] leading-[1.9] text-[#1C1C1E]/52">實際展示內容、授權範圍與合作名稱，於確認策展與企業需求後共同規劃。</p>
+              </div>
+              <figure className="lg:col-span-7 overflow-hidden rounded-xl bg-white shadow-[0_18px_50px_rgba(44,37,27,0.1)]"><img src="/assets/venue-office-digital_a460b0a5.png" alt="企業空間長期展示身心障礙藝術作品的情境" className="w-full aspect-[4/3] object-cover" /><figcaption className="px-6 py-4 text-[12px] tracking-[0.12em] text-[#1C1C1E]/55">企業空間 · 聯名藝術展示情境</figcaption></figure>
+            </div>
+          </div>
+        </section>
 
+        <section className="py-20 bg-[#FBFAF7] text-center"><div className="container"><p className="text-[13px] text-[#45423C] mb-6">需要多據點配置、電子紙或聯名展示規劃？</p><a href={consultMail("ArtON Commercial 商業方案諮詢")} className="inline-flex items-center gap-3 px-8 py-4 bg-[#16203B] text-white rounded-full text-[14px] font-semibold hover:bg-[#263354] transition-colors">洽詢 Commercial 商業方案 <ArrowRight className="w-4 h-4" /></a></div></section>
       </main>
       <FooterSection />
     </div>
-  );
-}
-
-function EcoStat({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="bg-white/[0.06] border border-white/10 rounded-xl px-4 py-6 text-center">
-      <p className="text-[clamp(1.6rem,2.6vw,2.4rem)] font-light text-[#E8B339] leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-        {value}
-      </p>
-      <p className="text-white/55 text-[11px] leading-[1.7] mt-3">{label}</p>
-    </div>
-  );
-}
-
-function HighlightCard({ icon: Icon, title, description, index }: { icon: typeof Check; title: string; description: string; index: number }) {
-  const { ref, isVisible } = useScrollAnimation(0.1);
-  return (
-    <article
-      ref={ref}
-      className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-      style={{ transitionDelay: `${index * 110}ms` }}
-    >
-      <div className="flex items-center gap-3.5 mb-5">
-        <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#F5B300]/10">
-          <Icon className="w-5 h-5 text-[#E8B339]" strokeWidth={1.5} />
-        </span>
-        <h3 className="text-[24px] font-normal text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-          {title}
-        </h3>
-      </div>
-      <p className="text-[14px] leading-[2] text-[#45423C]">{description}</p>
-    </article>
-  );
-}
-
-function EsGCard({ target, name, description, metric, index }: { target: string; name: string; description: string; metric: string; index: number }) {
-  const { ref, isVisible } = useScrollAnimation(0.1);
-  return (
-    <article
-      ref={ref}
-      className={`border-t border-[#1C1C1E]/12 pt-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-      style={{ transitionDelay: `${index * 100}ms` }}
-    >
-      <p className="text-[clamp(1.5rem,2.4vw,2rem)] text-[#C98F0E] font-bold mb-3 tracking-[0.06em]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{target}</p>
-      <h3 className="text-[19px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-        {name}
-      </h3>
-      <p className="text-[13px] leading-[1.9] text-[#45423C] mb-4">{description}</p>
-      <p className="text-[11px] uppercase tracking-[0.2em] text-[#1C1C1E]/40 font-semibold">{metric}</p>
-    </article>
   );
 }

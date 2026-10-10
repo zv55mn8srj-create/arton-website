@@ -103,6 +103,8 @@ export default function FooterSection({ curatorMode = false }: { curatorMode?: b
                 <Link href="/start" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">開始展示</Link>
                 <Link href="/b2b" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">企業 ESG 訂閱方案</Link>
                 <Link href="/curator" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">策展人加入</Link>
+                <Link href="/privacy" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">隱私權政策</Link>
+                <Link href="/terms" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">訂閱服務條款</Link>
                 {/* 手機版顯示聯絡資訊 */}
                 <div className="flex flex-col gap-2 mt-4 md:hidden w-full pt-4 border-t border-white/5">
                   <a href={LINKS.phone} className="text-white/50 text-[14px]">{LINKS.phoneDisplay}</a>

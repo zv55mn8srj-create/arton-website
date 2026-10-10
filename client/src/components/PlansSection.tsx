@@ -117,7 +117,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
 
   return (
     <section id="plans" className="relative py-28 md:py-44 bg-[#F7F4EF] overflow-hidden">
-      <div className="absolute -bottom-28 left-[3%] text-[20rem] leading-none text-[#F5B300]/[0.045] font-light select-none" aria-hidden="true">09</div>
+      {showRoom && <div className="absolute -bottom-28 left-[3%] text-[20rem] leading-none text-[#F5B300]/[0.045] font-light select-none" aria-hidden="true">09</div>}
       <div className="container relative" ref={ref}>
         <div className={`text-center mb-16 md:mb-20 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <GalleryHeading

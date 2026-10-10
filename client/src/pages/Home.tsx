@@ -36,8 +36,6 @@ export default function Home() {
             <p className="text-[clamp(1.35rem,2.2vw,2rem)] leading-[1.6] font-light tracking-[-0.02em] text-[#1C1C1E]/85 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
               選一個喜歡的展，<br className="md:hidden" />剩下的交給 ArtON。
             </p>
-            <p className="text-[13px] text-[#1C1C1E]/45 mt-6">一次安裝，持續更新。</p>
-
             {/* 向下箭頭：引導進入流程區塊 */}
             <button
               aria-label="往下查看 ArtON 如何運作"
@@ -102,7 +100,7 @@ function PlansTeaserSection() {
               讓藝術<span className="text-[#E8B339]">持續發生。</span>
             </h2>
             <p className="text-white/72 text-[15px] md:text-[16px] leading-[2] max-w-xl">
-              藝術內容訂閱與空間展示授權分開說明；硬體一次買斷，Commercial 方案含 Impact 服務。
+              藝術內容訂閱與空間展示授權分開說明；Commercial 方案另含 ESG 報告整理服務，設備依空間條件配置。
             </p>
           </div>
           <div className="lg:col-span-5">

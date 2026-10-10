@@ -10,6 +10,7 @@ import { useHashScroll } from "./components/Header";
 import StartPage from "./pages/StartPage";
 import CuratorPage from "./pages/CuratorPage";
 import B2BPage from "./pages/B2BPage";
+import LegalPage from "./pages/LegalPage";
 import { installClickTracking, trackPageView } from "./lib/analytics";
 
 
@@ -39,6 +40,8 @@ function Router() {
       <Route path={"/start"} component={StartPage} />
       <Route path={"/curator"} component={CuratorPage} />
       <Route path={"/b2b"} component={B2BPage} />
+      <Route path={"/privacy"}>{() => <LegalPage type="privacy" />}</Route>
+      <Route path={"/terms"}>{() => <LegalPage type="terms" />}</Route>
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

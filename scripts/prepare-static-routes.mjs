@@ -6,7 +6,7 @@ const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = resolve(projectRoot, "dist", "public");
 const indexPath = resolve(publicDir, "index.html");
 
-const routeNames = ["start", "b2b", "curator"];
+const routeNames = ["start", "b2b", "curator", "privacy", "terms"];
 const apacheFallback = `# ArtON React SPA fallback for Apache hosting\nOptions -MultiViews\nRewriteEngine On\n\nRewriteCond %{REQUEST_FILENAME} -f [OR]\nRewriteCond %{REQUEST_FILENAME} -d\nRewriteRule ^ - [L]\n\nRewriteRule ^ index.html [L]\n`;
 const redirectsFallback = `/*    /index.html   200\n`;
 
