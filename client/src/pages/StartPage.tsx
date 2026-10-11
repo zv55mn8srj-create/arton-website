@@ -67,7 +67,7 @@ const reasons = [
 const startScenes = [
   { title: "會議室／洽談室", label: "Meeting Room", image: "/assets/scene-meeting-room-v2.webp", text: "讓作品自然融入討論與交流的空間。" },
   { title: "茶水間／員工休憩區", label: "Pantry & Lounge", image: "/assets/scene-pantry-v2.webp", text: "在短暫休息裡，遇見一件喜歡的作品。" },
-  { title: "工廠／工作現場", label: "Workplace", image: "/assets/scene-factory.webp", text: "讓藝術展示進入團隊每天工作的地方。" },
+  { title: "家裡書桌前", label: "Home Study", image: "/assets/scene-home-study.webp", text: "在閱讀、工作與創作的日常裡，留一面牆給喜歡的作品。" },
 ];
 
 const steps = [

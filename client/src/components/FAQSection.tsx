@@ -5,10 +5,6 @@
 import GalleryHeading, { PowerGlyph } from "./GalleryHeading";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useState } from "react";
-import { MessageCircle } from "lucide-react";
-import { LINKS } from "@/lib/links";
-
-const LINE_QR = LINKS.lineQr;
 
 const questions = [
   { q: "已有螢幕，如何開始？", a: "已有相容螢幕，可另購 ArtON Box 開始展示。ArtON 控制端需要連網，設備綁定與展示管理依平台操作流程完成；實際相容性會依螢幕與場域條件確認。" },
@@ -69,32 +65,6 @@ export default function FAQSection() {
             })}
             <div className="border-t border-[#1C1C1E]/12" />
 
-            {/* QR Code — scan to consult */}
-            <div className="mt-14 flex flex-col sm:flex-row items-start sm:items-center gap-8 plaque bg-white/60 p-8 md:p-10">
-              <div className="flex-shrink-0">
-                <div className="w-32 h-32 bg-white p-3 shadow-[0_8px_30px_rgba(28,28,30,0.08)]">
-                  <img src={LINE_QR} alt="ArtON 客戶 LINE QR Code" className="w-full h-full object-contain" />
-                </div>
-              </div>
-              <div>
-                <p className="text-[11px] uppercase tracking-[0.3em] text-[#F5B300] font-semibold mb-3">Scan to Consult</p>
-                <h3 className="text-[19px] md:text-[22px] font-normal text-[#1C1C1E] mb-3" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                  看完問答，還有想了解的？
-                </h3>
-                <p className="text-[13.5px] leading-[1.9] text-[#45423C] mb-6 max-w-md">
-                  用手機開啟 LINE 掃描 QR Code，或撥打專線 <a href={LINKS.phone} className="font-semibold text-[#16203B] hover:text-[#F5B300] transition-colors">{LINKS.phoneDisplay}</a>，與顧問聊聊您的空間與需求。
-                </p>
-                <a
-                  href={LINKS.customerLine}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#16203B] text-white text-[13.5px] font-medium rounded-full hover:bg-[#333336] transition-all duration-300 active:scale-[0.97]"
-                >
-                  <MessageCircle className="w-4 h-4" strokeWidth={2} />
-                  直接點擊加入 LINE
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
