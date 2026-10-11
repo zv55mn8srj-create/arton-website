@@ -10,7 +10,6 @@
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import PlansSection from "@/components/PlansSection";
-import ExploreSection from "@/components/ExploreSection";
 import { LINKS, consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Check, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
@@ -63,6 +62,12 @@ const reasons = [
     title: "ESG 可紀錄",
     description: "Commercial 方案含 Impact 服務；實際展示與支持紀錄範圍依方案確認。",
   },
+];
+
+const startScenes = [
+  { title: "會議室／洽談室", label: "Meeting Room", image: "/assets/scene-meeting-room-v2.webp", text: "讓作品自然融入討論與交流的空間。" },
+  { title: "茶水間／員工休憩區", label: "Pantry & Lounge", image: "/assets/scene-pantry-v2.webp", text: "在短暫休息裡，遇見一件喜歡的作品。" },
+  { title: "工廠／工作現場", label: "Workplace", image: "/assets/scene-factory.webp", text: "讓藝術展示進入團隊每天工作的地方。" },
 ];
 
 const steps = [
@@ -222,8 +227,21 @@ export default function StartPage() {
         {/* Plans (subscription only — hardware cards hidden for now) */}
         <PlansSection hideHardware showRoom={false} />
 
-        {/* 策展內容預覽（保留於 /start 方案頁） */}
-        <ExploreSection />
+        <section className="py-24 md:py-36 bg-[#F5F0EB]">
+          <div className="container">
+            <div className="max-w-3xl mb-12 md:mb-16">
+              <p className="text-[11px] uppercase tracking-[0.3em] text-[#B38A44] font-semibold mb-5">Choose your setting · 展示情境</p>
+              <h2 className="text-[clamp(2.2rem,4vw,4rem)] leading-[1.2] font-light text-[#1C1C1E] mb-5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>先想像藝術，<br />在你的空間裡如何發生。</h2>
+              <p className="text-[15px] leading-[2] text-[#45423C]">從會議室到員工休憩區，選擇適合的展示方式，讓作品與空間一起成為日常的一部分。</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+              {startScenes.map((scene) => <figure key={scene.title} className="bg-white overflow-hidden border border-[#E7E0D5]">
+                <div className="aspect-[4/3] overflow-hidden"><img src={scene.image} alt={`${scene.title}展示情境`} className="w-full h-full object-cover" /></div>
+                <figcaption className="p-6"><p className="text-[10px] uppercase tracking-[0.2em] text-[#B38A44] mb-2">{scene.label}</p><h3 className="text-[22px] font-light text-[#1C1C1E] mb-2" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{scene.title}</h3><p className="text-[13px] leading-[1.8] text-[#45423C]/70">{scene.text}</p></figcaption>
+              </figure>)}
+            </div>
+          </div>
+        </section>
 
 
 

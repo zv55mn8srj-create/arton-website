@@ -12,7 +12,6 @@ const venues = [
   { name: "企業", en: "Workplace", image: "/assets/venue-office-digital_a460b0a5.png", description: "文化不是牆上的標語，而是每天的風景。" },
   { name: "校園", en: "Campus", image: "/assets/venue-campus-digital_55c365e8.png", description: "讓美感教育發生在每一次經過。" },
   { name: "公部門", en: "Public", image: "/assets/venue-public-digital_7e46c4c6.png", description: "公共空間，也能成為城市的展廳。" },
-  { name: "咖啡館", en: "Café", image: "/assets/scene-cafe-wide.webp", description: "一杯咖啡的時間，遇見一件作品。" },
   { name: "家裡", en: "Home", image: "/assets/scene-home-living.webp", description: "客廳、書房或餐桌旁，讓喜歡的作品進入日常。" },
 ];
 
@@ -39,7 +38,6 @@ export default function VenuesSection() {
               "md:col-span-7 md:row-span-2",
               "md:col-span-5 md:row-span-1",
               "md:col-span-5 md:row-span-1",
-              "md:col-span-4 md:row-span-1",
               "md:col-span-4 md:row-span-1",
               "md:col-span-4 md:row-span-1",
               "md:col-span-4 md:row-span-1",

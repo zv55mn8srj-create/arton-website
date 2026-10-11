@@ -107,8 +107,8 @@ export default function B2BPage() {
           <div className="container">
             <div className="max-w-3xl mb-12">
               <p className="text-[11px] uppercase tracking-[0.3em] text-[#2D5A3D] font-semibold mb-5">ESG in the everyday · 企業日常場域</p>
-              <h2 className="text-[clamp(2rem,3.5vw,3.4rem)] font-light text-[#1C1C1E] mb-5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>不只在大廳，<br />茶水間與工廠也能成為共好的日常。</h2>
-              <p className="text-[15px] leading-[2] text-[#45423C]">企業 ESG 不只發生在正式接待空間，也可以進入員工每天經過的茶水間、休憩區與工廠現場，讓藝術支持成為組織文化的一部分。</p>
+              <h2 className="text-[clamp(2rem,3.5vw,3.4rem)] font-light text-[#1C1C1E] mb-5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>讓藝術展示，<br />進入企業每天發生的地方。</h2>
+              <p className="text-[15px] leading-[2] text-[#45423C]">從員工休憩區到工作現場，企業可以依照空間與團隊的使用情境安排展示，讓藝術支持成為組織文化裡自然的一部分。</p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 max-w-6xl">
               {[

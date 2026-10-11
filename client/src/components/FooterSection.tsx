@@ -102,7 +102,6 @@ export default function FooterSection({ curatorMode = false }: { curatorMode?: b
                 <Link href="/" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">關於 ArtON</Link>
                 <Link href="/start" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">開始展示</Link>
                 <Link href="/b2b" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">企業 ESG 訂閱方案</Link>
-                <Link href="/curator" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">策展人加入</Link>
                 <Link href="/privacy" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">隱私權政策</Link>
                 <Link href="/terms" className="text-white/50 text-[14px] hover:text-[#F5B300] transition-colors">訂閱服務條款</Link>
                 {/* 手機版顯示聯絡資訊 */}

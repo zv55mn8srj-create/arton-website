@@ -110,12 +110,6 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <Link
-            href="/curator"
-            className="text-[15px] font-medium text-[#C98F0E] hover:text-[#A77A08] transition-colors duration-300"
-          >
-            策展人加入
-          </Link>
           <a
             href="/b2b"
             className="text-[14px] font-medium border-2 border-[#16203B]/18 text-[#16203B] px-4 py-2 rounded-full hover:border-[#F5B300] hover:text-[#C98F0E] transition-colors duration-300"
@@ -156,9 +150,6 @@ export default function Header() {
             <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-[#E5E5E3]">
               <Link href="/b2b" onClick={() => setMobileOpen(false)} className="text-center text-[15px] text-[#C98F0E] font-medium py-2 border border-[#F5B300]/50 rounded-full">
                 企業 ESG 訂閱方案
-              </Link>
-              <Link href="/curator" onClick={() => setMobileOpen(false)} className="text-center text-[15px] text-[#1C1C1E] font-medium py-2">
-                策展人加入
               </Link>
               <Link href="/start" onClick={() => setMobileOpen(false)} className="text-center px-5 py-2.5 bg-[#F5B300] text-[#16203B] text-[15px] font-bold rounded-full">
                 選擇方案

@@ -17,13 +17,13 @@ const scenes = [
   {
     name: "會議室／洽談室",
     tag: "02 · 作者介紹 · 直式",
-    image: "/assets/scene-meeting-room.webp",
+    image: "/assets/scene-meeting-room-v2.webp",
     caption: "鄭美珠老師的創作故事與肖像，讓觀者認識作品背後的人。",
   },
   {
     name: "員工休憩區",
     tag: "03 · 作品介紹 · 橫式",
-    image: "/assets/scene-office-lounge.webp",
+    image: "/assets/scene-pantry-v2.webp",
     caption: "作品旁附上故事說明，每一幅畫都有自己的導覽。",
   },
   {
