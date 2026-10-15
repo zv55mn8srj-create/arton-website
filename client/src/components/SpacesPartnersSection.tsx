@@ -3,7 +3,6 @@
  * Gallery Quietism: a quiet partnership wall led by disability-art
  * collaborators.
  */
-import { LINKS } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const _unused = [
@@ -42,19 +41,27 @@ const _unused = [
 const partners = [
   {
     name: "方睿有限公司",
-    tagEn: "Platform & Technology",
-    tagZh: "ArtON 平台服務",
-    description: "ArtON 平台營運與藝術科技服務。",
+    tagEn: "FOUNDER & OPERATOR",
+    tagZh: "品牌創辦與營運單位",
+    description: "ArtON 由方睿有限公司創立與營運，負責品牌、平台技術、策展服務、藝術授權與企業合作。",
     logo: "/assets/fangrui-logo-new_63324092.webp",
     icon: "tech",
   },
   {
     name: "小光點畫廊",
-    tagEn: "Founding Partner",
-    tagZh: "創始合作夥伴",
-    description: "臺灣共融藝術推手，致力於策展與藝術授權，賦予身心障礙藝術家創作多元價值與展現舞台。",
+    tagEn: "FOUNDING CURATORIAL PARTNER",
+    tagZh: "創始策展夥伴",
+    description: "ArtON 首波共融藝術策展夥伴，長期陪伴身心障礙藝術創作者，與 ArtON 共同推動作品進入更多生活與企業空間。",
     logo: "/assets/partner-logo-1_7e5ae4bc.png",
     icon: "gallery",
+  },
+  {
+    name: "中華工商資源整合策進會",
+    tagEn: "DISPLAY & ENTERPRISE PARTNER",
+    tagZh: "展示與企業夥伴",
+    description: "整合工商產業資源與跨域網絡，協助 ArtON 串聯企業場域與合作夥伴，共同拓展創新應用與藝術展示機會。",
+    logo: "/assets/partner-logo-chinese-business-association.png",
+    icon: "enterprise",
   },
 ];
 
@@ -112,24 +119,6 @@ export default function SpacesPartnersSection() {
               </div>
             ))}
 
-            <a
-              href={LINKS.curatorLine}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`border-2 border-dashed border-[#E3C98D] rounded-[1.5rem] p-10 flex flex-col items-center justify-center text-center transition-all duration-700 hover:border-[#F5B300] hover:bg-[#FBF7EF] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-              style={{ transitionDelay: "380ms" }}
-            >
-              <span className="text-[28px] text-[#1C1C1E]/70 mb-3" aria-hidden="true">+</span>
-              <p className="text-[15px] font-medium text-[#C98F0E] leading-[1.6]">
-                更多合作夥伴徵集中
-              </p>
-              <p className="text-[11px] uppercase tracking-[0.22em] text-[#1C1C1E]/40 mt-2">
-                Display Partner｜展示合作夥伴
-              </p>
-              <p className="text-[12px] leading-[1.7] text-[#1C1C1E]/40 mt-3">
-                歡迎空間、咖啡館與企業加入
-              </p>
-            </a>
           </div>
       </div>
       </section>
