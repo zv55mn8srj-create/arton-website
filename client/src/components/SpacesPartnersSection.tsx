@@ -52,7 +52,7 @@ const partners = [
     name: "小光點畫廊",
     tagEn: "FOUNDING CURATORIAL PARTNER",
     tagZh: "創始策展夥伴",
-    description: "ArtON 首波共融藝術策展夥伴，長期陪伴身心障礙藝術創作者，與 ArtON 共同推動作品進入更多生活與企業空間。",
+    description: "ArtON 首波共融藝術策展夥伴，陪伴身心障礙藝術創作者，推動作品進入更多生活與企業空間。",
     logo: "/assets/partner-logo-xiaoguangdian-official.png",
     icon: "gallery",
   },
@@ -128,14 +128,14 @@ export default function SpacesPartnersSection() {
               style={{ transitionDelay: "470ms" }}
             >
               <span className="text-[28px] text-[#1C1C1E]/70 mb-3" aria-hidden="true">+</span>
-              <p className="text-[15px] font-medium text-[#C98F0E] leading-[1.6]">
+              <p className="text-[11px] md:text-[12px] uppercase tracking-[0.25em] text-[#C98F0E] font-medium leading-[1.6]">
+                PARTNER WITH ARTON
+              </p>
+              <p className="text-[15px] font-medium text-[#C98F0E] leading-[1.6] mt-1">
+                成為合作夥伴
+              </p>
+              <p className="text-[12px] leading-[1.7] text-[#1C1C1E]/40 mt-4">
                 更多合作夥伴徵集中
-              </p>
-              <p className="text-[11px] uppercase tracking-[0.22em] text-[#1C1C1E]/40 mt-2">
-                Display Partner｜展示合作夥伴
-              </p>
-              <p className="text-[12px] leading-[1.7] text-[#1C1C1E]/40 mt-3">
-                歡迎空間、咖啡館與企業加入
               </p>
             </a>
 
