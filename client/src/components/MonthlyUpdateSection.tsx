@@ -32,9 +32,9 @@ export default function MonthlyUpdateSection() {
           <GalleryHeading
             room="04"
             label="Monthly Renewal · 每月更新"
-            title={<>每月都有新的展覽。<br />讓牆上的藝術持續更新。</>}
+            title={<>每月都有新展，<br />讓牆上的藝術持續更新。</>}
             titleSize="clamp(2.6rem,4.6vw,4.6rem)"
-            description={<>策展內容持續上新，可自由換展，也可延續喜歡的展覽。</>}
+            description={<>持續推出新的策展內容，讓空間不必重新裝修，也能不斷換上新的風景。</>}
             className={`lg:col-span-5 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           />
 
