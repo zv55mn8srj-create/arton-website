@@ -1,25 +1,23 @@
 /**
- * 每月更新區（依 2026-08-16 反饋新增）
- * 「公開策展目錄持續更新，實際內容依方案與排程提供。」
- * 以「本月 → 下月」的卡片對照呈現，直觀傳達內容持續更新。
+ * 每月更新區：以兩張作品卡呈現每月新展與持續更新的品牌訊息。
  */
 import GalleryHeading from "./GalleryHeading";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const months = [
   {
-    label: "精選",
-    en: "Selected",
+    label: "本月新展",
+    en: "NEW EXHIBITION",
     artist: "藝術家 · 鄭美珠",
-    theme: "小光點畫廊策展 · 精選藝術展",
+    theme: "小光點畫廊策展 · 本月新展",
     img: "/assets/flowers-sea-square2_29d1e34e.jpg",
   },
   {
-    label: "精選",
-    en: "Selected",
+    label: "本月新展",
+    en: "NEW EXHIBITION",
     badge: undefined,
     artist: "《兩顆柿子》",
-    theme: "精選藝術內容 · 依排程提供",
+    theme: "每月更新內容 · 新的風景",
     img: "/assets/next-persimmon-painting_0c834f5b_50af0cfa.jpg",
   },
 ];
@@ -34,9 +32,9 @@ export default function MonthlyUpdateSection() {
           <GalleryHeading
             room="04"
             label="Monthly Renewal · 每月更新"
-            title={<>持續更新，<br />看見新的<br />展覽。</>}
+            title={<>每月都有新的展覽。<br />讓牆上的藝術持續更新。</>}
             titleSize="clamp(2.6rem,4.6vw,4.6rem)"
-            description={<>公開策展目錄持續更新，內容依方案與排程提供。</>}
+            description={<>策展內容持續上新，可自由換展，也可延續喜歡的展覽。</>}
             className={`lg:col-span-5 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           />
 
@@ -72,7 +70,7 @@ export default function MonthlyUpdateSection() {
 
             <div className="mt-8 flex items-center gap-4 text-[12px] text-[#1C1C1E]/50">
               <span className="h-px flex-1 bg-[#F5B300]/38" />
-              <span className="uppercase tracking-[0.24em]">公開策展 · 持續更新</span>
+              <span className="uppercase tracking-[0.24em]">新的藝術，持續發生</span>
               <span className="h-px flex-1 bg-[#F5B300]/38" />
             </div>
           </div>
