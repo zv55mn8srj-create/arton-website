@@ -58,9 +58,9 @@ const partners = [
   },
   {
     name: "中華工商資源整合策進會",
-    tagEn: "DISPLAY & ENTERPRISE PARTNER",
-    tagZh: "展示與企業夥伴",
-    description: "整合工商產業資源與跨域網絡，協助 ArtON 串聯企業場域與合作夥伴，共同拓展創新應用與藝術展示機會。",
+    tagEn: "ECOSYSTEM PARTNER",
+    tagZh: "生態合作夥伴",
+    description: "整合工商產業資源與跨域網絡，協助 ArtON 串聯企業場域與合作夥伴，拓展藝術展示機會。",
     logo: "/assets/partner-logo-chinese-business-association.png",
     icon: "enterprise",
   },
