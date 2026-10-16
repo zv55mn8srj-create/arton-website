@@ -39,46 +39,40 @@ interface BundledPlan {
 
 const planTable = [
   {
-    name: "一分鐘藝術",
-    english: "ONE MINUTE ART",
-    price: "199",
-    unit: "／月",
-    license: "無面板內容訂閱",
-    device: "不含面板；內容訂閱獨立計費",
-    content: "每月一件作品＋約一分鐘藝術內容",
-    audience: "想以輕量方式接收藝術內容的使用者",
-    record: "內容訂閱紀錄",
-    impact: "可依成果加購",
-    onsite: "另行報價",
-    cta: "諮詢一分鐘藝術",
-  },
-  {
     name: "ArtON Home",
-    english: "家庭授權",
+    english: "HOME · PRIVATE",
     price: "699",
     unit: "／台／月",
-    license: "私人住宅、非商業使用",
-    device: "硬體另行選購；一次買斷，不含內容訂閱",
-    content: "公開策展目錄依方案與排程提供",
-    audience: "家庭客廳、房間、書房與私人住宅",
-    record: "基本展示紀錄",
-    impact: "可依成果加購",
+    audience: "私人住宅",
+    content: "持續推出新展，可自由換展",
+    management: "會員自行管理",
+    impact: "可加購",
     onsite: "另行報價",
-    cta: "諮詢 Home",
+    cta: "開始 Home 訂閱",
   },
   {
     name: "Commercial Standard",
     english: "COMMERCIAL · STANDARD",
     price: "1,499",
     unit: "／台／月",
-    license: "企業、診所、飯店、店家與公開空間",
-    device: "硬體另行選購；一次買斷，不含內容訂閱",
-    content: "公開策展目錄依方案與排程提供",
-    audience: "需要商業展示與合法授權的空間",
-    record: "基本展示紀錄",
-    impact: "可依成果加購",
-    onsite: "安裝、設定與到場服務另行報價",
-    cta: "諮詢 Commercial Standard",
+    audience: "診所、咖啡館、店家、辦公室與商業空間",
+    content: "持續推出商用策展，可自由換展",
+    management: "雲端管理、遠端支援",
+    impact: "可加購",
+    onsite: "另行報價",
+    cta: "選擇 Commercial",
+  },
+  {
+    name: "Enterprise / Government",
+    english: "ENTERPRISE · GOVERNMENT",
+    price: "專案報價",
+    unit: "",
+    audience: "企業、多據點、政府、公部門與機構",
+    content: "依企業主題、場域與專案需求規劃",
+    management: "ArtON 後台代管、多據點整合管理",
+    impact: "依專案提供成果追蹤、彙整與報告",
+    onsite: "納入專案需求評估",
+    cta: "了解企業方案",
   },
 ];
 
@@ -147,9 +141,9 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
           }`}
         >
           <div className="text-center mb-10">
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/40 mb-4 font-semibold">Three Plans · 三種方案</p>
+            <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/40 mb-4 font-semibold">Choose your route · 三個主要入口</p>
             <p className="text-[14px] md:text-[15px] leading-[1.9] text-[#45423C] max-w-2xl mx-auto">
-              一分鐘藝術是不含面板的內容訂閱；ArtON Home 是家庭授權；Commercial Standard 是商用授權。三者的使用對象與授權範圍不同。
+              先依你的展示情境選擇入口；企業、政府、多據點與機構，可直接進入企業 ESG 方案了解專案合作方式。
             </p>
           </div>
 
@@ -163,9 +157,11 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
                       <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C98F0E]">{plan.english}</p>
                       <p className="text-[21px] font-normal leading-[1.35] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{plan.name}</p>
                       <p className="mt-4 text-[#1C1C1E]">
-                        <span className="text-[12px] text-[#C98F0E]">NT$</span>
-                        <span className="mx-1 text-[32px] font-light leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{plan.price}</span>
-                        <span className="text-[12px] text-[#1C1C1E]/50">{plan.unit}</span>
+                        {plan.price === "專案報價" ? (
+                          <span className="text-[25px] font-light leading-none" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>專案報價</span>
+                        ) : (
+                          <><span className="text-[12px] text-[#C98F0E]">NT$</span><span className="mx-1 text-[32px] font-light leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{plan.price}</span><span className="text-[12px] text-[#1C1C1E]/50">{plan.unit}</span></>
+                        )}
                       </p>
                     </th>
                   ))}
@@ -173,12 +169,10 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
               </thead>
               <tbody>
                 {[
-                  ["授權／內容類型", ...planTable.map((p) => p.license)],
-                  ["面板與設備", ...planTable.map((p) => p.device)],
-                  ["每月提供", ...planTable.map((p) => p.content)],
-                  ["適合對象", ...planTable.map((p) => p.audience)],
-                  ["展示紀錄", ...planTable.map((p) => p.record)],
-                  ["Impact／成果服務", ...planTable.map((p) => p.impact)],
+                  ["適合", ...planTable.map((p) => p.audience)],
+                  ["內容", ...planTable.map((p) => p.content)],
+                  ["管理", ...planTable.map((p) => p.management)],
+                  ["Impact／成果", ...planTable.map((p) => p.impact)],
                   ["現場服務", ...planTable.map((p) => p.onsite)],
                 ].map(([label, ...values]) => (
                   <tr key={label} className="border-t border-[#EAE5DC] align-top">
@@ -190,7 +184,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
                   <th className="px-6 py-6 text-left font-medium text-[#1C1C1E]/55">開始方式</th>
                   {planTable.map((plan) => (
                     <td key={plan.name} className="border-l border-[#EAE5DC] px-6 py-6">
-                      <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border border-[#1C1C1E]/35 px-4 py-3 text-[12px] font-medium text-[#1C1C1E] transition-colors hover:border-[#C98F0E] hover:text-[#C98F0E]">
+                      <a href={plan.name === "Enterprise / Government" ? "/b2b" : LINKS.customerLine} target={plan.name === "Enterprise / Government" ? undefined : "_blank"} rel={plan.name === "Enterprise / Government" ? undefined : "noopener noreferrer"} className="inline-flex items-center justify-center gap-2 border border-[#1C1C1E]/35 px-4 py-3 text-[12px] font-medium text-[#1C1C1E] transition-colors hover:border-[#C98F0E] hover:text-[#C98F0E]">
                         {plan.cta}<ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2} />
                       </a>
                     </td>
@@ -199,22 +193,10 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
               </tbody>
             </table>
           </div>
-          <div className="mt-10 max-w-5xl mx-auto border border-[#DDE4D8] bg-[#F3F7F1] rounded-xl p-7 md:p-8">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-              <div className="md:max-w-sm">
-                <p className="text-[11px] uppercase tracking-[0.24em] text-[#2D5A3D] font-semibold mb-3">Commercial · 方案包含</p>
-                <h3 className="text-[25px] font-normal text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>把展示，整理成可說明的行動。</h3>
-              </div>
-              <div className="grid sm:grid-cols-3 gap-5 md:max-w-2xl">
-                {["展示期間與據點", "策展與作品內容", "藝術支持與合作紀錄"].map((item) => <div key={item} className="border-l border-[#2D5A3D]/25 pl-4"><p className="text-[13px] leading-[1.8] text-[#2D5A3D]">{item}</p><p className="text-[12px] leading-[1.75] text-[#1C1C1E]/55 mt-1">依方案與合作條件整理</p></div>)}
-              </div>
-            </div>
-            <p className="text-[12.5px] leading-[1.8] text-[#1C1C1E]/55 mt-6 pt-5 border-t border-[#2D5A3D]/15">Commercial 方案提供基本展示紀錄；Impact／成果服務可依成果加購，現場服務則另行報價。不等同 ESG 分數、第三方認證或法定申報。</p>
-          </div>
         </div>
 
         {/* Hardware comparison — purchase devices separately from content licenses */}
-        <div className="mt-16 md:mt-20 max-w-6xl mx-auto">
+        {!hideHardware && <div className="mt-16 md:mt-20 max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/40 mb-4 font-semibold">Exhibiting Devices · 展示設備方案</p>
             <p className="text-[14px] md:text-[15px] leading-[1.9] text-[#45423C] max-w-2xl mx-auto">
@@ -263,7 +245,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
             </table>
           </div>
           <p className="mt-5 text-center text-[12px] leading-[1.8] text-[#1C1C1E]/45">設備皆為一次買斷，不含內容訂閱；全彩電子紙價格依尺寸、數量與場域條件由 ArtON 提供專案報價。</p>
-        </div>
+        </div>}
 
         {/* Hardware — three devices together (hidden when hideHardware is true) */}
         {!hideHardware && (

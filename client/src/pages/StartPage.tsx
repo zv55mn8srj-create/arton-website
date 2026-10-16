@@ -16,49 +16,6 @@ import { Check, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 
 const FOUNDING_ART = "/assets/founding-art_d2e8df21.jpg";
 
-const planComparison = [
-  {
-    category: "方案價格",
-    home: "NT$699／台／月",
-    commercial: "NT$1,499／台／月",
-  },
-  {
-    category: "授權類型",
-    home: "家庭授權｜僅限私人住宅、非商業使用",
-    commercial: "商用授權｜企業、診所、飯店、店家與公開空間",
-  },
-  {
-    category: "展示設備",
-    home: "不含面板；相容螢幕可搭配 ArtON Box（設備一次買斷）",
-    commercial: "不含面板；相容螢幕可搭配 ArtON Box（設備一次買斷）",
-  },
-  {
-    category: "策展內容",
-    home: "公開策展目錄依方案與排程提供",
-    commercial: "公開策展目錄依方案與排程提供",
-  },
-  {
-    category: "展示紀錄",
-    home: "提供基本展示紀錄",
-    commercial: "提供基本展示紀錄",
-  },
-  {
-    category: "Impact／成果服務",
-    home: "可依成果加購",
-    commercial: "可依成果加購",
-  },
-  {
-    category: "現場服務",
-    home: "另行報價",
-    commercial: "安裝、設定與到場服務另行報價",
-  },
-  {
-    category: "適合對象",
-    home: "家庭客廳、房間、書房與私人住宅",
-    commercial: "公司、診所、飯店、店家與其他商業／公開空間",
-  },
-];
-
 const reasons = [
   {
     title: "輕量訂閱",

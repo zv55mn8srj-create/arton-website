@@ -2,33 +2,47 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import { LINKS, consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { ArrowRight, Check, FileOutput, Leaf, Mail, MessageCircle, Users } from "lucide-react";
+import { ArrowRight, BarChart3, Check, FileOutput, Leaf, Mail, MessageCircle, Users } from "lucide-react";
 
 const comparisonRows = [
-  ["適用對象", "家庭、個人生活空間", "企業、診所、飯店、店家與公開空間"],
-  ["授權方式", "家庭展示授權", "商用／公開空間展示授權"],
-  ["內容訂閱", "NT$699／台／月", "NT$1,499／台／月"],
-  ["展示紀錄", "依方案提供基本紀錄", "提供基本展示紀錄"],
-  ["Impact／成果服務", "可依成果加購", "可依成果加購"],
-  ["現場服務", "另行報價", "安裝、設定與到場服務另行報價"],
-  ["設備配置", "可搭配 ArtON Box 或展示面板", "可依據點與場域配置設備"],
+  ["適合", "單一或少量商業展示空間", "企業總部、多據點、政府、公部門與大型機構"],
+  ["費用", "NT$1,499／台／月；多台享階梯優惠", "專案報價"],
+  ["藝術內容", "商用策展持續更新", "企業主題／專案策展"],
+  ["管理方式", "雲端管理、遠端支援", "ArtON 後台代管、多據點整合管理"],
+  ["Impact", "可加購成果追蹤", "可納入成果追蹤、彙整與報告"],
+  ["服務方式", "標準商用服務", "需求訪談、報價、合約／採購"],
 ];
 
 const benefits = [
   {
-    icon: FileOutput,
-    title: "Impact／成果服務，可依成果加購",
-    body: "可依企業需要加購成果整理與 ESG 行動素材服務；實際內容依展示紀錄、藝術支持內容與合作資料確認，不等同第三方認證或法定申報。",
+    icon: Users,
+    title: "支持藝術家數",
+    body: "依實際展示與合作紀錄彙整，讓企業看見支持創作的累積。",
   },
   {
     icon: Users,
-    title: "讓支持成為日常展示",
-    body: "企業可選擇具 ESG 標誌的策展，支持身心障礙創作者與策展夥伴，讓作品在空間裡持續被看見。",
+    title: "身心障礙藝術家數",
+    body: "可依企業選擇的 ESG 策展與合作內容，整理對應的創作者支持紀錄。",
+  },
+  {
+    icon: FileOutput,
+    title: "展示天數／展示作品數",
+    body: "以展示期間與上線內容為基礎，整理作品被看見的時間與數量。",
+  },
+  {
+    icon: BarChart3,
+    title: "多據點成果",
+    body: "Enterprise／Government 方案可依據點整合展示資料，掌握不同場域的累積成果。",
+  },
+  {
+    icon: BarChart3,
+    title: "Impact Dashboard",
+    body: "依合作範圍整理展示、藝術支持與據點資料，形成可閱讀的成果視圖。",
   },
   {
     icon: Leaf,
-    title: "想加強 E，再選全彩電子紙",
-    body: "全彩電子紙是額外的展示設備選項，具全反射與低耗能特性；實際節能效果依尺寸、更新頻率與場域條件估算。",
+    title: "年度／專案成果報告",
+    body: "可依專案需求彙整成果報告；內容以實際紀錄為基礎，不等同第三方認證或法定申報。",
   },
 ];
 
@@ -52,12 +66,12 @@ export default function B2BPage() {
                 <span className="text-[#E8B339]">持續發生。</span>
               </h1>
               <p className="text-white/72 text-[15px] md:text-[17px] leading-[2] max-w-2xl mb-10">
-                ArtON Commercial 是給企業與公開空間的商用授權。除了藝術內容訂閱，也可依成果加購 Impact／成果服務；若希望進一步強化節能展示，再選擇全彩電子紙。
+                ArtON 提供 Commercial Standard 與 Enterprise／Government 兩種企業合作方式。單一或少量商業空間可選標準方案；企業總部、多據點、政府、公部門與大型機構，則依主題、場域與專案需求規劃。
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#E8B339] text-[#16202B] text-[15px] font-semibold rounded-full hover:bg-[#F0B429] transition-all duration-300 active:scale-[0.97]">
                   <MessageCircle className="w-4 h-4" strokeWidth={2} />
-                  諮詢 Commercial 內容訂閱
+                  諮詢企業方案
                 </a>
                 <a href="#plans" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/30 text-white text-[15px] font-medium rounded-full hover:bg-white/10 transition-all duration-300">
                   查看方案差異 <ArrowRight className="w-4 h-4" strokeWidth={2} />
@@ -70,15 +84,15 @@ export default function B2BPage() {
         <section id="plans" className="py-24 md:py-32 bg-[#FBFAF7]">
           <div className="container">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/35 font-semibold mb-6 text-center">Choose the right license · 先分清楚授權</p>
-            <h2 className="text-center text-[clamp(2rem,3.6vw,3.5rem)] font-light text-[#1C1C1E] mb-5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>一般方案，與商業方案。</h2>
-            <p className="max-w-2xl mx-auto text-center text-[15px] leading-[2] text-[#45423C] mb-14">兩種方案的差異不只是價格，而是使用對象、展示授權與企業 ESG 需求不同。</p>
+            <h2 className="text-center text-[clamp(2rem,3.6vw,3.5rem)] font-light text-[#1C1C1E] mb-5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>兩種企業合作方式。</h2>
+            <p className="max-w-2xl mx-auto text-center text-[15px] leading-[2] text-[#45423C] mb-14">從 Commercial Standard 標準商用服務，到 Enterprise／Government 多據點與公部門專案合作，依展示規模與管理需求選擇。</p>
             <div className="max-w-5xl mx-auto overflow-x-auto rounded-xl border border-[#E2DCCF] bg-white shadow-[0_18px_50px_rgba(44,37,27,0.06)]">
               <table className="w-full min-w-[760px] text-[13.5px]">
                 <thead>
                   <tr className="border-b border-[#E2DCCF]">
                     <th className="w-[24%] px-6 py-6 text-left text-[12px] font-medium text-[#1C1C1E]/45">比較項目</th>
-                    <th className="w-[38%] border-l border-[#E2DCCF] px-6 py-6 text-left align-top"><p className="text-[10px] uppercase tracking-[0.22em] text-[#C98F0E] mb-2">HOME</p><p className="text-[22px] font-normal text-[#1C1C1E]">ArtON Home</p><p className="text-[#1C1C1E]/55 mt-2">一般／家庭授權</p></th>
-                    <th className="w-[38%] border-l border-[#E2DCCF] px-6 py-6 text-left align-top bg-[#F3F7F1]"><p className="text-[10px] uppercase tracking-[0.22em] text-[#2D5A3D] mb-2">COMMERCIAL</p><p className="text-[22px] font-normal text-[#1C1C1E]">ArtON Commercial</p><p className="text-[#1C1C1E]/55 mt-2">商用／公開空間授權</p></th>
+                    <th className="w-[38%] border-l border-[#E2DCCF] px-6 py-6 text-left align-top"><p className="text-[10px] uppercase tracking-[0.22em] text-[#C98F0E] mb-2">COMMERCIAL · STANDARD</p><p className="text-[22px] font-normal text-[#1C1C1E]">Commercial Standard</p><p className="text-[#1C1C1E]/55 mt-2">標準商用服務</p></th>
+                    <th className="w-[38%] border-l border-[#E2DCCF] px-6 py-6 text-left align-top bg-[#F3F7F1]"><p className="text-[10px] uppercase tracking-[0.22em] text-[#2D5A3D] mb-2">ENTERPRISE · GOVERNMENT</p><p className="text-[22px] font-normal text-[#1C1C1E]">Enterprise / Government</p><p className="text-[#1C1C1E]/55 mt-2">企業與公部門專案</p></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -92,14 +106,14 @@ export default function B2BPage() {
         <section className="py-24 md:py-32 bg-[#F7F4EF]">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center mb-14">
-              <p className="text-[11px] uppercase tracking-[0.3em] text-[#2D5A3D] font-semibold mb-5">Commercial · 商業方案內容</p>
-              <h2 className="text-[clamp(2rem,3.5vw,3.4rem)] font-light text-[#1C1C1E] mb-5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>不只是展示藝術，<br />也把 ESG 行動整理好。</h2>
-              <p className="text-[15px] leading-[2] text-[#45423C]">Commercial Standard NT$1,499／台／月，適用企業、診所、飯店、店家與其他公開空間。方案包含公開策展內容訂閱、商用展示授權與基本展示紀錄；Impact／成果服務可依成果加購，現場服務另行報價。</p>
+              <p className="text-[11px] uppercase tracking-[0.3em] text-[#2D5A3D] font-semibold mb-5">ESG · 成果服務</p>
+              <h2 className="text-[clamp(2rem,3.5vw,3.4rem)] font-light text-[#1C1C1E] mb-5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>藝術展示，不只美化空間，<br />也留下支持創作者的成果。</h2>
+              <p className="text-[15px] leading-[2] text-[#45423C]">從單一商業空間到多據點企業與公部門專案，ArtON 依實際展示與合作紀錄，整理支持藝術家、展示內容與場域成果，讓企業的文化行動有跡可循。</p>
             </div>
             <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {benefits.map(({ icon: Icon, title, body }) => <article key={title} className="bg-white border border-[#E7E0D5] rounded-xl p-8"><span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#2D5A3D]/10 mb-6"><Icon className="w-5 h-5 text-[#2D5A3D]" strokeWidth={1.6} /></span><h3 className="text-[21px] font-normal text-[#1C1C1E] mb-4" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{title}</h3><p className="text-[14px] leading-[1.9] text-[#45423C]">{body}</p></article>)}
             </div>
-            <p className="max-w-3xl mx-auto text-center text-[12px] leading-[1.8] text-[#1C1C1E]/45 mt-10">Impact／成果服務依成果與合作資料整理，不等同第三方 ESG 認證、法定申報或固定 ESG 分數；現場服務另行報價。</p>
+            <p className="max-w-3xl mx-auto text-center text-[12px] leading-[1.8] text-[#1C1C1E]/45 mt-10">實際指標、彙整範圍與報告形式，依方案、據點數量與專案需求確認；不等同第三方 ESG 認證、法定申報或固定 ESG 分數。</p>
           </div>
         </section>
 
@@ -150,7 +164,7 @@ export default function B2BPage() {
           </div>
         </section>
 
-        <section className="py-20 bg-[#FBFAF7] text-center"><div className="container"><p className="text-[13px] text-[#45423C] mb-6">需要多據點配置、電子紙或聯名展示規劃？</p><a href={consultMail("ArtON Commercial 商業方案諮詢")} className="inline-flex items-center gap-3 px-8 py-4 bg-[#16203B] text-white rounded-full text-[14px] font-semibold hover:bg-[#263354] transition-colors">洽詢 Commercial 商業方案 <ArrowRight className="w-4 h-4" /></a></div></section>
+        <section className="py-20 bg-[#FBFAF7] text-center"><div className="container"><p className="text-[13px] text-[#45423C] mb-6">需要多據點配置、電子紙或企業成果規劃？</p><a href={consultMail("ArtON 企業 ESG 方案諮詢")} className="inline-flex items-center gap-3 px-8 py-4 bg-[#16203B] text-white rounded-full text-[14px] font-semibold hover:bg-[#263354] transition-colors">了解企業方案 <ArrowRight className="w-4 h-4" /></a></div></section>
       </main>
       <FooterSection />
     </div>
