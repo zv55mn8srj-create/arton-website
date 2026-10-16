@@ -111,11 +111,13 @@ const hardwarePlans: HardwarePlan[] = [
 interface PlansSectionProps {
   /** Hide the three hardware device cards (kept for future use) */
   hideHardware?: boolean;
+  /** 是否顯示 ArtON Box、藝術框與全彩電子紙比較表 */
+  showHardwareComparison?: boolean;
   /** 是否顯示 Room 編號（子頁不顯示） */
   showRoom?: boolean;
 }
 
-export default function PlansSection({ hideHardware = false, showRoom = true }: PlansSectionProps) {
+export default function PlansSection({ hideHardware = false, showHardwareComparison = true, showRoom = true }: PlansSectionProps) {
   const { ref, isVisible } = useScrollAnimation(0.05);
 
   return (
@@ -196,7 +198,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
         </div>
 
         {/* Hardware comparison — purchase devices separately from content licenses */}
-        {!hideHardware && <div className="mt-16 md:mt-20 max-w-6xl mx-auto">
+        {showHardwareComparison && <div className="mt-16 md:mt-20 max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/40 mb-4 font-semibold">Exhibiting Devices · 展示設備方案</p>
             <p className="text-[14px] md:text-[15px] leading-[1.9] text-[#45423C] max-w-2xl mx-auto">
