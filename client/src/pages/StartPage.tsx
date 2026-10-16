@@ -19,8 +19,8 @@ const FOUNDING_ART = "/assets/founding-art_d2e8df21.jpg";
 const planComparison = [
   {
     category: "方案價格",
-    home: "NT$699／月",
-    commercial: "NT$999／月",
+    home: "NT$699／台／月",
+    commercial: "NT$1,499／台／月",
   },
   {
     category: "授權類型",
@@ -40,7 +40,17 @@ const planComparison = [
   {
     category: "展示紀錄",
     home: "提供基本展示紀錄",
-    commercial: "基本展示紀錄；含 Impact 服務",
+    commercial: "提供基本展示紀錄",
+  },
+  {
+    category: "Impact／成果服務",
+    home: "可依成果加購",
+    commercial: "可依成果加購",
+  },
+  {
+    category: "現場服務",
+    home: "另行報價",
+    commercial: "安裝、設定與到場服務另行報價",
   },
   {
     category: "適合對象",
@@ -60,7 +70,7 @@ const reasons = [
   },
   {
     title: "ESG 可紀錄",
-    description: "Commercial 方案含 Impact 服務；實際展示與支持紀錄範圍依方案確認。",
+    description: "Commercial 方案提供基本展示紀錄；Impact／成果服務可依成果加購，現場服務另行報價。",
   },
 ];
 
@@ -195,7 +205,7 @@ export default function StartPage() {
                   </span>
                   <span className="inline-flex items-center gap-2.5 text-[13.5px] text-[#1C1C1E]">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#E8B339]" />
-                    訂閱後依方案收費：Home NT$699／月、Commercial NT$999／月
+                    訂閱後依方案收費：Home NT$699／台／月、Commercial Standard NT$1,499／台／月
                   </span>
                 </div>
                 <a

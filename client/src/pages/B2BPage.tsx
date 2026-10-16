@@ -7,17 +7,18 @@ import { ArrowRight, Check, FileOutput, Leaf, Mail, MessageCircle, Users } from 
 const comparisonRows = [
   ["適用對象", "家庭、個人生活空間", "企業、診所、飯店、店家與公開空間"],
   ["授權方式", "家庭展示授權", "商用／公開空間展示授權"],
-  ["內容訂閱", "NT$699／月", "NT$999／月"],
-  ["展示紀錄", "依方案提供基本紀錄", "含展示與藝術支持紀錄整理"],
-  ["ESG 報告", "不含", "含 ESG 報告整理服務"],
+  ["內容訂閱", "NT$699／台／月", "NT$1,499／台／月"],
+  ["展示紀錄", "依方案提供基本紀錄", "提供基本展示紀錄"],
+  ["Impact／成果服務", "可依成果加購", "可依成果加購"],
+  ["現場服務", "另行報價", "安裝、設定與到場服務另行報價"],
   ["設備配置", "可搭配 ArtON Box 或展示面板", "可依據點與場域配置設備"],
 ];
 
 const benefits = [
   {
     icon: FileOutput,
-    title: "Commercial 方案含 ESG 報告",
-    body: "以展示紀錄、藝術支持內容與合作資料為基礎，整理企業可使用的 ESG 行動素材；不等同第三方認證或法定申報。",
+    title: "Impact／成果服務，可依成果加購",
+    body: "可依企業需要加購成果整理與 ESG 行動素材服務；實際內容依展示紀錄、藝術支持內容與合作資料確認，不等同第三方認證或法定申報。",
   },
   {
     icon: Users,
@@ -51,7 +52,7 @@ export default function B2BPage() {
                 <span className="text-[#E8B339]">持續發生。</span>
               </h1>
               <p className="text-white/72 text-[15px] md:text-[17px] leading-[2] max-w-2xl mb-10">
-                ArtON Commercial 是給企業與公開空間的商用授權。除了藝術內容訂閱，也包含 ESG 報告整理；若希望進一步強化節能展示，再選擇全彩電子紙。
+                ArtON Commercial 是給企業與公開空間的商用授權。除了藝術內容訂閱，也可依成果加購 Impact／成果服務；若希望進一步強化節能展示，再選擇全彩電子紙。
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#E8B339] text-[#16202B] text-[15px] font-semibold rounded-full hover:bg-[#F0B429] transition-all duration-300 active:scale-[0.97]">
@@ -93,12 +94,12 @@ export default function B2BPage() {
             <div className="max-w-3xl mx-auto text-center mb-14">
               <p className="text-[11px] uppercase tracking-[0.3em] text-[#2D5A3D] font-semibold mb-5">Commercial · 商業方案內容</p>
               <h2 className="text-[clamp(2rem,3.5vw,3.4rem)] font-light text-[#1C1C1E] mb-5" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>不只是展示藝術，<br />也把 ESG 行動整理好。</h2>
-              <p className="text-[15px] leading-[2] text-[#45423C]">Commercial NT$999／月，適用企業、診所、飯店、店家與其他公開空間。方案包含公開策展內容訂閱、商用展示授權、展示與藝術支持紀錄，以及 ESG 報告整理服務。</p>
+              <p className="text-[15px] leading-[2] text-[#45423C]">Commercial Standard NT$1,499／台／月，適用企業、診所、飯店、店家與其他公開空間。方案包含公開策展內容訂閱、商用展示授權與基本展示紀錄；Impact／成果服務可依成果加購，現場服務另行報價。</p>
             </div>
             <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {benefits.map(({ icon: Icon, title, body }) => <article key={title} className="bg-white border border-[#E7E0D5] rounded-xl p-8"><span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#2D5A3D]/10 mb-6"><Icon className="w-5 h-5 text-[#2D5A3D]" strokeWidth={1.6} /></span><h3 className="text-[21px] font-normal text-[#1C1C1E] mb-4" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>{title}</h3><p className="text-[14px] leading-[1.9] text-[#45423C]">{body}</p></article>)}
             </div>
-            <p className="max-w-3xl mx-auto text-center text-[12px] leading-[1.8] text-[#1C1C1E]/45 mt-10">ESG 報告內容依方案與合作資料整理，不等同第三方 ESG 認證、法定申報或固定 ESG 分數。</p>
+            <p className="max-w-3xl mx-auto text-center text-[12px] leading-[1.8] text-[#1C1C1E]/45 mt-10">Impact／成果服務依成果與合作資料整理，不等同第三方 ESG 認證、法定申報或固定 ESG 分數；現場服務另行報價。</p>
           </div>
         </section>
 

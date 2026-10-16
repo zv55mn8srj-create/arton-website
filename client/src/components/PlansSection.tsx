@@ -42,34 +42,43 @@ const planTable = [
     name: "一分鐘藝術",
     english: "ONE MINUTE ART",
     price: "199",
+    unit: "／月",
     license: "無面板內容訂閱",
     device: "不含面板；內容訂閱獨立計費",
     content: "每月一件作品＋約一分鐘藝術內容",
     audience: "想以輕量方式接收藝術內容的使用者",
     record: "內容訂閱紀錄",
+    impact: "可依成果加購",
+    onsite: "另行報價",
     cta: "諮詢一分鐘藝術",
   },
   {
     name: "ArtON Home",
     english: "家庭授權",
     price: "699",
+    unit: "／台／月",
     license: "私人住宅、非商業使用",
     device: "硬體另行選購；一次買斷，不含內容訂閱",
     content: "公開策展目錄依方案與排程提供",
     audience: "家庭客廳、房間、書房與私人住宅",
     record: "基本展示紀錄",
+    impact: "可依成果加購",
+    onsite: "另行報價",
     cta: "諮詢 Home",
   },
   {
-    name: "ArtON Commercial",
-    english: "商用授權",
-    price: "999",
+    name: "Commercial Standard",
+    english: "COMMERCIAL · STANDARD",
+    price: "1,499",
+    unit: "／台／月",
     license: "企業、診所、飯店、店家與公開空間",
     device: "硬體另行選購；一次買斷，不含內容訂閱",
     content: "公開策展目錄依方案與排程提供",
     audience: "需要商業展示與合法授權的空間",
-    record: "基本展示紀錄；含 Impact 服務",
-    cta: "諮詢 Commercial",
+    record: "基本展示紀錄",
+    impact: "可依成果加購",
+    onsite: "安裝、設定與到場服務另行報價",
+    cta: "諮詢 Commercial Standard",
   },
 ];
 
@@ -140,7 +149,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
           <div className="text-center mb-10">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/40 mb-4 font-semibold">Three Plans · 三種方案</p>
             <p className="text-[14px] md:text-[15px] leading-[1.9] text-[#45423C] max-w-2xl mx-auto">
-              一分鐘藝術是不含面板的內容訂閱；ArtON Home 是家庭授權；ArtON Commercial 是商用授權。三者的使用對象與授權範圍不同。
+              一分鐘藝術是不含面板的內容訂閱；ArtON Home 是家庭授權；Commercial Standard 是商用授權。三者的使用對象與授權範圍不同。
             </p>
           </div>
 
@@ -156,7 +165,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
                       <p className="mt-4 text-[#1C1C1E]">
                         <span className="text-[12px] text-[#C98F0E]">NT$</span>
                         <span className="mx-1 text-[32px] font-light leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{plan.price}</span>
-                        <span className="text-[12px] text-[#1C1C1E]/50">／月</span>
+                        <span className="text-[12px] text-[#1C1C1E]/50">{plan.unit}</span>
                       </p>
                     </th>
                   ))}
@@ -169,6 +178,8 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
                   ["每月提供", ...planTable.map((p) => p.content)],
                   ["適合對象", ...planTable.map((p) => p.audience)],
                   ["展示紀錄", ...planTable.map((p) => p.record)],
+                  ["Impact／成果服務", ...planTable.map((p) => p.impact)],
+                  ["現場服務", ...planTable.map((p) => p.onsite)],
                 ].map(([label, ...values]) => (
                   <tr key={label} className="border-t border-[#EAE5DC] align-top">
                     <th className="px-6 py-5 text-left font-medium text-[#1C1C1E]/55">{label}</th>
@@ -198,7 +209,7 @@ export default function PlansSection({ hideHardware = false, showRoom = true }: 
                 {["展示期間與據點", "策展與作品內容", "藝術支持與合作紀錄"].map((item) => <div key={item} className="border-l border-[#2D5A3D]/25 pl-4"><p className="text-[13px] leading-[1.8] text-[#2D5A3D]">{item}</p><p className="text-[12px] leading-[1.75] text-[#1C1C1E]/55 mt-1">依方案與合作條件整理</p></div>)}
               </div>
             </div>
-            <p className="text-[12.5px] leading-[1.8] text-[#1C1C1E]/55 mt-6 pt-5 border-t border-[#2D5A3D]/15">Commercial 方案提供相關資料整理，協助企業形成 ESG 行動素材；不等同 ESG 分數、第三方認證或法定申報。</p>
+            <p className="text-[12.5px] leading-[1.8] text-[#1C1C1E]/55 mt-6 pt-5 border-t border-[#2D5A3D]/15">Commercial 方案提供基本展示紀錄；Impact／成果服務可依成果加購，現場服務則另行報價。不等同 ESG 分數、第三方認證或法定申報。</p>
           </div>
         </div>
 
