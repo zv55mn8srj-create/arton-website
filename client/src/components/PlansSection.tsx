@@ -244,17 +244,17 @@ export default function PlansSection({ hideHardware = false, showHardwareCompari
             {hardwarePlans.map((plan, index) => (
               <article
                 key={plan.title}
-                className={`relative flex flex-col p-8 md:p-9 transition-all duration-700 ${
+                className={`group relative flex flex-col p-8 md:p-9 transition-all duration-700 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 } ${
                   plan.recommended
-                    ? "lg:mx-[-1px] lg:-my-6 lg:px-9 lg:py-12 bg-[#16203B] text-white shadow-[0_32px_90px_rgba(22,32,43,0.45)] border-t-4 border-[#E8B339] lg:z-10"
+                    ? "lg:mx-[-1px] lg:-my-6 lg:px-9 lg:py-12 bg-[#16203B] text-white shadow-[0_32px_90px_rgba(22,32,43,0.45)] border-t-4 border-[#E8B339] lg:z-10 hover:-translate-y-2 hover:shadow-[0_42px_110px_rgba(22,32,43,0.58)]"
                     : "bg-white border border-[#E7E0D5] shadow-[0_18px_50px_rgba(44,37,27,0.06)]"
                 }`}
-                style={{ transitionDelay: `${index * 120}ms` }}
+                style={{ transitionDelay: `${index * 120}ms`, transitionDuration: plan.recommended ? "320ms" : undefined }}
               >
                 <div className="flex items-center gap-3.5 mb-5">
-                  <plan.icon className={`w-5 h-5 ${plan.recommended ? "text-[#E8B339]" : "text-[#C98F0E]"}`} strokeWidth={1.5} />
+                  <plan.icon className={`w-5 h-5 transition-transform duration-300 ${plan.recommended ? "text-[#E8B339] group-hover:scale-110 group-hover:rotate-[-4deg]" : "text-[#C98F0E]"}`} strokeWidth={1.5} />
                   <h3
                     className="text-[23px] md:text-[26px] leading-[1.35] font-normal text-[#1C1C1E]"
                     style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif", ...(plan.recommended ? { color: "#FFFFFF" } : {}) }}
