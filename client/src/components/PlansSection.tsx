@@ -7,7 +7,7 @@
 import GalleryHeading from "./GalleryHeading";
 import { LINKS, consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { ArrowUpRight, Check, Monitor, Send, Smartphone, Sun } from "lucide-react";
+import { ArrowUpRight, Check, Monitor, Send, Smartphone } from "lucide-react";
 
 type PlanFeature = string;
 
@@ -97,21 +97,12 @@ const hardwarePlans: HardwarePlan[] = [
     cta: "取得專人規劃報價",
     recommended: true,
   },
-  {
-    icon: Sun,
-    title: "ArtON 真全彩電子紙展示",
-    subtitle: "1,677 萬真全彩｜全反射顯示｜依空間需求配置。",
-    highlight: "一次買斷",
-    highlightNote: "全彩電子紙面板；其他尺寸請洽詢",
-    features: ["採用全反射、雙穩態電子紙顯示技術", "忠實呈現藝術作品色彩，適合長時間展示", "設備一次買斷，節能估算依實際條件評估"],
-    cta: "諮詢電子紙展示方案",
-  },
 ];
 
 interface PlansSectionProps {
   /** Hide the three hardware device cards (kept for future use) */
   hideHardware?: boolean;
-  /** 是否顯示 ArtON Box、藝術框與全彩電子紙比較表 */
+  /** 是否顯示 ArtON Box 與藝術展示面板比較表 */
   showHardwareComparison?: boolean;
   /** 是否顯示 Room 編號（子頁不顯示） */
   showRoom?: boolean;
@@ -202,7 +193,7 @@ export default function PlansSection({ hideHardware = false, showHardwareCompari
           <div className="text-center mb-10">
             <p className="text-[11px] uppercase tracking-[0.3em] text-[#1C1C1E]/40 mb-4 font-semibold">Exhibiting Devices · 展示設備方案</p>
             <p className="text-[14px] md:text-[15px] leading-[1.9] text-[#45423C] max-w-2xl mx-auto">
-              訂閱方案決定內容與授權；設備則依你的現有條件另行選購。已有螢幕，選 ArtON Box；想要完整藝術框，選 ArtON 藝術展示面板；想強化 ESG 節能，選全彩電子紙。
+              訂閱方案決定內容與授權；設備則依你的現有條件另行選購。已有螢幕，選 ArtON Box；想要完整藝術框，選 ArtON 藝術展示面板。
             </p>
           </div>
           <div className="overflow-x-auto rounded-xl border border-[#E2DCCF] bg-white shadow-[0_18px_50px_rgba(44,37,27,0.06)]">
@@ -223,20 +214,16 @@ export default function PlansSection({ hideHardware = false, showHardwareCompari
                     <p className="mt-4 text-[#1C1C1E]"><span className="text-[12px] text-[#C98F0E]">NT$</span><span className="mx-1 text-[32px] font-light leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>13,900</span><span className="text-[12px] text-[#1C1C1E]/50"></span></p>
                   </th>
                   <th className="w-[27.3%] border-l border-[#E2DCCF] px-6 py-6 text-left align-top">
-                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C98F0E]">E-PAPER</p>
-                    <p className="text-[21px] font-normal leading-[1.35] text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>全彩電子紙</p>
-                    <span className="inline-flex mt-3 border border-[#1C1C1E]/18 px-2.5 py-1 text-[10px] tracking-[0.08em] text-[#1C1C1E]/60">適合：商用／ESG 優先</span>
-                    <p className="mt-4 text-[24px] font-light leading-none text-[#1C1C1E]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>專案報價</p>
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ["是否需要自備螢幕", "需要；接上既有螢幕", "不需要；設備含藝術框與顯示面板", "不需要；設備含全彩電子紙面板"],
-                  ["適合情境", "已有螢幕，想快速開始展示", "想要完整藝術框與一體化展示", "想強化 ESG 節能與低耗電展示"],
-                  ["搭配授權", "ArtON Home／Commercial", "ArtON Home／Commercial", "ArtON Commercial／專案配置"],
-                  ["設備形式", "播放器／訊號盒，適合搭配既有螢幕", "21 吋藝術展示面板；其他尺寸請洽詢", "尺寸依空間需求配置，依專案報價"],
-                  ["基本紀錄", "依方案提供基本展示紀錄", "依方案提供基本展示紀錄", "依方案提供基本展示紀錄"],
+                  ["是否需要自備螢幕", "需要；接上既有螢幕", "不需要；設備含藝術框與顯示面板"],
+                  ["適合情境", "已有螢幕，想快速開始展示", "想要完整藝術框與一體化展示"],
+                  ["搭配授權", "ArtON Home／Commercial", "ArtON Home／Commercial"],
+                  ["設備形式", "播放器／訊號盒，適合搭配既有螢幕", "21 吋藝術展示面板；其他尺寸請洽詢"],
+                  ["基本紀錄", "依方案提供基本展示紀錄", "依方案提供基本展示紀錄"],
                 ].map(([label, ...values]) => (
                   <tr key={label} className="border-t border-[#EAE5DC] align-top">
                     <th className="px-6 py-5 text-left font-medium text-[#1C1C1E]/55">{label}</th>
@@ -246,7 +233,7 @@ export default function PlansSection({ hideHardware = false, showHardwareCompari
               </tbody>
             </table>
           </div>
-          <p className="mt-5 text-center text-[12px] leading-[1.8] text-[#1C1C1E]/45">設備皆為一次買斷，不含內容訂閱；全彩電子紙價格依尺寸、數量與場域條件由 ArtON 提供專案報價。</p>
+          <p className="mt-5 text-center text-[12px] leading-[1.8] text-[#1C1C1E]/45">設備皆為一次買斷，不含內容訂閱。</p>
         </div>}
 
         {/* Hardware — three devices together (hidden when hideHardware is true) */}

@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import { LINKS, consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { ArrowRight, BarChart3, Check, FileOutput, Leaf, Mail, MessageCircle, Users } from "lucide-react";
+import { ArrowRight, BarChart3, Check, FileOutput, Leaf, MessageCircle, Users } from "lucide-react";
 
 const comparisonRows = [
   ["適合", "單一或少量商業展示空間", "企業總部、多據點、政府、公部門與大型機構"],
@@ -136,22 +136,6 @@ export default function B2BPage() {
           </div>
         </section>
 
-        <section className="py-24 md:py-32 bg-[#16203B] text-white">
-          <div className="container">
-            <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
-              <div className="lg:col-span-5">
-                <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] font-semibold mb-6">E · Optional upgrade</p>
-                <h2 className="text-[clamp(2rem,3.7vw,3.6rem)] leading-[1.25] font-light mb-6" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>想再加強 ESG 的 E，<br /><span className="text-[#E8B339]">再選全彩電子紙。</span></h2>
-                <p className="text-white/72 text-[15px] leading-[2] mb-8">全彩電子紙是額外的展示設備，不取代 Commercial 內容訂閱。全反射、雙穩態與低耗能特性，適合長時間展示藝術作品；其他尺寸與數量請洽詢。</p>
-                <a href={consultMail("全彩電子紙展示方案諮詢")} className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#E8B339] text-[#16203B] rounded-full text-[14px] font-semibold hover:bg-[#F0B429] transition-colors">諮詢電子紙升級 <Mail className="w-4 h-4" /></a>
-              </div>
-              <div className="lg:col-span-7 grid sm:grid-cols-2 gap-5">
-                {["全反射顯示，借助環境光呈現畫面", "畫面靜止時維持顯示，適合長時間展示", "真全彩 1,677 萬色，呈現作品色彩", "設備依尺寸、數量與場域條件配置"].map((text) => <div key={text} className="border border-white/12 rounded-lg p-6"><Check className="w-5 h-5 text-[#E8B339] mb-5" strokeWidth={2} /><p className="text-[14px] leading-[1.8] text-white/78">{text}</p></div>)}
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className="py-24 md:py-36 bg-[#F5F0EB]">
           <div className="container">
             <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
@@ -166,7 +150,7 @@ export default function B2BPage() {
           </div>
         </section>
 
-        <section className="py-20 bg-[#FBFAF7] text-center"><div className="container"><p className="text-[13px] text-[#45423C] mb-6">需要多據點配置、電子紙或企業成果規劃？</p><a href={consultMail("ArtON 企業 ESG 方案諮詢")} className="inline-flex items-center gap-3 px-8 py-4 bg-[#16203B] text-white rounded-full text-[14px] font-semibold hover:bg-[#263354] transition-colors">了解企業方案 <ArrowRight className="w-4 h-4" /></a></div></section>
+        <section className="py-20 bg-[#FBFAF7] text-center"><div className="container"><p className="text-[13px] text-[#45423C] mb-6">需要多據點配置或企業成果規劃？</p><a href={consultMail("ArtON 企業 ESG 方案諮詢")} className="inline-flex items-center gap-3 px-8 py-4 bg-[#16203B] text-white rounded-full text-[14px] font-semibold hover:bg-[#263354] transition-colors">了解企業方案 <ArrowRight className="w-4 h-4" /></a></div></section>
       </main>
       <FooterSection />
     </div>
