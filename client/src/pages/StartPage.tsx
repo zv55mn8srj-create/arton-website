@@ -12,7 +12,7 @@ import FooterSection from "@/components/FooterSection";
 import PlansSection from "@/components/PlansSection";
 import { LINKS, consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Check, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
+import { Check, ShieldCheck, Sparkles } from "lucide-react";
 
 const FOUNDING_ART = "/assets/founding-art_d2e8df21.jpg";
 
@@ -84,15 +84,16 @@ export default function StartPage() {
               >
                 從家庭日常到商業空間，選擇適合的 ArtON 授權方案，讓藝術內容持續走進你的生活與展示場域。
               </p>
-              <a
-                href="/#customer-line"
-                className={`group inline-flex items-center gap-3 px-8 py-4 bg-[#E8B339] text-[#1C2632] text-[15px] font-semibold tracking-[0.04em] rounded-full hover:bg-[#F0B429] transition-all duration-300 hover:shadow-xl hover:shadow-[#E8B339]/20 active:scale-[0.97] ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                } delay-300`}
-              >
-                <MessageCircle className="w-4.5 h-4.5" strokeWidth={2} />
-                加入 ArtON LINE 開始諮詢
-              </a>
+              <div className={`mt-2 inline-flex items-center gap-4 rounded-2xl bg-white/95 p-3 pr-5 text-[#1C2632] shadow-[0_18px_50px_rgba(0,0,0,0.18)] transition-all duration-700 delay-300 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              }`}>
+                <img src={LINKS.lineQr} alt="ArtON 客戶 LINE QR Code" className="h-32 w-32 rounded-lg object-contain" />
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#B38A44]">Official LINE</p>
+                  <p className="mt-1 text-[16px] font-semibold">掃碼開始諮詢</p>
+                  <p className="mt-1 text-[12px] text-[#1C1C1E]/55">與顧問聊聊你的空間與方案</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

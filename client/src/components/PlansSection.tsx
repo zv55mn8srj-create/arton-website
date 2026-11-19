@@ -48,7 +48,6 @@ const planTable = [
     management: "會員自行管理",
     impact: "可加購",
     onsite: "另行報價",
-    cta: "開始 Home 訂閱",
   },
   {
     name: "Commercial Standard",
@@ -60,7 +59,6 @@ const planTable = [
     management: "雲端管理、遠端支援",
     impact: "可加購",
     onsite: "另行報價",
-    cta: "選擇 Commercial",
   },
   {
     name: "Enterprise / Government",
@@ -72,7 +70,6 @@ const planTable = [
     management: "ArtON 後台代管、多據點整合管理",
     impact: "依專案提供成果追蹤、彙整與報告",
     onsite: "納入專案需求評估",
-    cta: "諮詢企業方案",
   },
 ];
 
@@ -173,18 +170,25 @@ export default function PlansSection({ hideHardware = false, showHardwareCompari
                     {values.map((value, i) => <td key={`${label}-${i}`} className="border-l border-[#EAE5DC] px-6 py-5 leading-[1.8] text-[#45423C]">{value}</td>)}
                   </tr>
                 ))}
-                <tr className="border-t border-[#EAE5DC] align-top">
-                  <th className="px-6 py-6 text-left font-medium text-[#1C1C1E]/55">開始方式</th>
-                  {planTable.map((plan) => (
-                    <td key={plan.name} className="border-l border-[#EAE5DC] px-6 py-6">
-                      <a href="/#customer-line" className="inline-flex items-center justify-center gap-2 border border-[#1C1C1E]/35 px-4 py-3 text-[12px] font-medium text-[#1C1C1E] transition-colors hover:border-[#C98F0E] hover:text-[#C98F0E]">
-                        {plan.cta}<ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2} />
-                      </a>
-                    </td>
-                  ))}
-                </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+
+        <div className="mt-14 md:mt-18 max-w-5xl mx-auto rounded-2xl bg-[#16203B] px-6 py-8 md:px-10 md:py-10 text-white shadow-[0_24px_70px_rgba(22,32,43,0.18)]">
+          <div className="grid md:grid-cols-[1fr_auto] items-center gap-8 md:gap-12">
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] font-semibold mb-4">Subscribe on LINE · LINE 訂閱</p>
+              <h3 className="text-[clamp(1.7rem,3vw,2.6rem)] leading-[1.35] font-light mb-4" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
+                選好方案，<br />掃碼從 LINE 開始訂閱。
+              </h3>
+              <p className="max-w-lg text-[13px] leading-[1.9] text-white/68">
+                Home 與 Commercial 訂閱都可以直接從 LINE 開始。掃碼後留下空間與方案需求，ArtON 顧問會協助完成訂閱與展示設定。
+              </p>
+            </div>
+            <div className="shrink-0 rounded-xl bg-[#F5B300] p-3 shadow-[0_12px_32px_rgba(0,0,0,0.18)]">
+              <img src="/assets/arton-subscription-line-qr.webp" alt="ArtON 訂閱 LINE QR Code" className="h-auto w-[min(58vw,270px)] md:w-[270px] rounded-lg object-contain" />
+            </div>
           </div>
         </div>
 
