@@ -177,7 +177,7 @@ export default function PlansSection({ hideHardware = false, showHardwareCompari
                   <th className="px-6 py-6 text-left font-medium text-[#1C1C1E]/55">開始方式</th>
                   {planTable.map((plan) => (
                     <td key={plan.name} className="border-l border-[#EAE5DC] px-6 py-6">
-                      <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border border-[#1C1C1E]/35 px-4 py-3 text-[12px] font-medium text-[#1C1C1E] transition-colors hover:border-[#C98F0E] hover:text-[#C98F0E]">
+                      <a href="/#customer-line" className="inline-flex items-center justify-center gap-2 border border-[#1C1C1E]/35 px-4 py-3 text-[12px] font-medium text-[#1C1C1E] transition-colors hover:border-[#C98F0E] hover:text-[#C98F0E]">
                         {plan.cta}<ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2} />
                       </a>
                     </td>

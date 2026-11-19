@@ -87,7 +87,7 @@ export default function FooterSection({ curatorMode = false }: { curatorMode?: b
                     {LINKS.emailDisplay}
                   </a>
                 </div>
-                <div className="group relative">
+                <div id="customer-line" className="group relative">
                   <div className="w-16 h-16 bg-white p-1 rounded-sm overflow-hidden">
                     <img src={LINKS.lineQr} alt="Official LINE" className="w-full h-full object-contain" />
                   </div>

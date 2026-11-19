@@ -85,9 +85,7 @@ export default function StartPage() {
                 從家庭日常到商業空間，選擇適合的 ArtON 授權方案，讓藝術內容持續走進你的生活與展示場域。
               </p>
               <a
-                href={LINKS.customerLine}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/#customer-line"
                 className={`group inline-flex items-center gap-3 px-8 py-4 bg-[#E8B339] text-[#1C2632] text-[15px] font-semibold tracking-[0.04em] rounded-full hover:bg-[#F0B429] transition-all duration-300 hover:shadow-xl hover:shadow-[#E8B339]/20 active:scale-[0.97] ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 } delay-300`}
