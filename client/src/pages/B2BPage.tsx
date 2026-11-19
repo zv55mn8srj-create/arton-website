@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import { LINKS, consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { ArrowRight, BarChart3, Check, FileOutput, Leaf, MessageCircle, Users } from "lucide-react";
+import { ArrowRight, BarChart3, Check, FileOutput, Leaf, Users } from "lucide-react";
 
 const comparisonRows = [
   ["適合", "單一或少量商業展示空間", "企業總部、多據點、政府、公部門與大型機構"],
@@ -70,11 +70,15 @@ export default function B2BPage() {
               <p className="text-white/72 text-[15px] md:text-[17px] leading-[2] max-w-2xl mb-10">
                 ArtON 提供 Commercial Standard 與 Enterprise／Government 兩種企業合作方式。單一或少量商業空間可選標準方案；企業總部、多據點、政府、公部門與大型機構，則依主題、場域與專案需求規劃。
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#E8B339] text-[#16202B] text-[15px] font-semibold rounded-full hover:bg-[#F0B429] transition-all duration-300 active:scale-[0.97]">
-                  <MessageCircle className="w-4 h-4" strokeWidth={2} />
-                  諮詢企業方案
-                </a>
+              <div className="flex flex-col sm:flex-row items-start gap-4">
+                <div className="inline-flex items-center gap-4 rounded-2xl bg-white/95 p-3 pr-5 text-[#16202B] shadow-[0_18px_50px_rgba(0,0,0,0.18)]">
+                  <img src={LINKS.lineQr} alt="ArtON 企業方案官方 LINE QR Code" className="h-32 w-32 rounded-lg object-contain" />
+                  <div className="pr-1">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#B38A44]">Official LINE</p>
+                    <p className="mt-1 text-[16px] font-semibold">掃碼諮詢企業方案</p>
+                    <p className="mt-1 max-w-[12rem] text-[12px] leading-[1.6] text-[#1C1C1E]/55">直接加入官方 LINE，與顧問討論據點與方案。</p>
+                  </div>
+                </div>
                 <a href="#plans" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/30 text-white text-[15px] font-medium rounded-full hover:bg-white/10 transition-all duration-300">
                   查看方案差異 <ArrowRight className="w-4 h-4" strokeWidth={2} />
                 </a>
