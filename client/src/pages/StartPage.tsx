@@ -95,7 +95,7 @@ export default function StartPage() {
                     <p className="text-[10px] uppercase tracking-[0.25em] text-[#B38A44] font-semibold">Subscribe on LINE · LINE 訂閱</p>
                     <h2 className="mt-2 text-[21px] md:text-[24px] leading-[1.35] font-normal" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>選好方案，從 LINE 開始訂閱。</h2>
                     <p className="mt-2 text-[12px] leading-[1.7] text-[#1C1C1E]/58">掃碼或點擊按鈕，留下空間與方案需求。</p>
-                    <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center justify-center rounded-full bg-[#16203B] px-5 py-2.5 text-[12px] font-semibold text-white transition-colors hover:bg-[#263354]">
+                    <a href={LINKS.subscriptionLine} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center justify-center rounded-full bg-[#16203B] px-5 py-2.5 text-[12px] font-semibold text-white transition-colors hover:bg-[#263354]">
                       點擊直接跳轉 LINE 訂閱 ↗
                     </a>
                   </div>

@@ -10,6 +10,7 @@ export const LINKS = {
   phone: "tel:0975-678-388",
   phoneDisplay: "0975-678-388",
   customerLine: "https://lin.ee/yEZxsB3",
+  subscriptionLine: "https://line.me/R/ti/p/@446wdxuv",
   curatorLine: "https://lin.ee/7dr8uq4",
   lineQr: "/assets/artonline-line-qr-new_e5c21675.png",
 };
