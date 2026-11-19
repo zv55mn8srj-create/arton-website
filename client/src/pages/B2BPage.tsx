@@ -72,7 +72,12 @@ export default function B2BPage() {
               </p>
               <div className="flex flex-col sm:flex-row items-start gap-4">
                 <div className="inline-flex items-center gap-4 rounded-2xl bg-white/95 p-3 pr-5 text-[#16202B] shadow-[0_18px_50px_rgba(0,0,0,0.18)]">
-                  <img src={LINKS.lineQr} alt="ArtON 企業方案官方 LINE QR Code" className="h-32 w-32 rounded-lg object-contain" />
+                  <div className="flex shrink-0 flex-col items-center gap-2">
+                    <img src={LINKS.lineQr} alt="ArtON 企業方案官方 LINE QR Code" className="h-32 w-32 rounded-lg object-contain" />
+                    <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="text-[11px] font-semibold text-[#16202B] underline decoration-[#B38A44]/60 underline-offset-4 transition-colors hover:text-[#B38A44]">
+                      手機點擊直接加 LINE ↗
+                    </a>
+                  </div>
                   <div className="pr-1">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#B38A44]">Official LINE</p>
                     <p className="mt-1 text-[16px] font-semibold">掃碼諮詢企業方案</p>
