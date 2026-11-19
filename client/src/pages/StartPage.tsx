@@ -10,7 +10,7 @@
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import PlansSection from "@/components/PlansSection";
-import { LINKS, consultMail } from "@/lib/links";
+import { consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Check, ShieldCheck, Sparkles } from "lucide-react";
 
@@ -84,16 +84,6 @@ export default function StartPage() {
               >
                 從家庭日常到商業空間，選擇適合的 ArtON 授權方案，讓藝術內容持續走進你的生活與展示場域。
               </p>
-              <div className={`mt-2 inline-flex items-center gap-4 rounded-2xl bg-white/95 p-3 pr-5 text-[#1C2632] shadow-[0_18px_50px_rgba(0,0,0,0.18)] transition-all duration-700 delay-300 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              }`}>
-                <img src={LINKS.lineQr} alt="ArtON 客戶 LINE QR Code" className="h-32 w-32 rounded-lg object-contain" />
-                <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#B38A44]">Official LINE</p>
-                  <p className="mt-1 text-[16px] font-semibold">掃碼開始諮詢</p>
-                  <p className="mt-1 text-[12px] text-[#1C1C1E]/55">與顧問聊聊你的空間與方案</p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
