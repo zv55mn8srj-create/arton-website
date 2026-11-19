@@ -5,7 +5,7 @@
  * three hardware devices — subscription and hardware clearly separated.
  */
 import GalleryHeading from "./GalleryHeading";
-import { LINKS, consultMail } from "@/lib/links";
+import { consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ArrowUpRight, Check, Monitor, Send, Smartphone } from "lucide-react";
 
@@ -122,26 +122,6 @@ export default function PlansSection({ hideHardware = false, showHardwareCompari
             className="max-w-3xl mx-auto"
             titleSize="clamp(2.15rem,3.8vw,3.6rem)"
           />
-        </div>
-
-        <div className="mb-14 md:mb-18 max-w-5xl mx-auto rounded-2xl bg-[#16203B] px-6 py-8 md:px-10 md:py-10 text-white shadow-[0_24px_70px_rgba(22,32,43,0.18)]">
-          <div className="grid md:grid-cols-[1fr_auto] items-center gap-8 md:gap-12">
-            <div>
-              <p className="text-[11px] uppercase tracking-[0.3em] text-[#E8B339] font-semibold mb-4">Subscribe on LINE · LINE 訂閱</p>
-              <h3 className="text-[clamp(1.7rem,3vw,2.6rem)] leading-[1.35] font-light mb-4" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>
-                選好方案，<br />掃碼從 LINE 開始訂閱。
-              </h3>
-              <p className="max-w-lg text-[13px] leading-[1.9] text-white/68">
-                Home 與 Commercial 訂閱都可以直接從 LINE 開始。掃碼後留下空間與方案需求，ArtON 顧問會協助完成訂閱與展示設定。
-              </p>
-            </div>
-            <div className="shrink-0 rounded-xl bg-[#F5B300] p-3 shadow-[0_12px_32px_rgba(0,0,0,0.18)]">
-              <img src="/assets/arton-subscription-line-qr.webp" alt="ArtON 訂閱 LINE QR Code" className="h-auto w-[min(58vw,270px)] md:w-[270px] rounded-lg object-contain" />
-              <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="mt-3 block rounded-lg bg-[#16203B] px-4 py-3 text-center text-[12px] font-semibold text-white transition-colors hover:bg-[#263354]">
-                點擊直接跳轉 LINE 訂閱 ↗
-              </a>
-            </div>
-          </div>
         </div>
 
         {/* Three plans — one clear comparison table */}

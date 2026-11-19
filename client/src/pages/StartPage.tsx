@@ -10,7 +10,7 @@
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 import PlansSection from "@/components/PlansSection";
-import { consultMail } from "@/lib/links";
+import { LINKS, consultMail } from "@/lib/links";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Check, ShieldCheck, Sparkles } from "lucide-react";
 
@@ -84,6 +84,23 @@ export default function StartPage() {
               >
                 從家庭日常到商業空間，選擇適合的 ArtON 授權方案，讓藝術內容持續走進你的生活與展示場域。
               </p>
+              <div className={`max-w-2xl rounded-2xl bg-white/95 p-4 md:p-5 text-[#1C2632] shadow-[0_18px_50px_rgba(0,0,0,0.18)] transition-all duration-700 delay-300 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              }`}>
+                <div className="flex flex-col sm:flex-row items-center gap-5">
+                  <div className="shrink-0 rounded-xl bg-[#F5B300] p-2.5">
+                    <img src="/assets/arton-subscription-line-qr.webp" alt="ArtON 訂閱 LINE QR Code" className="h-28 w-56 rounded-lg object-contain sm:h-24 sm:w-48" />
+                  </div>
+                  <div className="flex-1 text-center sm:text-left">
+                    <p className="text-[10px] uppercase tracking-[0.25em] text-[#B38A44] font-semibold">Subscribe on LINE · LINE 訂閱</p>
+                    <h2 className="mt-2 text-[21px] md:text-[24px] leading-[1.35] font-normal" style={{ fontFamily: "'Cormorant Garamond', 'Noto Sans TC', serif" }}>選好方案，從 LINE 開始訂閱。</h2>
+                    <p className="mt-2 text-[12px] leading-[1.7] text-[#1C1C1E]/58">掃碼或點擊按鈕，留下空間與方案需求。</p>
+                    <a href={LINKS.customerLine} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center justify-center rounded-full bg-[#16203B] px-5 py-2.5 text-[12px] font-semibold text-white transition-colors hover:bg-[#263354]">
+                      點擊直接跳轉 LINE 訂閱 ↗
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
